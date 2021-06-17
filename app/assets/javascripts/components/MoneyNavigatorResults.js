@@ -78,6 +78,7 @@ define(['jquery', 'DoughBaseComponent', 'utilities'], function($, DoughBaseCompo
     this.$headingContent.find('[data-overlay-hide]').on('click', function(e) {
       e.preventDefault(); 
       _this._hideHeading(e.target); 
+      _this._resizeContent();
     }); 
 
     this.$overlay.on('click', function() {
@@ -170,8 +171,12 @@ define(['jquery', 'DoughBaseComponent', 'utilities'], function($, DoughBaseCompo
   }; 
 
   MoneyNavigatorResults.prototype._resizeContent = function(target) {
-    var size = this._getSize($(target).parents('[data-heading]')[0].querySelector('[data-heading-content]'));
-    document.body.style.height = size.height + 'px'; 
+    if (target === undefined) {
+      document.body.style.height = 'auto';
+    } else {
+      var size = this._getSize($(target).parents('[data-heading]')[0].querySelector('[data-heading-content]'));
+      document.body.style.height = size.height + 'px'; 
+    }
   };
 
   MoneyNavigatorResults.prototype._getSize = function(el) {

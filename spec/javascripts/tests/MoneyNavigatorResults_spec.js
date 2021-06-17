@@ -78,7 +78,7 @@ describe.only('MoneyNavigatorResults', function() {
     }); 
   }); 
 
-  describe('setUpEvents method', function() {
+  describe.only('setUpEvents method', function() {
     it('Sets the correct event listeners and arguments when called', function() {
       this.obj._updateDOM(); 
 
@@ -111,15 +111,22 @@ describe.only('MoneyNavigatorResults', function() {
       $(heading_0_btn).trigger('click'); 
       expect(showHeadingSpy.calledWith(heading_0_btn[0])).to.be.true; 
       expect(resizeContentSpy.calledWith(heading_0_btn[0])).to.be.true; 
+      expect(resizeContentSpy.callCount).to.equal(1); 
 
       $(heading_2_btn).trigger('click'); 
       expect(showHeadingSpy.calledWith(heading_2_btn[0])).to.be.true; 
+      expect(resizeContentSpy.calledWith(heading_2_btn[0])).to.be.true; 
+      expect(resizeContentSpy.callCount).to.equal(2); 
 
       $(heading_4_btn).trigger('click'); 
       expect(showHeadingSpy.calledWith(heading_4_btn[0])).to.be.true; 
+      expect(resizeContentSpy.calledWith(heading_4_btn[0])).to.be.true; 
+      expect(resizeContentSpy.callCount).to.equal(3); 
 
       $(overlayHide).trigger('click');
       expect(hideHeadingSpy.calledWith(overlayHide[0])).to.be.true; 
+      expect(resizeContentSpy.calledWith()).to.be.true;
+      expect(resizeContentSpy.callCount).to.equal(4); 
 
       this.$overlay.trigger('click'); 
       expect(hideHeadingSpy.calledWith()).to.be.true; 
@@ -142,6 +149,9 @@ describe.only('MoneyNavigatorResults', function() {
   describe('resizeContent method', function() {
     it('Sets new value for height of body', function() {
       var getSizeSpy = sinon.spy(this.obj, '_getSize');
+
+      this.obj._resizeContent();
+      expect(getSizeSpy.called).to.not.be.true; 
 
       this.obj._resizeContent(this.S1_H1_btn);
       expect(getSizeSpy.calledWith(this.S1_H1_btn[0].parentNode.querySelector('[data-heading-content]'))).to.be.true; 

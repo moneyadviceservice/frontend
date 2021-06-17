@@ -30,6 +30,7 @@ define(['jquery', 'DoughBaseComponent', 'utilities'], function($, DoughBaseCompo
     this._updateDOM(); 
     this._setUpEvents(); 
     this._initialisedSuccess(initialised);
+    this.bodyHeight = document.body.clientHeight; 
   };
 
   MoneyNavigatorResults.prototype._updateDOM = function() {
@@ -174,8 +175,14 @@ define(['jquery', 'DoughBaseComponent', 'utilities'], function($, DoughBaseCompo
     if (target === undefined) {
       document.body.style.height = 'auto';
     } else {
-      var size = this._getSize($(target).parents('[data-heading]')[0].querySelector('[data-heading-content]'));
-      document.body.style.height = size.height + 'px'; 
+      var article = $(target).parents('[data-heading]')[0].querySelector('[data-heading-content]'); 
+      var size = this._getSize(article);
+
+      if (this.bodyHeight < size.height) {
+        document.body.style.height = size.height + 'px'; 
+      } else {
+        article.style.height = this.bodyHeight + 'px'; 
+      }
     }
   };
 

@@ -1,4 +1,4 @@
-describe('MoneyNavigatorResults', function() {
+describe.only('MoneyNavigatorResults', function() {
   'use strict';
 
   beforeEach(function(done) {
@@ -144,10 +144,10 @@ describe('MoneyNavigatorResults', function() {
       var getSizeSpy = sinon.spy(this.obj, '_getSize');
 
       this.obj._resizeContent(this.S1_H1_btn);
-      expect(getSizeSpy.calledWith(this.S1_H1_btn)).to.be.true; 
+      expect(getSizeSpy.calledWith(this.S1_H1_btn[0].parentNode.querySelector('[data-heading-content]'))).to.be.true; 
 
       this.obj._resizeContent(this.S4_H3_btn);
-      expect(getSizeSpy.calledWith(this.S4_H3_btn)).to.be.true;
+      expect(getSizeSpy.calledWith(this.S4_H3_btn[0].parentNode.querySelector('[data-heading-content]'))).to.be.true;
 
       getSizeSpy.restore(); 
     });

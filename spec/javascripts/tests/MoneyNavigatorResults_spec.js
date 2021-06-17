@@ -1,4 +1,4 @@
-describe('MoneyNavigatorResults', function() {
+describe.only('MoneyNavigatorResults', function() {
   'use strict';
 
   beforeEach(function(done) {
@@ -146,8 +146,7 @@ describe('MoneyNavigatorResults', function() {
     }); 
   });
 
-  // TODO: Fix this test
-  xdescribe('resizeContent method', function() {
+  describe('resizeContent method', function() {
     it('Sets new value for height of body', function() {
       var getSizeSpy = sinon.spy(this.obj, '_getSize');
 
@@ -155,10 +154,10 @@ describe('MoneyNavigatorResults', function() {
       expect(getSizeSpy.called).to.not.be.true; 
 
       this.obj._resizeContent(this.S1_H1_btn);
-      expect(getSizeSpy.calledWith(this.S1_H1_btn.parents('[data-heading-content]'))).to.be.true;
+      expect(getSizeSpy.calledWith(this.S1_H1_btn.parents('[data-heading]').find('[data-heading-content]')[0])).to.be.true;
 
       this.obj._resizeContent(this.S4_H3_btn);
-      expect(getSizeSpy.calledWith(this.S4_H3_btn.parents('[data-heading-content]'))).to.be.true;
+      expect(getSizeSpy.calledWith(this.S4_H3_btn.parents('[data-heading]').find('[data-heading-content]')[0])).to.be.true;
 
       getSizeSpy.restore(); 
     });

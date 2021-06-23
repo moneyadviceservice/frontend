@@ -24,11 +24,11 @@ describe('MoneyNavigatorResults', function() {
           self.doneSuffix = self.obj.doneSuffix; 
 
           // TODO: Use these variables in setUpEvents method in favour of $headingTitles above
-          self.S1_H1_btn = $('#S1_H1').find('button');
-          self.S1_H2_btn = $('#S1_H2').find('button');
+          self.S1_H1_btn = self.component.find('#S1_H1').find('button');
+          self.S1_H2_btn = self.component.find('#S1_H2').find('button');
           // self.S3_H1_btn = $('#S3_H1').find('button');
           // self.S4_H2_btn = $('#S4_H2').find('button');
-          self.S4_H3_btn = $('#S4_H3').find('button');
+          self.S4_H3_btn = self.component.find('#S4_H3').find('button');
 
           done();
         }, done);
@@ -153,7 +153,7 @@ describe('MoneyNavigatorResults', function() {
       this.obj._resizeContent();
       expect(getSizeSpy.called).to.not.be.true; 
 
-      this.obj._resizeContent(this.S1_H1_btn);
+      this.obj._resizeContent(this.S1_H1_btn[0]);
       expect(getSizeSpy.calledWith(this.S1_H1_btn.parents('[data-heading]').find('[data-heading-content]')[0])).to.be.true;
 
       this.obj._resizeContent(this.S4_H3_btn);

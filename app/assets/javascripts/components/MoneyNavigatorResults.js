@@ -30,6 +30,7 @@ define(['jquery', 'DoughBaseComponent', 'utilities'], function($, DoughBaseCompo
     this._updateDOM(); 
     this._setUpEvents(); 
     this._initialisedSuccess(initialised);
+    this.bodyHeight = document.body.clientHeight; 
   };
 
   MoneyNavigatorResults.prototype._updateDOM = function() {
@@ -71,12 +72,14 @@ define(['jquery', 'DoughBaseComponent', 'utilities'], function($, DoughBaseCompo
     }); 
 
     this.$headingTitles.parents('button').on('click', function(e) {
-      _this._showHeading(e.target); 
-    }); 
+      _this._showHeading(e.target);
+      _this._resizeContent(e.target);
+    });
 
     this.$headingContent.find('[data-overlay-hide]').on('click', function(e) {
       e.preventDefault(); 
       _this._hideHeading(e.target); 
+      _this._resizeContent();
     }); 
 
     this.$overlay.on('click', function() {
@@ -166,6 +169,27 @@ define(['jquery', 'DoughBaseComponent', 'utilities'], function($, DoughBaseCompo
     if (!this.$overlay.hasClass(this.hiddenClass)) {
       this.$overlay.addClass(this.hiddenClass); 
     }
+  }; 
+
+  MoneyNavigatorResults.prototype._resizeContent = function(target) {
+    if (target === undefined) {
+      document.body.style.height = 'auto';
+    } else {
+      var article = $(target).parents('[data-heading]')[0].querySelector('[data-heading-content]'); 
+      var size = this._getSize(article);
+
+      if (this.bodyHeight < size.height) {
+        document.body.style.height = size.height + 'px'; 
+      } else {
+        article.style.height = this.bodyHeight + 'px'; 
+      }
+    }
+  };
+
+  MoneyNavigatorResults.prototype._getSize = function(el) {
+    return {
+      height: el.getBoundingClientRect().height
+    };
   }
 
   return MoneyNavigatorResults; 

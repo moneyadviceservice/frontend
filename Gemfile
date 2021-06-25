@@ -74,7 +74,7 @@ gem 'websocket-extensions', '>= 0.1.5'
 # Dependencies
 gem 'adal', git: 'git@github.com:moneyadviceservice/azure-activedirectory-library-for-ruby'
 gem 'cream', '2.1.8'
-gem 'dough-ruby', git: 'git@github.com:moneyadviceservice/dough.git', branch: 'PostMessages_v5.43', ref: '170e999'
+gem 'dough-ruby', git: 'git@github.com:moneyadviceservice/dough.git', branch: 'PostMessages_v5.45', ref: '2294f781317831d6e64b33fd2d63474ccce3c05b'
 gem 'mas-cms-client', '1.20.1'
 gem 'site_search', '0.3.0'
 # Tools
@@ -99,7 +99,7 @@ gem 'quiz', '~> 1.4.0', source: 'http://gems.dev.mas.local'
 gem 'rio', git: 'git@github.com:moneyadviceservice/rio.git', branch: 'feature/ntt_moneyhelper_reskin', ref: 'cbc00d8'
 gem 'savings_calculator', git: 'git@github.com:moneyadviceservice/savings_calculator.git', branch: 'feature/ntt_moneyhelper_reskin', ref: 'b6d897c'
 gem 'timelines', git: 'git@github.com:moneyadviceservice/timelines.git', branch: 'feature/ntt_moneyhelper_reskin', ref: 'b01fa33'
-gem 'universal_credit', git: 'git@github.com:moneyadviceservice/universal_credit.git', branch: 'feature/ntt_moneyhelper_reskin', ref: '7a248de'
+gem 'universal_credit', git: 'git@github.com:moneyadviceservice/universal_credit.git', branch: '12641_Add-Dough-PostMessages_v5.45', ref: 'cc7269cf4f77e8aa4a43288b963672496ced2706'
 gem 'wpcc', git: 'git@github.com:moneyadviceservice/wpcc.git', branch: 'feature/ntt_moneyhelper_reskin', ref: '6e709b6'
 
 group :assets do

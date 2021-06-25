@@ -114,11 +114,11 @@ GIT
 
 GIT
   remote: git@github.com:moneyadviceservice/dough.git
-  revision: 170e9998c4508c0aaf6af368a89599096d2fc7c8
-  ref: 170e999
-  branch: PostMessages_v5.43
+  revision: 2294f781317831d6e64b33fd2d63474ccce3c05b
+  ref: 2294f781317831d6e64b33fd2d63474ccce3c05b
+  branch: PostMessages_v5.45
   specs:
-    dough-ruby (5.43.0)
+    dough-ruby (5.45.0)
       activemodel
       activesupport
       rails (>= 3.2, < 5.1.0)
@@ -219,9 +219,9 @@ GIT
 
 GIT
   remote: git@github.com:moneyadviceservice/universal_credit.git
-  revision: 7a248deb7c3a3508c1c61d10f31c022fcec5aed7
-  ref: 7a248de
-  branch: feature/ntt_moneyhelper_reskin
+  revision: cc7269cf4f77e8aa4a43288b963672496ced2706
+  ref: cc7269cf4f77e8aa4a43288b963672496ced2706
+  branch: 12641_Add-Dough-PostMessages_v5.45
   specs:
     universal_credit (5.1.0)
       autoprefixer-rails

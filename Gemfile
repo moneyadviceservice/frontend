@@ -91,7 +91,7 @@ gem 'debt_free_day_calculator', git: 'git@github.com:moneyadviceservice/debt_fre
 gem 'debt_test', '~> 1.9.0'
 gem 'decision_trees', '~> 2.3.0'
 gem 'feedback', '~> 0.5.1'
-gem 'mortgage_calculator', git: 'git@github.com:moneyadviceservice/mortgage_calculator.git', branch: 'feature/ntt_moneyhelper_reskin', ref: '2272bea'
+gem 'mortgage_calculator', git: 'git@github.com:moneyadviceservice/mortgage_calculator.git', branch: 'replace_uat_partner_link'
 gem 'pacs', git: 'git@github.com:moneyadviceservice/pacs.git', branch: 'feature/NTT_Rebased', ref: '6660077'
 gem 'payday_loans_intervention', '~> 1.9.0'
 gem 'pensions_calculator', git: 'git@github.com:moneyadviceservice/pensions_calculator.git', branch: '12723_fix_results_page_link'

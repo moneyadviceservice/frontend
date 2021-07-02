@@ -82,7 +82,7 @@ gem 'action_plans', git: 'git@github.com:moneyadviceservice/action_plans.git', b
 gem 'advice_plans', '~> 4.1.1'
 gem 'agreements', '~> 2.5.0'
 gem 'budget_planner', git: 'git@github.com:moneyadviceservice/budget_planner.git', branch: 'feature/ntt_moneyhelper_reskin', ref: '0fe0746'
-gem 'car_cost_tool', git: 'git@github.com:moneyadviceservice/car_cost_tool.git', branch: 'feature/ntt_moneyhelper_reskin', ref: '7e72b82'
+gem 'car_cost_tool', git: 'git@github.com:moneyadviceservice/car_cost_tool.git', branch: 'feature/ntt_moneyhelper_reskin', ref: 'a2fd287'
 gem 'cost_calculator_builder', git: 'git@github.com:moneyadviceservice/cost_calculator_builder.git', branch: 'feature/ntt_moneyhelper_reskin', ref: 'de6d7e3'
 gem 'cutback_calculator', '~> 0.13.0'
 gem 'debt_advice_locator', git: 'git@github.com:moneyadviceservice/debt-advice-locator.git', branch: 'feature/ntt_moneyhelper_reskin', ref: '6d20957'

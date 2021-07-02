@@ -14,6 +14,20 @@ GIT
       uri_template (~> 0.7)
 
 GIT
+  remote: git@github.com:moneyadviceservice/budget_planner.git
+  revision: 231ded889f23db0ca18799981af4487f574bf9f1
+  branch: 12731_Next-steps-links_New-window
+  specs:
+    budget_planner (5.7.1)
+      i18n-js (= 3.0.0.mas)
+      js-routes (= 1.1.2)
+      mas-mailer (~> 0.3)
+      modernizr-rails (~> 2.6.2)
+      rails (>= 4, < 5)
+      sass-rails
+      spreadsheet
+
+GIT
   remote: git@github.com:moneyadviceservice/dough.git
   revision: 3910a43034b2abf77b2bebc304c2dcfa141b22ea
   branch: Third-Party-Cookie-Control_v5.42
@@ -134,14 +148,6 @@ GEM
     bowndler (1.0.2)
       thor
     bson (4.11.1)
-    budget_planner (5.7.1)
-      i18n-js (= 3.0.0.mas)
-      js-routes (= 1.1.2)
-      mas-mailer (~> 0.3)
-      modernizr-rails (~> 2.6.2)
-      rails (>= 4, < 5)
-      sass-rails
-      spreadsheet
     bugsnag (6.7.0)
       concurrent-ruby (~> 1.0)
     builder (3.2.4)
@@ -826,7 +832,7 @@ DEPENDENCIES
   binding_of_caller
   blind_index (= 0.2.0)
   bowndler (~> 1.0)
-  budget_planner (~> 5.7.1)
+  budget_planner!
   bugsnag
   byebug
   capybara

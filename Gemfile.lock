@@ -189,11 +189,11 @@ GIT
 
 GIT
   remote: git@github.com:moneyadviceservice/savings_calculator.git
-  revision: b6d897c8aee4416add91146f7cf7adc2b2d16e7d
-  ref: b6d897c
+  revision: d802e9551b617200cc3df29baa5a7d7780769560
+  ref: d802e95
   branch: feature/ntt_moneyhelper_reskin
   specs:
-    savings_calculator (1.10.2)
+    savings_calculator (2.0.0)
       autoprefixer-rails
       dough-ruby (~> 5.36)
       jquery-rails
@@ -205,9 +205,8 @@ GIT
 
 GIT
   remote: git@github.com:moneyadviceservice/timelines.git
-  revision: b01fa3365a87a6331cf2578ca6b446bc674ec0b6
-  ref: b01fa33
-  branch: feature/ntt_moneyhelper_reskin
+  revision: 57288505c5d8bfdd0a0cceb7c462a851e5e8385b
+  branch: 12735_update_links
   specs:
     timelines (1.7.1)
       bowndler

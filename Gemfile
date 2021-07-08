@@ -74,11 +74,11 @@ gem 'websocket-extensions', '>= 0.1.5'
 # Dependencies
 gem 'adal', git: 'git@github.com:moneyadviceservice/azure-activedirectory-library-for-ruby'
 gem 'cream', '2.1.8'
-gem 'dough-ruby', git: 'git@github.com:moneyadviceservice/dough.git', branch: 'PostMessages_v5.43', ref: '170e999'
+gem 'dough-ruby', git: 'git@github.com:moneyadviceservice/dough.git', branch: 'PostMessages_v5.45', ref: '2294f78'
 gem 'mas-cms-client', '1.20.1'
 gem 'site_search', '0.3.0'
 # Tools
-gem 'action_plans', git: 'git@github.com:moneyadviceservice/action_plans.git', branch: 'feature/ntt_moneyhelper_reskin', ref: '2348a9f'
+gem 'action_plans', git: 'git@github.com:moneyadviceservice/action_plans.git', branch: '12641_Add-Dough-PostMessages_v5.45', ref: 'dbb22eb'
 gem 'advice_plans', '~> 4.1.1'
 gem 'agreements', '~> 2.5.0'
 gem 'budget_planner', git: 'git@github.com:moneyadviceservice/budget_planner.git', branch: 'feature/ntt_moneyhelper_reskin', ref: '0fe0746'
@@ -99,7 +99,7 @@ gem 'quiz', '~> 1.4.0', source: 'http://gems.dev.mas.local'
 gem 'rio', git: 'git@github.com:moneyadviceservice/rio.git', branch: 'feature/ntt_moneyhelper_reskin', ref: 'cbc00d8'
 gem 'savings_calculator', git: 'git@github.com:moneyadviceservice/savings_calculator.git', branch: 'feature/ntt_moneyhelper_reskin', ref: 'd802e95'
 gem 'timelines', git: 'git@github.com:moneyadviceservice/timelines.git', branch: '12735_update_links'
-gem 'universal_credit', git: 'git@github.com:moneyadviceservice/universal_credit.git', branch: 'feature/ntt_moneyhelper_reskin', ref: '7a248de'
+gem 'universal_credit', '~> 5.1.0'
 gem 'wpcc', git: 'git@github.com:moneyadviceservice/wpcc.git', branch: 'feature/ntt_moneyhelper_reskin', ref: '6e709b6'
 
 group :assets do

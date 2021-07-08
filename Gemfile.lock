@@ -141,25 +141,6 @@ GIT
       underscore-rails
 
 GIT
-  remote: git@github.com:moneyadviceservice/pacs.git
-  revision: 666007781f707d41210e25ea9b0c9ee1e5aa9a1b
-  ref: 6660077
-  branch: feature/NTT_Rebased
-  specs:
-    pacs (3.13.0)
-      dough-ruby (~> 5.39)
-      dry-struct (< 1.4.0)
-      dry-struct-setters
-      dry-types (< 1.5.0)
-      faraday
-      faraday-conductivity
-      faraday_middleware
-      meta-tags
-      modernizr-rails (~> 2.6.2)
-      mongoid
-      rails (>= 4, < 5)
-
-GIT
   remote: git@github.com:moneyadviceservice/pensions_calculator.git
   revision: 9f0b4bb6c2403260d0daf14ae7dbb45f5623b888
   ref: 9f0b4bb
@@ -467,23 +448,20 @@ GEM
       dry-configurable (~> 0.1, >= 0.1.3)
     dry-core (0.6.0)
       concurrent-ruby (~> 1.0)
-    dry-equalizer (0.3.0)
     dry-inflector (0.2.0)
     dry-logic (1.2.0)
       concurrent-ruby (~> 1.0)
       dry-core (~> 0.5, >= 0.5)
-    dry-struct (1.3.0)
-      dry-core (~> 0.4, >= 0.4.4)
-      dry-equalizer (~> 0.3)
-      dry-types (~> 1.3)
+    dry-struct (1.4.0)
+      dry-core (~> 0.5, >= 0.5)
+      dry-types (~> 1.5)
       ice_nine (~> 0.11)
     dry-struct-setters (0.3.0)
       dry-struct (>= 1.0.0)
-    dry-types (1.4.0)
+    dry-types (1.5.1)
       concurrent-ruby (~> 1.0)
       dry-container (~> 0.3)
-      dry-core (~> 0.4, >= 0.4.4)
-      dry-equalizer (~> 0.3)
+      dry-core (~> 0.5, >= 0.5)
       dry-inflector (~> 0.1, >= 0.1.2)
       dry-logic (~> 1.0, >= 1.0.2)
     ejs (1.1.1)
@@ -646,6 +624,18 @@ GEM
       activesupport
     origin (2.3.1)
     orm_adapter (0.5.0)
+    pacs (4.0.0)
+      dough-ruby (~> 5.39)
+      dry-struct
+      dry-struct-setters
+      dry-types
+      faraday
+      faraday-conductivity
+      faraday_middleware
+      meta-tags
+      modernizr-rails (~> 2.6.2)
+      mongoid
+      rails (>= 4, < 5)
     parallel (1.12.1)
     parser (2.5.0.5)
       ast (~> 2.4.0)
@@ -966,7 +956,7 @@ DEPENDENCIES
   nokogiri (>= 1.10.3)
   nunes
   opening_hours
-  pacs!
+  pacs (~> 4.0.0)
   payday_loans_intervention (~> 1.9.0)
   pensions_calculator!
   poltergeist

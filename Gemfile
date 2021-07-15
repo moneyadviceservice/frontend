@@ -85,7 +85,7 @@ gem 'budget_planner', git: 'git@github.com:moneyadviceservice/budget_planner.git
 gem 'car_cost_tool', git: 'git@github.com:moneyadviceservice/car_cost_tool.git', branch: 'feature/ntt_moneyhelper_reskin', ref: 'a2fd287'
 gem 'cost_calculator_builder', git: 'git@github.com:moneyadviceservice/cost_calculator_builder.git', branch: 'feature/ntt_moneyhelper_reskin', ref: 'de6d7e3'
 gem 'cutback_calculator', '~> 0.13.0'
-gem 'debt_advice_locator', git: 'git@github.com:moneyadviceservice/debt-advice-locator.git', branch: 'feature/ntt_moneyhelper_reskin', ref: '6d20957'
+gem 'debt_advice_locator', git: 'git@github.com:moneyadviceservice/debt-advice-locator.git', branch: 'feature/ntt_moneyhelper_reskin', ref: 'bcea22a'
 gem 'debt_and_mental_health', '~> 1.6.0'
 gem 'debt_free_day_calculator', git: 'git@github.com:moneyadviceservice/debt_free_day_calculator', branch: 'feature/ntt_moneyhelper_reskin', ref: 'd165d1c'
 gem 'debt_test', '~> 1.9.0'

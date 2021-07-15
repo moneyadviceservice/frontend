@@ -114,11 +114,11 @@ GIT
 
 GIT
   remote: git@github.com:moneyadviceservice/dough.git
-  revision: 170e9998c4508c0aaf6af368a89599096d2fc7c8
-  ref: 170e999
-  branch: PostMessages_v5.43
+  revision: 2294f781317831d6e64b33fd2d63474ccce3c05b
+  ref: 2294f78
+  branch: PostMessages_v5.45
   specs:
-    dough-ruby (5.43.0)
+    dough-ruby (5.45.0)
       activemodel
       activesupport
       rails (>= 3.2, < 5.1.0)
@@ -170,11 +170,11 @@ GIT
 
 GIT
   remote: git@github.com:moneyadviceservice/savings_calculator.git
-  revision: b6d897c8aee4416add91146f7cf7adc2b2d16e7d
-  ref: b6d897c
+  revision: d802e9551b617200cc3df29baa5a7d7780769560
+  ref: d802e95
   branch: feature/ntt_moneyhelper_reskin
   specs:
-    savings_calculator (1.10.2)
+    savings_calculator (2.0.0)
       autoprefixer-rails
       dough-ruby (~> 5.36)
       jquery-rails
@@ -448,20 +448,23 @@ GEM
       dry-configurable (~> 0.1, >= 0.1.3)
     dry-core (0.6.0)
       concurrent-ruby (~> 1.0)
+    dry-equalizer (0.3.0)
     dry-inflector (0.2.0)
     dry-logic (1.2.0)
       concurrent-ruby (~> 1.0)
       dry-core (~> 0.5, >= 0.5)
-    dry-struct (1.4.0)
-      dry-core (~> 0.5, >= 0.5)
-      dry-types (~> 1.5)
+    dry-struct (1.3.0)
+      dry-core (~> 0.4, >= 0.4.4)
+      dry-equalizer (~> 0.3)
+      dry-types (~> 1.3)
       ice_nine (~> 0.11)
     dry-struct-setters (0.3.0)
       dry-struct (>= 1.0.0)
-    dry-types (1.5.1)
+    dry-types (1.4.0)
       concurrent-ruby (~> 1.0)
       dry-container (~> 0.3)
-      dry-core (~> 0.5, >= 0.5)
+      dry-core (~> 0.4, >= 0.4.4)
+      dry-equalizer (~> 0.3)
       dry-inflector (~> 0.1, >= 0.1.2)
       dry-logic (~> 1.0, >= 1.0.2)
     ejs (1.1.1)
@@ -624,11 +627,14 @@ GEM
       activesupport
     origin (2.3.1)
     orm_adapter (0.5.0)
-    pacs (4.0.0)
+    pacs (4.0.1)
       dough-ruby (~> 5.39)
-      dry-struct
+      dry-container (= 0.7.2)
+      dry-core (= 0.6.0)
+      dry-inflector (= 0.2.0)
+      dry-struct (< 1.4.0)
       dry-struct-setters
-      dry-types
+      dry-types (< 1.5.0)
       faraday
       faraday-conductivity
       faraday_middleware
@@ -956,7 +962,7 @@ DEPENDENCIES
   nokogiri (>= 1.10.3)
   nunes
   opening_hours
-  pacs (~> 4.0.0)
+  pacs (~> 4.0.1)
   payday_loans_intervention (~> 1.9.0)
   pensions_calculator!
   poltergeist

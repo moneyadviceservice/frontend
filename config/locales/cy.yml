@@ -489,9 +489,10 @@ cy:
         step_1: 1) Ewch i'r dudalen hon ar wefan HelpwrArian. Peidiwch â disgwyl yn rhy hir cyn ailosod eich cyfrinair oherwydd bydd y ddolen hon yn dirwyn i ben am resymau diogelwch.
         link_label: Newid fy nghyfrinair
         step_2: 2) Meddyliwch am gyfrinair y byddwch yn ei gofio (ond nid pobl eraill) a'i deipio ar y wefan pan ofynnir i chi wneud hynny.
-        step_3: 3) Cewch eich arwyddo i mewn yn awtomatig fel y gallwch barhau i dderbyn cyngor gan HelpwrArian.
+        step_3_html: |
+          <p>3) Cewch eich arwyddo i mewn yn awtomatig fel y gallwch barhau i dderbyn cyngor gan HelpwrArian.</p>
         expired_token_tip: Beth i'w wneud os bydd eich dolen ailosod cyfrinair (uchod) wedi dirwyn i ben
-        expired_token_tip_steps_html: "Ewch yn ôl i'r dudalen <a href='%{url}'>Anghofio Cyfrinair</a> a theipiwch eich cyfeiriad e-bost unwaith eto fel y gallwn anfon un arall atoch."
+        expired_token_tip_steps_html: "Ewch yn ôl i'r dudalen <a href='https://www.moneyhelper.org.uk/cy/users/password'>Anghofio Cyfrinair</a> a theipiwch eich cyfeiriad e-bost unwaith eto fel y gallwn anfon un arall atoch."
     settings:
       title: Golygu fy ngosodiadau
       secondary_intro_html: 'Yn ôl i dudalen <a href="%{url}">fy nghyfrif</a>.'

@@ -98,7 +98,7 @@ gem 'quiz', '~> 1.4.0', source: 'http://gems.dev.mas.local'
 gem 'rio', '~> 2.2.1', source: 'http://gems.dev.mas.local'
 gem 'savings_calculator', '~> 1.10.2'
 gem 'timelines', '~> 1.7.1'
-gem 'universal_credit', '~> 4.2.0'
+gem 'universal_credit', '~> 5.1.0'
 gem 'wpcc', '2.8.3'
 
 group :assets do

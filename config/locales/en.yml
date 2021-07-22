@@ -495,21 +495,23 @@ en:
       button_label: Change my password
     emails:
       layout:
-        purpose: You're receiving this email as you contacted MoneyHelper.
+        purpose: You're receiving this email as you contacted the Money Advice Service and MoneyHelper.
         greeting: Hello
         signature: Regards,
         sender: MoneyHelper
         contact_html: "This is an automatically generated email – please don't reply to it. To contact <a href='https://www.moneyhelper.org.uk' style='line-height: 22px ;color:#D64E04; font-family: Arial, sans-serif; font-weight: 500; text-decoration: none;'>MoneyHelper</a>, please call us on <a href='tel:+4408001387777' style='line-height: 22px ;color:#D64E04; font-family: Arial, sans-serif; font-weight: 500; text-decoration: none;'>0800&nbsp;138&nbsp;7777</a>"
-        terms_one: "Lines are open Monday to Friday 8am - 6pm, Saturday, Sunday & Bank Holidays Closed. Calls are recorded for training and quality purposes. No responsibility is accepted for loss or damage arising from viruses or changes made to this message after it was sent"
-        terms_two: "We are MoneyHelper, a limited company registered in England and Wales. Our registered office is at 120 Holborn, London, England EC1N 2TD."
+        terms_one: "Lines are open Monday to Friday 8am - 6pm, Closed: Saturday, Sunday & Bank Holidays. Calls are free and recorded for training and quality purposes. No responsibility is accepted for loss or damage arising from viruses or changes made to this message after it was sent"
+        terms_two: "MoneyHelper is owned and maintained by the Money and Pensions Service, an arm's-length body, sponsored by the Department for Work and Pensions. Our registered office is Holborn Centre, 120 Holborn, London, England EC1N 2TD."
       reset_passwords:
         intro:  You've told us that you've forgotten your password so we've sent you this automatic email to show you how to reset it.
         step_1: 1) Visit this page on MoneyHelper website. Don't wait too long to reset your password as this link will expire for security reasons.
         link_label: Change my password
         step_2: 2) Think of a password that you will remember (but others won't) and enter that in on the website when asked.
-        step_3: 3) You will be signed in automatically so you can carry on getting advice from MoneyHelper.
+        step_3_html: |
+           <p>3) You will be taken from the Money Advice Service website to the MoneyHelper website. From here, you can navigate to the tool to sign in with your new password.</p>
+           <p>Or go straight to your account using the <a href="https://www.moneyhelper.org.uk/en/users/sign-in">sign in page</a>.</p>
         expired_token_tip: "What to do if your reset password link (above) has expired:"
-        expired_token_tip_steps_html: 'Go back to the <a href="%{url}">Forgotten Password page</a> and input your email address again so that we can send you another one.'
+        expired_token_tip_steps_html: 'Go back to the <a href="https://www.moneyhelper.org.uk/en/users/password">Forgotten Password page</a> and input your email address again so that we can send you another one.'
     settings:
       title: Edit my settings
       secondary_intro_html: "Back to my <a href=\"%{url}\">account page</a>."

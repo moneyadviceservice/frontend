@@ -62,11 +62,11 @@ GEM
       erubis (~> 2.7.0)
       rails-dom-testing (~> 1.0, >= 1.0.5)
       rails-html-sanitizer (~> 1.0, >= 1.0.3)
-    active_attr (0.15.0)
-      actionpack (>= 3.0.2, < 6.1)
-      activemodel (>= 3.0.2, < 6.1)
-      activesupport (>= 3.0.2, < 6.1)
-    active_model_serializers (0.9.7)
+    active_attr (0.15.3)
+      actionpack (>= 3.0.2, < 7.0)
+      activemodel (>= 3.0.2, < 7.0)
+      activesupport (>= 3.0.2, < 7.0)
+    active_model_serializers (0.9.8)
       activemodel (>= 3.2)
       concurrent-ruby (~> 1.0)
     activejob (4.2.11.20)
@@ -223,7 +223,7 @@ GEM
       responders
       sass-rails
     database_cleaner (1.6.2)
-    debt_advice_locator (3.13.0)
+    debt_advice_locator (4.1.1)
       active_attr
       active_model_serializers (< 0.10.0)
       addressable
@@ -371,7 +371,7 @@ GEM
     friendly_id (5.2.5)
       activerecord (>= 4.0.0)
     geokit (1.13.1)
-    geokit-rails (2.3.1)
+    geokit-rails (2.3.2)
       geokit (~> 1.5)
       rails (>= 3.0)
     gherkin (5.0.0)
@@ -758,7 +758,7 @@ GEM
       thread_safe (~> 0.1)
     uglifier (4.2.0)
       execjs (>= 0.3.0, < 3)
-    uk_postcode (2.1.5)
+    uk_postcode (2.1.6)
     underscore-rails (1.8.3)
     unf (0.1.4)
       unf_ext
@@ -845,7 +845,7 @@ DEPENDENCIES
   cucumber-rails
   cutback_calculator (~> 0.13.0)
   database_cleaner
-  debt_advice_locator (= 3.13.0)
+  debt_advice_locator (= 4.1.1)
   debt_and_mental_health (~> 1.6.0)
   debt_free_day_calculator (~> 3.2.0)
   debt_test (~> 1.9.0)

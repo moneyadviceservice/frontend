@@ -100,7 +100,7 @@ gem 'rio', git: 'git@github.com:moneyadviceservice/rio.git', branch: 'feature/nt
 gem 'savings_calculator', git: 'git@github.com:moneyadviceservice/savings_calculator.git', branch: 'feature/ntt_moneyhelper_reskin', ref: 'd802e95'
 gem 'timelines', git: 'git@github.com:moneyadviceservice/timelines.git', branch: 'feature/ntt_moneyhelper_reskin', ref: 'b01fa33'
 gem 'universal_credit', '~> 5.1.0'
-gem 'wpcc', git: 'git@github.com:moneyadviceservice/wpcc.git', branch: 'feature/ntt_moneyhelper_reskin', ref: '6e709b6'
+gem 'wpcc', git: 'git@github.com:moneyadviceservice/wpcc.git', branch: 'feature/ntt_moneyhelper_reskin', ref: '39b9885'
 
 group :assets do
   gem 'autoprefixer-rails'

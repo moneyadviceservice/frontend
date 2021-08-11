@@ -5,20 +5,6 @@ GIT
     aes (0.5.0)
 
 GIT
-  remote: git@github.com:moneyadviceservice/action_plans.git
-  revision: 2348a9f060fdfab0148cca49ff54a8269685d10b
-  ref: 2348a9f
-  branch: feature/ntt_moneyhelper_reskin
-  specs:
-    action_plans (6.0.0)
-      autoprefixer-rails
-      dough-ruby (~> 5.0)
-      draper
-      hashie
-      rails (>= 4, < 5)
-      sass-rails
-
-GIT
   remote: git@github.com:moneyadviceservice/azure-activedirectory-library-for-ruby
   revision: 26f534a42d516dcdd13fe7fc82149b6d4bc9bebb
   specs:
@@ -26,91 +12,6 @@ GIT
       jwt (~> 1.5)
       nokogiri (~> 1.6)
       uri_template (~> 0.7)
-
-GIT
-  remote: git@github.com:moneyadviceservice/budget_planner.git
-  revision: 0fe0746403167a91668aa9901a8786017ac10ee4
-  ref: 0fe0746
-  branch: feature/ntt_moneyhelper_reskin
-  specs:
-    budget_planner (6.0.0)
-      i18n-js (= 3.0.0.mas)
-      js-routes (= 1.1.2)
-      mas-mailer (~> 0.3)
-      modernizr-rails (~> 2.6.2)
-      rails (>= 4, < 5)
-      sass-rails
-      spreadsheet
-
-GIT
-  remote: git@github.com:moneyadviceservice/car_cost_tool.git
-  revision: a2fd2878c7079178c290314e3a0be2f0e0af2266
-  ref: a2fd287
-  branch: feature/ntt_moneyhelper_reskin
-  specs:
-    car_cost_tool (2.0.0)
-      dough-ruby (~> 5.36)
-      nokogiri
-      rails (>= 4, < 5)
-      rest-client
-      roo (< 2.5.0)
-      roo-xls (<= 1)
-      sass-rails
-
-GIT
-  remote: git@github.com:moneyadviceservice/cost_calculator_builder.git
-  revision: de6d7e35dd7bd5eeb06d23bfb8dd24d8315a0d0d
-  ref: de6d7e3
-  branch: feature/ntt_moneyhelper_reskin
-  specs:
-    cost_calculator_builder (2.0.0)
-      bowndler
-      dough-ruby (~> 5.36)
-      friendly_id (>= 5.1.0)
-      rails (>= 4, < 5)
-
-GIT
-  remote: git@github.com:moneyadviceservice/debt-advice-locator.git
-  revision: bcea22a539fc0f6cec4fbdbd2438fb67c5c43dc4
-  ref: bcea22a
-  branch: feature/ntt_moneyhelper_reskin
-  specs:
-    debt_advice_locator (4.1.0)
-      active_attr
-      active_model_serializers (< 0.10.0)
-      addressable
-      bcrypt
-      coffee-rails
-      dough-ruby (~> 5.36)
-      draper (< 3)
-      geokit-rails
-      kaminari
-      mas-templating (~> 1.0.0)
-      rails (>= 4, < 5)
-      redcarpet
-      sass-rails (= 4.0.5)
-      uk_postcode
-      validate_url (= 1.0.0)
-
-GIT
-  remote: git@github.com:moneyadviceservice/debt_free_day_calculator
-  revision: d165d1c26b7c399a93cb483b8cc6278b00552562
-  ref: d165d1c
-  branch: feature/ntt_moneyhelper_reskin
-  specs:
-    debt_free_day_calculator (3.1.0)
-      autoprefixer-rails (< 9)
-      bigdecimal (~> 1.3.0)
-      debt_finance_calculator (~> 1.1.0)
-      dough-ruby (~> 5.36)
-      draper (< 3)
-      email_validator (~> 1.4.0)
-      i18n-js (= 3.0.0.mas)
-      mas-fonts
-      meta-tags
-      rails (>= 4, < 5)
-      roadie (< 3)
-      sass-rails
 
 GIT
   remote: git@github.com:moneyadviceservice/dough.git
@@ -125,38 +26,6 @@ GIT
       sass-rails
 
 GIT
-  remote: git@github.com:moneyadviceservice/mortgage_calculator.git
-  revision: 15c58ed7241d58a95dbfc50c2a95a1e0224ac0f8
-  ref: 15c58ed
-  branch: feature/ntt_moneyhelper_reskin
-  specs:
-    mortgage_calculator (3.18.1)
-      angularjs-rails (~> 1.2.18)
-      dough-ruby (~> 5.36)
-      mas-fonts
-      modernizr-rails
-      rails (>= 4, < 5)
-      sass-rails
-      sprockets (< 4)
-      underscore-rails
-
-GIT
-  remote: git@github.com:moneyadviceservice/pensions_calculator.git
-  revision: 9f0b4bb6c2403260d0daf14ae7dbb45f5623b888
-  ref: 9f0b4bb
-  branch: feature/NTT_Rebased
-  specs:
-    pensions_calculator (2.7.2)
-      autoprefixer-rails
-      dough-ruby (~> 5.36)
-      meta-tags
-      pensions_calculator-calculations (~> 3.0.2)
-      rails (>= 4, < 5)
-      responders
-      sass-rails
-      uglifier
-
-GIT
   remote: git@github.com:moneyadviceservice/rio.git
   revision: cbc00d8ba801ee9446b2d0f73903f81a13017f05
   ref: cbc00d8
@@ -166,48 +35,6 @@ GIT
       bowndler
       dough-ruby (~> 5.36)
       pensions_calculator-calculations (~> 3.0.2)
-      rails (>= 4, < 5)
-
-GIT
-  remote: git@github.com:moneyadviceservice/savings_calculator.git
-  revision: d802e9551b617200cc3df29baa5a7d7780769560
-  ref: d802e95
-  branch: feature/ntt_moneyhelper_reskin
-  specs:
-    savings_calculator (2.0.0)
-      autoprefixer-rails
-      dough-ruby (~> 5.36)
-      jquery-rails
-      mas-fonts
-      meta-tags
-      rails (>= 4, < 5)
-      sass-rails
-      sprockets (< 4)
-
-GIT
-  remote: git@github.com:moneyadviceservice/timelines.git
-  revision: b01fa3365a87a6331cf2578ca6b446bc674ec0b6
-  ref: b01fa33
-  branch: feature/ntt_moneyhelper_reskin
-  specs:
-    timelines (1.7.1)
-      bowndler
-      icalendar
-      jquery-rails
-      mas-templating
-      rails (>= 4, < 5)
-      sass-rails
-
-GIT
-  remote: git@github.com:moneyadviceservice/wpcc.git
-  revision: 39b98859408fb1c4ce0c93e79c393936a184bdda
-  ref: 39b9885
-  branch: feature/ntt_moneyhelper_reskin
-  specs:
-    wpcc (3.0.1)
-      dough-ruby (~> 5.38)
-      meta-tags
-      modernizr-rails (~> 2.6.2)
       rails (>= 4, < 5)
 
 GIT
@@ -222,6 +49,13 @@ GEM
   remote: https://gems.railslts.com/
   remote: http://gems.dev.mas.local/
   specs:
+    action_plans (6.0.1)
+      autoprefixer-rails
+      dough-ruby (~> 5.0)
+      draper
+      hashie
+      rails (>= 4, < 5)
+      sass-rails
     actionmailer (4.2.11.17)
       actionpack (= 4.2.11.17)
       actionview (= 4.2.11.17)
@@ -313,6 +147,14 @@ GEM
     bowndler (1.0.2)
       thor
     bson (4.12.1)
+    budget_planner (6.0.0)
+      i18n-js (= 3.0.0.mas)
+      js-routes (= 1.1.2)
+      mas-mailer (~> 0.3)
+      modernizr-rails (~> 2.6.2)
+      rails (>= 4, < 5)
+      sass-rails
+      spreadsheet
     bugsnag (6.7.0)
       concurrent-ruby (~> 1.0)
     builder (3.2.4)
@@ -324,6 +166,14 @@ GEM
       rack (>= 1.0.0)
       rack-test (>= 0.5.4)
       xpath (>= 2.0, < 4.0)
+    car_cost_tool (2.0.1)
+      dough-ruby (~> 5.36)
+      nokogiri
+      rails (>= 4, < 5)
+      rest-client
+      roo (< 2.5.0)
+      roo-xls (<= 1)
+      sass-rails
     chai-jquery-rails (2.0.1)
       railties (>= 3.1)
       sprockets
@@ -341,6 +191,11 @@ GEM
       execjs
     coffee-script-source (1.12.2)
     concurrent-ruby (1.1.7)
+    cost_calculator_builder (2.0.0)
+      bowndler
+      dough-ruby (~> 5.36)
+      friendly_id (>= 5.1.0)
+      rails (>= 4, < 5)
     crack (0.4.3)
       safe_yaml (~> 1.0.0)
     crass (1.0.6)
@@ -381,6 +236,22 @@ GEM
       responders
       sass-rails
     database_cleaner (1.6.2)
+    debt_advice_locator (4.1.1)
+      active_attr
+      active_model_serializers (< 0.10.0)
+      addressable
+      bcrypt
+      coffee-rails
+      dough-ruby (~> 5.36)
+      draper (< 3)
+      geokit-rails
+      kaminari
+      mas-templating (~> 1.0.0)
+      rails (>= 4, < 5)
+      redcarpet
+      sass-rails (= 4.0.5)
+      uk_postcode
+      validate_url (= 1.0.0)
     debt_and_mental_health (1.6.0)
       bcrypt
       dough-ruby (~> 5.36)
@@ -392,6 +263,19 @@ GEM
       sass-rails
     debt_finance_calculator (1.1.0.8)
       bigdecimal (> 1.2.3)
+    debt_free_day_calculator (4.0.0)
+      autoprefixer-rails (< 9)
+      bigdecimal (~> 1.3.0)
+      debt_finance_calculator (~> 1.1.0)
+      dough-ruby (~> 5.39)
+      draper (< 3)
+      email_validator (~> 1.4.0)
+      i18n-js (= 3.0.0.mas)
+      mas-fonts
+      meta-tags
+      rails (>= 4, < 5)
+      roadie (< 3)
+      sass-rails
     debt_test (1.9.0)
       autoprefixer-rails
       dough-ruby (~> 5.0)
@@ -614,6 +498,15 @@ GEM
       mongo (>= 2.5.1, < 3.0.0)
       origin (~> 2.3)
       tzinfo (>= 0.3.37)
+    mortgage_calculator (4.0.0)
+      angularjs-rails (~> 1.2.18)
+      dough-ruby (~> 5.36)
+      mas-fonts
+      modernizr-rails
+      rails (>= 4, < 5)
+      sass-rails
+      sprockets (< 4)
+      underscore-rails
     multi_json (1.15.0)
     multi_test (0.1.2)
     multipart-post (2.1.1)
@@ -652,6 +545,15 @@ GEM
       modernizr-rails
       rails (>= 4, < 5)
       sass-rails
+    pensions_calculator (3.0.0)
+      autoprefixer-rails
+      dough-ruby (~> 5.36)
+      meta-tags
+      pensions_calculator-calculations (~> 3.0.2)
+      rails (>= 4, < 5)
+      responders
+      sass-rails
+      uglifier
     pensions_calculator-calculations (3.0.2)
       activesupport
     poltergeist (1.17.0)
@@ -796,6 +698,15 @@ GEM
       sass (~> 3.2.2)
       sprockets (~> 2.8, < 3.0)
       sprockets-rails (~> 2.0)
+    savings_calculator (2.0.1)
+      autoprefixer-rails
+      dough-ruby (~> 5.36)
+      jquery-rails
+      mas-fonts
+      meta-tags
+      rails (>= 4, < 5)
+      sass-rails
+      sprockets (< 4)
     sdoc (1.0.0)
       rdoc (>= 5.0)
     sexp_processor (4.12.0)
@@ -811,8 +722,8 @@ GEM
       capybara (~> 2.7)
     site_search (0.3.0)
       algoliasearch
-    spreadsheet (1.2.4)
-      ruby-ole (>= 1.0)
+    spreadsheet (1.2.9)
+      ruby-ole
     sprockets (2.12.5)
       hike (~> 1.2)
       multi_json (~> 1.0)
@@ -834,6 +745,13 @@ GEM
     tidy-html5 (0.1.2)
     tilt (1.4.1)
     timecop (0.9.1)
+    timelines (2.0.0)
+      bowndler
+      icalendar
+      jquery-rails
+      mas-templating
+      rails (>= 4, < 5)
+      sass-rails
     transitions (0.1.13)
     turnout (2.4.1)
       i18n (~> 0.7)
@@ -884,6 +802,11 @@ GEM
     websocket-extensions (0.1.5)
     whenever (0.10.0)
       chronic (>= 0.6.3)
+    wpcc (3.0.1)
+      dough-ruby (~> 5.38)
+      meta-tags
+      modernizr-rails (~> 2.6.2)
+      rails (>= 4, < 5)
     xpath (3.0.0)
       nokogiri (~> 1.8)
 
@@ -892,7 +815,7 @@ PLATFORMS
   x86_64-darwin-20
 
 DEPENDENCIES
-  action_plans!
+  action_plans (~> 6.0.1)
   actionmailer!
   actionpack!
   actionview!
@@ -912,23 +835,23 @@ DEPENDENCIES
   binding_of_caller
   blind_index (= 0.2.0)
   bowndler (~> 1.0)
-  budget_planner!
+  budget_planner (~> 6.0.0)
   bugsnag
   byebug
   capybara
-  car_cost_tool!
+  car_cost_tool (~> 2.0.1)
   chai-jquery-rails
   chronic
   codeclimate-test-reporter (= 0.6.0)
-  cost_calculator_builder!
+  cost_calculator_builder (~> 2.0.0)
   cream (= 2.1.8)
   csslint_ruby
   cucumber-rails
   cutback_calculator (~> 0.13.0)
   database_cleaner
-  debt_advice_locator!
+  debt_advice_locator (~> 4.1.1)
   debt_and_mental_health (~> 1.6.0)
-  debt_free_day_calculator!
+  debt_free_day_calculator (~> 4.0.0)
   debt_test (~> 1.9.0)
   decision_trees (~> 2.3.0)
   delayed_job_active_record
@@ -956,7 +879,7 @@ DEPENDENCIES
   mailjet
   mas-cms-client (= 1.20.1)
   meta-tags (~> 2.4)
-  mortgage_calculator!
+  mortgage_calculator (~> 4.0.0)
   mysql2 (= 0.4.9)
   newrelic_rpm
   nokogiri (>= 1.10.3)
@@ -964,7 +887,7 @@ DEPENDENCIES
   opening_hours
   pacs (~> 4.0.1)
   payday_loans_intervention (~> 1.9.0)
-  pensions_calculator!
+  pensions_calculator (~> 3.0.0)
   poltergeist
   postcode_anywhere-email_validation!
   pry-byebug
@@ -989,7 +912,7 @@ DEPENDENCIES
   rubocop
   rubytree (~> 1)
   sass-rails
-  savings_calculator!
+  savings_calculator (~> 2.0.1)
   sdoc
   shoulda-matchers
   site_prism
@@ -1000,7 +923,7 @@ DEPENDENCIES
   syslog-logger
   tidy-html5
   timecop
-  timelines!
+  timelines (~> 2.0.0)
   turnout
   uglifier
   unicorn-rails
@@ -1009,7 +932,7 @@ DEPENDENCIES
   webmock
   websocket-extensions (>= 0.1.5)
   whenever
-  wpcc!
+  wpcc (~> 3.0.1)
 
 BUNDLED WITH
    1.17.3

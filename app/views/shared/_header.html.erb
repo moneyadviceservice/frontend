@@ -1,7 +1,5 @@
 <header 
-  class="l-header
-    <%= ' l-header--non-sticky' if hide_sticky_header? || hide_elements_irrelevant_for_third_parties? %>
-    <%= ' l-header--home' if show_home_banner? %>"
+  class="l-header <%= ' l-header--non-sticky' if hide_sticky_header? || hide_elements_irrelevant_for_third_parties? %>"
   role="banner"
 >
   <div class="l-constrained l-header__content">

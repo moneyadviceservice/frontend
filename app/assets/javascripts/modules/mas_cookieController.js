@@ -96,7 +96,7 @@ var CookieController = function (opts) {
 };
 
 CookieController.prototype.addNecessaryCookies = function () {
-  this.config.necessaryCookies = ["action-plan-*", "_iz_uh_ps_", "_iz_sd_ss_"];
+  this.config.necessaryCookies = ["action-plan-*", "__zjc*", "_iz_uh_ps_", "_iz_sd_ss_"];
 };
 
 CookieController.prototype.addBranding = function () {

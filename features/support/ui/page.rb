@@ -26,8 +26,8 @@ module UI
     section :footer_social_links, UI::Sections::FooterSocialLinks, '.t-footer-social-links'
     section :header, UI::Sections::Header, '.l-header'
     section :search_box, UI::Sections::SearchBox, '.search'
-    section :auth, UI::Sections::Auth, '.authentication'
     section :money_helper_auth, UI::Sections::Auth, '.authentication-links'
+    section :auth, UI::Sections::Auth, '.authentication', match: :first
     section :chat, UI::Sections::Chat, '.t-chat'
     section :whatsapp, UI::Sections::Whatsapp, '#js-whatsapp-content'
   end

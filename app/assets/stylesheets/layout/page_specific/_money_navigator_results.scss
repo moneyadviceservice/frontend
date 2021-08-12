@@ -453,7 +453,7 @@ $transition-time: 0.4s;
 						right: $default-gutter; 
 						width: 18px;
 						height: 12px; 
-						transform: translateY(-50%) rotate(0deg); 
+						transform: translateY(-50%) rotate(180deg); 
 						transition-property: transform; 
 						transition-duration: $transition-time; 
 						background-image: image_url('money_navigator_tool/section_title_icon.svg');
@@ -504,17 +504,16 @@ $transition-time: 0.4s;
 				}
 
 				.heading__content {
-					position: fixed;
+					position: absolute;
 					top: 0%;
 					left: 0%;
-					height: 100%; 
+					height: auto; 
 					width: 100%;
 					padding: $baseline-unit * 8 $default-gutter * 4 $baseline-unit * 4;
 					z-index: 155; 
 					background: $color-white;
 					transition-property: top; 
-					transition-duration: $transition-time; 
-					overflow-y: scroll;
+					transition-duration: $transition-time;
 
 					@include respond-to($mq-s) {
 						padding-left: $default-gutter * 3.5;
@@ -579,6 +578,7 @@ $transition-time: 0.4s;
 				}
 
 				.heading__content--hidden {
+					position: fixed;
 					top: 100%;
 
 					@include respond-to($mq-l) {
@@ -590,7 +590,7 @@ $transition-time: 0.4s;
 				&.is-collapsed {
 					.section__title {
 						.section__title__icon {
-							transform: translateY(-50%) rotate(180deg); 
+							transform: translateY(-50%) rotate(0deg); 
 						}			
 					}
 				}

@@ -22,7 +22,7 @@ cy:
   blog_link: https://www.moneyadviceservice.org.uk/blog
 
   breadcrumbs:
-   aria_label: briwsion bara
+    aria_label: briwsion bara
 
   flash:
     label:
@@ -52,8 +52,8 @@ cy:
 
   recaptcha:
     errors:
-      verification_failed: '- Mae’r dilysiad reCAPTCHA wedi methu, rhowch gynnig arall arni.'
-      recaptcha_unreachable: '- Wps, wnaethon ni ddim gallu dilysu eich ymateb reCAPTCHA. Rhowch gynnig arall arni.'
+      verification_failed: "- Mae’r dilysiad reCAPTCHA wedi methu, rhowch gynnig arall arni."
+      recaptcha_unreachable: "- Wps, wnaethon ni ddim gallu dilysu eich ymateb reCAPTCHA. Rhowch gynnig arall arni."
   errors:
     show:
       heading: Mae'n ddrwg gennym
@@ -265,6 +265,11 @@ cy:
   opt_out:
     title: Edrychwch ar hyn ar ein gwefan flaenorol
 
+  maps_banner:
+    mps_provided_1: Gwasanaeth Cynghori Ariannol
+    mps_provided_2: yn cael ei ddarparu gan
+    mps: Gwasanaeth Arian a Phensiynau
+
   feedback:
     title: Byddem yn falch iawn i gael eich adborth
     email_contents: |
@@ -308,9 +313,9 @@ cy:
     accessibility: Hygyrchedd
     accessibility_link: /cy/corporate/hygyrchedd
     privacy_statement: Rhybudd preifatrwydd
-    privacy_statement_link: /cy/corporate/polisipreifatrwydd
+    privacy_statement_link: https://www.moneyhelper.org.uk/cy/about-us/privacy-and-legal/privacy-notice
     terms_and_conditions: Amodau a Thelerau
-    terms_and_conditions_link: /cy/corporate/telerau-ac-amodau
+    terms_and_conditions_link: https://www.moneyhelper.org.uk/cy/about-us/privacy-and-legal/terms-and-conditions
     fincap: Galluogrwydd Ariannol
     fincap_link: http://www.fincap.org.uk/cymru
     jobs: Swyddi
@@ -364,8 +369,8 @@ cy:
       related_links_title: Erthyglau cysylltiedig
 
     on_page_feedback:
-      positive: 'Do'
-      negative: 'Naddo'
+      positive: "Do"
+      negative: "Naddo"
       prompt: A oedd y canllaw hwn o ddefnydd i chi?
       social_share_heading: Wnewch chi rannu’ch sylwadau?
       user_feedback_heading: Dywedwch wrthym os gwelwch yn dda pam nad oedd y canllaw hwn o gymorth
@@ -446,19 +451,19 @@ cy:
     my_account: Fy nghyfrif
     mandatory_warning: Cwblhewch y meysydd hyn
     links:
-      sign_in_html: "Wedi Cofrestru eisoes? <a href=\"%{url}\">Mewngofnodi</a>."
+      sign_in_html: 'Wedi Cofrestru eisoes? <a href="%{url}">Mewngofnodi</a>.'
     registration:
       meta:
         canonical: https://www.moneyhelper.org.uk/cy/users/sign_up
       title: Cofrestrwch am gyfrif am ddim nawr
-      intro_html: "Eisoes wedi cofrestru? <a href=\"%{url}\">Mewngofnodwch nawr</a>."
+      intro_html: 'Eisoes wedi cofrestru? <a href="%{url}">Mewngofnodwch nawr</a>.'
       subtitle: Yr hyn a gewch
       bullets:
         - "Cadwch eich Cynllunydd Cyllideb neu Reolwr arian a chadwch eich crynodeb o’ch gwariant wrth law"
         - "Help gyda’ch nodau ariannol"
         - "Mynediad hwylus at amryw o offer a chyfrifianellau"
-      terms_html: "Drwy glicio ar y botwm, rydych yn cytuno gyda ein <a href=\"%{url}\">Hamodau a Thelerau</a>."
-      privacy_html: "Gwasanaeth Cynghori Arian <a href=\"%{url}\">Polisi Preifatrwydd</a>."
+      terms_html: 'Drwy glicio ar y botwm, rydych yn cytuno gyda ein <a target="_blank" href="%{url}">Hamodau a Thelerau</a>.'
+      privacy_html: 'HelpiwrArian <a target="_blank" href="%{url}">Polisi Preifatrwydd</a>.'
       label: Arwyddwch fi
       field_help_texts:
         first_name: Rhowch eich enw cyntaf
@@ -473,7 +478,7 @@ cy:
       label: Mewngofnodi
       links:
         register_title: "Does gennych chi ddim cyfrif?"
-        register_html: "Peidiwch â phoeni, gallwch <a href=\"%{url}\">gofrestru yma</a> o hyd."
+        register_html: 'Peidiwch â phoeni, gallwch <a href="%{url}">gofrestru yma</a> o hyd.'
       field_help_texts:
         email: "Rhowch eich e-bost a ddefnyddiwyd wrth gofrestru"
         password: Rhowch eich cyfrinair a ddefnyddiwyd wrth gofrestru
@@ -511,7 +516,7 @@ cy:
         expired_token_tip_steps_html: "Ewch yn ôl i'r dudalen <a href='https://www.moneyhelper.org.uk/cy/users/password'>Anghofio Cyfrinair</a> a theipiwch eich cyfeiriad e-bost unwaith eto fel y gallwn anfon un arall atoch."
     settings:
       title: Golygu fy ngosodiadau
-      secondary_intro_html: "Yn ôl i dudalen <a href=\"%{url}\">fy nghyfrif</a>."
+      secondary_intro_html: 'Yn ôl i dudalen <a href="%{url}">fy nghyfrif</a>.'
       label: Diweddaru
       field_help_texts:
         email: Rhowch gyfeiriad e-bost dilys os hoffech newid yr un cyfredol
@@ -556,15 +561,6 @@ cy:
       intro: Eich nodau ariannol a gwybodaeth a gadwyd.
       change_settings: Newid fy ngosodiadau
       feedback: Gwella'r dudalen hon
-      goal:
-        heading: Traciwr nod
-        introduction: Cynllunio ar gyfer rhywbeth sylweddol neu'n cynilo ar gyfer diwrnod glawog yn unig? Mae'r rhan fwyaf o bobl yn ei chael hi'n haws cyrraedd nod drwy osod terfyn amser.
-        fieldset_legend: Fy nod
-        statement_field_label: Byddaf
-        statement_field_placeholder: Nodwch y nod yma
-        deadline_field_label: erbyn
-        deadline_field_placeholder: Nodwch y dyddiad yma
-        save_button_text: Gosodwch nod
     update:
       save_success_message:
 

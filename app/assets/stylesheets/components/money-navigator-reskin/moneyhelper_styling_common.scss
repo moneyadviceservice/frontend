@@ -1,0 +1,302 @@
+// -- Headers ----------------------------------------------------------------------
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  // font-family: 'Roobert-Bold', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+}
+h1 {
+  // font-size: 48px;
+  // line-height: 54px;
+  color: $blue_primary;
+  @media (max-width: $mobile_width) {
+    // font-size: 38px;
+    // line-height: 46px;
+  }
+}
+h2 {
+  // font-size: 38px;
+  // line-height: 43px;
+  color: $blue_primary;
+  @media (max-width: $mobile_width) {
+    // font-size: 28px;
+    // line-height: 36px;
+  }
+}
+h3 {
+  // font-size: 32px;
+  // line-height: 39px;
+  color: $text_secondary;
+  @media (max-width: $mobile_width) {
+    // font-size: 25px;
+    // line-height: 33px;
+  }
+}
+// -- *Note H4 restricted to footer links - out of scope for reskin tools --
+h5 {
+  // font-size: 22px;
+  // line-height: 28px;
+  color: $text_secondary;
+  @media (max-width: $mobile_width) {
+    // font-size: 20px;
+    // line-height: 25px;
+  }
+}
+h6 {
+  // font-size: 19px;
+  // line-height: 25px;
+  color: $text_secondary;
+}
+// ---------------------------------------------------------------------------------
+
+// -- Paragraphs -------------------------------------------------------------------
+p {
+  // font-family: 'Roobert-Regular', sans-serif!important;
+  font-size: 16px;
+  line-height: 23px;
+  color: $text_secondary;
+  &.callout {
+    background-color: $light_grey;
+    border-radius: $border_radius;
+    padding: 10px;
+  }
+}
+// ---------------------------------------------------------------------------------
+
+// -- Buttons ----------------------------------------------------------------------
+.button {
+  box-sizing: border-box;
+  // font-family: 'Roobert-Regular', sans-serif;
+  &:active,
+  &:focus,
+  &:hover {
+    outline: none !important;
+  }
+  &.button--primary {
+    background: $magenta_primary;
+    color: $white;
+    font-size: 16px;
+    border: 3px solid $magenta_primary;
+    border-radius: $border_radius;
+    box-shadow: 0px 3px 0px rgba(0, 11, 59, 0.25);
+    padding: 8px 16px;
+    &:hover {
+      background: $magenta_dark;
+      border: 3px solid $magenta_dark;
+    }
+    &:focus {
+      background-color: $yellow_secondary;
+      border: 3px solid $support_focus;
+      color: $text_secondary;
+    }
+    &:active {
+      background: $magenta_darker;
+      color: $white;
+      border: 3px solid $yellow_secondary;
+      box-shadow: 0px 3px 0px $white, inset 0px 5px 2px rgba(0, 11, 59, 0.25);
+    }
+  }
+}
+.js {
+  .popup-tip__button {
+    border: 2px solid $blue_primary;
+    font-size: 0;
+    border-radius: 0 0 0 5px;
+    background-color: $white;
+    background-image: $i_svg;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: 3px;
+    vertical-align: top;
+    &:focus {
+      box-shadow: 0 0 8px $yellow_secondary;
+      outline: 0;
+    }
+    @media print {
+      display: none;
+    }
+  }
+  .popup-tip__container {
+    border: 2px solid $blue_primary;
+    .popup-tip__close {
+      border: 2px solid $blue_primary;
+      border-radius: 0;
+      background-image: $close_svg;
+      background-repeat: no-repeat;
+      background-size: 16px;
+      background-position: 50%;
+      width: 32px;
+      height: 32px;
+    }
+  }
+}
+// ---------------------------------------------------------------------------------
+
+// -- Form elements ----------------------------------------------------------------
+label {
+  // font-family: 'Roobert-Bold', sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  color: $text_secondary;
+}
+input[type="text"],
+input[type="number"] {
+  width: 285px;
+  height: 40px;
+  // font-family: 'Roobert-Regular', sans-serif;
+  box-sizing: border-box;
+  background-color: $white;
+  border: 1px solid $input_border;
+  border-radius: $border_radius;
+  padding: 9px 12px 9px 12px;
+  &:focus {
+    border: 1px solid $input_border;
+    border-radius: $border_radius;
+    box-shadow: 0 0 0 4px $yellow_secondary;
+    outline: 0 !important;
+    background-color: $white !important;
+  }
+}
+input[type="radio"] {
+  display: none;
+  + label {
+    padding-left: 40px;
+    display: block;
+    margin-bottom: 20px;
+    position: relative;
+    cursor: pointer;
+    &:before {
+      content: "";
+      border: 1px solid $input_border;
+      border-radius: 50%;
+      display: block;
+      height: 28px;
+      width: 28px;
+      position: absolute;
+      left: 0;
+    }
+  }
+  &:checked {
+    + label {
+      &:after {
+        content: "";
+        display: block;
+        width: 16px;
+        height: 16px;
+        background: $magenta_primary;
+        border-radius: 50%;
+        position: absolute;
+        left: 6px;
+        top: 6px;
+      }
+    }
+  }
+}
+input[type="checkbox"] {
+  display: none;
+  + label {
+    padding-left: 40px;
+    display: block;
+    margin-bottom: 20px;
+    position: relative;
+    cursor: pointer;
+    &:before {
+      content: "";
+      border: 1px solid $input_border;
+      border-radius: 4px;
+      display: block;
+      height: 28px;
+      width: 28px;
+      position: absolute;
+      left: 0;
+    }
+  }
+
+  &:checked {
+    + label {
+      &:after {
+        content: "";
+        display: block;
+        width: 20px;
+        height: 14px;
+        background: $checkbox;
+        background-repeat: no-repeat;
+        position: absolute;
+        left: 4px;
+        top: 6px;
+      }
+    }
+  }
+  &:focus {
+    + label {
+      &:before {
+        box-shadow: 0 0 10px $yellow_secondary;
+      }
+    }
+  }
+}
+select {
+  width: 285px;
+  height: 40px;
+  // font-family: 'Roobert', sans-serif;
+  box-sizing: border-box;
+  background-color: $white;
+  border: 1px solid $input_border;
+  border-radius: $border_radius;
+  background-image: $select_down_svg;
+  background-size: 40px;
+  background-repeat: no-repeat;
+  background-position: 100% -2px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  &::-ms-expand {
+    display: none;
+  }
+  &:focus {
+    border: 1px solid $input_border;
+    border-radius: $border_radius;
+    box-shadow: 0 0 0 4px $yellow_secondary;
+    background-color: $white !important;
+    outline: none;
+    background-image: $select_up_svg;
+    outline: 0 !important;
+  }
+}
+fieldset {
+  legend {
+    // font-family: 'Roobert-Bold', sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+  }
+}
+.form__row.is-errored {
+  border-color: $red_error;
+  label {
+    color: $text_secondary;
+  }
+  input[type="text"],
+  input[type="number"] {
+    border: 2px solid $red_error;
+  }
+  select {
+    border: 2px solid $red_error;
+    color: $text_secondary;
+  }
+  .js-inline-error {
+    p {
+      color: $red_error;
+      font-size: 16px;
+      line-height: 23px;
+    }
+  }
+}
+input[type="range"] {
+  &:focus {
+    border: 0;
+  }
+}
+// ---------------------------------------------------------------------------------

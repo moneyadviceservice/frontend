@@ -53,8 +53,6 @@ class User < ActiveRecord::Base
   validates :contact_number, format: { with: /\A0[1237]\d{9}\z/, if: 'contact_number.present?' }, allow_blank: true
 
   before_save :fake_send_confirmation_email
-  after_create :create_to_crm
-  after_update :update_to_crm
 
   def self.find_first_by_auth_conditions(conditions)
     User.where(conditions.symbolize_keys).first
@@ -101,18 +99,6 @@ class User < ActiveRecord::Base
     compute_email_bidx
     compute_first_name_bidx
     compute_last_name_bidx
-  end
-
-  def create_to_crm
-    Delayed::Job.enqueue(Jobs::CreateCustomer.new(id),
-                         queue: 'frontend_crm')
-  end
-
-  def update_to_crm
-    unless (changed & CRM_FIELDS).empty?
-      Delayed::Job.enqueue(Jobs::UpdateFromCustomer.new(id),
-                           queue: 'frontend_crm')
-    end
   end
 
   def uppercase_post_code

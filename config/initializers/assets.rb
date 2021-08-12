@@ -4,12 +4,13 @@ require 'asset_pipeline/processors/css_lint'
 Rails.application.configure do
 
   config.assets.paths << Rails.root.join('vendor', 'assets', 'bower_components')
+  config.assets.paths << Rails.root.join('app', 'assets', 'fonts')
 
   config.assets.register_postprocessor('application/javascript', AssetPipeline::Processors::JsHint)
   config.assets.register_postprocessor('text/css', AssetPipeline::Processors::CssLint)
 
   # Fonts
-  config.assets.precompile << /\.(?:png|svg|eot|woff|ttf)$/
+  config.assets.precompile << /\.(?:png|svg|eot|woff|woff2|ttf)$/
 
   # Application Stylesheets
   config.assets.precompile += %w(enhanced_fixed.css
@@ -33,6 +34,7 @@ Rails.application.configure do
                                    modules/mas_cookieController.js
                                    modules/mas_pubsub.js
                                    modules/mas_scrollTracking.js
+                                   modules/mas_cookieController.js
                                    components/*.js
                                    styleguide.js
                                    supports.js

@@ -1,0 +1,385 @@
+// -- Money navigator specific styles --------------------------------------
+
+[data-dough-money-navigator-questions-initialised="yes"] {
+  .question__content--q0 {
+    .response__control {
+      &:checked {
+        + .response__text {
+          border: 3px solid $support_focus !important;
+          background-color: $light_grey !important;
+          outline: none;
+        }
+      }
+      &:hover {
+        + .response__text {
+          border-color: $blue_primary !important;
+        }
+      }
+      &:focus {
+      }
+    }
+    .response__text {
+      &:before,
+      &:after {
+        display: none;
+      }
+      span {
+        &:before {
+          background-image: none;
+        }
+      }
+    }
+    label {
+      span {
+        &:before {
+          background-repeat: no-repeat;
+          background-size: 100%;
+        }
+      }
+    }
+    label[for="q0_a1"] span:before {
+      background-image: image_url("maps/map-england.png");
+    }
+    label[for="q0_a2"] span:before {
+      background-image: image_url("maps/map-ni.png");
+    }
+    label[for="q0_a3"] span:before {
+      background-image: image_url("maps/map-scotland.png");
+    }
+    label[for="q0_a4"] span:before {
+      background-image: image_url("maps/map-wales.png");
+    }
+  }
+}
+
+.l-money_navigator__banner {
+  background-color: $light_grey_2;
+}
+
+.l-money_navigator__question {
+  .question__counter {
+    font-size: 18px;
+    line-height: 26px;
+    color: $text_secondary;
+  }
+}
+input[type="radio"],
+input[type="checkbox"] {
+  &:not(#q0_a1):not(#q0_a2):not(#q0_a3):not(#q0_a4):not(#q6_a1):not(#q6_a2):not(#q6_a3):not(#q6_a4):not(#q6_a5):not(#q6_a6):not(#q6_a7):not(#control_1):not(#control_2) {
+    + label {
+      span {
+        display: block;
+        padding: 3px 0 0 15px;
+      }
+    }
+  }
+}
+
+[data-dough-money-navigator-questions-initialised="yes"]
+  [data-question-grouped]
+  .response__control[type="radio"],
+[data-dough-money-navigator-questions-initialised="yes"]
+  [data-question-grouped]
+  .response__control[type="checkbox"] {
+  + label.response__text {
+    background-color: $light_grey_2;
+    &:before,
+    &:after {
+      display: none;
+    }
+  }
+  &:checked {
+    + label.response__text {
+      background-color: $teal_secondary;
+      span {
+        padding: 3px 0 0 0;
+      }
+    }
+  }
+}
+[data-dough-money-navigator-questions-initialised="yes"]
+  .l-money_navigator__question[data-question-multiple] {
+  .button--yes,
+  .button--no {
+    .response__control + .response__text {
+      text-align: center;
+      span {
+        width: 100%;
+      }
+      &:after {
+        background-color: $light_grey_2;
+      }
+    }
+    .response__control:checked + .response__text {
+      &:after {
+        background-color: $teal_secondary;
+      }
+    }
+    .response__control:focus + .response__text {
+      &:before {
+        outline: none;
+      }
+    }
+    .response__control:focus,
+    .response__control:hover {
+      outline: none;
+    }
+  }
+}
+input[type="checkbox"] {
+  &#q7_a10,
+  &#q7_response_yes,
+  &#q8_a10,
+  &#q8_response_yes,
+  &#q9_a12,
+  &#q9_response_yes,
+  &#q12_a5,
+  &#q12_response_yes {
+    + label span {
+      padding: 3px 0 0 0 !important;
+    }
+  }
+}
+#q0_a1,
+#q0_a2,
+#q0_a3,
+#q0_a4 {
+  &:checked {
+    + label {
+      color: $text_secondary;
+    }
+  }
+}
+.sections__sections {
+  .sections__section {
+    border-top: 1px solid $support_hr;
+    margin-bottom: 0;
+    &:last-child {
+      border-bottom: 1px solid $support_hr;
+    }
+    .section__title {
+      border: 0;
+      .section__title__text {
+        font-size: 19px;
+        line-height: 25px;
+        color: $magenta_primary;
+      }
+      .section__title__icon {
+        background-image: $chevronUp_svg !important;
+        transform: rotate(180deg);
+      }
+      .mntreshead {
+        border: 2px solid transparent;
+        padding: 10px 0;
+        &:focus {
+          border: 2px solid $support_focus;
+          border-radius: $border_radius;
+          outline: 0;
+          box-shadow: 0 0 0 4px $yellow_secondary;
+        }
+      }
+      .mntresult {
+        background-color: $light_grey_2;
+      }
+    }
+    &:hover {
+      background-color: $white;
+      .section__title {
+        .section__title__text {
+          text-decoration: underline;
+        }
+      }
+    }
+    .section__subtitle {
+      color: $text_secondary;
+    }
+  }
+}
+.results__actions {
+  .button--print,
+  .button--restart {
+    background-color: $white;
+    border: 1px solid $magenta_primary;
+    box-shadow: 0px 3px 0px rgba(0, 11, 59, 0.25);
+    color: $magenta_primary;
+    &:hover {
+      border-color: $magenta_dark;
+      box-shadow: 0px 1px 0px rgba(0, 11, 59, 0.25);
+    }
+    &:active {
+      background-color: $light_grey_2;
+      border: 3px solid $support_focus;
+      box-shadow: 0px 1px 0px #ffffff, inset 0px 5px 2px rgba(0, 11, 59, 0.25);
+    }
+    &:focus {
+      background-color: $yellow_secondary;
+      border: 3px solid $support_focus;
+      box-shadow: 0px 1px 0px rgba(0, 11, 59, 0.25);
+    }
+  }
+}
+// .action__content{
+.callout--tool {
+  position: relative;
+  h3 {
+    background-color: transparent;
+    text-indent: 5px;
+    margin: 30px 0 0 74px;
+  }
+  p {
+    margin-left: 85px;
+  }
+  &:before {
+    content: "";
+    background-image: $callout_svg;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: -1px;
+    left: 24px;
+    width: 51px;
+    height: 79px;
+    @media (max-width: $mobile_width) {
+      background-image: $callout_mobile_svg;
+      left: 0px;
+      top: 31px;
+    }
+  }
+  .callout__icon {
+    display: none;
+    + p {
+      margin-top: 10px;
+      &:before {
+        display: none;
+      }
+    }
+  }
+  border: 8px solid $yellow_secondary;
+  border-radius: 0 0 0 36px;
+  @media (max-width: $mobile_width) {
+    h3 {
+      margin-left: 44px;
+    }
+    p {
+      margin-left: 55px;
+    }
+  }
+}
+.add-action {
+  padding-left: 20px;
+}
+// }
+
+// --------------------------------------------------------------------------------
+
+// -- Qa Fixes -------------------------------------------------------------------
+// -- UL list ----------------------------------------------------------------------
+
+.list > li,
+article.mntpanel ul > li {
+  font-family: "Roobert-Regular", sans-serif;
+  color: $text_secondary;
+}
+
+.landing__who-help .list > li,
+article.mntpanel ul > li {
+  &:before {
+    color: $text_secondary !important;
+  }
+}
+
+.landing__how-help {
+  .list > li:before {
+    color: $blue_primary;
+  }
+}
+
+// -- Links ----------------------------------------------------------------------
+
+a {
+  color: $magenta_primary;
+  text-decoration: underline;
+  display: inline !important;
+
+  &:active,
+  &:focus,
+  &:hover {
+    text-decoration: none;
+  }
+
+  &:focus {
+    background-color: $yellow_secondary;
+    border-bottom: 4px solid $support_focus !important;
+    text-decoration: none;
+    outline: none !important;
+  }
+}
+
+.crisis-help__cta:before {
+  content: " ";
+  display: block;
+}
+
+// ----------------------------------------------------------------------
+
+.question__heading {
+  font-family: "Roobert-Regular", sans-serif;
+  color: $text_secondary;
+  font-weight: normal;
+}
+
+.question__content--q0 {
+  .response__text {
+    color: $blue_primary !important;
+  }
+}
+
+.question__content {
+  &:focus {
+    outline: none;
+  }
+  label {
+    font-size: 18px;
+    font-family: "Roobert-SemiBold", sans-serif;
+  }
+
+  .content__inner {
+    font-family: "Roobert-SemiBold", sans-serif;
+  }
+}
+
+.button--back {
+  background: white;
+  color: #c82a87;
+  font-size: 16px;
+  border: 1px solid #c82a87;
+  border-radius: 4px;
+  box-shadow: 0px 3px 0px rgba(0, 11, 59, 0.25);
+  padding: 12px 16px;
+  font-weight: 600;
+
+  &:active {
+    font-weight: 600;
+    background: #f3f1f3;
+    color: #000b3b;
+    border: 3px solid #8200d1;
+    box-shadow: 0px 3px 0px white, inset 0px 5px 2px rgba(0, 11, 59, 0.25);
+  }
+}
+
+.action__content p {
+  font-size: 18px;
+
+  .callout--tool {
+    font-size: 16px;
+  }
+}
+
+article.mntpanel {
+  p {
+    font-size: 18px;
+  }
+
+  a.overlay__hide {
+    font-family: "Roobert-Regular", sans-serif;
+  }
+}

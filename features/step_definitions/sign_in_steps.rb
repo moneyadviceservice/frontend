@@ -35,6 +35,10 @@ When(/^I sign out$/) do
   sign_up_page.auth.sign_out.click
 end
 
+When(/^I sign out using Money Helper links$/) do
+  money_manager_page.money_helper_auth.money_helper_sign_out.click
+end
+
 When(/^I sign in elsewhere$/) do
   Capybara.using_session(:other_session) do
     sign_in_page.load(locale: 'en')

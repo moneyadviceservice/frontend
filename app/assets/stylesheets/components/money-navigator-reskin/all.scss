@@ -1,0 +1,12 @@
+// -- Apply these styles only within the following divs --
+.l-money_navigator,
+.l-money_navigator-results,
+.l-money_navigator-landing,
+.l-registration,
+.l-profile,
+.global-alert__content-container {
+  @import "moneyhelper_variables";
+  // @import 'moneyhelper_styling_common';
+  @import "moneyhelper_styling_common_compromise";
+  @import "moneyhelper_styling_money_navigator";
+}

@@ -350,7 +350,7 @@
 		.response__control {
 			&:checked + .response__text {
 				@include respond-to($mq-l) {
-					color: $color-green-secondary !important;
+					/*color: $color-green-secondary !important;*/
 					background: $color-green-pale !important;
 					border: solid 1px $color-green-secondary !important;
 				}

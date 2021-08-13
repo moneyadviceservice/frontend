@@ -6,11 +6,11 @@
   containerClass: "mas-widget-container"
   containerStyles: "width: 100%; margin: 0 auto;"
   linkClass: "mas-widget-logo-link"
-  linkHref: "https://www.moneyadviceservice.org.uk/"
+  linkHref: "https://www.moneyhelper.org.uk/en"
   linkTarget: "_blank"
-  logoSrc: "https://www.moneyadviceservice.org.uk/assets/logo_en.png"
+  logoSrc: "https://www.moneyhelper.org.uk/etc.clientlibs/maps/core/clientlibs/clientlib-base/resources/logos/logo-en-desktop.svg"
   logoStyles: "display: block; margin-bottom: 8px; width: 300px"
-  logoAltText: "Money Advice Service"
+  logoAltText: "MoneyHelper"
 
   toolConfig:
     employer_best_practices:

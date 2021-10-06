@@ -18,7 +18,6 @@ FactoryBot.define do
       q7 { answers_with_entropy('q7', [], nil) }
       q8 { answers_with_entropy('q8', [], nil) }
       q9 { answers_with_entropy('q9', [], []) }
-      q10 { answers_with_entropy('q10', [], nil) }
       q11 { answers_with_entropy('q11', ['a1'], []) }
       q12 { answers_with_entropy('q12', [], nil) }
       q13 { answers_with_entropy('q13', [], nil) }
@@ -35,7 +34,6 @@ FactoryBot.define do
       q7 { answers_with_entropy('q7', [], nil) }
       q8 { answers_with_entropy('q8', [], nil) }
       q9 { answers_with_entropy('q9', [], []) }
-      q10 { answers_with_entropy('q10', [], nil) }
       q11 { answers_with_entropy('q11', ['a1'], []) }
       q12 { answers_with_entropy('q12', [], nil) }
       q13 { answers_with_entropy('q13', [], nil) }
@@ -52,7 +50,6 @@ FactoryBot.define do
       q7 { answers_with_entropy('q7', [], nil) }
       q8 { answers_with_entropy('q8', [], nil) }
       q9 { answers_with_entropy('q9', [], nil) }
-      q10 { answers_with_entropy('q10', [], nil) }
       q11 { answers_with_entropy('q11', ['a1'], []) }
       q12 { answers_with_entropy('q12', [], nil) }
       q13 { answers_with_entropy('q13', [], nil) }
@@ -69,7 +66,6 @@ FactoryBot.define do
       q7 { answers_with_entropy('q7', [], nil) }
       q8 { answers_with_entropy('q8', [], nil) }
       q9 { answers_with_entropy('q9', [], nil) }
-      q10 { answers_with_entropy('q10', [], nil) }
       q11 { answers_with_entropy('q11', ['a1'], []) }
       q12 { answers_with_entropy('q12', [], nil) }
       q13 { answers_with_entropy('q13', [], nil) }

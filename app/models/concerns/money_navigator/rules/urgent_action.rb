@@ -9,7 +9,7 @@ class MoneyNavigator::Rules::UrgentAction
 
         {
           # Get Free debt advice now' Rules
-          # Any of these Q4A1, Q4A2, Q6A4, Q6A5, Q6A6, Q7A1-A9  BUT NOT IF HAVE SELECTED Q10A1 PLUS the regional variation
+          # Any of these Q4A1, Q4A2, Q6A4, Q6A5, Q6A6, Q7A1-A9  BUT NOT IF HAVE SELECTED the regional variation
           heading_code: 'H1',
           content_rules: [
             {

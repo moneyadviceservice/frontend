@@ -15,17 +15,6 @@ RSpec.describe MoneyNavigator::Questions, type: :model do
         end
       end
 
-      # All other debt advice redirected to stepchange england
-      [%w[england wales scotland ni]].each do |region|
-        describe "free debt advice #{region} england redirect" do
-          let(:heading_code) { 'H2' }
-          let(:region) { 'england' }
-          let(:content_prefix) { 'stepchange-debt' }
-
-          include_examples 'nationally valid content for national rule'
-        end
-      end
-
       # self employed debt advice
       [%w[england wales scotland]].each do |region|
         describe "Self employed debt advice #{region}" do

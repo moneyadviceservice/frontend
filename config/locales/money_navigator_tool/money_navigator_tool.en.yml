@@ -97,7 +97,7 @@ en:
         sort_order: 2
         responses:
           - code: A1
-            text: Employed (including furloughed)
+            text: Employed
             sort_order: 1
             default: true
           - code: A2
@@ -158,7 +158,7 @@ en:
             sort_order: 4
       - code: Q5
         type: radio
-        text: Have you used any government financial support?
+        text: Did you receive government financial support?
         sort_order: 6
         responses:
           - code: A1
@@ -325,18 +325,6 @@ en:
           - code: A11
             text: Repayments to family or friends
             sort_order: 12
-      - code: Q10
-        type: radio
-        text: Have you been on a debt solution that has failed in the past 12 months?
-        sort_order: 11
-        responses:
-          - code: A1
-            text: 'No'
-            sort_order: 1
-            default: true
-          - code: A2
-            text: 'Yes'
-            sort_order: 2
       - code: Q11
         type: radio
         text: Will you have to borrow more money to manage essential payments (like rent, food and bills) in the next few months?

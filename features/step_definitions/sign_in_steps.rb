@@ -15,6 +15,15 @@ When(/^I (?:sign|am signed) in$/) do
   sign_in_page.submit.click
 end
 
+When("I sign in with the same email address ALL IN UPPERCASE") do
+  @user = @user || create(:user)
+
+  sign_in_page.load(locale: 'en')
+  sign_in_page.email.set @user.email.upcase
+  sign_in_page.password.set @user.password
+  sign_in_page.submit.click
+end
+
 Then(/^I should receive a "(.*?)" notification$/) do |notification|
   expect(page.html).to include(notification)
 end

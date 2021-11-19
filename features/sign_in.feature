@@ -19,6 +19,10 @@ Feature: Sign in
     Then I should remain signed out
     And  I should receive a "Invalid email or password." validation message
 
+  Scenario: Sign in with email address with different case
+    When I sign in with the same email address ALL IN UPPERCASE
+    Then I should be signed in
+
   Scenario: Sign in elsewhere
     Given I am signed in
     When  I sign in elsewhere

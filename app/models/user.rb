@@ -93,6 +93,13 @@ class User < ActiveRecord::Base
     send(method) if respond_to?(method)
   end
 
+  def self.find_for_authentication(tainted_conditions)
+    if tainted_conditions.key?(:email)
+      tainted_conditions[:email] = tainted_conditions[:email].strip.downcase
+    end
+    find_first_by_auth_conditions(tainted_conditions)
+  end
+
   private
 
   def compute_blind_index

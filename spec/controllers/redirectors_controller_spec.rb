@@ -1,4 +1,4 @@
-RSpec.describe RedirectersController, type: :controller do
+RSpec.describe RedirectorsController, type: :controller do
   describe 'GET en/tools/redirect_to/:tool_name' do
     context 'when tool exists' do
       it 'sets an initial cookie and redirects' do

@@ -1,4 +1,4 @@
-class RedirectersController < ApplicationController
+class RedirectorsController < ApplicationController
   # This controller works around the Safari "No third-party cookies in cross-domain iframes unless that iframe has previously set a cookie outside of an iframe"
   # issue. We redirect from AEM to this controller, which sets a cookie and then redirects back to the tool.
 

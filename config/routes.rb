@@ -124,6 +124,8 @@ Rails.application.routes.draw do
 
     get '/tools/:id', to: 'landing_pages#show', constraints: { id: /annuities/ }
 
+    get '/tools/redirect_to/:tool_name', to: 'redirectors#redirect'
+
     resources :articles, only: 'show' do
       resource :amp, only: [:show], controller: :amp_articles
       resources :page_feedbacks, only: [:create]

@@ -15,10 +15,9 @@ RSpec.describe RedirectorsController, type: :controller do
 
     context 'when tool does not exists' do
       it 'raises a 404, but still sets the cookie for efficiency' do
-        expect {
-          get :redirect,
-              { locale: 'en', tool_name: 'something-completely-wrong' }
-        }.to raise_error(ActionController::RoutingError)
+          get :redirect, { locale: 'en', tool_name: 'something-completely-wrong' }
+
+          expect(response.body).to include("Couldn't find tool named something-completely-wrong")
       end
     end
   end

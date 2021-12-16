@@ -13,8 +13,7 @@ class RedirectorsController < ApplicationController
     if tool_url.present?
       redirect_to tool_url
     else
-      Rails.logger.error("Couldn't find redirect path with params #{params.to_json}")
-      not_found
+      render text: "Couldn't find tool named #{params[:tool_name]}"
     end
   end
 

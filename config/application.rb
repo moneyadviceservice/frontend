@@ -25,6 +25,9 @@ module Frontend
 
     config.crazy_egg_url         = '//dnn506yrbagrg.cloudfront.net/pages/scripts/0018/4438.js'
     config.google_tag_manager_id = 'GTM-WVFLH9'
+    config.action_dispatch.default_headers = {
+      'Referrer-Policy' => 'no-referrer-when-downgrade'
+    }
 
     config.time_zone = 'Europe/London'
     config.chat_opening_hours = OpeningHours.new('8:00 AM', '6:00 PM')

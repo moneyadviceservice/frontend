@@ -88,6 +88,7 @@ Rails.application.configure do
   config.session_store :active_record_store
 
   config.action_mailer.default_url_options = {:host => "#{ENV['MAS_ENVIRONMENT'] == 'qa' ? 'qa.test.' : 'partner-tools.'}moneyhelper.org.uk"}
+  config.action_mailer.asset_host = ENV['FRONTEND_ASSET_HOST_URL']
 
   # Custom configuration options for feedback settings
   config.feedback_delivery_method = :sendmail

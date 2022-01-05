@@ -79,7 +79,7 @@
               <br clear="all">
               <br clear="all">
               <%= link_to root_url(locale: I18n.locale), style: 'text-decoration: none;'  do %>
-                <img src="<%= asset_url("emails/moneyhelper_#{I18n.locale}.png") %>" alt="MoneyHelper Logo" border="0" class="col-3-img" hspace="0" id="logo" vspace="0" width="200" style="vertical-align:top; padding-bottom: 12px;">
+                <%= image_tag("emails/moneyhelper_#{I18n.locale}.png", alt: 'MoneyHelper logo', border: 0, class: 'col-3-img', hspace: 0, id: 'logo', style: 'vertical-align:top; padding-bottom:12px;', vspace: 0, width: 200  ) %>
               <% end %>
               <br clear="all">
               <br clear="all">

@@ -43,6 +43,10 @@ Then(/^I should see an "(.*?)" notification$/) do |notification|
   expect(page).to have_content(notification)
 end
 
+Then(/^I should be redirected to the home page$/) do
+  expect(page.current_url).to include('moneyhelper.org.uk')
+end
+
 Then(/^I should be at the page I was on$/) do
   expect(page.current_path).to eql('/en/articles/why-it-pays-to-save-regularly')
 end

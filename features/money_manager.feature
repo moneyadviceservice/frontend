@@ -9,7 +9,7 @@ Scenario: Signed out after completing questionnaire
   When  I complete the series of questions
   And   I get my results
   And   I sign out using Money Helper links
-  Then  I should not see any hint of my details when I re-visit the tool
+  Then  I should be redirected to the home page
 
 Scenario: Signing in after completing questionnaire saves answers
   Given I am on the Money Manager tool

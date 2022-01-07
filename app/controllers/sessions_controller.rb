@@ -31,7 +31,7 @@ class SessionsController < Devise::SessionsController
   end
 
   def after_sign_out_path_for(*)
-    last_known_path_or_root_path
+    ENV.fetch('MONEY_HELPER_URL')
   end
 
   def last_known_path_or_root_path

@@ -36,7 +36,7 @@ Then(/^I should (?:be|remain) signed out$/) do
 end
 
 Then(/^I should be at the home page$/) do
-  expect(page.current_path).to eql('/en')
+  expect(page.current_path).to eql('/en/users/profile/edit')
 end
 
 Then(/^I should see an "(.*?)" notification$/) do |notification|

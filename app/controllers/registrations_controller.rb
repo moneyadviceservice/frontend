@@ -29,7 +29,7 @@ class RegistrationsController < Devise::RegistrationsController
   private
 
   def after_sign_up_path_for(*)
-    session[:user_return_to] || root_path
+    session[:user_return_to] || edit_profile_path
   end
 
   def configure_permitted_parameters

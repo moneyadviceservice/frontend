@@ -35,6 +35,8 @@ class SessionsController < Devise::SessionsController
   end
 
   def last_known_path_or_root_path
-    session[:user_return_to] || root_path
+    (session[:user_return_to] || root_path).tap do |path|
+      logger.info("Returning to: #{path}")
+    end
   end
 end

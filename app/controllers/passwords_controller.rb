@@ -4,7 +4,9 @@ class PasswordsController < Devise::PasswordsController
   private
 
   def after_resetting_password_path_for(*)
-    session[:user_return_to] || root_path
+    (session[:user_return_to] || root_path).tap do |path|
+      logger.info("Returning to: #{path}")
+    end
   end
 
   def set_flash_message(key, kind, options = {})

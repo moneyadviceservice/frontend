@@ -88,8 +88,17 @@ Rails.application.configure do
   config.session_store :active_record_store
 
   config.action_mailer.default_url_options = {
-    host: "#{ENV['MAS_ENVIRONMENT'] == 'qa' ? 'qa.test.' : 'partner-tools.'}moneyhelper.org.uk",
-    protocol: 'https'
+    protocol: 'https',
+    host: case ENV['MAS_ENVIRONMENT']
+          when 'production'
+            'partner-tools'
+          when 'uat'
+            'uat-partner-tools'
+          when 'staging'
+            'staging-partner-tools'
+          else
+            'qa.test'
+          end + '.moneyhelper.org.uk'
   }
 
   config.action_mailer.asset_host = ENV['FRONTEND_ASSET_HOST_URL']

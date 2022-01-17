@@ -100,7 +100,7 @@ gem 'rio', git: 'git@github.com:moneyadviceservice/rio.git', branch: 'feature/nt
 gem 'savings_calculator', '~> 2.0.1'
 gem 'timelines', '~> 2.0.0'
 gem 'universal_credit', '~> 5.1.0'
-gem 'wpcc', '~> 3.0.1'
+gem 'wpcc', '~> 3.1.0'
 
 group :assets do
   gem 'autoprefixer-rails'

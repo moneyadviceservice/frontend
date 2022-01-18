@@ -53,6 +53,7 @@ gem 'newrelic_rpm'
 gem 'nokogiri', '>= 1.10.3'
 gem 'nunes'
 gem 'opening_hours'
+gem 'rollbar'
 # gem 'postcode_anywhere-email_validation', '~> 0.2.0'
 gem 'postcode_anywhere-email_validation', :source => 'http://gems.dev.mas.local/'
 gem 'psych', '>= 2.0.5' # https://www.ruby-lang.org/en/news/2014/03/29/heap-overflow-in-yaml-uri-escape-parsing-cve-2014-2525/

@@ -1,4 +1,4 @@
-jollbar.configure do |config|
+Rollbar.configure do |config|
   # Without configuration, Rollbar is enabled in all environments.
   # To disable in specific environments, set config.enabled=false.
 

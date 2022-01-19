@@ -17,11 +17,15 @@ class PasswordsController < Devise::PasswordsController
         set_flash_message!(:notice, flash_message)
         resource.after_database_authentication
         sign_in(resource_name, resource)
+        logger.info('Password reset and signed in')
       else
         set_flash_message!(:notice, :updated_not_active)
+        logger.info('Password reset failed')
       end
+      logger.info("Redirecting after password reset: #{after_resetting_password_url}")
       redirect_to after_resetting_password_url, status: :see_other
     else
+      logger.info('Password reset failed with validation issues')
       set_minimum_password_length
       respond_with resource
     end

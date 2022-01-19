@@ -154,8 +154,6 @@ GEM
       rails (>= 4, < 5)
       sass-rails
       spreadsheet
-    bugsnag (6.7.0)
-      concurrent-ruby (~> 1.0)
     builder (3.2.4)
     byebug (10.0.2)
     capybara (2.18.0)
@@ -840,7 +838,6 @@ DEPENDENCIES
   blind_index (= 0.2.0)
   bowndler (~> 1.0)
   budget_planner (~> 6.0.0)
-  bugsnag
   byebug
   capybara
   car_cost_tool (~> 2.0.1)

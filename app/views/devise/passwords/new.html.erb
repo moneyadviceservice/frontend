@@ -8,7 +8,7 @@
   <p><%= t("authentication.reset_password_page.instructions") %></p>
 
   <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post, class: 'form' }) do |f| %>
-    <%= devise_error_messages! %>
+    <%= render "devise/shared/error_messages", resource: resource %>
 
     <div class="registration__row">
       <div class="registration__field">

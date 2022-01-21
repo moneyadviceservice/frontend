@@ -33,5 +33,5 @@ Feature: Sign in
     And   I am on an article that lives in a single category
     When  I sign out
     Then  I should be signed out
-    And   I should be at the page I was on
+    And   I should be at the sign in page
     And   I should receive a "Signed out successfully." notification

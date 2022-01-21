@@ -2,6 +2,10 @@ When(/^I attempt to sign in$/) do
   sign_in_page.load(locale: 'en')
 end
 
+Then(/^I should be at the sign in page$/) do
+  expect(sign_in_page).to be_loaded
+end
+
 Then(/^I am told that the functionality is not implemented$/) do
   expect(status_code).to eql(501)
 end

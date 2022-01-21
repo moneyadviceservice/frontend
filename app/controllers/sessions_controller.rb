@@ -31,6 +31,6 @@ class SessionsController < Devise::SessionsController
   end
 
   def after_sign_out_path_for(resource_name)
-    session[:user_return_to] || new_session_path(resource_name)
+    new_session_path(resource_name)
   end
 end

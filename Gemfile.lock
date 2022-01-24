@@ -146,7 +146,7 @@ GEM
     bowndler (1.0.2)
       thor
     bson (4.12.1)
-    budget_planner (6.0.0)
+    budget_planner (6.0.1)
       i18n-js (= 3.0.0.mas)
       js-routes (= 1.1.2)
       mas-mailer (~> 0.3)
@@ -291,10 +291,10 @@ GEM
       rails (>= 4, < 5)
       sass-rails (~> 4.0.5)
       sprockets-rails (~> 2.3.3)
-    delayed_job (4.1.5)
-      activesupport (>= 3.0, < 5.3)
-    delayed_job_active_record (4.1.3)
-      activerecord (>= 3.0, < 5.3)
+    delayed_job (4.1.10)
+      activesupport (>= 3.0, < 8.0)
+    delayed_job_active_record (4.1.7)
+      activerecord (>= 3.0, < 8.0)
       delayed_job (>= 3.0, < 5)
     devise (4.7.3)
       bcrypt (~> 3.0)
@@ -839,7 +839,7 @@ DEPENDENCIES
   binding_of_caller
   blind_index (= 0.2.0)
   bowndler (~> 1.0)
-  budget_planner (~> 6.0.0)
+  budget_planner (~> 6.0.1)
   byebug
   capybara
   car_cost_tool (~> 2.0.2)

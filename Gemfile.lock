@@ -163,7 +163,7 @@ GEM
       rack (>= 1.0.0)
       rack-test (>= 0.5.4)
       xpath (>= 2.0, < 4.0)
-    car_cost_tool (2.0.1)
+    car_cost_tool (2.0.2)
       dough-ruby (~> 5.36)
       nokogiri
       rails (>= 4, < 5)
@@ -306,7 +306,7 @@ GEM
       devise (>= 2.1.0)
     diff-lcs (1.4.4)
     docile (1.3.0)
-    domain_name (0.5.20180417)
+    domain_name (0.5.20190701)
       unf (>= 0.0.5, < 1.0.0)
     dotenv (2.2.1)
     dotenv-rails (2.2.1)
@@ -412,7 +412,8 @@ GEM
       ruby_parser (~> 3.5)
     html_validation (1.1.5)
     htmlentities (4.3.4)
-    http-cookie (1.0.3)
+    http-accept (1.7.0)
+    http-cookie (1.0.4)
       domain_name (~> 0.5)
     httpclient (2.8.3)
     i18n (0.9.5)
@@ -481,9 +482,9 @@ GEM
     meta-tags (2.14.0)
       actionpack (>= 3.2.0, < 6.2)
     method_source (0.9.0)
-    mime-types (3.2.2)
+    mime-types (3.4.1)
       mime-types-data (~> 3.2015)
-    mime-types-data (3.2019.0331)
+    mime-types-data (3.2022.0105)
     mini_mime (1.1.2)
     mini_portile2 (2.6.1)
     minitest (5.15.0)
@@ -634,7 +635,8 @@ GEM
     responders (2.4.1)
       actionpack (>= 4.2.0, < 6.0)
       railties (>= 4.2.0, < 6.0)
-    rest-client (2.0.2)
+    rest-client (2.1.0)
+      http-accept (>= 1.7.0, < 2.0)
       http-cookie (>= 1.0.2, < 2.0)
       mime-types (>= 1.16, < 4.0)
       netrc (~> 0.8)
@@ -768,7 +770,7 @@ GEM
     underscore-rails (1.8.3)
     unf (0.1.4)
       unf_ext
-    unf_ext (0.0.7.6)
+    unf_ext (0.0.8)
     unicode-display_width (1.3.0)
     unicorn (5.4.0)
       kgio (~> 2.6)
@@ -840,7 +842,7 @@ DEPENDENCIES
   budget_planner (~> 6.0.0)
   byebug
   capybara
-  car_cost_tool (~> 2.0.1)
+  car_cost_tool (~> 2.0.2)
   chai-jquery-rails
   chronic
   codeclimate-test-reporter (= 0.6.0)

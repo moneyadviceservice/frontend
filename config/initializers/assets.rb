@@ -32,6 +32,7 @@ Rails.application.configure do
                                    modules/log.js
                                    modules/mas_collapsable.js
                                    modules/mas_cookieController.js
+                                   modules/IE11ImageLabelFix.js
                                    modules/mas_pubsub.js
                                    modules/mas_scrollTracking.js
                                    modules/mas_cookieController.js

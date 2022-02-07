@@ -25,6 +25,7 @@ require.config({
     common: 'app/assets/javascripts/modules/common',
     log: 'app/assets/javascripts/modules/log',
     i18n: 'app/assets/javascripts/modules/i18n',
+    IE11ImageLabelFix: 'app/assets/javascripts/modules/IE11ImageLabelFix',
 
     pubsub: 'app/assets/javascripts/modules/mas_pubsub',
     scrollTracking: 'app/assets/javascripts/modules/mas_scrollTracking',

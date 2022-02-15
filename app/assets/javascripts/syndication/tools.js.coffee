@@ -192,6 +192,7 @@
         path: "en/tools/house-buying/stamp-duty-calculator"
       cy:
         path: "cy/tools/prynu-ty/cyfrifiannell-treth-stamp"
+      include_ga: true
       title: "Stamp duty calculator"
 
     mortgage_affordability_calculator:

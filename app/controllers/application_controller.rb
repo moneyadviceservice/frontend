@@ -209,6 +209,9 @@ class ApplicationController < ActionController::Base
   end
 
   def set_headers
+
+
+    
     response.headers['Access-Control-Allow-Origin'] = '*'
     response.headers['Access-Control-Request-Method'] = %w{GET PUT POST OPTIONS}.join(",")
   end

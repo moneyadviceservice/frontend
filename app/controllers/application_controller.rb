@@ -7,6 +7,7 @@ class ApplicationController < ActionController::Base
 
   layout :check_syndicated_layout
 
+  after_action :set_headers
   before_action :set_syndicated_x_frame
 
   include Authentication
@@ -205,5 +206,10 @@ class ApplicationController < ActionController::Base
 
   def redirect_page(e)
     redirect_to e.location, status: e.http_response.status
+  end
+
+  def set_headers
+    response.headers['Access-Control-Allow-Origin'] = '*'
+    response.headers['Access-Control-Request-Method'] = %w{GET PUT POST OPTIONS}.join(",")
   end
 end

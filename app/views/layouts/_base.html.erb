@@ -206,7 +206,7 @@
 <!--<![endif]-->
 
 <%# START Google Tag Manager embed code %>
-<% if Rails.env.production? %>
+<% if Rails.env.production? && ENV['DISABLE_GOOGLE_TAG_MANAGER'].blank? %>
   <noscript>
     <iframe src="//www.googletagmanager.com/ns.html?id=<%= Rails.application.config.google_tag_manager_id %>"
     height="0" width="0" style="display:none;visibility:hidden"

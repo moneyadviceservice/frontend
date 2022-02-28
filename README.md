@@ -4,7 +4,6 @@
 
 The Money Advice Service's responsive website.
 
-
 ## Prerequisites
 
 * [Git]

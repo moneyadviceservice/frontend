@@ -97,7 +97,7 @@ gem 'payday_loans_intervention', '~> 1.9.0'
 gem 'pensions_calculator', git: 'git@github.com:moneyadviceservice/pensions_calculator', branch: 'year-end-updates'
 gem 'quiz', '~> 1.4.0', source: 'http://gems.dev.mas.local'
 gem 'savings_calculator', '~> 2.0.1'
-gem 'timelines', '~> 2.0.0'
+gem 'timelines', git: 'git@github.com:moneyadviceservice/timelines.git', branch: 'year-end-link-updates'
 gem 'universal_credit', '~> 5.1.0'
 gem 'wpcc', '~> 3.1.0'
 

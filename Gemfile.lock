@@ -52,6 +52,19 @@ GIT
       rails (>= 4, < 5)
 
 GIT
+  remote: git@github.com:moneyadviceservice/timelines.git
+  revision: fdc7dfba8be5322db07a1f8453e932f2a95185f7
+  branch: year-end-link-updates
+  specs:
+    timelines (2.1.0)
+      bowndler
+      icalendar
+      jquery-rails
+      mas-templating
+      rails (>= 4, < 5)
+      sass-rails
+
+GIT
   remote: https://github.com/rails-lts/rack.git
   revision: de472597cac8f3f222e7b6e90a07c2b991704b01
   branch: lts-1-6-stable
@@ -437,7 +450,7 @@ GEM
       i18n
     icalendar (2.7.1)
       ice_cube (~> 0.16)
-    ice_cube (0.16.3)
+    ice_cube (0.16.4)
     ice_nine (0.11.2)
     interception (0.5)
     jbuilder (2.9.1)
@@ -755,13 +768,6 @@ GEM
     tidy-html5 (0.1.2)
     tilt (1.4.1)
     timecop (0.9.1)
-    timelines (2.0.0)
-      bowndler
-      icalendar
-      jquery-rails
-      mas-templating
-      rails (>= 4, < 5)
-      sass-rails
     transitions (0.1.13)
     turnout (2.4.1)
       i18n (~> 0.7)
@@ -933,7 +939,7 @@ DEPENDENCIES
   syslog-logger
   tidy-html5
   timecop
-  timelines (~> 2.0.0)
+  timelines!
   turnout
   uglifier
   unicorn-rails

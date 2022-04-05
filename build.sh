@@ -26,6 +26,10 @@ echo "Configuring credentials for Rails LTS"
 echo "----"
 bundle config gems.railslts.com RAILS_LTS_USERNAME:RAILS_LTS_PASSWORD
 
+echo "Configuring ruby platform for nokogiri"
+echo "----"
+bundle config force_ruby_platform true
+
 echo "Running Bundle package"
 echo "----"
 time bundle package --all

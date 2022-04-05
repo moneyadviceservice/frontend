@@ -1,7 +1,7 @@
 module BudgetWarning
   ANNOUNCEMENT_DAY   = 6
   ANNOUNCEMENT_MONTH = 4
-  ANNOUNCEMENT_YEAR  = 2018
+  ANNOUNCEMENT_YEAR  = 2022
   WHITELIST = YAML.load_file('config/budget_warning_tools.yml')
 
   class Announcement

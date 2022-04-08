@@ -217,6 +217,12 @@
 
 <a id="top"></a>
 
+<% if display_banner_warning? %>
+  <div class="l-constrained">
+    <%=  render 'shared/banner_alert' %>
+  </div>
+<% end %>
+
 <%= yield %>
 
 <% if Rails.env.development? %>

@@ -26,6 +26,10 @@ echo "Configuring credentials for Rails LTS"
 echo "----"
 bundle config gems.railslts.com RAILS_LTS_USERNAME:RAILS_LTS_PASSWORD
 
+echo "Configuring nokogiri"
+echo "----"
+bundle config build.nokogiri --use-system-libraries
+
 echo "Running Bundle package"
 echo "----"
 time bundle package --all

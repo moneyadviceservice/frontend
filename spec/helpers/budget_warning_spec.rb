@@ -11,13 +11,13 @@ RSpec.describe BudgetWarning, type: :helper do
 
   context '#on announcement day' do
     it_behaves_like 'displays_warning_banner' do
-      let(:date) { '6th April 2018' }
+      let(:date) { '6th April 2022' }
     end
   end
 
   context '#after announcement day' do
     it_behaves_like 'displays_warning_banner' do
-      let(:date) { '24th April 2018' }
+      let(:date) { '24th April 2022' }
     end
   end
 

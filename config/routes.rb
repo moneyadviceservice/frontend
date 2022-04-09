@@ -100,9 +100,6 @@ Rails.application.routes.draw do
     mount Quiz::Engine => '/tools/:tool_id',
       constraints: ToolMountPoint.for(:quiz)
 
-    mount Rio::Engine => '/:engine_id',
-          constraints: EngineMountPoint.for(:rio)
-
     mount UniversalCredit::Engine => '/tools/:tool_id',
           constraints: ToolMountPoint.for(:universal_credit)
 

@@ -78,7 +78,7 @@ gem 'dough-ruby', git: 'git@github.com:moneyadviceservice/dough.git', branch: 'P
 gem 'mas-cms-client', '1.20.1'
 gem 'site_search', '0.3.0'
 # Tools
-gem 'action_plans', '~> 6.0.1'
+gem 'action_plans', git: 'git@github.com:moneyadviceservice/action_plans.git', branch: 'year-end-updates'
 gem 'advice_plans', '~> 4.1.1'
 gem 'agreements', '~> 2.5.0'
 gem 'budget_planner', '~> 6.0.0'

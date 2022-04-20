@@ -61,7 +61,7 @@ GIT
 
 GIT
   remote: git@github.com:moneyadviceservice/mortgage_calculator.git
-  revision: 8ca63d35c5183d882bd59895ea85fa0d9a6a5833
+  revision: 7b5561519d1773a97e96a8d59482f1fdadc7996b
   branch: year-end-updates
   specs:
     mortgage_calculator (4.1.0)
@@ -246,7 +246,7 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.12.2)
-    concurrent-ruby (1.1.9)
+    concurrent-ruby (1.1.10)
     cost_calculator_builder (2.0.0)
       bowndler
       dough-ruby (~> 5.36)
@@ -500,7 +500,7 @@ GEM
     letter_opener (1.6.0)
       launchy (~> 2.2)
     link_header (0.0.8)
-    loofah (2.14.0)
+    loofah (2.16.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
     mail (2.7.1)

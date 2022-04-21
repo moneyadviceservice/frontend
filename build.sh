@@ -34,10 +34,6 @@ echo "Running Bundle package"
 echo "----"
 time bundle package --all
 
-echo "Purging bower components"
-echo "----"
-[ -d vendor/assets/bower_components ] && rm -r vendor/assets/bower_components
-
 echo "Running Bower update (via bowndler)"
 echo "----"
 time bowndler update --production --config.interactive=false

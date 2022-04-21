@@ -19,8 +19,6 @@ rm -rf vendor/cache .bundle/config
 bundle config force_ruby_platform true
 bundle install --jobs $BUNDLE_JOBS
 rm -rf vendor/assets/bower_components
-
-
 bowndler update --production --config.interactive=false
 
 npm install -q

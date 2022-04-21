@@ -18,7 +18,6 @@ rm -rf vendor/cache .bundle/config
 # due to glibc being lesser than the required for nokogiri pre-build extensions
 bundle config build.nokogiri --use-system-libraries
 bundle install --jobs $BUNDLE_JOBS
-bower cache clean
 rm -rf vendor/assets/bower_components
 bowndler update --production --config.interactive=false
 

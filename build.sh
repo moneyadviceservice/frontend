@@ -30,10 +30,6 @@ echo "Running Bundle package"
 echo "----"
 time bundle package --all
 
-echo "Running Bower cache clean"
-echo "----"
-time bower cache clean
-
 echo "Purging bower components"
 echo "----"
 [ -d vendor/assets/bower_components ] && rm -r vendor/assets/bower_components

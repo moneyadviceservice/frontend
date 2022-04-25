@@ -27,6 +27,7 @@ if [[ ! -f "./phantomjs" ]]; then
   ./bootstrap-phantomjs
 fi
 alias phantomjs=./phantomjs
+
 ./node_modules/karma/bin/karma start spec/javascripts/karma.conf.js
 
 bundle exec rspec spec --format html --out tmp/spec.html --format RspecJunitFormatter --profile --format progress --deprecation-out log/rspec_deprecations.txt

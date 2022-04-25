@@ -10,3 +10,4 @@ rm -rf phantomjs-2.1.1-linux-x86_64
 rm -rf phantomjs.tar.bz2
 alias phantomjs=./phantomjs
 phantomjs --version
+which -a phantomjs

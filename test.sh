@@ -23,6 +23,8 @@ bowndler update --production --config.interactive=false
 
 npm install -q
 
+./bootstrap-phantomjs
+alias phantomjs=phantomjs-2.1.1-linux-x86_64/bin/phantomjs
 ./node_modules/karma/bin/karma start spec/javascripts/karma.conf.js
 
 bundle exec rspec spec --format html --out tmp/spec.html --format RspecJunitFormatter --profile --format progress --deprecation-out log/rspec_deprecations.txt

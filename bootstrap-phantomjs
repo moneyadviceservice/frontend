@@ -1,0 +1,8 @@
+#!/bin/bash
+set -euo pipefail
+IFS=$'\n\t'
+
+export PHANTOMJS_VERSION="2.1.1"
+wget "https://github.com/Medium/phantomjs/releases/download/v$PHANTOMJS_VERSION/phantomjs-$PHANTOMJS_VERSION-linux-x86_64.tar.bz2" -O phantomjs.tar.bz2
+tar -xvf phantomjs.tar.bz2
+phantomjs --version

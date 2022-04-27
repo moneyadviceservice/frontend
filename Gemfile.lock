@@ -76,18 +76,26 @@ GIT
 
 GIT
   remote: git@github.com:moneyadviceservice/pensions_calculator
-  revision: f2c8254f2dcd32f83f0bd2a19dcb92056fa9e98c
+  revision: 825e336666187e85e103fe9c6f44629641410d1b
   branch: year-end-updates
   specs:
     pensions_calculator (3.1.0)
       autoprefixer-rails
       dough-ruby (~> 5.36)
       meta-tags
-      pensions_calculator-calculations (~> 3.0.3)
+      pensions_calculator-calculations (~> 3.1.0)
       rails (>= 4, < 5)
       responders
       sass-rails
       uglifier
+
+GIT
+  remote: git@github.com:moneyadviceservice/pensions_calculator-calculations
+  revision: e95ec1f941bde7b3ab9ada2e8a65dc2945b717d6
+  branch: updated-rates
+  specs:
+    pensions_calculator-calculations (3.1.0)
+      activesupport
 
 GIT
   remote: git@github.com:moneyadviceservice/timelines.git
@@ -522,8 +530,8 @@ GEM
       delayed_job_active_record
       hashie
     mas-templating (1.0.0.18)
-    meta-tags (2.14.0)
-      actionpack (>= 3.2.0, < 6.2)
+    meta-tags (2.16.0)
+      actionpack (>= 3.2.0, < 7.1)
     method_source (0.9.0)
     mime-types (3.4.1)
       mime-types-data (~> 3.2015)
@@ -577,8 +585,6 @@ GEM
       modernizr-rails
       rails (>= 4, < 5)
       sass-rails
-    pensions_calculator-calculations (3.0.3)
-      activesupport
     poltergeist (1.17.0)
       capybara (~> 2.1)
       cliver (~> 0.3.1)
@@ -905,6 +911,7 @@ DEPENDENCIES
   pacs (~> 4.0.2)
   payday_loans_intervention (~> 1.9.0)
   pensions_calculator!
+  pensions_calculator-calculations!
   poltergeist
   postcode_anywhere-email_validation!
   pry-byebug

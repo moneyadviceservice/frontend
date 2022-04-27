@@ -95,6 +95,7 @@ gem 'mortgage_calculator', git: 'git@github.com:moneyadviceservice/mortgage_calc
 gem 'pacs', '~> 4.0.2'
 gem 'payday_loans_intervention', '~> 1.9.0'
 gem 'pensions_calculator', git: 'git@github.com:moneyadviceservice/pensions_calculator', branch: 'year-end-updates'
+gem 'pensions_calculator-calculations', git: 'git@github.com:moneyadviceservice/pensions_calculator-calculations', branch: 'updated-rates'
 gem 'quiz', '~> 1.4.0', source: 'http://gems.dev.mas.local'
 gem 'savings_calculator', '~> 2.0.1'
 gem 'timelines', git: 'git@github.com:moneyadviceservice/timelines.git', branch: 'year-end-link-updates'

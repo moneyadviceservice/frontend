@@ -23,13 +23,9 @@ bowndler update --production --config.interactive=false
 
 npm install -q
 
-./node_modules/karma/bin/karma start spec/javascripts/karma.conf.js 2> /dev/null
-if [ $? -eq 0 ]
-then
-    echo "Karma tests passed!"
-else
-    echo "Karma tests couldn't run, probably phantomjs being stupid" >&2
-fi
+for i in 1 2 3 4 5; do
+  ./node_modules/karma/bin/karma start spec/javascripts/karma.conf.js && break
+done
 
 bundle exec rspec spec --format html --out tmp/spec.html --format RspecJunitFormatter --profile --format progress --deprecation-out log/rspec_deprecations.txt
 bundle exec cucumber

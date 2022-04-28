@@ -6,10 +6,10 @@ GIT
 
 GIT
   remote: git@github.com:moneyadviceservice/action_plans.git
-  revision: 02f8f7b4f3d2daeb2ad4d54e4f09acaae6a150dc
+  revision: 75ee78a300b6eac4ff2e189977ef533ecedda3d8
   branch: year-end-updates
   specs:
-    action_plans (6.2.0)
+    action_plans (6.3.0)
       autoprefixer-rails
       dough-ruby (~> 5.0)
       draper
@@ -508,7 +508,7 @@ GEM
     letter_opener (1.6.0)
       launchy (~> 2.2)
     link_header (0.0.8)
-    loofah (2.16.0)
+    loofah (2.17.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
     mail (2.7.1)

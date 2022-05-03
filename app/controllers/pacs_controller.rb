@@ -1,4 +1,8 @@
 class PacsController < EmbeddedToolsController
+  def canonical
+    "https://www.moneyhelper.org.uk/#{locale}/everyday-money/banking/compare-bank-account-fees-and-charges"
+  end
+
   def exclude_syndicated_iframe_resizer?
     true
   end

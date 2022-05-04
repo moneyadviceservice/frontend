@@ -1,4 +1,8 @@
-<% set_meta_tags(alternate: alternate_options, canonical: canonical) %>
+<% if canonical.present? %>
+  <% set_meta_tags(alternate: alternate_options, canonical: canonical) %>
+<% else %>
+  <% set_meta_tags(alternate: alternate_options) %>
+<% end %>
 
 <%= render layout: 'layouts/base' do %>
 

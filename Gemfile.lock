@@ -48,7 +48,7 @@ GEM
   remote: https://gems.railslts.com/
   remote: http://gems.dev.mas.local/
   specs:
-    action_plans (6.0.1)
+    action_plans (6.1.0)
       autoprefixer-rails
       dough-ruby (~> 5.0)
       draper
@@ -626,7 +626,7 @@ GEM
     recaptcha (4.14.0)
       json
     redcarpet (3.2.3)
-    request_store (1.4.1)
+    request_store (1.5.1)
       rack (>= 1.4)
     responders (2.4.1)
       actionpack (>= 4.2.0, < 6.0)
@@ -815,7 +815,7 @@ PLATFORMS
   x86_64-darwin-20
 
 DEPENDENCIES
-  action_plans (~> 6.0.1)
+  action_plans (~> 6.1.0)
   actionmailer!
   actionpack!
   actionview!

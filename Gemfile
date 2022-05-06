@@ -98,7 +98,7 @@ gem 'pensions_calculator', '~> 3.0.0'
 gem 'quiz', '~> 1.4.0', source: 'http://gems.dev.mas.local'
 gem 'rio', git: 'git@github.com:moneyadviceservice/rio.git', branch: 'feature/ntt_moneyhelper_reskin', ref: 'cbc00d8'
 gem 'savings_calculator', '~> 2.0.1'
-gem 'timelines', '~> 2.0.0'
+gem 'timelines', '~> 2.1.0'
 gem 'universal_credit', '~> 5.1.0'
 gem 'wpcc', '~> 3.1.0'
 

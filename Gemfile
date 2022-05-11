@@ -85,7 +85,7 @@ gem 'budget_planner', '~> 6.0.0'
 gem 'car_cost_tool', '~> 2.0.2'
 gem 'cost_calculator_builder', '~> 2.0.0'
 gem 'cutback_calculator', '~> 0.13.0'
-gem 'debt_advice_locator', '~> 4.1.1'
+gem 'debt_advice_locator', git: "git@github.com:moneyadviceservice/debt-advice-locator", branch: "change-canonical"
 gem 'debt_and_mental_health', '~> 1.6.0'
 gem 'debt_free_day_calculator', '~> 4.0.0'
 gem 'debt_test', '~> 1.9.0'
@@ -94,12 +94,12 @@ gem 'feedback', '~> 0.5.1'
 gem 'mortgage_calculator', '~> 4.1.0'
 gem 'pacs', '~> 4.0.2'
 gem 'payday_loans_intervention', '~> 1.9.0'
-gem 'pensions_calculator', '~> 3.0.0'
+gem 'pensions_calculator', git: "git@github.com:moneyadviceservice/pensions_calculator", branch: "change-canonical"
 gem 'quiz', '~> 1.4.0', source: 'http://gems.dev.mas.local'
 gem 'rio', git: 'git@github.com:moneyadviceservice/rio.git', branch: 'feature/ntt_moneyhelper_reskin', ref: 'cbc00d8'
 gem 'savings_calculator', '~> 2.0.1'
 gem 'timelines', '~> 2.1.0'
-gem 'universal_credit', '~> 5.1.0'
+gem 'universal_credit', git: "git@github.com:moneyadviceservice/universal_credit", branch: "change-canonical"
 gem 'wpcc', '~> 3.1.0'
 
 group :assets do

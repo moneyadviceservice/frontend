@@ -14,6 +14,47 @@ GIT
       uri_template (~> 0.7)
 
 GIT
+  remote: git@github.com:moneyadviceservice/debt-advice-locator
+  revision: eb22d429feed3bd8f5fb890ca46d03b94b1386b6
+  branch: change-canonical
+  specs:
+    debt_advice_locator (4.1.1)
+      active_attr
+      active_model_serializers (< 0.10.0)
+      addressable
+      bcrypt
+      coffee-rails
+      dough-ruby (~> 5.36)
+      draper (< 3)
+      geokit-rails
+      kaminari
+      mas-templating (~> 1.0.0)
+      rails (>= 4, < 5)
+      redcarpet
+      sass-rails (= 4.0.5)
+      uk_postcode
+      validate_url (= 1.0.0)
+
+GIT
+  remote: git@github.com:moneyadviceservice/debt_free_day_calculator
+  revision: de67f49057be2cdbc365bf9b67c5883fb374c951
+  branch: change-canonical
+  specs:
+    debt_free_day_calculator (4.0.0)
+      autoprefixer-rails (< 9)
+      bigdecimal (~> 1.3.0)
+      debt_finance_calculator (~> 1.1.0)
+      dough-ruby (~> 5.39)
+      draper (< 3)
+      email_validator (~> 1.4.0)
+      i18n-js (= 3.0.0.mas)
+      mas-fonts
+      meta-tags
+      rails (>= 4, < 5)
+      roadie (< 3)
+      sass-rails
+
+GIT
   remote: git@github.com:moneyadviceservice/dough.git
   revision: da95aee3c884cd55a046960b01cedfbd7e56e307
   branch: PostMessages_v5.45
@@ -23,6 +64,21 @@ GIT
       activesupport
       rails (>= 3.2, < 5.1.0)
       sass-rails
+
+GIT
+  remote: git@github.com:moneyadviceservice/pensions_calculator
+  revision: 15c3f1cd0f55b364f1ac1f69c2543750f017c73c
+  branch: change-canonical
+  specs:
+    pensions_calculator (3.0.0)
+      autoprefixer-rails
+      dough-ruby (~> 5.36)
+      meta-tags
+      pensions_calculator-calculations (~> 3.0.2)
+      rails (>= 4, < 5)
+      responders
+      sass-rails
+      uglifier
 
 GIT
   remote: git@github.com:moneyadviceservice/rio.git
@@ -35,6 +91,24 @@ GIT
       dough-ruby (~> 5.36)
       pensions_calculator-calculations (~> 3.0.2)
       rails (>= 4, < 5)
+
+GIT
+  remote: git@github.com:moneyadviceservice/universal_credit
+  revision: 38b8c743e7bbc3449ee224f226b5c8e335c012c9
+  branch: change-canonical
+  specs:
+    universal_credit (5.1.0)
+      autoprefixer-rails
+      devise
+      dough-ruby (~> 5.36)
+      mas-cms-client (~> 1.1)
+      meta-tags
+      mysql2 (= 0.4.9)
+      preamble
+      rails (>= 4, < 5)
+      redcarpet
+      sass-rails
+      uglifier
 
 GIT
   remote: https://github.com/rails-lts/rack.git
@@ -74,10 +148,10 @@ GEM
       erubis (~> 2.7.0)
       rails-dom-testing (~> 1.0, >= 1.0.5)
       rails-html-sanitizer (~> 1.0, >= 1.0.3)
-    active_attr (0.15.3)
-      actionpack (>= 3.0.2, < 7.0)
-      activemodel (>= 3.0.2, < 7.0)
-      activesupport (>= 3.0.2, < 7.0)
+    active_attr (0.15.4)
+      actionpack (>= 3.0.2, < 7.1)
+      activemodel (>= 3.0.2, < 7.1)
+      activesupport (>= 3.0.2, < 7.1)
     active_model_serializers (0.9.8)
       activemodel (>= 3.2)
       concurrent-ruby (~> 1.0)
@@ -233,22 +307,6 @@ GEM
       responders
       sass-rails
     database_cleaner (1.6.2)
-    debt_advice_locator (4.1.1)
-      active_attr
-      active_model_serializers (< 0.10.0)
-      addressable
-      bcrypt
-      coffee-rails
-      dough-ruby (~> 5.36)
-      draper (< 3)
-      geokit-rails
-      kaminari
-      mas-templating (~> 1.0.0)
-      rails (>= 4, < 5)
-      redcarpet
-      sass-rails (= 4.0.5)
-      uk_postcode
-      validate_url (= 1.0.0)
     debt_and_mental_health (1.6.0)
       bcrypt
       dough-ruby (~> 5.36)
@@ -260,19 +318,6 @@ GEM
       sass-rails
     debt_finance_calculator (1.1.0.8)
       bigdecimal (> 1.2.3)
-    debt_free_day_calculator (4.0.0)
-      autoprefixer-rails (< 9)
-      bigdecimal (~> 1.3.0)
-      debt_finance_calculator (~> 1.1.0)
-      dough-ruby (~> 5.39)
-      draper (< 3)
-      email_validator (~> 1.4.0)
-      i18n-js (= 3.0.0.mas)
-      mas-fonts
-      meta-tags
-      rails (>= 4, < 5)
-      roadie (< 3)
-      sass-rails
     debt_test (1.9.0)
       autoprefixer-rails
       dough-ruby (~> 5.0)
@@ -543,15 +588,6 @@ GEM
       modernizr-rails
       rails (>= 4, < 5)
       sass-rails
-    pensions_calculator (3.0.0)
-      autoprefixer-rails
-      dough-ruby (~> 5.36)
-      meta-tags
-      pensions_calculator-calculations (~> 3.0.2)
-      rails (>= 4, < 5)
-      responders
-      sass-rails
-      uglifier
     pensions_calculator-calculations (3.0.2)
       activesupport
     poltergeist (1.17.0)
@@ -774,18 +810,6 @@ GEM
     unicorn-rails (2.2.1)
       rack
       unicorn
-    universal_credit (5.1.0)
-      autoprefixer-rails
-      devise
-      dough-ruby (~> 5.36)
-      mas-cms-client (~> 1.1)
-      meta-tags
-      mysql2 (= 0.4.9)
-      preamble
-      rails (>= 4, < 5)
-      redcarpet
-      sass-rails
-      uglifier
     uri_template (0.7.0)
     validate_url (1.0.0)
       activemodel (>= 3.0.0)
@@ -848,9 +872,9 @@ DEPENDENCIES
   cucumber-rails
   cutback_calculator (~> 0.13.0)
   database_cleaner
-  debt_advice_locator (~> 4.1.1)
+  debt_advice_locator!
   debt_and_mental_health (~> 1.6.0)
-  debt_free_day_calculator (~> 4.0.0)
+  debt_free_day_calculator!
   debt_test (~> 1.9.0)
   decision_trees (~> 2.3.0)
   delayed_job_active_record
@@ -886,7 +910,7 @@ DEPENDENCIES
   opening_hours
   pacs (~> 4.0.2)
   payday_loans_intervention (~> 1.9.0)
-  pensions_calculator (~> 3.0.0)
+  pensions_calculator!
   poltergeist
   postcode_anywhere-email_validation!
   pry-byebug
@@ -927,7 +951,7 @@ DEPENDENCIES
   turnout
   uglifier
   unicorn-rails
-  universal_credit (~> 5.1.0)
+  universal_credit!
   vcr
   webmock
   websocket-extensions (>= 0.1.5)

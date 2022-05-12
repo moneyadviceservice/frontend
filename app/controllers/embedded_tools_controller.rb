@@ -82,6 +82,11 @@ class EmbeddedToolsController < ApplicationController
   end
   helper_method :category_id
 
+  def canonical
+    nil
+  end
+  helper_method :canonical
+
   private
 
   def set_categories

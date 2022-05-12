@@ -3,6 +3,10 @@ class WpccController < EmbeddedToolsController
     true
   end
 
+  def canonical
+    "https://www.moneyhelper.org.uk/#{locale}/pensions-and-retirement/auto-enrolment/workplace-pension-calculator"
+  end
+
   protected
 
   def category_id

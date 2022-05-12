@@ -1,5 +1,10 @@
-<%= render layout: 'layouts/base' do %>
+<% if canonical.present? %>
+  <% set_meta_tags(alternate: alternate_options, canonical: canonical) %>
+<% else %>
   <% set_meta_tags(alternate: alternate_options) %>
+<% end %>
+
+<%= render layout: 'layouts/base' do %>
 
   <% content_for(:alternate_link) do %>
     <%= link_to(alternate_url, lang: alternate_locale, class: "t-#{alternate_locale}-link") do %>

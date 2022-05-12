@@ -258,4 +258,3 @@ Make sure before you changed and open a PR to run the follow script and **paste 
 
 Obs.: 1869 and 1870 is just an example of versions to be shown. Use the GO build
 number in ascending order.
-

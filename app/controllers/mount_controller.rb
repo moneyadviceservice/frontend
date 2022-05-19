@@ -2,6 +2,11 @@ class MountController < ApplicationController
   include Navigation
   before_action :set_categories
 
+  def canonical
+    nil
+  end
+  helper_method :canonical
+
   protected
 
   def alternate_url

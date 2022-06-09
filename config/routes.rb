@@ -242,9 +242,12 @@ Rails.application.routes.draw do
     get '/hub/:slug' => 'content_hub#show', as: :content_hub
   end
 
-  %w(404 422 500 ).each do |status_code|
+  %w(422 500 ).each do |status_code|
     get status_code, to: 'errors#show', status_code: status_code
   end
 
+  scope '/:locale', locale: /en|cy/ do
+    match '*path', via: :all, to: 'catchall#not_implemented'
+  end
   match '*path', via: :all, to: 'catchall#not_implemented'
 end

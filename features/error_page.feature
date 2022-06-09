@@ -1,7 +1,7 @@
-Feature: Friendly Error Message
+Feature: Error Page
   As an owner of the MAS website
-  I want to present users with friendly error messages
-  So that they have a more positive user experience
+  I want to redirect users to the main moneyhelper error page
+  So that they have a more consistent user experience
 
   Scenario Outline: Application throws error with HTML 500 Status Code
     Given that I visit the internal server error page in my "<language>"
@@ -13,11 +13,10 @@ Feature: Friendly Error Message
       | Welsh    | Nid yw'r dudalen hon ar gael ar hyn o bryd, ceisiwch ail-lwytho |
 
   Scenario Outline: Application throws error with HTML 404 Status Code
-    Given that I visit a non-existent page in my "<language>"
-    Then I should get a page not found error with this "<status_code>"
-
+    Given that I visit a non-existent page in "<language>"
+    Then I should get redirected to the moneyhelper 404 page for "<language>"
     @allow_rescue
     Examples:
-      | language | status_code |
-      | English  | 404         |
-      | Welsh    | 404         |
+      | language |
+      | English  |
+      | Welsh    |

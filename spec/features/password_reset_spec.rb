@@ -51,5 +51,7 @@ RSpec.describe 'password reset', type: :feature do
       instance.render text: 'redirected'
     end
     change_password_page.submit.click
+
+    expect(User.first.valid_password?('securePassword')).to eq(true)
   end
 end

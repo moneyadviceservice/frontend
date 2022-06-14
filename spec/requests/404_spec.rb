@@ -1,4 +1,4 @@
-RSpec.describe '404 catachall', type: :request do
+RSpec.describe '404 catchall', type: :request do
   before do
     @old_url = ENV['MONEY_HELPER_URL']
     ENV['MONEY_HELPER_URL'] = 'https://www.moneyhelper.org.uk'
@@ -23,6 +23,9 @@ RSpec.describe '404 catachall', type: :request do
     it 'redirects to a 404 page with the correct locale' do
       get '/cy/doesnotexist/other'
       expect(response).to redirect_to('https://www.moneyhelper.org.uk/cy/404')
+
+      get '/en/blah/other'
+      expect(response).to redirect_to('https://www.moneyhelper.org.uk/en/404')
     end
   end
 

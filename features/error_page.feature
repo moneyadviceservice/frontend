@@ -11,12 +11,3 @@ Feature: Error Page
       | language | error_message |
       | English  | This page is currently unavailable, please try reloading |
       | Welsh    | Nid yw'r dudalen hon ar gael ar hyn o bryd, ceisiwch ail-lwytho |
-
-  Scenario Outline: Application throws error with HTML 404 Status Code
-    Given that I visit a non-existent page in "<language>"
-    Then I should get redirected to the moneyhelper 404 page for "<language>"
-    @allow_rescue
-    Examples:
-      | language |
-      | English  |
-      | Welsh    |

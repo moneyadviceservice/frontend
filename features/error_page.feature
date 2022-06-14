@@ -1,7 +1,7 @@
 Feature: Error Page
   As an owner of the MAS website
-  I want to redirect users to the main moneyhelper error page
-  So that they have a more consistent user experience
+  I want to present users with friendly error messages
+  So that they have a more positive user experience
 
   Scenario Outline: Application throws error with HTML 500 Status Code
     Given that I visit the internal server error page in my "<language>"

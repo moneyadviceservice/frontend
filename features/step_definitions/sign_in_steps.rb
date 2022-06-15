@@ -1,7 +1,3 @@
-When(/^I attempt to sign in$/) do
-  sign_in_page.load(locale: 'en')
-end
-
 Then(/^I am told that the functionality is not implemented$/) do
   expect(status_code).to eql(501)
 end
@@ -74,10 +70,6 @@ end
 Then(/^I click on 'Forgot your password\?'$/) do
   sign_in_page.load(locale: 'en')
   sign_in_page.forgot_password.click
-end
-
-Then(/^I should be on a page instructing me of the next steps$/) do
-  expect(page.current_path).to eql('/en/users/password/new')
 end
 
 When(/^I fill in my email$/) do

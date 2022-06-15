@@ -4,13 +4,21 @@ class CatchallController < ApplicationController
       return redirect_to error.location, status: error.status if error.redirect?
     end
 
-    raise ActionController::RoutingError.new('Not Found')
+    redirect_to_money_helper_url
   rescue Core::Repository::Base::RequestError => e
-    raise ActionController::RoutingError.new('Not Found')
+    redirect_to_money_helper_url
   end
 
   private
 
+  def redirect_to_money_helper_url
+    redirect_to money_helper_url("/#{locale}/404")
+  end
+
+  def money_helper_url(path)
+    [ENV.fetch("MONEY_HELPER_URL", "https://www.moneyhelper.org.uk"), path].join("")
+  end
+  
   def interactor
     Core::RedirectReader.new(path)
   end

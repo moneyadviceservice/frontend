@@ -25,18 +25,6 @@ GIT
       sass-rails
 
 GIT
-  remote: git@github.com:moneyadviceservice/rio.git
-  revision: cbc00d8ba801ee9446b2d0f73903f81a13017f05
-  ref: cbc00d8
-  branch: feature/ntt_moneyhelper_reskin
-  specs:
-    rio (2.2.1)
-      bowndler
-      dough-ruby (~> 5.36)
-      pensions_calculator-calculations (~> 3.0.2)
-      rails (>= 4, < 5)
-
-GIT
   remote: https://github.com/rails-lts/rack.git
   revision: 416ce595040638b147d747b2e636a7ef63a26a07
   branch: lts-1-6-stable
@@ -903,7 +891,6 @@ DEPENDENCIES
   recaptcha
   redcarpet
   rest-client (~> 2.0)
-  rio!
   rollbar
   rouge
   rspec-html-matchers

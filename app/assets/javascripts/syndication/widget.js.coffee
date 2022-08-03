@@ -7,7 +7,7 @@ class window.PartnerMAS.Widget
   render: ->
     this.setPartnerToolsURL()
     renderParts = []
-    renderParts.push(this.createLogo()) unless this.dataAttr("omit_logo")
+    renderParts.push(this.createLogo(masConfig.getLocale(@targetNode))) unless this.dataAttr("omit_logo")
     renderParts.push(this.createIFrame())
     renderParts.push(this.createGAIFrame()) if masConfig.gaIframeRequired(@targetNode)
     this.addToDocument this.createContainer(renderParts...)
@@ -40,10 +40,10 @@ class window.PartnerMAS.Widget
         </div>
         """
 
-  createLogo: ->
+  createLogo: (locale)->
     """
-        <a class='#{masConfig.linkClass}' href='#{masConfig.linkHref}' target='#{masConfig.linkTarget}'>
-          <img src='#{masConfig.logoSrc}' alt='#{masConfig.logoAltText}' style='#{masConfig.logoStyles}'/>
+        <a class='#{masConfig[locale].linkClass}' href='#{masConfig[locale].linkHref}' target='#{masConfig[locale].linkTarget}'>
+          <img src='#{masConfig[locale].logoSrc}' alt='#{masConfig[locale].logoAltText}' style='#{masConfig[locale].logoStyles}'/>
         </a>
         """
 

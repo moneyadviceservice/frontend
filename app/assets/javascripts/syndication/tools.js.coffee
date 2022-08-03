@@ -5,12 +5,20 @@
   targetSelector: "mas-widget"
   containerClass: "mas-widget-container"
   containerStyles: "width: 100%; margin: 0 auto;"
-  linkClass: "mas-widget-logo-link"
-  linkHref: "https://www.moneyhelper.org.uk/en"
-  linkTarget: "_blank"
-  logoSrc: "https://www.moneyhelper.org.uk/etc.clientlibs/maps/core/clientlibs/clientlib-base/resources/logos/logo-en-desktop.svg"
-  logoStyles: "display: block; margin-bottom: 8px; width: 300px"
-  logoAltText: "MoneyHelper"
+  en:
+    linkClass: "mas-widget-logo-link"
+    linkHref: "https://www.moneyhelper.org.uk/en"
+    linkTarget: "_blank"
+    logoSrc: "https://www.moneyhelper.org.uk/etc.clientlibs/maps/core/clientlibs/clientlib-base/resources/logos/logo-en-desktop.svg"
+    logoStyles: "display: block; margin-bottom: 8px; width: 300px"
+    logoAltText: "MoneyHelper"
+  cy:
+    linkClass: "mas-widget-logo-link"
+    linkHref: "https://www.moneyhelper.org.uk/cy"
+    linkTarget: "_blank"
+    logoSrc: "https://www.moneyhelper.org.uk/etc.clientlibs/maps/core/clientlibs/clientlib-base/resources/logos/logo-cy-desktop.svg"
+    logoStyles: "display: block; margin-bottom: 8px; width: 300px"
+    logoAltText: "HelpwrArian"
 
   toolConfig:
     employer_best_practices:

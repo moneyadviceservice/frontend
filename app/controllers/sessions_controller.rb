@@ -22,6 +22,14 @@ class SessionsController < Devise::SessionsController
 
   private
 
+  def default_url_options(options = {})
+    if params.key?(:noresize)
+      options.merge(noresize: true)
+    else
+      super
+    end
+  end
+
   def xhr_not_implemented
     head :not_implemented if request.xhr?
   end

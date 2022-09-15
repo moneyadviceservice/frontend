@@ -4,6 +4,18 @@ When(/^I view my profile page$/) do
   profile_page.load(locale: 'en')
 end
 
+When(/^I view my profile page without resize$/) do
+  profile_page.load(locale: 'en', query: { noresize: true })
+end
+
+Then("links persist without resize") do
+  expect(profile_page.edit_profile_link['href']).to end_with('noresize=true')
+end
+
+Then("the link persists without resize") do
+  expect(profile_page.budget_planner_link['href']).to end_with('noresize=true')
+end
+
 Given(/^I am signed in with warden$/) do
   @user = create(:user)
   login_as(@user, scope: :user)

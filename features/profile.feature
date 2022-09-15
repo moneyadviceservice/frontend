@@ -7,3 +7,8 @@ Feature: Profile page
     Given I am signed in
     When I view my profile page
     Then I see my name
+
+  Scenario: Viewing a profile page without resize JS
+    Given I am signed in
+    When I view my profile page without resize
+    Then links persist without resize

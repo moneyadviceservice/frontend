@@ -4,6 +4,12 @@ class EmbeddedToolsController < ApplicationController
 
   protected
 
+  def default_url_options(options = {})
+    return super unless exclude_syndicated_iframe_resizer?
+
+    options.merge(noresize: true, locale: I18n.locale)
+  end
+
   def alternate_url
     # First dup the params for the current request
     new_params = params.dup
@@ -61,7 +67,7 @@ class EmbeddedToolsController < ApplicationController
   end
 
   def exclude_syndicated_iframe_resizer?
-    false
+    params.key?(:noresize)
   end
 
   helper_method :exclude_syndicated_iframe_resizer?

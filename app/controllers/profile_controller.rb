@@ -20,6 +20,11 @@ class ProfileController < ArticlesController
 
   private
 
+  def noresize
+    '?noresize=true' if params.key?(:noresize)
+  end
+  helper_method :noresize
+
   def saved_tools
     t('saved_tools.tools').select do |tool_name, _|
       current_user.data_for?(tool_name)

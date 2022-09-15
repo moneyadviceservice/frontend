@@ -206,4 +206,12 @@ class ApplicationController < ActionController::Base
   def redirect_page(e)
     redirect_to e.location, status: e.http_response.status
   end
+
+  def default_url_options(options = {})
+    if params.key?(:noresize)
+      options.merge(noresize: true, locale: I18n.locale)
+    else
+      super
+    end
+  end
 end

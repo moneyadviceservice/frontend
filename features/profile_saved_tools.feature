@@ -12,8 +12,9 @@ Feature:
   Scenario: Saved data for budget planner
     Given I am signed in with warden
     And I have saved data for the "budget_planner" tool
-    When I view my profile page
+    When I view my profile page without resize
     Then I see the "Review and edit your saved budget now" link listed under saved tools
+    And the link persists without resize
 
   Scenario: Saved data for universal credit
     Given I am signed in with warden

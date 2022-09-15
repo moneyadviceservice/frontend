@@ -9,7 +9,7 @@
       </h2>
       <p class="l-profile__your-tools__content__text"><%= tool[:message] %></p>
       <p class="l-profile__your-tools__content__text">
-        <%= link_to tool[:link_copy], tool[:link_url], class: "gtm-your-tool-link" %>
+      <%= link_to tool[:link_copy], "#{tool[:link_url]}#{noresize}", class: "gtm-your-tool-link t-saved-tool" %>
       </p>
     <% end %>
   <% else %>

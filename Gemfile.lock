@@ -25,6 +25,21 @@ GIT
       sass-rails
 
 GIT
+  remote: git@github.com:moneyadviceservice/mortgage_calculator.git
+  revision: 55f9a24b3b40e523a6ffdfd1f00f5449db0e0308
+  branch: stamp-duty-banner
+  specs:
+    mortgage_calculator (4.2.0)
+      angularjs-rails (~> 1.2.18)
+      dough-ruby (~> 5.36)
+      mas-fonts
+      modernizr-rails
+      rails (>= 4, < 5)
+      sass-rails
+      sprockets (< 4)
+      underscore-rails
+
+GIT
   remote: https://github.com/rails-lts/rack.git
   revision: f1b68ecceed8086d77932d83d8aa35d66d3d6faa
   branch: lts-1-6-stable
@@ -484,15 +499,6 @@ GEM
       mongo (>= 2.5.1, < 3.0.0)
       origin (~> 2.3)
       tzinfo (>= 0.3.37)
-    mortgage_calculator (4.2.0)
-      angularjs-rails (~> 1.2.18)
-      dough-ruby (~> 5.36)
-      mas-fonts
-      modernizr-rails
-      rails (>= 4, < 5)
-      sass-rails
-      sprockets (< 4)
-      underscore-rails
     multi_json (1.15.0)
     multi_test (0.1.2)
     multipart-post (2.1.1)
@@ -866,7 +872,7 @@ DEPENDENCIES
   mailjet
   mas-cms-client (= 1.20.1)
   meta-tags (~> 2.4)
-  mortgage_calculator (~> 4.2.0)
+  mortgage_calculator!
   mysql2 (= 0.4.9)
   newrelic_rpm
   nokogiri (~> 1.10.3)

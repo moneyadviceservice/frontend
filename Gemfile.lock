@@ -531,16 +531,16 @@ GEM
       modernizr-rails
       rails (>= 4, < 5)
       sass-rails
-    pensions_calculator (3.0.4)
+    pensions_calculator (3.3.0)
       autoprefixer-rails
       dough-ruby (~> 5.36)
       meta-tags
-      pensions_calculator-calculations (~> 3.0.4)
+      pensions_calculator-calculations (~> 3.1.1)
       rails (>= 4, < 5)
       responders
       sass-rails
       uglifier
-    pensions_calculator-calculations (3.0.4)
+    pensions_calculator-calculations (3.1.1)
       activesupport
     poltergeist (1.17.0)
       capybara (~> 2.1)
@@ -874,7 +874,7 @@ DEPENDENCIES
   opening_hours
   pacs (~> 4.0.4)
   payday_loans_intervention (~> 1.9.0)
-  pensions_calculator (~> 3.0.3)
+  pensions_calculator (~> 3.3.0)
   poltergeist
   postcode_anywhere-email_validation!
   pry-byebug

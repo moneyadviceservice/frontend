@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-source 'http://gems.dev.mas.local'
+source 'https://gem.fury.io/benlovell'
 
 # RULES OF THE GEMFILE
 #
@@ -54,7 +54,7 @@ gem 'nunes'
 gem 'opening_hours'
 gem 'rollbar'
 # gem 'postcode_anywhere-email_validation', '~> 0.2.0'
-gem 'postcode_anywhere-email_validation', :source => 'http://gems.dev.mas.local/'
+gem 'postcode_anywhere-email_validation', :source => 'https://gem.fury.io/benlovell'
 gem 'psych', '>= 2.0.5' # https://www.ruby-lang.org/en/news/2014/03/29/heap-overflow-in-yaml-uri-escape-parsing-cve-2014-2525/
 gem 'rack', git: 'https://github.com/rails-lts/rack.git', branch: 'lts-1-6-stable'
 gem 'recaptcha', require: 'recaptcha/rails'
@@ -95,7 +95,7 @@ gem 'mortgage_calculator', '~> 4.5.1'
 gem 'pacs', '~> 4.0.4'
 gem 'payday_loans_intervention', '~> 1.9.0'
 gem 'pensions_calculator', '~> 3.3.0'
-gem 'quiz', '~> 1.4.0', source: 'http://gems.dev.mas.local'
+gem 'quiz', '~> 1.4.0', source: 'https://gem.fury.io/benlovell'
 gem 'savings_calculator', '~> 2.0.1'
 gem 'timelines', '~> 2.1.0'
 gem 'universal_credit', '~> 5.1.1'

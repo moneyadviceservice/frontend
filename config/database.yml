@@ -18,4 +18,4 @@ production:
   timeout: 5000
   encoding: utf8
   reconnect: true
-  url: <%= ENV["MAS_PUBLIC_WEBSITE_DATABASE_URL"] %>
+  url: <%= ENV["DATABASE_URL"] %>

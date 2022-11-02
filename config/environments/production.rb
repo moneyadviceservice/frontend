@@ -44,7 +44,7 @@ Rails.application.configure do
 
   # Force all access to the app over SSL, use Strict-Transport-Security, and
   # use secure cookies.
-  # config.force_ssl = true
+  config.force_ssl = true
 
   # Set to :debug to see everything in the log.
   config.log_level = :info
@@ -54,14 +54,9 @@ Rails.application.configure do
 
   # Use a different logger for distributed setups.
   # config.logger = ActiveSupport::TaggedLogging.new(SyslogLogger.new)
-  Logger::Syslog.send :include, ActiveRecord::SessionStore::Extension::LoggerSilencer
-  config.logger = ActiveSupport::TaggedLogging.new(Logger::Syslog.new("frontend", Syslog::LOG_LOCAL6).tap {|log| log.level = Logger::INFO})
 
   # Use a different cache store in production.
   config.cache_store = :memory_store, { expires_in: 1.hour }
-
-  # Enable serving of images, stylesheets, and JavaScripts from an asset server.
-  config.action_controller.asset_host = ENV['FRONTEND_ASSET_HOST_URL']
 
   # Precompile additional assets.
   # application.js, application.css, and all non-JS/CSS in app/assets folder
@@ -100,8 +95,6 @@ Rails.application.configure do
             'qa.test'
           end + '.moneyhelper.org.uk'
   }
-
-  config.action_mailer.asset_host = ENV['FRONTEND_ASSET_HOST_URL']
 
   # Custom configuration options for feedback settings
   config.feedback_delivery_method = :sendmail

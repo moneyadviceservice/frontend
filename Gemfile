@@ -1,3 +1,5 @@
+ruby IO.read('.ruby-version').strip
+
 source 'https://rubygems.org'
 source 'https://gem.fury.io/benlovell'
 

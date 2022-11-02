@@ -145,6 +145,7 @@ end
 group :production do
   gem 'syslog-logger'
   gem 'unicorn-rails'
+  gem 'rails_12factor'
 end
 
 group :build, :test, :development do

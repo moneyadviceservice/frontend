@@ -3,6 +3,9 @@ ruby IO.read('.ruby-version').strip
 source 'https://rubygems.org'
 source 'https://gem.fury.io/benlovell'
 
+# force Bundler to use SSL
+git_source(:github) { |repo| "https://github.com/#{repo}.git" }
+
 # RULES OF THE GEMFILE
 #
 # 1. Consult contributors before adding a dependency
@@ -32,7 +35,7 @@ gem 'activerecord-session_store'
 # This could feasibly be replaced by an implementation within
 # this repo, as all the gem is doing is wrapping OpenSSL.
 ##############################################################
-gem 'aes', git: 'git@github.com:chicks/aes.git'
+gem 'aes', github: 'chicks/aes'
 gem 'algoliasearch'
 gem 'attr_encrypted', '~> 3.1'
 gem 'blind_index', '0.2.0'
@@ -58,7 +61,7 @@ gem 'rollbar'
 # gem 'postcode_anywhere-email_validation', '~> 0.2.0'
 gem 'postcode_anywhere-email_validation', :source => 'https://gem.fury.io/benlovell'
 gem 'psych', '>= 2.0.5' # https://www.ruby-lang.org/en/news/2014/03/29/heap-overflow-in-yaml-uri-escape-parsing-cve-2014-2525/
-gem 'rack', git: 'https://github.com/rails-lts/rack.git', branch: 'lts-1-6-stable'
+gem 'rack', github: 'rails-lts/rack', branch: 'lts-1-6-stable'
 gem 'recaptcha', require: 'recaptcha/rails'
 gem 'redcarpet'
 gem 'rest-client', '~> 2.0'
@@ -74,9 +77,9 @@ gem 'websocket-extensions', '>= 0.1.5'
 # MAS Gems
 # ========
 # Dependencies
-gem 'adal', git: 'git@github.com:moneyadviceservice/azure-activedirectory-library-for-ruby'
+gem 'adal', github: 'moneyadviceservice/azure-activedirectory-library-for-ruby'
 gem 'cream', '2.1.8'
-gem 'dough-ruby', git: 'git@github.com:moneyadviceservice/dough.git', branch: 'PostMessages_v5.45'
+gem 'dough-ruby', github: 'moneyadviceservice/dough', branch: 'PostMessages_v5.45'
 gem 'mas-cms-client', '1.20.1'
 gem 'site_search', '0.3.0'
 # Tools

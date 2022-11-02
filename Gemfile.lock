@@ -1,11 +1,11 @@
 GIT
-  remote: git@github.com:chicks/aes.git
-  revision: 001f77806a2cbef513315993e19a8f679f8f5786
+  remote: https://github.com/chicks/aes.git
+  revision: 0503a8ff65487c3ea7272ead4f7071139b736d44
   specs:
-    aes (0.5.0)
+    aes (0.5.1)
 
 GIT
-  remote: git@github.com:moneyadviceservice/azure-activedirectory-library-for-ruby
+  remote: https://github.com/moneyadviceservice/azure-activedirectory-library-for-ruby.git
   revision: 26f534a42d516dcdd13fe7fc82149b6d4bc9bebb
   specs:
     adal (1.1.0)
@@ -14,7 +14,7 @@ GIT
       uri_template (~> 0.7)
 
 GIT
-  remote: git@github.com:moneyadviceservice/dough.git
+  remote: https://github.com/moneyadviceservice/dough.git
   revision: da95aee3c884cd55a046960b01cedfbd7e56e307
   branch: PostMessages_v5.45
   specs:

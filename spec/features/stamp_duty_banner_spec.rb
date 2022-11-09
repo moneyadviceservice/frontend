@@ -9,6 +9,6 @@ RSpec.feature 'Stamp duty calculator banners' do
     expect(page).to have_no_css('.global-alert--warning')
 
     visit '/en/tools/house-buying/land-transaction-tax-calculator-wales'
-    expect(page).to have_css('.global-alert--warning')
+    expect(page).to have_no_css('.global-alert--warning')
   end
 end

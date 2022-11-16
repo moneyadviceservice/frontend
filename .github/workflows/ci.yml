@@ -1,0 +1,33 @@
+name: "CI"
+env:
+  BUNDLE_GEMS__RAILSLTS__COM: ${{ secrets.BUNDLE_GEMS__RAILSLTS__COM }}
+  BUNDLE_GEM__FURY__IO: ${{ secrets.BUNDLE_GEM__FURY__IO }}
+on:
+  push:
+    branches: [ "heroku" ]
+  pull_request:
+    branches: [ "heroku" ]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    env:
+      RAILS_ENV: test
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      - name: Install Ruby and gems
+        uses: ruby/setup-ruby@0a29871fe2b0200a17a4497bae54fe5df0d973aa # v1.115.3
+        with:
+          bundler-cache: true
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v3.5.1
+        with:
+          node-version: 4.1.1
+      - name: Install bower
+        run: npm install -g bower
+      - name: Install bowndler packages
+        run: bin/bowndler update
+      - name: Set up database schema
+        run: bin/rake db:schema:load
+      - name: Run tests
+        run: bin/rake

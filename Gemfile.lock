@@ -1,4 +1,22 @@
 GIT
+  remote: git@github.com:moneyadviceservice/universal_credit
+  revision: 840cc2ffa18eae2e070d8dd62b0b455ac3b70dea
+  branch: heroku
+  specs:
+    universal_credit (5.2.0)
+      autoprefixer-rails
+      devise
+      dough-ruby (~> 5.36)
+      mas-cms-client (~> 1.1)
+      meta-tags
+      mysql2
+      preamble
+      rails (>= 4, < 5)
+      redcarpet
+      sass-rails
+      uglifier
+
+GIT
   remote: https://github.com/chicks/aes.git
   revision: 0503a8ff65487c3ea7272ead4f7071139b736d44
   specs:
@@ -496,7 +514,7 @@ GEM
     multi_json (1.15.0)
     multi_test (0.1.2)
     multipart-post (2.1.1)
-    mysql2 (0.4.9)
+    mysql2 (0.5.4)
     netrc (0.11.0)
     newrelic_rpm (5.0.0.342)
     nokogiri (1.10.10)
@@ -767,18 +785,6 @@ GEM
     unicorn-rails (2.2.1)
       rack
       unicorn
-    universal_credit (5.1.1)
-      autoprefixer-rails
-      devise
-      dough-ruby (~> 5.36)
-      mas-cms-client (~> 1.1)
-      meta-tags
-      mysql2 (= 0.4.9)
-      preamble
-      rails (>= 4, < 5)
-      redcarpet
-      sass-rails
-      uglifier
     uri_template (0.7.0)
     validate_url (1.0.0)
       activemodel (>= 3.0.0)
@@ -872,7 +878,7 @@ DEPENDENCIES
   mas-cms-client (= 1.20.1)
   meta-tags (~> 2.4)
   mortgage_calculator (~> 4.5.1)
-  mysql2 (= 0.4.9)
+  mysql2
   newrelic_rpm
   nokogiri (~> 1.10.3)
   nunes
@@ -920,7 +926,7 @@ DEPENDENCIES
   turnout
   uglifier
   unicorn-rails
-  universal_credit (~> 5.1.1)
+  universal_credit!
   vcr
   webmock
   websocket-extensions (>= 0.1.5)

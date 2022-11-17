@@ -12,10 +12,4 @@ RSpec.describe 'HomePage', type: :request do
       'Free and impartial money advice, set up by government'
     )
   end
-
-  it 'displays footer content' do
-    expect(response.body).to include(
-      'Give us a call for free and impartial money advice.'
-    )
-  end
 end

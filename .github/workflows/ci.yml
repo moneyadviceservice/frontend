@@ -15,6 +15,8 @@ jobs:
       ALGOLIA_APP_ID: test
       ALGOLIA_API_KEY: test
       FRONTEND_HTTP_REQUEST_TIMEOUT: 12
+      ATTR_CRYPT_KEY: ${{ secrets.ATTR_CRYPT_KEY }}
+      BIDX_CRYPT_KEY: ${{ secrets.BIDX_CRYPT_KEY }}
     steps:
       - name: Install SSH key
         uses: shimataro/ssh-key-action@v2

@@ -17,6 +17,10 @@ jobs:
       FRONTEND_HTTP_REQUEST_TIMEOUT: 12
       ATTR_CRYPT_KEY: ${{ secrets.ATTR_CRYPT_KEY }}
       BIDX_CRYPT_KEY: ${{ secrets.BIDX_CRYPT_KEY }}
+      CAR_COST_TOOL_DOMAIN: localhost
+      CAR_COST_TOOL_CAP_SUBSCRIBER_ID: ''
+      CAR_COST_TOOL_CAP_PASSWORD: ''
+      CAR_COST_TOOL_MAX_CARS_TO_COMPARE: 3
     steps:
       - name: Install SSH key
         uses: shimataro/ssh-key-action@v2

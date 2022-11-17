@@ -12,6 +12,8 @@ jobs:
     runs-on: ubuntu-latest
     env:
       RAILS_ENV: test
+      ALGOLIA_APP_ID: test
+      ALGOLIA_API_KEY: test
     steps:
       - name: Install SSH key
         uses: shimataro/ssh-key-action@v2

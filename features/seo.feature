@@ -68,16 +68,19 @@ Feature: Search Engine Optimisation
     | English         |
     | Welsh           |
 
+  @wip
   Scenario: Empty query search results page include a robots tag
     Given I am on the home page
     When I submit a search with no query
     Then the search results page should have a robots tag with value noindex
 
+  @wip
   Scenario: No results search page include a robots tag
     Given I am on the home page
     When I search for something irrelevant
     Then the search results page should have a robots tag with value noindex
 
+  @wip
   Scenario: Results search page include a robots tag
     Given I am on the home page
     When I search for something relevant

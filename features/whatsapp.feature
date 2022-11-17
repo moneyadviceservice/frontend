@@ -1,3 +1,4 @@
+@wip
 Feature: WhatsApp Chat
   As a user visiting the website
   I want to chat online with an advisor via WhatsApp

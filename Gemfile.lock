@@ -1,22 +1,4 @@
 GIT
-  remote: git@github.com:moneyadviceservice/universal_credit
-  revision: 840cc2ffa18eae2e070d8dd62b0b455ac3b70dea
-  branch: heroku
-  specs:
-    universal_credit (5.2.0)
-      autoprefixer-rails
-      devise
-      dough-ruby (~> 5.36)
-      mas-cms-client (~> 1.1)
-      meta-tags
-      mysql2
-      preamble
-      rails (>= 4, < 5)
-      redcarpet
-      sass-rails
-      uglifier
-
-GIT
   remote: https://github.com/chicks/aes.git
   revision: 0503a8ff65487c3ea7272ead4f7071139b736d44
   specs:
@@ -41,6 +23,24 @@ GIT
       activesupport
       rails (>= 3.2, < 5.1.0)
       sass-rails
+
+GIT
+  remote: https://github.com/moneyadviceservice/universal_credit.git
+  revision: 840cc2ffa18eae2e070d8dd62b0b455ac3b70dea
+  branch: heroku
+  specs:
+    universal_credit (5.2.0)
+      autoprefixer-rails
+      devise
+      dough-ruby (~> 5.36)
+      mas-cms-client (~> 1.1)
+      meta-tags
+      mysql2
+      preamble
+      rails (>= 4, < 5)
+      redcarpet
+      sass-rails
+      uglifier
 
 GIT
   remote: https://github.com/rails-lts/rack.git

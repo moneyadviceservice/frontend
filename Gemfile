@@ -103,7 +103,7 @@ gem 'pensions_calculator', '~> 3.3.0'
 gem 'quiz', '~> 1.4.0', source: 'https://gem.fury.io/benlovell'
 gem 'savings_calculator', '~> 2.0.1'
 gem 'timelines', '~> 2.1.0'
-gem 'universal_credit', git: 'git@github.com:moneyadviceservice/universal_credit', branch: 'heroku'
+gem 'universal_credit', github: 'moneyadviceservice/universal_credit', branch: 'heroku'
 gem 'wpcc', '~> 3.1.0'
 
 group :assets do

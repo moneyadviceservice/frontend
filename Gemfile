@@ -100,6 +100,7 @@ gem 'mortgage_calculator', '~> 4.5.1'
 gem 'pacs', '~> 4.0.4'
 gem 'payday_loans_intervention', '~> 1.9.0'
 gem 'pensions_calculator', '~> 3.3.0'
+gem 'puma'
 gem 'quiz', '~> 1.4.0', source: 'https://gem.fury.io/benlovell'
 gem 'savings_calculator', '~> 2.0.1'
 gem 'timelines', '~> 2.1.0'
@@ -144,7 +145,6 @@ end
 
 group :production do
   gem 'syslog-logger'
-  gem 'unicorn-rails'
   gem 'rails_12factor'
 end
 

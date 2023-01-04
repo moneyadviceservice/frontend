@@ -1,7 +1,7 @@
 ruby IO.read('.ruby-version').strip
 
 source 'https://rubygems.org'
-source 'https://gem.fury.io/benlovell'
+source 'https://gem.fury.io/h_app288206558'
 
 # force Bundler to use SSL
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
@@ -58,8 +58,7 @@ gem 'nokogiri', '~> 1.10.3'
 gem 'nunes'
 gem 'opening_hours'
 gem 'rollbar'
-# gem 'postcode_anywhere-email_validation', '~> 0.2.0'
-gem 'postcode_anywhere-email_validation', :source => 'https://gem.fury.io/benlovell'
+gem 'postcode_anywhere-email_validation', :source => 'https://gem.fury.io/h_app288206558'
 gem 'psych', '>= 2.0.5' # https://www.ruby-lang.org/en/news/2014/03/29/heap-overflow-in-yaml-uri-escape-parsing-cve-2014-2525/
 gem 'rack', github: 'rails-lts/rack', branch: 'lts-1-6-stable'
 gem 'recaptcha', require: 'recaptcha/rails'
@@ -101,7 +100,7 @@ gem 'pacs', '~> 4.0.4'
 gem 'payday_loans_intervention', '~> 1.9.0'
 gem 'pensions_calculator', '~> 3.3.0'
 gem 'puma'
-gem 'quiz', '~> 1.4.0', source: 'https://gem.fury.io/benlovell'
+gem 'quiz', '~> 1.4.0', source: 'https://gem.fury.io/h_app288206558'
 gem 'savings_calculator', '~> 2.0.1'
 gem 'timelines', '~> 2.1.0'
 gem 'universal_credit', github: 'moneyadviceservice/universal_credit', branch: 'heroku'

@@ -1,3 +1,4 @@
+@wip
 Feature: Categories
   As a visitor to the website
   I want to view categories and their contents

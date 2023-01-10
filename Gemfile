@@ -61,6 +61,7 @@ gem 'rollbar'
 gem 'postcode_anywhere-email_validation', :source => 'https://gem.fury.io/h_app288206558'
 gem 'psych', '>= 2.0.5' # https://www.ruby-lang.org/en/news/2014/03/29/heap-overflow-in-yaml-uri-escape-parsing-cve-2014-2525/
 gem 'rack', github: 'rails-lts/rack', branch: 'lts-1-6-stable'
+gem 'rack-rewrite'
 gem 'recaptcha', require: 'recaptcha/rails'
 gem 'redcarpet'
 gem 'rest-client', '~> 2.0'

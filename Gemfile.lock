@@ -614,6 +614,7 @@ GEM
       rack (>= 0.4)
     rack-livereload (0.3.17)
       rack
+    rack-rewrite (1.5.1)
     rack-test (0.6.3)
       rack (>= 1.0)
     rails (4.2.11.26)
@@ -910,6 +911,7 @@ DEPENDENCIES
   quiz (~> 1.4.0)!
   rack!
   rack-livereload
+  rack-rewrite
   rails (~> 4.2.11)!
   rails_12factor
   railslts-version!

@@ -18,11 +18,6 @@ class ApplicationController < ActionController::Base
   BANNER_DISMISSED_COOKIE_NAME = '_covid_banner'.freeze
   BANNER_DISMISSED_COOKIE_VALUE = 'y'.freeze
 
-  before_action :fetch_footer_content
-  def fetch_footer_content
-    @footer = Mas::Cms::Footer.find('footer', cached: true, locale: I18n.locale)
-  end
-
   helper BudgetWarning
 
   def syndicated_tool_request?
@@ -179,7 +174,7 @@ class ApplicationController < ActionController::Base
   helper_method :hide_elements_irrelevant_for_third_parties?
 
   def hide_contact_panels?
-    false
+    true
   end
 
   helper_method :hide_contact_panels?

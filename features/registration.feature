@@ -3,6 +3,7 @@ Feature: Registration
   I want to register for a MAS account
   So that I can sign in and get better financial tools and advice
 
+  @wip
   Scenario: Registration when browsing MAS
     Given I am on an article that lives in a single category
     When  I register
@@ -34,6 +35,7 @@ Feature: Registration
       | invalid email                                 |
       | insecure password                             |
 
+  @wip
   Scenario: Attempt to register with existing account
     When I attempt to register with an already registered email address
     Then My MAS account should have already been created

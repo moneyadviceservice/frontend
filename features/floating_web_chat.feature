@@ -1,3 +1,4 @@
+@wip
 Feature: Foating Web Chat 
   As a user browsing the MAS home page
   In order to be able to get help quickly

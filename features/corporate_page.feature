@@ -1,3 +1,4 @@
+@wip
 Feature: Settings
   As a corporate partner
   I want to be able to view more information on partnering

@@ -7,6 +7,7 @@ require 'action_view/railtie'
 require 'active_model/railtie'
 require 'active_record/railtie'
 require 'sprockets/railtie'
+require 'rack/rewrite'
 
 require_relative '../lib/core_ext'
 require_relative '../lib/tool_mount_point'
@@ -23,7 +24,6 @@ module Frontend
     config.filter_parameters += [:password]
     config.i18n.load_path    += Dir[Rails.root.join('config', 'locales', '**/*', '*.yml').to_s]
 
-    config.crazy_egg_url         = '//dnn506yrbagrg.cloudfront.net/pages/scripts/0018/4438.js'
     config.google_tag_manager_id = 'GTM-WVFLH9'
 
     config.time_zone = 'Europe/London'
@@ -40,6 +40,10 @@ module Frontend
     config.middleware.use 'RouteProbe' # respond to requests probing for a implemented route
     config.middleware.use 'VersionHeader' # add version of the running app to each response
     config.middleware.insert_after 'ActionDispatch::Static', 'PartnerToolsCookies'
+
+    config.middleware.insert_before(Rack::Runtime, Rack::Rewrite) do
+      instance_eval IO.read(Rails.root.join('lib', 'legacy_redirects.rb'))
+    end
 
     config.assets.initialize_on_precompile = true
 

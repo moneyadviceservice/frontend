@@ -8,10 +8,7 @@ class PartnerToolsCookies
   def call(env)
     status, headers, body = @app.call(env)
 
-    if (headers['X-Syndicated-Tool'].present? || env['HTTP_X_SYNDICATED_TOOL'].present?) &&
-      (headers['Set-Cookie'].present? || env['HTTP_SET_COOKIE'].present?) &&
-      Rack::Request.new(env).ssl?
-
+    if (headers['Set-Cookie'].present? || env['HTTP_SET_COOKIE'].present?) && Rack::Request.new(env).ssl?
       cookie = headers['Set-Cookie'] || env['HTTP_SET_COOKIE']
       cookies = cookie.split(COOKIE_SEPARATOR)
 

@@ -1,5 +1,10 @@
+ruby IO.read('.ruby-version').strip
+
 source 'https://rubygems.org'
-source 'http://gems.dev.mas.local'
+source 'https://gem.fury.io/h_app288206558'
+
+# force Bundler to use SSL
+git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 # RULES OF THE GEMFILE
 #
@@ -30,7 +35,7 @@ gem 'activerecord-session_store'
 # This could feasibly be replaced by an implementation within
 # this repo, as all the gem is doing is wrapping OpenSSL.
 ##############################################################
-gem 'aes', git: 'git@github.com:chicks/aes.git'
+gem 'aes', github: 'chicks/aes'
 gem 'algoliasearch'
 gem 'attr_encrypted', '~> 3.1'
 gem 'blind_index', '0.2.0'
@@ -47,16 +52,16 @@ gem 'link_header'
 gem 'mail'
 gem 'mailjet'
 gem 'meta-tags', '~> 2.4'
-gem 'mysql2', '0.4.9'
+gem 'mysql2'
 gem 'newrelic_rpm'
-gem 'nokogiri', '~> 1.10.3'
+gem 'nokogiri'
 gem 'nunes'
 gem 'opening_hours'
 gem 'rollbar'
-# gem 'postcode_anywhere-email_validation', '~> 0.2.0'
-gem 'postcode_anywhere-email_validation', :source => 'http://gems.dev.mas.local/'
+gem 'postcode_anywhere-email_validation', :source => 'https://gem.fury.io/h_app288206558'
 gem 'psych', '>= 2.0.5' # https://www.ruby-lang.org/en/news/2014/03/29/heap-overflow-in-yaml-uri-escape-parsing-cve-2014-2525/
-gem 'rack', git: 'https://github.com/rails-lts/rack.git', branch: 'lts-1-6-stable'
+gem 'rack', github: 'rails-lts/rack', branch: 'lts-1-6-stable'
+gem 'rack-rewrite'
 gem 'recaptcha', require: 'recaptcha/rails'
 gem 'redcarpet'
 gem 'rest-client', '~> 2.0'
@@ -72,9 +77,9 @@ gem 'websocket-extensions', '>= 0.1.5'
 # MAS Gems
 # ========
 # Dependencies
-gem 'adal', git: 'git@github.com:moneyadviceservice/azure-activedirectory-library-for-ruby'
+gem 'adal', github: 'moneyadviceservice/azure-activedirectory-library-for-ruby'
 gem 'cream', '2.1.8'
-gem 'dough-ruby', git: 'git@github.com:moneyadviceservice/dough.git', branch: 'PostMessages_v5.45'
+gem 'dough-ruby', github: 'moneyadviceservice/dough', branch: 'PostMessages_v5.45', ref: '0bf4b23a'
 gem 'mas-cms-client', '1.20.1'
 gem 'site_search', '0.3.0'
 # Tools
@@ -91,14 +96,15 @@ gem 'debt_free_day_calculator', '~> 4.0.1'
 gem 'debt_test', '~> 1.9.0'
 gem 'decision_trees', '~> 2.3.0'
 gem 'feedback', '~> 0.5.1'
-gem 'mortgage_calculator', '~> 4.5.1'
+gem 'mortgage_calculator', github: 'moneyadviceservice/mortgage_calculator', branch: 'remove-bugsnag'
 gem 'pacs', '~> 4.0.4'
 gem 'payday_loans_intervention', '~> 1.9.0'
 gem 'pensions_calculator', '~> 3.3.0'
-gem 'quiz', '~> 1.4.0', source: 'http://gems.dev.mas.local'
+gem 'puma'
+gem 'quiz', '~> 1.4.0', source: 'https://gem.fury.io/h_app288206558'
 gem 'savings_calculator', '~> 2.0.1'
 gem 'timelines', '~> 2.1.0'
-gem 'universal_credit', '~> 5.1.1'
+gem 'universal_credit', github: 'moneyadviceservice/universal_credit', branch: 'heroku'
 gem 'wpcc', '~> 3.1.0'
 
 group :assets do
@@ -130,7 +136,7 @@ group :test do
   gem 'rspec_junit_formatter'
   gem 'shoulda-matchers'
   gem 'site_prism'
-  gem 'sqlite3'
+  gem 'sqlite3', '1.4.2'
   gem 'tidy-html5'
   gem 'timecop'
   gem 'vcr'
@@ -139,7 +145,7 @@ end
 
 group :production do
   gem 'syslog-logger'
-  gem 'unicorn-rails'
+  gem 'rails_12factor'
 end
 
 group :build, :test, :development do

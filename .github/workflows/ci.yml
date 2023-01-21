@@ -1,0 +1,43 @@
+name: "CI"
+env:
+  BUNDLE_GEMS__RAILSLTS__COM: ${{ secrets.BUNDLE_GEMS__RAILSLTS__COM }}
+  BUNDLE_GEM__FURY__IO: ${{ secrets.BUNDLE_GEM__FURY__IO }}
+  BUNDLE_GITHUB__COM: ${{ secrets.BUNDLE_GITHUB__COM }}
+on:
+  push:
+    branches: [ "heroku" ]
+  pull_request:
+    branches: [ "heroku" ]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    env:
+      RAILS_ENV: test
+      ALGOLIA_APP_ID: test
+      ALGOLIA_API_KEY: test
+      FRONTEND_HTTP_REQUEST_TIMEOUT: 12
+      ATTR_CRYPT_KEY: ${{ secrets.ATTR_CRYPT_KEY }}
+      BIDX_CRYPT_KEY: ${{ secrets.BIDX_CRYPT_KEY }}
+      CAR_COST_TOOL_DOMAIN: localhost
+      CAR_COST_TOOL_CAP_SUBSCRIBER_ID: ''
+      CAR_COST_TOOL_CAP_PASSWORD: ''
+      CAR_COST_TOOL_MAX_CARS_TO_COMPARE: 3
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      - name: Install Ruby and gems
+        uses: ruby/setup-ruby@v1
+        with:
+          bundler-cache: true
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v3.5.1
+        with:
+          node-version: 4.1.1
+      - name: Install bower
+        run: npm install -g bower
+      - name: Install bowndler packages
+        run: bin/bowndler update
+      - name: Set up database schema
+        run: bin/rake db:schema:load
+      - name: Run tests
+        run: bin/rake

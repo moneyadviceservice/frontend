@@ -1,7 +1,4 @@
 class EmbeddedToolsController < ApplicationController
-  include Navigation
-  before_action :set_categories
-
   protected
 
   def default_url_options(options = {})
@@ -93,16 +90,4 @@ class EmbeddedToolsController < ApplicationController
   end
   helper_method :canonical
 
-  private
-
-  def set_categories
-    if category_id.blank?
-      @category = nil
-      @breadcrumbs = BreadcrumbTrail.home
-    else
-      @category = Mas::Cms::Category.find(category_id, locale: I18n.locale)
-      assign_active_categories(@category)
-      @breadcrumbs = BreadcrumbTrail.build_tool_trail(@category)
-    end
-  end
 end

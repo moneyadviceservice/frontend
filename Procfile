@@ -1,2 +1,1 @@
-web: export $(cat .env | xargs) && bundle exec rails s -p 5000
-
+web: bundle exec puma -C config/puma.rb

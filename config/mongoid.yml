@@ -22,6 +22,4 @@ test:
 production:
   clients:
     default:
-      database: "<%= ENV['PACS_MONGOD_DB'] %>"
-      hosts:
-        - "<%= ENV['PACS_MONGOD_HOST'] %>"
+      uri: "<%= ENV['MONGODB_URL'] %>"

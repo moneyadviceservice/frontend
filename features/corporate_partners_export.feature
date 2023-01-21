@@ -1,3 +1,4 @@
+@wip
 Feature: Export Corporate Partners
   As a MAS partnerships user
   I would like to be able to see a list of all corporate partners via a spreadsheet

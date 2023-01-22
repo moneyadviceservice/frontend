@@ -1,4 +1,7 @@
-r301 %r{^/assets/syndication/(.*)$}, '/a/syndication/$1'
+if Rails.env.production?
+  r301 %r{^/assets/(.*)$}, '/a/$1'
+end
+
 r301 %r{^/blog/?(.*)$}, 'https://www.moneyhelper.org.uk/en/blog'
 r301 %r{^/en/blog/?(.*)$}, 'https://www.moneyhelper.org.uk/en/blog'
 r301 %r{^/en/articles/how-to-talk-to-your-children-about-money-age-5-6/?$}, 'https://www.moneyhelper.org.uk/en/family-and-care/talk-money/how-to-talk-to-five-and-six-year-olds-about-money?source=mas'

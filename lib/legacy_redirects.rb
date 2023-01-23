@@ -5204,3 +5204,4 @@ r301 %r{^/en/articles/salary-sacrifice-schemes.html}, 'https://www.moneyhelper.o
 r301 %r{^/en/guaranteed-income-for-life}, 'https://www.moneyhelper.org.uk/en/pensions-and-retirement/taking-your-pension/compare-annuities'
 r301 %r{^/cy/articles/crowdfunding--what-you-need-to-know}, 'https://www.moneyhelper.org.uk/en/savings/investing/peer-to-peer-lending-what-you-need-to-know'
 r301 %r{^/cy/users/sign_up}, 'https://www.moneyhelper.org.uk/en/users/sign-up'
+r301 %r{^(/en)?/articles/?(.*)$}, 'https://www.moneyhelper.org.uk/en'

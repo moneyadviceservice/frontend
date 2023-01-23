@@ -8,24 +8,14 @@ RSpec.describe '404 catchall', type: :request do
   context 'when page does not exist' do
     it 'redirects to the correct url' do
       get '/doesnotexist'
-      expect(response).to redirect_to('https://www.moneyhelper.org.uk/en/404')
+      expect(response).to redirect_to('https://www.moneyhelper.org.uk/404')
     end
   end
 
   context 'when nested page does not exist' do
     it 'redirects to the correct url' do
       get '/en/nothing/other'
-      expect(response).to redirect_to('https://www.moneyhelper.org.uk/en/404')
-    end
-  end
-
-  context 'when the url contains locale' do
-    it 'redirects to a 404 page with the correct locale' do
-      get '/cy/doesnotexist/other'
-      expect(response).to redirect_to('https://www.moneyhelper.org.uk/cy/404')
-
-      get '/en/blah/other'
-      expect(response).to redirect_to('https://www.moneyhelper.org.uk/en/404')
+      expect(response).to redirect_to('https://www.moneyhelper.org.uk/404')
     end
   end
 

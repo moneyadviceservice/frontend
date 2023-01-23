@@ -8,7 +8,7 @@ RSpec.describe 'Request we have no implementation for', type: :request do
   it 'raises routing error' do
     get('/unsupported')
 
-    expect(response).to redirect_to('https://www.moneyhelper.org.uk/en/404')
+    expect(response).to redirect_to('https://www.moneyhelper.org.uk/404')
   end
 end
 

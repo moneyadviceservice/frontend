@@ -12,7 +12,7 @@ class CatchallController < ApplicationController
   private
 
   def redirect_to_money_helper_url
-    redirect_to money_helper_url("/#{locale}/404")
+    redirect_to money_helper_url("/404")
   end
 
   def money_helper_url(path)

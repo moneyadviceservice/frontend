@@ -6,8 +6,6 @@ class AmpArticlesController < ActionController::Base
   rescue_from Mas::Cms::HttpRedirect, with: :redirect_page
   rescue_from Mas::Cms::Errors::ResourceNotFound, with: :not_found
 
-  newrelic_ignore_enduser
-
   decorates_assigned :article, with: AmpArticleDecorator
   before_action :retrieve_article
 

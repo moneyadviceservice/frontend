@@ -109,7 +109,7 @@ class ApplicationController < ActionController::Base
   end
 
   def set_syndicated_x_frame
-    response.headers['X-Frame-Options'] = 'ALLOWALL' if syndicated_tool_request?
+    response.headers.delete('X-Frame-Options') if syndicated_tool_request?
   end
 
   # This layout chops off the header and footer

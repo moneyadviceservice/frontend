@@ -16,8 +16,8 @@ RSpec.describe ApplicationController, type: :controller do
       expect(subject).to render_template('layouts/syndicated')
     end
 
-    it 'sets x frame options to ALLOWALL' do
-      expect(subject.headers['X-Frame-Options']).to eql('ALLOWALL')
+    it 'strips the frame options header to allow all by default' do
+      expect(subject.headers['X-Frame-Options']).to be_nil
     end
   end
 

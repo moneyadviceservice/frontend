@@ -16,7 +16,7 @@ RSpec.describe 'Request that is redirected', type: :request do
   it 'redirects to specified location' do
     get('/en/categories/types-of-retirement-income')
 
-    expect(response).to redirect_to('http://localhost:5000/en/categories/using-your-pension-pot')
+    expect(response).to redirect_to('https://www.moneyhelper.org.uk/en')
   end
 end
 

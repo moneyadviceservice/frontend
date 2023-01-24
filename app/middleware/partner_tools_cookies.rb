@@ -14,9 +14,8 @@ class PartnerToolsCookies
 
       cookies.each do |cookie|
         next if cookie.blank?
-        next if cookie =~ /;\s*secure/i
 
-        cookie << '; Secure; SameSite=None'
+        cookie << '; SameSite=None'
       end
 
       headers['Set-Cookie'] = cookies.join(COOKIE_SEPARATOR)

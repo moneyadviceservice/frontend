@@ -11,9 +11,9 @@ RSpec.describe PartnerToolsCookies do
       allow_any_instance_of(Rack::Request).to receive(:ssl?) { true }
     end
 
-    it 'set secure and SameSite to None' do
+    it 'adds SameSite' do
       get '/'
-      expect(last_response.headers['Set-Cookie']).to eq "v=1; Secure; SameSite=None"
+      expect(last_response.headers['Set-Cookie']).to eq "v=1; SameSite=None"
     end
   end
 end

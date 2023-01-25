@@ -1,8 +1,6 @@
 # Frontend
 
-[![Code Climate](https://codeclimate.com/github/moneyadviceservice/frontend.png)](https://codeclimate.com/github/moneyadviceservice/frontend)
-
-The Money Advice Service's responsive website.
+The Money Advice Service's legacy tools application.
 
 
 ## Prerequisites
@@ -20,17 +18,16 @@ Clone the repository:
 $ git clone --recursive https://github.com/moneyadviceservice/frontend.git
 ```
 
-Install Mysql 5.7
+Install MariaDB/MySQL
 
 ```sh
-$ brew install mysql@5.7
-$ brew link mysql@5.7 --force
+$ brew install mariadb
 ```
 
 Make sure MySQL is running.
 
 ```sh
-$ brew services start mysql@5.7
+$ brew services restart mariadb
 ```
 
 Install Bower
@@ -39,7 +36,7 @@ Install Bower
 npm install -g bower
 ```
 
-Add Rails LTS credentials (get the username and password from keepass)
+Add Rails LTS credentials (get the username and password from Ben L)
 
 ```sh
 bundle config gems.railslts.com USERNAME:PASSWORD
@@ -61,7 +58,7 @@ cp .env-example .env
 Setup the database:
 
 ```sh
-bundle exec rake db:create && bundle exec rake db:schema:load
+bundle exec rake db:create db:schema:load
 ```
 
 ## Usage
@@ -86,19 +83,11 @@ Or alternatively you can add `DEV_CACHE=true` to your .env file.
 
 In development, frontend will use the local CMS for convenience. See [CMS repository README](https://github.com/moneyadviceservice/cms/blob/master/README.md) for instructions on setting up a local CMS instance.
 
-You can change the MAS_CMS_URL on .env file. Use https://cms.qa.dev.mas.local for testing, or http://localhost:PORT to point to a local running CMS.
+You can change the MAS_CMS_URL on .env file. Use https://staging-mas-cms.moneyhelper.org.uk for testing, or http://localhost:PORT to point to a local running CMS.
 
 Don't forget to restart the server after the modification.
 
 ### Development setup gotchas
-
-#### Contento 404 error
-
-```
-Unable to fetch Footer JSON from Contento error: [#<Core::Connection::Http::ResourceNotFound: the server responded with status 404>] url_prefix: [#<URI::HTTP http://localhost:3000/>]
-```
-
-The CMS is setup but the database is empty. A solution is to copy the QA CMS database into the CMS, as detailed in the [CMS repository README](https://github.com/moneyadviceservice/cms/blob/master/README.md).
 
 #### Problems loading Dough or Yeast
 
@@ -145,14 +134,6 @@ as a [blueprint file][apiary.apib] using the
 [blueprint file][apiary.apib] will be automatically reflected in the online
 [API documentation] and [mock API].
 
-### Styleguide
-
-The application includes an internal styleguide for contributors. It contains a
-living CSS styleguide, JavaScript styleguide and some recommendations on how to
-write Ruby code. As a contributor you should update the styleguide as you update
-the application. The CSS styleguide is powered by [KSS], a documenting syntax
-for CSS.
-
 ### Writing front-end code
 
 There are a number of documents to help everyone write maintainble, performant and readible HTML, CSS and Javascript.
@@ -172,14 +153,6 @@ be defined in the [bower.json] configuration file. Once installed they will be
 automatically available to the asset pipeline.
 
 ### Consuming the front-end without having to manually import dependencies
-
-We have a couple of projects that live outside of this website, but benefit from
-having the generated HTML and CSS. I.e. they don't need to manually import
-[Dough](https://github.com/moneyadviceservice/dough), [Yeast](https://github.com/moneyadviceservice/yeast), and [MAS Dough Theme](https://github.com/moneyadviceservice/mas_dough_theme), etc.
-
-Useful if you're an agency and want to get up and running quickly, we render both
-[English](https://www.moneyadviceservice.org.uk/en/empty) and [Welsh](https://www.moneyadviceservice.org.uk/cy/empty) versions of our 'empty' template. This can then be pulled in via
-`curl` or good old view-source and copying & pasting.
 
 There are minor differences to the header and footer in the empty template, to enable
 the HTML to run in a static fashion. For example, we [remove the authentication links](https://github.com/moneyadviceservice/frontend/blob/master/app/views/shared/_authentication.html.erb#L7)
@@ -246,15 +219,8 @@ RAILS_ENV=development bundle exec rake karma:install karma:run_once
 
 ## Deploy to staging and production
 
-Today the current process occurs in GO. You need to change the build number
-here:
-https://github.com/moneyadviceservice/scripts/blob/master/puppet/extdata/common.yaml#L249
+You'll need a heroku account with permissions to the `staging-partner-tools` and `partner-tools` apps.
 
-Make sure before you changed and open a PR to run the follow script and **paste on the PR description**:
-
-```
-./bin/mas-version-diff 1869 1870
-```
-
-Obs.: 1869 and 1870 is just an example of versions to be shown. Use the GO build
-number in ascending order.
+1. Configure your local git repository with the staging heroku remote: `https://git.heroku.com/staging-partner-tools.git`
+2. `git push staging your-branch:main`
+3. Once you're happy and this has been tested and approved `heroku pipelines:promote --app partner-tools` will promote the build to production

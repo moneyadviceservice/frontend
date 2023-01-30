@@ -2,6 +2,9 @@ if Rails.env.production?
   r301 %r{^/assets/(.*)$}, '/a/$1'
 end
 
+r301 %r{^/en/tools/budget-planner/?(.*)}, 'https://www.moneyhelper.org.uk/en/everyday-money/budgeting/use-our-budget-planner', host: 'www.moneyadviceservice.org.uk'
+r301 %r{^/cy/tools/cynllunydd-cyllideb/?(.*)}, 'https://www.moneyhelper.org.uk/cy/everyday-money/budgeting/use-our-budget-planner', host: 'www.moneyadviceservice.org.uk'
+
 r301 %r{^/en/tools/christmas-money-planner/?$}, 'https://www.moneyhelper.org.uk/en/savings/types-of-savings/saving-money-for-christmas'
 r301 %r{^/en/tools/annuities/?$}, 'https://www.moneyhelper.org.uk/en/pensions-and-retirement/taking-your-pension/compare-annuities'
 r301 %r{^(/en)?/blog/?(.*)$}, 'https://www.moneyhelper.org.uk/en/blog'

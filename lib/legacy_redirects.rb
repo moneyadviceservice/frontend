@@ -1,9 +1,18 @@
+LEGACY_MAS_WWW = 'www.moneyadviceservice.org.uk'.freeze
+
 if Rails.env.production?
   r301 %r{^/assets/(.*)$}, '/a/$1'
 end
 
-r301 %r{^/en/tools/budget-planner/?(.*)}, 'https://www.moneyhelper.org.uk/en/everyday-money/budgeting/use-our-budget-planner', host: 'www.moneyadviceservice.org.uk'
-r301 %r{^/cy/tools/cynllunydd-cyllideb/?(.*)}, 'https://www.moneyhelper.org.uk/cy/everyday-money/budgeting/use-our-budget-planner', host: 'www.moneyadviceservice.org.uk'
+r301 %r{^/en/tools/budget-planner/?(.*)}, 'https://www.moneyhelper.org.uk/en/everyday-money/budgeting/use-our-budget-planner', host: LEGACY_MAS_WWW
+r301 %r{^/cy/tools/cynllunydd-cyllideb/?(.*)}, 'https://www.moneyhelper.org.uk/cy/everyday-money/budgeting/use-our-budget-planner', host: LEGACY_MAS_WWW
+r301 %r{^/en/tools/debt-advice-locator/?(.*)}, 'https://www.moneyhelper.org.uk/en/money-troubles/dealing-with-debt/use-our-debt-advice-locator', host: LEGACY_MAS_WWW
+r301 %r{^/en/tools/mortgage-calculator/?(.*)}, 'https://www.moneyhelper.org.uk/en/homes/buying-a-home/use-our-mortgage-calculator', host: LEGACY_MAS_WWW
+r301 %r{^/en/tools/house-buying/stamp-duty-calculator/?(.*)}, 'https://www.moneyhelper.org.uk/en/homes/buying-a-home/use-our-stamp-duty-calculator', host: LEGACY_MAS_WWW
+r301 %r{^/en/tools/pension-calculator/?(.*)}, 'https://www.moneyhelper.org.uk/en/pensions-and-retirement/pensions-basics/use-our-pension-calculator', host: LEGACY_MAS_WWW
+r301 %r{^/en/tools/workplace-pension-contribution-calculator/?(.*)}, 'https://www.moneyhelper.org.uk/en/pensions-and-retirement/auto-enrolment/use-our-workplace-pension-calculator', host: LEGACY_MAS_WWW
+r301 %r{^/en/tools/savings-calculator/?(.*)}, 'https://www.moneyhelper.org.uk/en/savings/how-to-save/use-our-savings-calculator', host: LEGACY_MAS_WWW
+r301 %r{^//?/?en/tools/money-navigator-tool/?(.*)}, 'https://www.moneyhelper.org.uk/en/money-troubles/coronavirus/use-our-money-navigator-tool', host: LEGACY_MAS_WWW
 
 r301 %r{^/en/tools/christmas-money-planner/?$}, 'https://www.moneyhelper.org.uk/en/savings/types-of-savings/saving-money-for-christmas'
 r301 %r{^/en/tools/annuities/?$}, 'https://www.moneyhelper.org.uk/en/pensions-and-retirement/taking-your-pension/compare-annuities'

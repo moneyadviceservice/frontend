@@ -4,6 +4,16 @@ if Rails.env.production?
   r301 %r{^/assets/(.*)$}, '/a/$1'
 end
 
+r301 %r{.*}, 'https://www.moneyhelper.org.uk/en?source=mas', host: 'syndicated.moneyadviceservice.org.uk'
+r301 %r{.*}, 'https://www.moneyhelper.org.uk/en?source=mas', host: 'tables.moneyadviceservice.org.uk'
+r301 %r{.*}, 'https://www.moneyhelper.org.uk/en?source=mas', host: 'healthcheck.moneyadviceservice.org.uk'
+r301 %r{.*}, 'https://www.moneyhelper.org.uk/en/blog?source=mas', host: 'blog.moneyadviceservice.org.uk'
+r301 %r{.*}, 'https://www.moneyhelper.org.uk/en/family-and-care?source=mas', host: 'parents.moneyadviceservice.org.uk'
+r301 %r{.*}, 'https://www.moneyhelper.org.uk/en/family-and-care/divorce-and-separation?source=mas', host: 'divorce.moneyadviceservice.org.uk'
+r301 %r{.*}, 'https://www.moneyhelper.org.uk/en/pensions-and-retirement/taking-your-pension/compare-annuities?source=mas', host: 'compare.moneyadviceservice.org.uk'
+r301 %r{.*}, 'https://www.moneyhelper.org.uk/en/everyday-money?source=mas', host: 'yourmoney.moneyadviceservice.org.uk'
+r301 %r{.*}, 'https://www.moneyhelper.org.uk/en/benefits/universal-credit/money-manager?source=mas', host: 'obs.moneyadviceservice.org.uk'
+
 r301 %r{^/en/tools/budget-planner/?(.*)}, 'https://www.moneyhelper.org.uk/en/everyday-money/budgeting/use-our-budget-planner', host: LEGACY_MAS_WWW
 r301 %r{^/cy/tools/cynllunydd-cyllideb/?(.*)}, 'https://www.moneyhelper.org.uk/cy/everyday-money/budgeting/use-our-budget-planner', host: LEGACY_MAS_WWW
 r301 %r{^/en/tools/debt-advice-locator/?(.*)}, 'https://www.moneyhelper.org.uk/en/money-troubles/dealing-with-debt/use-our-debt-advice-locator', host: LEGACY_MAS_WWW

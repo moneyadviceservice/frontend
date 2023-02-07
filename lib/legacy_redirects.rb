@@ -5231,3 +5231,5 @@ r301 %r{^/cy/users/sign_up}, 'https://www.moneyhelper.org.uk/en/users/sign-up'
 r301 %r{^(/en|/cy)?/articles/?(.*)$}, 'https://www.moneyhelper.org.uk/en'
 r301 %r{^(/en|/cy)?/categories/?(.*)$}, 'https://www.moneyhelper.org.uk/en'
 r301 %r{^///en/categories/?(.*)$}, 'https://www.moneyhelper.org.uk/en'
+
+r301 %r{.*}, 'https://www.moneyhelper.org.uk/en?source=mas', host: 'www.moneyadviceservice.org.uk'

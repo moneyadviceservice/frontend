@@ -11,14 +11,4 @@ RSpec.describe 'Legacy redirects', type: :request do
       expect(request).to redirect_to('https://www.moneyhelper.org.uk/en/money-troubles/coronavirus/use-our-money-navigator-tool')
     end
   end
-
-  context 'when requested from any other host' do
-    it 'loads the tool' do
-      get '/en/tools/budget-planner'
-      expect(response).to be_ok
-
-      get '///en/tools/money-navigator-tool'
-      expect(response).to be_ok
-    end
-  end
 end

@@ -1,6 +1,5 @@
 RSpec.describe 'Wpcc', type: :request do
-  ["/en/tools/#{ToolMountPoint::Wpcc::EN_ID}",
-   "/cy/tools/#{ToolMountPoint::Wpcc::CY_ID}"].each do |path|
+  ["/cy/tools/#{ToolMountPoint::Wpcc::CY_ID}"].each do |path|
     describe path do
       before do
         get(path)

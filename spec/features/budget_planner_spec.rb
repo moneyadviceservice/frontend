@@ -1,7 +1,5 @@
 RSpec.feature 'Budget Planner' do
   scenario 'The `noresize` param when set, persists across requests' do
-    allow_any_instance_of(ApplicationController).to receive(:syndicated_tool_request?).and_return(true)
-
     visit '/en/tools/budget-planner?noresize=true'
 
     page.all('form').each do |form|

@@ -1,0 +1,7 @@
+<% content_for(:engine_content) do %>
+  <div class="global-alert__content-container">
+    <h1>This tool is provided by MoneyHelper</h1>
+    <p>You may experience technical issues accessing this tool without third-party cookies enabled.</p>
+    <p>For the best experience we recommend using the tool on <%= link_to 'the MoneyHelper website', @tool.canonical_url, target: '_blank' %>.</p>
+  </div>
+<% end %>

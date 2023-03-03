@@ -20,6 +20,8 @@ Rails.application.routes.draw do
   scope '/:locale', locale: /en|cy/ do
     root 'home#show'
 
+    resource :cookies_disabled
+
     #Money Navigator Tool
     scope :tools do
       scope '/:money_navigator_tool', money_navigator_tool: /money-navigator-tool|teclyn-llywio-ariannol/ do

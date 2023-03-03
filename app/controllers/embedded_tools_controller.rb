@@ -1,5 +1,18 @@
 class EmbeddedToolsController < ApplicationController
+  before_action :check_cookie_compatibility, unless: :cookies_checked?
+
   protected
+
+  def check_cookie_compatibility
+    if @tool = CookiedTool.find_by_landing_path(request.path)
+      cookies[:checked] = 'true'
+      redirect_to main_app.cookies_disabled_path(tool: @tool.tool)
+    end
+  end
+
+  def cookies_checked?
+    params[:checked] == 'true'
+  end
 
   def default_url_options(options = {})
     return super unless exclude_syndicated_iframe_resizer?

@@ -1,5 +1,5 @@
 Given(/^I am on the Money Manager tool$/) do
-  money_manager_page.load
+  money_manager_page.load(query: { checked: true })
 end
 
 Given(/^I select a country$/) do

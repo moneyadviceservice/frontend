@@ -7,7 +7,7 @@ $gutter: $default-gutter / 2; // the space between category columns
 $global-nav-transition-duration: 300ms !default; // Defined in _global_nav.scss
 
 .global-subnav {
-  transition-property: visibility;
+  transition: visibility;
   transition-delay: $global-nav-transition-duration;
   visibility: hidden;
   position: absolute;
@@ -43,7 +43,7 @@ $global-nav-transition-duration: 300ms !default; // Defined in _global_nav.scss
 
   .is-hidden {
     @include respond-to($mq-m) {
-      display: block; 
+      display: block;
     }
   }
 }

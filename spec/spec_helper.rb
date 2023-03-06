@@ -1,4 +1,19 @@
 require 'codeclimate-test-reporter'
+require 'warning'
+
+# https://github.com/jeremyevans/ruby-warning
+# Ignore any thor related warnings as we need to bump the thor gem in order to silence warnings
+Warning.ignore(/thor-0.19.4/)
+
+# Ignore warning as we are on Ruby 2.7.7
+Warning.ignore(/rb_check_safe_obj will be removed in Ruby 3.0/)
+
+Warning.ignore(/StructuredWarnings::BuiltInWarning/)
+Warning.ignore(/NOTE: Gem.gunzip is deprecated/)
+Warning.ignore(/warning-1.3.0/)
+
+Warning.ignore(/DEPRECATION WARNING: `#column_for_attribute` will return a null object for non-existent columns in Rails 5./)
+
 CodeClimate::TestReporter.start
 
 ENV['RAILS_ENV'] = 'test'
@@ -90,7 +105,6 @@ RSpec.configure do |c|
 
   c.before(:suite) do
     DatabaseCleaner.clean
-    ActiveRecord::Tasks::DatabaseTasks.load_schema_current(:ruby, ENV['SCHEMA'])
 
     Core::Registry::Repository[:customer] = Core::Repository::Customers::Fake.new
   end

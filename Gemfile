@@ -130,6 +130,9 @@ group :test do
   gem 'factory_bot'
   gem 'faker'
   gem 'html_validation'
+  gem 'net-http'
+  gem 'net-smtp'
+  gem 'net-imap'
   gem 'poltergeist'
   gem 'rspec-html-matchers'
   gem 'rspec_junit_formatter'
@@ -138,8 +141,10 @@ group :test do
   gem 'sqlite3', '1.4.2'
   gem 'tidy-html5'
   gem 'timecop'
+  gem 'uri', '0.10.0'
   gem 'vcr'
-  gem 'webmock'
+  gem 'warning', '~> 1.3'
+  gem 'webmock', '~> 3.5.0'
 end
 
 group :production do

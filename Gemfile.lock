@@ -124,8 +124,8 @@ GEM
       minitest (~> 5.1)
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.2, >= 1.2.10)
-    addressable (2.7.0)
-      public_suffix (>= 2.0.2, < 5.0)
+    addressable (2.8.1)
+      public_suffix (>= 2.0.2, < 6.0)
     advice_plans (4.1.1)
       dough-ruby (~> 5.36)
       friendly_id (>= 5.1.0)
@@ -215,8 +215,8 @@ GEM
       dough-ruby (~> 5.36)
       friendly_id (>= 5.1.0)
       rails (>= 4, < 5)
-    crack (0.4.3)
-      safe_yaml (~> 1.0.0)
+    crack (0.4.5)
+      rexml
     crass (1.0.6)
     cream (2.1.8)
       faraday (>= 0.9)
@@ -423,7 +423,7 @@ GEM
       execjs (>= 1.2.9)
       sprockets (>= 2.0.3)
       tilt
-    hashdiff (0.3.7)
+    hashdiff (1.0.1)
     hashie (2.0.5)
     hike (1.2.3)
     historyjs-rails (1.0.1)
@@ -604,7 +604,7 @@ GEM
       interception (>= 0.5)
       pry
     psych (3.0.2)
-    public_suffix (4.0.1)
+    public_suffix (5.0.1)
     puma (6.0.0)
       nio4r (~> 2.0)
     quiz (1.4.0)
@@ -672,6 +672,7 @@ GEM
       http-cookie (>= 1.0.2, < 2.0)
       mime-types (>= 1.16, < 4.0)
       netrc (~> 0.8)
+    rexml (3.2.5)
     roadie (2.4.3)
       actionmailer (> 3.0.0, < 5.0.0)
       css_parser (~> 1.3.4)
@@ -727,7 +728,6 @@ GEM
       json (~> 2.1)
       structured_warnings (~> 0.3)
     rubyzip (1.3.0)
-    safe_yaml (1.0.4)
     sass (3.2.19)
     sass-rails (4.0.5)
       railties (>= 4.0.0, < 5.0)
@@ -812,7 +812,7 @@ GEM
     vcr (4.0.0)
     warden (1.2.7)
       rack (>= 1.0)
-    webmock (3.3.0)
+    webmock (3.5.1)
       addressable (>= 2.3.6)
       crack (>= 0.3.2)
       hashdiff
@@ -948,7 +948,7 @@ DEPENDENCIES
   uglifier
   universal_credit!
   vcr
-  webmock
+  webmock (~> 3.5.0)
   websocket-extensions (>= 0.1.5)
   whenever
   wpcc (~> 3.1.0)

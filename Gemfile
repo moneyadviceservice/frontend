@@ -139,7 +139,7 @@ group :test do
   gem 'tidy-html5'
   gem 'timecop'
   gem 'vcr'
-  gem 'webmock'
+  gem 'webmock', '~> 3.5.0'
 end
 
 group :production do

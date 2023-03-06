@@ -1,0 +1,65 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://webservices.capnetwork.co.uk/CAPUsedValues_Webservice/capusedvalues.asmx/GetUsedValuation
+    body:
+      encoding: UTF-8
+      string: Password=ghaj7a&Subscriber_ID=170796&CAPID=86391&CAPCode=&Database=CAR&RegistrationDate=2018%2F11%2F30&DatasetDate=2014%2F04%2F01&JustCurrent=true&Mileage=40000
+    headers:
+      Accept:
+      - "*/*"
+      User-Agent:
+      - rest-client/2.1.0 (darwin22 arm64) ruby/2.7.7p221
+      Content-Length:
+      - '160'
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Host:
+      - webservices.capnetwork.co.uk
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - private
+      Transfer-Encoding:
+      - chunked
+      Content-Type:
+      - text/xml; charset=utf-8
+      Server:
+      - Microsoft-IIS/8.5
+      X-Aspnet-Version:
+      - 4.0.30319
+      X-Powered-By:
+      - ASP.NET
+      Date:
+      - Tue, 07 Mar 2023 12:47:22 GMT
+    body:
+      encoding: UTF-8
+      string: "<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<CAPDataSetResult xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"
+        xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns=\"http://webservices.capnetwork.co.uk\">\r\n
+        \ <Success>true</Success>\r\n  <FailMessage />\r\n  <Returned_DataSet>\r\n
+        \   <xs:schema id=\"UsedValues\" xmlns=\"\" xmlns:xs=\"http://www.w3.org/2001/XMLSchema\"
+        xmlns:msdata=\"urn:schemas-microsoft-com:xml-msdata\">\r\n      <xs:element
+        name=\"UsedValues\" msdata:IsDataSet=\"true\" msdata:UseCurrentLocale=\"true\">\r\n
+        \       <xs:complexType>\r\n          <xs:choice minOccurs=\"0\" maxOccurs=\"unbounded\">\r\n
+        \           <xs:element name=\"Valuation\">\r\n              <xs:complexType>\r\n
+        \               <xs:sequence>\r\n                  <xs:element name=\"Retail\"
+        type=\"xs:int\" minOccurs=\"0\" />\r\n                  <xs:element name=\"Clean\"
+        type=\"xs:int\" minOccurs=\"0\" />\r\n                  <xs:element name=\"Average\"
+        type=\"xs:int\" minOccurs=\"0\" />\r\n                  <xs:element name=\"Below\"
+        type=\"xs:int\" minOccurs=\"0\" />\r\n                </xs:sequence>\r\n              </xs:complexType>\r\n
+        \           </xs:element>\r\n          </xs:choice>\r\n        </xs:complexType>\r\n
+        \     </xs:element>\r\n    </xs:schema>\r\n    <diffgr:diffgram xmlns:msdata=\"urn:schemas-microsoft-com:xml-msdata\"
+        xmlns:diffgr=\"urn:schemas-microsoft-com:xml-diffgram-v1\">\r\n      <UsedValues
+        xmlns=\"\">\r\n        <Valuation diffgr:id=\"Valuation1\" msdata:rowOrder=\"0\">\r\n
+        \         <Retail>43000</Retail>\r\n          <Clean>37500</Clean>\r\n          <Average>36200</Average>\r\n
+        \         <Below>34900</Below>\r\n        </Valuation>\r\n      </UsedValues>\r\n
+        \   </diffgr:diffgram>\r\n  </Returned_DataSet>\r\n</CAPDataSetResult>"
+    http_version:
+  recorded_at: Tue, 07 Mar 2023 12:47:22 GMT
+recorded_with: VCR 4.0.0

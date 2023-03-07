@@ -7,10 +7,14 @@ development:
   encoding: utf8
 
 test:
-  adapter: sqlite3
-  database: db/test.sqlite3
+  adapter: mysql2
+  host: 127.0.0.1
+  username: root
+  database: cms_test
   pool: 5
   timeout: 5000
+  encoding: utf8
+  port: 3306
 
 production:
   adapter: mysql2

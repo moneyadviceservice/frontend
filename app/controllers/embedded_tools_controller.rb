@@ -11,7 +11,7 @@ class EmbeddedToolsController < ApplicationController
   end
 
   def cookies_checked?
-    params[:checked] == 'true'
+    request.post? || params[:checked] == 'true'
   end
 
   def default_url_options(options = {})

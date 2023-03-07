@@ -1,0 +1,90 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://webservices.capnetwork.co.uk/CAPDVLA_Webservice/CAPDVLA.asmx/DVLALookupVRM
+    body:
+      encoding: UTF-8
+      string: Password=ghaj7a&SubscriberID=170796&vrm=AC+63+UFO
+    headers:
+      Accept:
+      - "*/*"
+      User-Agent:
+      - rest-client/2.1.0 (darwin22 arm64) ruby/2.7.7p221
+      Content-Length:
+      - '49'
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Host:
+      - webservices.capnetwork.co.uk
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - private
+      Transfer-Encoding:
+      - chunked
+      Content-Type:
+      - text/xml; charset=utf-8
+      Server:
+      - Microsoft-IIS/8.5
+      X-Aspnet-Version:
+      - 4.0.30319
+      X-Powered-By:
+      - ASP.NET
+      Date:
+      - Tue, 07 Mar 2023 12:47:21 GMT
+    body:
+      encoding: UTF-8
+      string: "<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<RESPONSE>\r\n  <SUCCESS>true</SUCCESS>\r\n
+        \ <ERRORMESSAGE>\r\n  </ERRORMESSAGE>\r\n  <TIMESTAMP>07/03/2023 12:47:21</TIMESTAMP>\r\n
+        \ <AUDITID>122509074</AUDITID>\r\n  <LOOKUP_VRM>AC 63 UFO</LOOKUP_VRM>\r\n
+        \ <LOOKUP_VIN />\r\n  <MONTHLYLOOKUPLIMITEXCEEDED>False</MONTHLYLOOKUPLIMITEXCEEDED>\r\n
+        \ <AUTOCORRECTED>False</AUTOCORRECTED>\r\n  <AUTOCORRECTEDREASON>\r\n  </AUTOCORRECTEDREASON>\r\n
+        \ <MATCHLEVEL>\r\n    <DVLA>1</DVLA>\r\n    <DVLAKEEPER>1</DVLAKEEPER>\r\n
+        \   <DVLABASIC>1</DVLABASIC>\r\n    <SMMT>0</SMMT>\r\n    <CAP>1</CAP>\r\n
+        \   <ALTERNATIVEVRMS>0</ALTERNATIVEVRMS>\r\n    <ALTERNATIVEDERIVATIVES>0</ALTERNATIVEDERIVATIVES>\r\n
+        \ </MATCHLEVEL>\r\n  <DATA>\r\n    <DVLA>\r\n      <VRM>AC63UFO</VRM>\r\n
+        \     <VIN>WDD2053872F826224</VIN>\r\n      <MANUFACTURER>MERCEDES-BENZ</MANUFACTURER>\r\n
+        \     <MODEL>AMG C 63 S PREMIUM + AUTO</MODEL>\r\n      <FUELTYPE>Petrol</FUELTYPE>\r\n
+        \     <BODYTYPE>Coupe</BODYTYPE>\r\n      <DOORS>2</DOORS>\r\n      <SEATING>4</SEATING>\r\n
+        \     <WHEELPLAN>2 Axle Rigid Body</WHEELPLAN>\r\n      <REGISTRATIONDATE>20181130</REGISTRATIONDATE>\r\n
+        \     <MANUFACTUREDDATE>20181130</MANUFACTUREDDATE>\r\n      <FIRSTREG_DATE>20181130</FIRSTREG_DATE>\r\n
+        \     <FIRSTREG_USEDBEFORE>0</FIRSTREG_USEDBEFORE>\r\n      <CO2>230</CO2>\r\n
+        \     <ENGINECAPACITY>3982</ENGINECAPACITY>\r\n      <ENGINENUMBER>17798060071786</ENGINENUMBER>\r\n
+        \     <ISSCRAPPED>No</ISSCRAPPED>\r\n      <SCRAPPEDDATE>\r\n      </SCRAPPEDDATE>\r\n
+        \     <ISEXPORTED>No</ISEXPORTED>\r\n      <EXPORTEDDATE>\r\n      </EXPORTEDDATE>\r\n
+        \     <ISIMPORTED>No</ISIMPORTED>\r\n      <IMPORTEDDATE>\r\n      </IMPORTEDDATE>\r\n
+        \     <COLOUR>BLACK</COLOUR>\r\n      <MASSINSERVICE>1820</MASSINSERVICE>\r\n
+        \     <MAXMASS>2205</MAXMASS>\r\n      <MAXNETPOWER>375</MAXNETPOWER>\r\n
+        \     <MAXTOW_BRAKED>\r\n      </MAXTOW_BRAKED>\r\n      <MAXTOW_UNBRAKED>\r\n
+        \     </MAXTOW_UNBRAKED>\r\n      <SOUNDLEVEL_STATIONARY>88</SOUNDLEVEL_STATIONARY>\r\n
+        \     <SOUNDLEVEL_ENGINE>3750</SOUNDLEVEL_ENGINE>\r\n      <SOUNDLEVEL_DRIVEBY>74</SOUNDLEVEL_DRIVEBY>\r\n
+        \     <PREVIOUSAQUISITION>20220413</PREVIOUSAQUISITION>\r\n      <PREVIOUSDISPOSAL>20220126</PREVIOUSDISPOSAL>\r\n
+        \     <PREVIOUSKEEPERS>1</PREVIOUSKEEPERS>\r\n      <CHERISHEDTRANSFERMARKER>Yes</CHERISHEDTRANSFERMARKER>\r\n
+        \     <TRANSFERDATE>20220418</TRANSFERDATE>\r\n    </DVLA>\r\n    <CAP>\r\n
+        \     <VEHICLETYPE_ID>1</VEHICLETYPE_ID>\r\n      <VEHICLETYPE>Car</VEHICLETYPE>\r\n
+        \     <CAPID>86391</CAPID>\r\n      <CAPCODE>MECC40PP32CPTA  2   </CAPCODE>\r\n
+        \     <ENHANCEDCAPCODE>0108639120191201201912010303424700072170</ENHANCEDCAPCODE>\r\n
+        \     <ENHANCEDCAPCODE_IDENTIFIER>010863912019120120191201</ENHANCEDCAPCODE_IDENTIFIER>\r\n
+        \     <ENHANCEDCAPCODE_TECNICAL>0303424700072170</ENHANCEDCAPCODE_TECNICAL>\r\n
+        \     <MANUFACTURER_CODE>5509</MANUFACTURER_CODE>\r\n      <MANUFACTURER>MERCEDES-BENZ</MANUFACTURER>\r\n
+        \     <RANGE_CODE>160</RANGE_CODE>\r\n      <RANGE>C CLASS</RANGE>\r\n      <MODEL_CODE>89965</MODEL_CODE>\r\n
+        \     <MODEL>C CLASS AMG COUPE</MODEL>\r\n      <MODELDATEDESC_SHORT>(18 ----)</MODELDATEDESC_SHORT>\r\n
+        \     <MODELDATEDESC_LONG>(2018 ----)</MODELDATEDESC_LONG>\r\n      <DERIVATIVE>C63
+        S Premium Plus 2dr 9G-Tronic</DERIVATIVE>\r\n      <DERIVATIVEDATEDESC_SHORT>(18
+        - 20)</DERIVATIVEDATEDESC_SHORT>\r\n      <DERIVATIVEDATEDESC_LONG>(2018 -
+        2020)</DERIVATIVEDATEDESC_LONG>\r\n      <INTRODUCED>20180901</INTRODUCED>\r\n
+        \     <DISCONTINUED>20201201</DISCONTINUED>\r\n      <RUNOUTDATE>20210531</RUNOUTDATE>\r\n
+        \     <DOORS>2</DOORS>\r\n      <DRIVETRAIN>Rear Wheel Drive</DRIVETRAIN>\r\n
+        \     <FUELDELIVERY>Turbo</FUELDELIVERY>\r\n      <TRANSMISSION>Automatic</TRANSMISSION>\r\n
+        \     <FUELTYPE>Petrol</FUELTYPE>\r\n      <PLATE>2018 68</PLATE>\r\n      <PLATE_SEQNO>118</PLATE_SEQNO>\r\n
+        \     <PLATE_YEAR>2018</PLATE_YEAR>\r\n      <PLATE_MONTH>9</PLATE_MONTH>\r\n
+        \   </CAP>\r\n  </DATA>\r\n</RESPONSE>"
+    http_version:
+  recorded_at: Tue, 07 Mar 2023 12:47:22 GMT
+recorded_with: VCR 4.0.0

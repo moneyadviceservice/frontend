@@ -1,0 +1,88 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://webservices.capnetwork.co.uk/CAPNVD_Webservice/CAPNVD.asmx/GetBulkTechnicalData
+    body:
+      encoding: UTF-8
+      string: Password=ghaj7a&Subscriber_ID=170796&Database=CAR&CAPIDList=86391&SpecDateList=&TechDataList=CO2%2C+CC%2C+MPG_COMBINED%2C+MPG_URBAN%2C+MPG_EXTRAURBAN&ReturnVehicleDescription=true&ReturnCAPcodeTechnicalItems=false&ReturnCostNew=true
+    headers:
+      Accept:
+      - "*/*"
+      User-Agent:
+      - rest-client/2.1.0 (darwin22 arm64) ruby/2.7.7p221
+      Content-Length:
+      - '232'
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Host:
+      - webservices.capnetwork.co.uk
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - private
+      Transfer-Encoding:
+      - chunked
+      Content-Type:
+      - text/xml; charset=utf-8
+      Server:
+      - Microsoft-IIS/8.5
+      X-Aspnet-Version:
+      - 4.0.30319
+      X-Powered-By:
+      - ASP.NET
+      Date:
+      - Tue, 07 Mar 2023 12:47:21 GMT
+    body:
+      encoding: UTF-8
+      string: "<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<CAPDataSetResult xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"
+        xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns=\"http://www.capnetwork.co.uk/CAPNVD/\">\r\n
+        \ <Success>true</Success>\r\n  <FailMessage />\r\n  <Returned_DataSet>\r\n
+        \   <xs:schema id=\"TechData\" xmlns=\"\" xmlns:xs=\"http://www.w3.org/2001/XMLSchema\"
+        xmlns:msdata=\"urn:schemas-microsoft-com:xml-msdata\">\r\n      <xs:element
+        name=\"TechData\" msdata:IsDataSet=\"true\" msdata:UseCurrentLocale=\"true\">\r\n
+        \       <xs:complexType>\r\n          <xs:choice minOccurs=\"0\" maxOccurs=\"unbounded\">\r\n
+        \           <xs:element name=\"Tech_Table\">\r\n              <xs:complexType>\r\n
+        \               <xs:sequence>\r\n                  <xs:element name=\"CAPID\"
+        type=\"xs:int\" minOccurs=\"0\" />\r\n                  <xs:element name=\"SpecDate\"
+        type=\"xs:dateTime\" minOccurs=\"0\" />\r\n                  <xs:element name=\"Manufacturer\"
+        type=\"xs:string\" minOccurs=\"0\" />\r\n                  <xs:element name=\"Range\"
+        type=\"xs:string\" minOccurs=\"0\" />\r\n                  <xs:element name=\"Model\"
+        type=\"xs:string\" minOccurs=\"0\" />\r\n                  <xs:element name=\"Derivative\"
+        type=\"xs:string\" minOccurs=\"0\" />\r\n                  <xs:element name=\"ModIntroduced\"
+        type=\"xs:int\" minOccurs=\"0\" />\r\n                  <xs:element name=\"ModDiscontinued\"
+        type=\"xs:int\" minOccurs=\"0\" />\r\n                  <xs:element name=\"DerIntroducted\"
+        type=\"xs:dateTime\" minOccurs=\"0\" />\r\n                  <xs:element name=\"DerDiscontinued\"
+        type=\"xs:dateTime\" minOccurs=\"0\" />\r\n                  <xs:element name=\"BodyStyle\"
+        type=\"xs:string\" minOccurs=\"0\" />\r\n                  <xs:element name=\"Basic\"
+        type=\"xs:decimal\" minOccurs=\"0\" />\r\n                  <xs:element name=\"VAT\"
+        type=\"xs:decimal\" minOccurs=\"0\" />\r\n                  <xs:element name=\"CO2\"
+        type=\"xs:string\" minOccurs=\"0\" />\r\n                  <xs:element name=\"CC\"
+        type=\"xs:string\" minOccurs=\"0\" />\r\n                  <xs:element name=\"MPG_COMBINED\"
+        type=\"xs:string\" minOccurs=\"0\" />\r\n                  <xs:element name=\"MPG_URBAN\"
+        type=\"xs:string\" minOccurs=\"0\" />\r\n                  <xs:element name=\"MPG_EXTRAURBAN\"
+        type=\"xs:string\" minOccurs=\"0\" />\r\n                </xs:sequence>\r\n
+        \             </xs:complexType>\r\n            </xs:element>\r\n          </xs:choice>\r\n
+        \       </xs:complexType>\r\n      </xs:element>\r\n    </xs:schema>\r\n    <diffgr:diffgram
+        xmlns:msdata=\"urn:schemas-microsoft-com:xml-msdata\" xmlns:diffgr=\"urn:schemas-microsoft-com:xml-diffgram-v1\">\r\n
+        \     <TechData xmlns=\"\">\r\n        <Tech_Table diffgr:id=\"Tech_Table1\"
+        msdata:rowOrder=\"0\">\r\n          <CAPID>86391</CAPID>\r\n          <SpecDate>1900-01-01T00:00:00+00:00</SpecDate>\r\n
+        \         <Manufacturer>MERCEDES-BENZ</Manufacturer>\r\n          <Range>C
+        CLASS</Range>\r\n          <Model>C CLASS AMG COUPE</Model>\r\n          <Derivative>C63
+        S Premium Plus 2dr 9G-Tronic</Derivative>\r\n          <ModIntroduced>2018</ModIntroduced>\r\n
+        \         <ModDiscontinued>0</ModDiscontinued>\r\n          <DerIntroducted>2018-09-01T00:00:00+01:00</DerIntroducted>\r\n
+        \         <DerDiscontinued>2020-12-01T00:00:00+00:00</DerDiscontinued>\r\n
+        \         <BodyStyle>Coupe</BodyStyle>\r\n          <CO2>230                                               </CO2>\r\n
+        \         <CC>3982                                              </CC>\r\n
+        \         <MPG_COMBINED>28                                                </MPG_COMBINED>\r\n
+        \         <MPG_URBAN>20.2                                              </MPG_URBAN>\r\n
+        \         <MPG_EXTRAURBAN>36.2                                              </MPG_EXTRAURBAN>\r\n
+        \       </Tech_Table>\r\n      </TechData>\r\n    </diffgr:diffgram>\r\n  </Returned_DataSet>\r\n</CAPDataSetResult>"
+    http_version:
+  recorded_at: Tue, 07 Mar 2023 12:47:22 GMT
+recorded_with: VCR 4.0.0

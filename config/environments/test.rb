@@ -1,3 +1,7 @@
+Warning.ignore(/thor-0.19.4/)
+Warning.ignore(/rb_check_safe_obj will be removed in Ruby 3.0/)
+Warning.ignore(/NOTE: Gem.gunzip is deprecated/)
+
 Rails.application.configure do
 
   # Disable caching

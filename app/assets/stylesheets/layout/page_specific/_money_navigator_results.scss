@@ -6,21 +6,21 @@ $transition-time: 0.4s;
 	}
 
 	.results__intro {
-		font-size: 1.125rem; 
-		font-weight: 700; 
+		font-size: 1.125rem;
+		font-weight: 700;
 	}
 
 	.results__urgent-actions {
-		@include row(12); 
+		@include row(12);
 
-		background: $color-grey-pale; 
+		background: $color-grey-pale;
 
 		.urgent-actions__heading {
-			@include column(12); 
+			@include column(12);
 
-			font-size: 1rem; 
-			margin-top: $baseline-unit * 2; 
-			color: $color-black; 
+			font-size: 1rem;
+			margin-top: $baseline-unit * 2;
+			color: $color-black;
 
 			.heading--strong {
 				text-transform: uppercase;
@@ -28,57 +28,57 @@ $transition-time: 0.4s;
 		}
 
 		.urgent-actions__actions {
-			@include column(12); 
+			@include column(12);
 
 			@include respond-to($mq-m) {
-				width: 100%; 
-				margin-left: 0; 
-				margin-right: 0; 
+				width: 100%;
+				margin-left: 0;
+				margin-right: 0;
 			}
 
-			list-style: none; 
-			padding: 0; 
-			margin-top: 0; 
-			margin-bottom: 0; 
+			list-style: none;
+			padding: 0;
+			margin-top: 0;
+			margin-bottom: 0;
 		}
 
 		.urgent-actions__action {
-			@extend %clearfix; 
+			@extend %clearfix;
 
 			@include respond-to($mq-m) {
-				@include column(12); 
+				@include column(12);
 			}
 
 			.action__content {
-				@extend %clearfix; 
+				@extend %clearfix;
 
 				position: relative;
 				background: $color-white;
-				min-height: 14rem; 
-				margin-top: 0; 
-				margin-bottom: $baseline-unit * 2; 
-				padding: $baseline-unit 0; 
+				min-height: 14rem;
+				margin-top: 0;
+				margin-bottom: $baseline-unit * 2;
+				padding: $baseline-unit 0;
 
 				a {
 					text-decoration: underline;
 				}
 
 				& > p {
-					@include column(12); 
+					@include column(12);
 
 					clear: left;
-					margin-top: 0; 
+					margin-top: 0;
 
 					&:first-child {
-						margin-top: 1rem; 
+						margin-top: 1rem;
 					}
 
 					@include respond-to($mq-m) {
-						@include column(6); 
+						@include column(6);
 					}
 
 					@include respond-to($mq-l) {
-						@include column(7); 
+						@include column(7);
 					}
 
 					& > img {
@@ -87,62 +87,62 @@ $transition-time: 0.4s;
 				}
 
 				@include respond-to($mq-m) {
-					@include row(12); 
+					@include row(12);
 				}
-		
+
 				@include respond-to($mq-l) {
 					width: 100%;
-					margin-left: 0; 
-					margin-right: 0; 
+					margin-left: 0;
+					margin-right: 0;
 				}
 
 				.callout {
 					@include column(12);
 
-					margin-top: 0;  
+					margin-top: 0;
 
 					p {
-						font-size: 1rem; 
+						font-size: 1rem;
 					}
 
 					@include respond-to($mq-m) {
-						@include column(6); 
+						@include column(6);
 
 						position: absolute;
 						top: 1.5rem;
-						right: $default-gutter; 
-						margin-top: 0; 
-						margin-right: 0; 
+						right: $default-gutter;
+						margin-top: 0;
+						margin-right: 0;
 					}
 
 					@include respond-to($mq-l) {
-						@include column(5); 
+						@include column(5);
 
-						margin-right: 0; 
+						margin-right: 0;
 					}
 				}
 
 				.action__contact {
-					@include column(12); 
+					@include column(12);
 
 					margin-bottom: 0;
 
 					& + .action__contact {
-						clear: none; 
+						clear: none;
 					}
 
 					&:last-child {
-						margin-bottom: 1rem; 
+						margin-bottom: 1rem;
 					}
 
 					@include respond-to($mq-m) {
-						@include column(4); 
+						@include column(4);
 
-						margin-bottom: 1rem; 
+						margin-bottom: 1rem;
 					}
 
 					@include respond-to($mq-l) {
-						@include column(3); 
+						@include column(3);
 					}
 				}
 			}
@@ -150,44 +150,44 @@ $transition-time: 0.4s;
 			&.coronavirus-debt-advice-wales {
 				.action__content {
 					.action__contact {
-						@include column(4); 
+						@include column(4);
 
 						position: relative;
-	
+
 						@include respond-to($mq-l) {
-							padding-left: 100px; 
+							padding-left: 100px;
 							padding-left: calc(100px + #{$default-gutter});
-							margin-top: -1rem; 
+							margin-top: -1rem;
 
 							img {
 								position: absolute;
 								width: 100px;
-								left: 0; 
-								top: 1rem; 
+								left: 0;
+								top: 1rem;
 							}
 						}
 					}
 				}
 			}
 
-			&.coronavirus-self-employed-debt-advice, 
-			&.coronavirus-self-employed-debt-advice-ni, 
-			&.urgent-pension-advice, 
+			&.coronavirus-self-employed-debt-advice,
+			&.coronavirus-self-employed-debt-advice-ni,
+			&.urgent-pension-advice,
 			&[class*="coronavirus-help-mental-health"] {
 				.action__content {
 					& > p {
 						@include respond-to($mq-m) {
-							@include column(8); 
+							@include column(8);
 						}
 
 						@include respond-to($mq-l) {
-							@include column(10); 
+							@include column(10);
 						}
 					}
 
 					.action__contact {
 						@include respond-to($mq-m) {
-							margin-top: -1rem; 
+							margin-top: -1rem;
 
 							img {
 								position: absolute;
@@ -202,11 +202,11 @@ $transition-time: 0.4s;
 					.action__content {
 						& > p {
 							@include respond-to($mq-m) {
-								@include column(12); 
+								@include column(12);
 							}
 
 							@include respond-to($mq-l) {
-								@include column(12); 
+								@include column(12);
 							}
 						}
 					}
@@ -216,60 +216,60 @@ $transition-time: 0.4s;
 	}
 
 	.results__sections {
-		@include row(12); 
+		@include row(12);
 
 		.sections__sections {
-			list-style: none; 
+			list-style: none;
 			padding: 0;
 		}
 
 		.section__title {
-			font-size: 1rem; 
-			line-height: 1.2; 
+			font-size: 1rem;
+			line-height: 1.2;
 			color: $color-green-secondary;
-			padding-bottom: $baseline-unit; 
-			border-bottom: solid 1px $color-grey-normal; 
+			padding-bottom: $baseline-unit;
+			border-bottom: solid 1px $color-grey-normal;
 
 			button {
-				border: none; 
+				border: none;
 				width: 100%;
-				text-align: left; 
+				text-align: left;
 				padding: 0;
 				background: transparent;
 			}
 
 			.section__title__text {
-				@include column(12); 
+				@include column(12);
 
 				display: inline-block;
-				float: none; 
-				padding-right: calc(18px + #{$default-gutter}); 
+				float: none;
+				padding-right: calc(18px + #{$default-gutter});
 			}
 		}
 
 		.section__subtitle {
-			@include column(12); 
-			
+			@include column(12);
+
 			font-size: 1.125rem;
-			line-height: 1.2; 
-			margin-top: $baseline-unit; 
+			line-height: 1.2;
+			margin-top: $baseline-unit;
 			color: $color-green-secondary;
 		}
 
 		.sections__headings {
-			@include column(12); 
+			@include column(12);
 
-			list-style: none; 
+			list-style: none;
 			padding: 0;
-			margin-top: 0; 
-			margin-bottom: 0; 
+			margin-top: 0;
+			margin-bottom: 0;
 		}
 
 		.sections__heading {
 			button {
-				border: none; 
+				border: none;
 				width: 100%;
-				text-align: left; 
+				text-align: left;
 				padding: 0;
 				background: transparent;
 
@@ -280,15 +280,15 @@ $transition-time: 0.4s;
 			}
 
 			.heading__title {
-				font-size: 1rem; 
-				line-height: 1.2; 
-				margin-top: 0; 
-				margin-bottom: $baseline-unit; 
+				font-size: 1rem;
+				line-height: 1.2;
+				margin-top: 0;
+				margin-bottom: $baseline-unit;
 			}
 
 			.heading__content {
-				margin-top: 0; 
-				margin-bottom: 0; 
+				margin-top: 0;
+				margin-bottom: 0;
 
 				p, a {
 					margin: $baseline-unit 0;
@@ -340,7 +340,7 @@ $transition-time: 0.4s;
 					}
 
 					h2:first-child {
-						margin-top: 0; 
+						margin-top: 0;
 					}
 				}
 
@@ -350,9 +350,9 @@ $transition-time: 0.4s;
 
 					p {
 						padding: $baseline-unit $baseline-unit*2;
-						font-size: 1rem; 
-						font-weight: 300; 
-						line-height: 1.5; 
+						font-size: 1rem;
+						font-weight: 300;
+						line-height: 1.5;
 
 						@include respond-to($mq-l) {
 							font-size: 1.125rem;
@@ -360,7 +360,7 @@ $transition-time: 0.4s;
 					}
 				}
 
-				.callout--tip, 
+				.callout--tip,
 				.callout--tool {
 					h1, h2, h3 {
 						text-indent: 2.25rem;
@@ -390,26 +390,26 @@ $transition-time: 0.4s;
 			}
 
 			.heading__content__title, .overlay__hide {
-				display: none; 
+				display: none;
 			}
 		}
 	}
 
 	.results__actions {
-		@include column(12); 
-		
-		text-align: center; 
+		@include column(12);
 
-		.button--restart, 
+		text-align: center;
+
+		.button--restart,
 		.button--print {
-			width: 100%; 
+			width: 100%;
 
 			@include respond-to($mq-m) {
-				width: 50%; 
+				width: 50%;
 			}
 
 			@include respond-to($mq-l) {
-				width: 25%; 
+				width: 25%;
 				float: right;
 			}
 		}
@@ -421,7 +421,7 @@ $transition-time: 0.4s;
 		}
 
 		.button--print {
-			margin-bottom: $baseline-unit * 4; 
+			margin-bottom: $baseline-unit * 4;
 
 			@include respond-to($mq-l) {
 				float: left;
@@ -433,13 +433,13 @@ $transition-time: 0.4s;
 	.results__sections[data-dough-money-navigator-results-initialised="yes"] {
 		@media not print {
 			.sections__section {
-				@extend %clearfix; 
+				@extend %clearfix;
 
 				.section__content {
 					overflow: hidden;
 
-					transition-property: height; 
-					transition-duration: $transition-time; 
+					transition: height;
+					transition-duration: $transition-time;
 				}
 
 				.section__title {
@@ -449,23 +449,23 @@ $transition-time: 0.4s;
 
 					.section__title__icon {
 						position: absolute;
-						top: 50%; 
-						right: $default-gutter; 
+						top: 50%;
+						right: $default-gutter;
 						width: 18px;
-						height: 12px; 
-						transform: translateY(-50%) rotate(180deg); 
-						transition-property: transform; 
-						transition-duration: $transition-time; 
+						height: 12px;
+						transform: translateY(-50%) rotate(180deg);
+						transition: transform;
+						transition-duration: $transition-time;
 						background-image: image_url('money_navigator_tool/section_title_icon.svg');
 						background-repeat: no-repeat;
-						background-size: 100%; 
-						background-position: center; 
-					}			
+						background-size: 100%;
+						background-position: center;
+					}
 				}
 
 				.sections__heading {
 					border: solid 1px $color-grey-normal;
-					box-shadow: 0 2px 4px $color-grey-normal; 
+					box-shadow: 0 2px 4px $color-grey-normal;
 
 					button {
 						padding: $baseline-unit * 2 $default-gutter;
@@ -477,23 +477,23 @@ $transition-time: 0.4s;
 
 					.heading__title__icon {
 						&:before {
-							content: '\2713'; 
+							content: '\2713';
 							display: block;
 							text-align: center;
-							line-height: 1.25rem; 
+							line-height: 1.25rem;
 						}
 					}
 				}
 
 				.heading__title {
 					margin-bottom: 0;
-					padding-left: calc(1.25rem + #{$default-gutter}); 
+					padding-left: calc(1.25rem + #{$default-gutter});
 					position: relative;
 
 					.heading__title__icon {
 						display: inline-block;
-						width: 1.25rem; 
-						height: 1.25rem; 
+						width: 1.25rem;
+						height: 1.25rem;
 						border: solid 1px;
 						position: absolute;
 						top: 50%;
@@ -507,12 +507,12 @@ $transition-time: 0.4s;
 					position: absolute;
 					top: 0%;
 					left: 0%;
-					height: auto; 
+					height: auto;
 					width: 100%;
 					padding: $baseline-unit * 8 $default-gutter * 4 $baseline-unit * 4;
-					z-index: 155; 
+					z-index: 155;
 					background: $color-white;
-					transition-property: top; 
+					transition: top;
 					transition-duration: $transition-time;
 
 					@include respond-to($mq-s) {
@@ -530,7 +530,7 @@ $transition-time: 0.4s;
 						width: 70%;
 						padding-left: $default-gutter * 2.5;
 						padding-right: $default-gutter * 2.5;
-						transition-property: left; 
+						transition: left;
 					}
 
 					@include respond-to($mq-xl) {
@@ -570,8 +570,8 @@ $transition-time: 0.4s;
 							position: absolute;
 							width: 12px;
 							height: 12px;
-							right: $baseline-unit; 
-							top: 50%; 
+							right: $baseline-unit;
+							top: 50%;
 							transform: translateY(-50%);
 						}
 					}
@@ -590,14 +590,14 @@ $transition-time: 0.4s;
 				&.is-collapsed {
 					.section__title {
 						.section__title__icon {
-							transform: translateY(-50%) rotate(0deg); 
-						}			
+							transform: translateY(-50%) rotate(0deg);
+						}
 					}
 				}
 
 				.heading__content__title {
-					display: block; 
-					margin-top: 0; 
+					display: block;
+					margin-top: 0;
 				}
 			}
 		}
@@ -608,11 +608,11 @@ $transition-time: 0.4s;
 			left: 0;
 			bottom: 0;
 			width: 100%;
-			z-index: 150; 
+			z-index: 150;
 			background: rgba(0, 0, 0, 0.5);
 
 			&.is-hidden {
-				display: none; 
+				display: none;
 			}
 		}
 	}
@@ -620,16 +620,16 @@ $transition-time: 0.4s;
 	// Enhanced print styles
 	@media print {
 		p, ul, li, a, h1, h2, h3, h4, h5, h6 {
-			font-size: 12pt !important; 
+			font-size: 12pt !important;
 		}
 
 		.results__heading {
-			font-size: 21pt !important; 			
+			font-size: 21pt !important;
 		}
 
 		.results__urgent-actions {
 			.urgent-actions__heading {
-				font-size: 18pt !important; 
+				font-size: 18pt !important;
 			}
 
 			.urgent-actions__action {
@@ -637,7 +637,7 @@ $transition-time: 0.4s;
 
 				.action__content {
 					width: 100%;
-					padding: 0; 	
+					padding: 0;
 					margin: 0;
 
 					.callout {
@@ -645,13 +645,13 @@ $transition-time: 0.4s;
 						padding: 12pt;
 
 						.callout__icon {
-							display: none; 
+							display: none;
 
 							& + p {
-								margin-top: 0; 
+								margin-top: 0;
 
 								&:before {
-									display: none; 
+									display: none;
 								}
 							}
 						}
@@ -674,19 +674,19 @@ $transition-time: 0.4s;
 				border-bottom: solid 1pt;
 
 				button {
-					font-size: 15pt !important; 
+					font-size: 15pt !important;
 				}
 			}
 
 			.section__content {
 				.heading__title {
-					font-size: 12pt !important; 
+					font-size: 12pt !important;
 				}
 			}
 		}
 
 		.results__actions {
-			display: none; 
+			display: none;
 		}
 	}
 }

@@ -18,6 +18,8 @@ Bundler.require(*Rails.groups(assets: %w(development test)))
 
 module Frontend
   class Application < Rails::Application
+    config.rails_lts_options = { default: :compatible }
+
     config.session_store :active_record_store
 
     config.action_mailer.delivery_method = :mailjet

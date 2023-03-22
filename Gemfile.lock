@@ -40,24 +40,6 @@ GIT
       sass-rails
 
 GIT
-  remote: https://github.com/moneyadviceservice/universal_credit.git
-  revision: 840cc2ffa18eae2e070d8dd62b0b455ac3b70dea
-  branch: heroku
-  specs:
-    universal_credit (5.2.0)
-      autoprefixer-rails
-      devise
-      dough-ruby (~> 5.36)
-      mas-cms-client (~> 1.1)
-      meta-tags
-      mysql2
-      preamble
-      rails (>= 4, < 5)
-      redcarpet
-      sass-rails
-      uglifier
-
-GIT
   remote: https://github.com/rails-lts/rack.git
   revision: 58ff147213a796fae0faf2b7110008338a33fbfd
   branch: lts-1-6-stable
@@ -807,6 +789,18 @@ GEM
       unf_ext
     unf_ext (0.0.8)
     unicode-display_width (1.3.0)
+    universal_credit (5.2.0)
+      autoprefixer-rails
+      devise
+      dough-ruby (~> 5.36)
+      mas-cms-client (~> 1.1)
+      meta-tags
+      mysql2
+      preamble
+      rails (>= 4, < 5)
+      redcarpet
+      sass-rails
+      uglifier
     uri (0.10.0)
     uri_template (0.7.0)
     validate_url (1.0.0)
@@ -953,7 +947,7 @@ DEPENDENCIES
   timelines (~> 2.1.0)
   turnout
   uglifier
-  universal_credit!
+  universal_credit (~> 5.2.0)
   uri (= 0.10.0)
   vcr
   warning (~> 1.3)

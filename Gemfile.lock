@@ -14,20 +14,6 @@ GIT
       uri_template (~> 0.7)
 
 GIT
-  remote: https://github.com/moneyadviceservice/budget_planner.git
-  revision: 5686451168540115fa2110d75e4c05cfe05e7b9c
-  ref: 56864511
-  specs:
-    budget_planner (6.1.0)
-      i18n-js (= 3.0.0.mas)
-      js-routes (= 1.1.2)
-      mas-mailer (~> 0.3)
-      modernizr-rails (~> 2.6.2)
-      rails (>= 4, < 5)
-      sass-rails
-      spreadsheet (= 1.2.8)
-
-GIT
   remote: https://github.com/moneyadviceservice/dough.git
   revision: 0bf4b23a74f57d5ec0d5ebd300828e4088109e6f
   ref: 0bf4b23a
@@ -149,6 +135,14 @@ GEM
     bowndler (1.0.2)
       thor
     bson (4.12.1)
+    budget_planner (6.2.0)
+      i18n-js (= 3.0.0.mas)
+      js-routes (= 1.1.2)
+      mas-mailer (~> 0.3)
+      modernizr-rails (~> 2.6.2)
+      rails (>= 4, < 5)
+      sass-rails
+      spreadsheet (= 1.2.8)
     builder (3.2.4)
     byebug (10.0.2)
     capybara (2.18.0)
@@ -852,7 +846,7 @@ DEPENDENCIES
   binding_of_caller
   blind_index (= 0.2.0)
   bowndler (~> 1.0)
-  budget_planner!
+  budget_planner (~> 6.2.0)
   byebug
   capybara
   car_cost_tool (~> 2.0.2)

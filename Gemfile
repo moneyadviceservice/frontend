@@ -82,7 +82,7 @@ gem 'dough-ruby', github: 'moneyadviceservice/dough', branch: 'PostMessages_v5.4
 gem 'mas-cms-client', '1.20.1'
 gem 'site_search', '0.3.0'
 # Tools
-gem 'action_plans', '~> 6.1.0'
+gem 'action_plans', '~> 6.2.0'
 gem 'advice_plans', '~> 4.1.1'
 gem 'agreements', '~> 2.5.0'
 gem 'budget_planner', '~> 6.2.0'

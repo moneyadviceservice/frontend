@@ -27,6 +27,7 @@ r301 %r{^//?/?en/tools/money-navigator-tool/?(.*)}, 'https://www.moneyhelper.org
 r301 %r{^/en/tools/christmas-money-planner/?$}, 'https://www.moneyhelper.org.uk/en/savings/types-of-savings/saving-money-for-christmas'
 r301 %r{^/en/tools/annuities/?$}, 'https://www.moneyhelper.org.uk/en/pensions-and-retirement/taking-your-pension/compare-annuities'
 r301 %r{^(/en)?/blog/?(.*)$}, 'https://www.moneyhelper.org.uk/en/blog'
+r301 %r{^/en/articles/how-do-savings-and-lump-sum-pay-outs-affect-benefits%23what-counts-as-savings/?$}, ' https://www.moneyhelper.org.uk/en/benefits/problems-with-benefits/how-do-savings-and-lump-sum-pay-outs-affect-benefits?source=mas'
 r301 %r{^/en/articles/how-to-talk-to-your-children-about-money-age-5-6/?$}, 'https://www.moneyhelper.org.uk/en/family-and-care/talk-money/how-to-talk-to-five-and-six-year-olds-about-money?source=mas'
 r301 %r{^/en/articles/individual-and-fixed-protection-2014-schemes-for-pension-savings/?$}, 'https://www.moneyhelper.org.uk/en/pensions-and-retirement/pension-problems/the-pension-protection-fund?source=mas'
 r301 %r{^/cy/articles/cronnwch-eich-cynilion-ymddeoliad-wedi-ysgariad-neu-ddiddymu/?$}, 'https://www.moneyhelper.org.uk/cy/family-and-care/divorce-and-separation/build-up-your-retirement-savings?source=mas'

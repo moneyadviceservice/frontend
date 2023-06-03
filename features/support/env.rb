@@ -4,10 +4,12 @@ ENV['RAILS_ROOT'] = File.expand_path('../../../', __FILE__)
 require 'cucumber/rails'
 require 'cucumber/rspec/doubles'
 require 'capybara'
-require 'capybara/poltergeist'
 require 'site_prism'
 require 'timecop'
 require 'email_spec/cucumber'
+require 'selenium/webdriver'
+require 'webdrivers/chromedriver'
+
 
 I18n.available_locales = [:en, :cy]
 Time.zone = 'London'
@@ -67,5 +69,14 @@ Before('@auth-required') do
   allow(Authenticable).to receive(:required?) { true }
 end
 
-Capybara.javascript_driver = :poltergeist
+
+Capybara.register_driver :chrome_headless do |app|
+  options = Selenium::WebDriver::Chrome::Options.new(
+    args: %w(headless no-sandbox disable-gpu window-size=2500,2500)
+  )
+
+  Capybara::Selenium::Driver.new(app, browser: :chrome, options: options)
+end
+
+Capybara.javascript_driver = :chrome_headless
 Capybara.default_max_wait_time = 20

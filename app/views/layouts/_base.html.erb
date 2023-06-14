@@ -53,7 +53,7 @@
       Any JS that is required before DOM is created should be in this block
       includes feature detection, analytics setup, JSON bootstrap %>
 
-  <% if Rails.env.production? && ENV['INCLUDE_AEM_ANALYTICS'] == 'true' %>
+  <% if include_adobe_analytics_scripts?(request) %>
   <script type="text/javascript" src="//assets.adobedtm.com/c3a3920a84ef/2104df5e2099/launch-a40370bb1e84.min.js" async></script>
   <script type="text/javascript" src="//www.moneyhelper.org.uk/etc.clientlibs/maps/core/clientlibs/clientlib-digitaldata.min.536e82a039f309f9f59b3e9e3dab024f.js" defer></script>
   <% end %>

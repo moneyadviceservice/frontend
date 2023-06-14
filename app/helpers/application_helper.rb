@@ -1,4 +1,10 @@
 module ApplicationHelper
+  def include_adobe_analytics_scripts?(request)
+    return false unless Rails.env.production? && ENV['INCLUDE_AEM_ANALYTICS'] == 'true'
+
+    request.original_url.match?(/partner-tools.moneyhelper.org.uk/)
+  end
+
   def css(line_numbers: false, &block)
     source = strip_leading_indentation_from_source(capture(&block))
     tokens = Rouge::Lexers::CSS.lex(source)

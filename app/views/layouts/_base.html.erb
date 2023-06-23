@@ -263,14 +263,6 @@
     // });
   </script>
 <% end %>
-<% if defined?(engine_name) %>
-  <script>
-    var digitalData = window.digitalData || {};
-    digitalData.tool = {
-      toolName: '<%= engine_name.dasherize %>',
-      toolStep: '<%= action_name %>'
-    };
-  </script>
-<% end %>
+
 </body>
 </html>

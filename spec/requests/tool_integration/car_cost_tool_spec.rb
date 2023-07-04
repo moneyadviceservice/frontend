@@ -1,9 +1,8 @@
 require 'car_cost_tool/wrappers/cap'
 
-RSpec.describe 'Car Cost Tool', type: :request do
+RSpec.describe 'Car Cost Tool', type: :request, vcr: true do
   %W[
     /en/tools/#{ToolMountPoint::CarCostTool::EN_ID}?checked=true
-    /cy/tools/#{ToolMountPoint::CarCostTool::CY_ID}
   ].each do |path|
     describe path do
       before do

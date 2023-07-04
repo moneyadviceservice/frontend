@@ -2,32 +2,30 @@
 http_interactions:
 - request:
     method: post
-    uri: http://webservices.capnetwork.co.uk/CAPNVD_Webservice/CAPNVD.asmx/GetBulkTechnicalData
+    uri: https://soap.cap.co.uk/nvd/CAPNVD.asmx/GetBulkTechnicalData
     body:
       encoding: UTF-8
-      string: Password=ghaj7a&Subscriber_ID=170796&Database=CAR&CAPIDList=86391&SpecDateList=&TechDataList=CO2%2C+CC%2C+MPG_COMBINED%2C+MPG_URBAN%2C+MPG_EXTRAURBAN&ReturnVehicleDescription=true&ReturnCAPcodeTechnicalItems=false&ReturnCostNew=true
+      string: password=<Password>&subscriberId=170796&database=CAR&capidList=86391&specDateList=&techDataList=CO2%2C+CC%2C+MPG_COMBINED%2C+MPG_URBAN%2C+MPG_EXTRAURBAN&returnVehicleDescription=true&returnCaPcodeTechnicalItems=false&returnCostNew=true
     headers:
       Accept:
       - "*/*"
       User-Agent:
       - rest-client/2.1.0 (darwin22 arm64) ruby/2.7.7p221
       Content-Length:
-      - '232'
+      - '231'
       Content-Type:
       - application/x-www-form-urlencoded
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Host:
-      - webservices.capnetwork.co.uk
+      - soap.cap.co.uk
   response:
     status:
       code: 200
       message: OK
     headers:
       Cache-Control:
-      - private
-      Transfer-Encoding:
-      - chunked
+      - private, max-age=0
       Content-Type:
       - text/xml; charset=utf-8
       Server:
@@ -37,11 +35,13 @@ http_interactions:
       X-Powered-By:
       - ASP.NET
       Date:
-      - Tue, 07 Mar 2023 12:47:21 GMT
+      - Tue, 04 Jul 2023 11:22:43 GMT
+      Content-Length:
+      - '3651'
     body:
       encoding: UTF-8
       string: "<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<CAPDataSetResult xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"
-        xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns=\"http://www.capnetwork.co.uk/CAPNVD/\">\r\n
+        xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns=\"https://soap.cap.co.uk/nvd\">\r\n
         \ <Success>true</Success>\r\n  <FailMessage />\r\n  <Returned_DataSet>\r\n
         \   <xs:schema id=\"TechData\" xmlns=\"\" xmlns:xs=\"http://www.w3.org/2001/XMLSchema\"
         xmlns:msdata=\"urn:schemas-microsoft-com:xml-msdata\">\r\n      <xs:element
@@ -84,5 +84,5 @@ http_interactions:
         \         <MPG_EXTRAURBAN>36.2                                              </MPG_EXTRAURBAN>\r\n
         \       </Tech_Table>\r\n      </TechData>\r\n    </diffgr:diffgram>\r\n  </Returned_DataSet>\r\n</CAPDataSetResult>"
     http_version:
-  recorded_at: Tue, 07 Mar 2023 12:47:22 GMT
+  recorded_at: Tue, 04 Jul 2023 11:22:43 GMT
 recorded_with: VCR 4.0.0

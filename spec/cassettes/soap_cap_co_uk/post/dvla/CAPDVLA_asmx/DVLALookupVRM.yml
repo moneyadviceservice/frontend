@@ -2,10 +2,10 @@
 http_interactions:
 - request:
     method: post
-    uri: http://webservices.capnetwork.co.uk/CAPDVLA_Webservice/CAPDVLA.asmx/DVLALookupVRM
+    uri: https://soap.cap.co.uk/dvla/CAPDVLA.asmx/DVLALookupVRM
     body:
       encoding: UTF-8
-      string: Password=ghaj7a&SubscriberID=170796&vrm=AC+63+UFO
+      string: Password=<Password>&SubscriberID=170796&vrm=AC+63+UFO
     headers:
       Accept:
       - "*/*"
@@ -18,16 +18,14 @@ http_interactions:
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Host:
-      - webservices.capnetwork.co.uk
+      - soap.cap.co.uk
   response:
     status:
       code: 200
       message: OK
     headers:
       Cache-Control:
-      - private
-      Transfer-Encoding:
-      - chunked
+      - private, max-age=0
       Content-Type:
       - text/xml; charset=utf-8
       Server:
@@ -37,12 +35,14 @@ http_interactions:
       X-Powered-By:
       - ASP.NET
       Date:
-      - Tue, 07 Mar 2023 12:47:21 GMT
+      - Tue, 04 Jul 2023 11:22:42 GMT
+      Content-Length:
+      - '3730'
     body:
       encoding: UTF-8
       string: "<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<RESPONSE>\r\n  <SUCCESS>true</SUCCESS>\r\n
-        \ <ERRORMESSAGE>\r\n  </ERRORMESSAGE>\r\n  <TIMESTAMP>07/03/2023 12:47:21</TIMESTAMP>\r\n
-        \ <AUDITID>122509074</AUDITID>\r\n  <LOOKUP_VRM>AC 63 UFO</LOOKUP_VRM>\r\n
+        \ <ERRORMESSAGE>\r\n  </ERRORMESSAGE>\r\n  <TIMESTAMP>04/07/2023 12:22:43</TIMESTAMP>\r\n
+        \ <AUDITID>148632024</AUDITID>\r\n  <LOOKUP_VRM>AC 63 UFO</LOOKUP_VRM>\r\n
         \ <LOOKUP_VIN />\r\n  <MONTHLYLOOKUPLIMITEXCEEDED>False</MONTHLYLOOKUPLIMITEXCEEDED>\r\n
         \ <AUTOCORRECTED>False</AUTOCORRECTED>\r\n  <AUTOCORRECTEDREASON>\r\n  </AUTOCORRECTEDREASON>\r\n
         \ <MATCHLEVEL>\r\n    <DVLA>1</DVLA>\r\n    <DVLAKEEPER>1</DVLAKEEPER>\r\n
@@ -86,5 +86,5 @@ http_interactions:
         \     <PLATE_YEAR>2018</PLATE_YEAR>\r\n      <PLATE_MONTH>9</PLATE_MONTH>\r\n
         \   </CAP>\r\n  </DATA>\r\n</RESPONSE>"
     http_version:
-  recorded_at: Tue, 07 Mar 2023 12:47:22 GMT
+  recorded_at: Tue, 04 Jul 2023 11:22:43 GMT
 recorded_with: VCR 4.0.0

@@ -53,6 +53,7 @@ VCR.configure do |c|
 
   c.filter_sensitive_data('<API_KEY>') { ENV['ALGOLIA_API_KEY'] }
   c.filter_sensitive_data('<APP_ID>') { ENV['ALGOLIA_APP_ID'] }
+  c.filter_sensitive_data('<Password>') { ENV['CAR_COST_TOOL_CAP_PASSWORD'] }
 end
 
 WebMock.disable_net_connect!(allow: 'codeclimate.com')

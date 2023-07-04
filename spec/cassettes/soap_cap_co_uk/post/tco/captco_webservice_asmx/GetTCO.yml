@@ -1,0 +1,53 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://soap.cap.co.uk/tco/captco_webservice.asmx/GetTCO
+    body:
+      encoding: UTF-8
+      string: Password=<Password>&SubscriberID=170796&Database=CAR&CapId=86391&RegistrationDate=2018%2F11%2F30&PurchaseCost=41000.0&FinanceAPR=0&Deposit=0&CurrentMileage=40&AnnualMileage=10&LengthOfOwnership=12&UserAge=30&UserPostCode=N1+1AA&AnnualInsurance=0
+    headers:
+      Accept:
+      - "*/*"
+      User-Agent:
+      - rest-client/2.1.0 (darwin22 arm64) ruby/2.7.7p221
+      Content-Length:
+      - '241'
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Host:
+      - soap.cap.co.uk
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - private, max-age=0
+      Content-Type:
+      - text/xml; charset=utf-8
+      Server:
+      - Microsoft-IIS/8.5
+      X-Aspnet-Version:
+      - 4.0.30319
+      X-Powered-By:
+      - ASP.NET
+      Date:
+      - Tue, 04 Jul 2023 11:22:43 GMT
+      Content-Length:
+      - '762'
+    body:
+      encoding: UTF-8
+      string: "<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<TCOResult xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"
+        xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns=\"https://soap.cap.co.uk/tco\">\r\n
+        \ <Success>true</Success>\r\n  <FailMessage />\r\n  <TotalCostOfOwnership>15499.95</TotalCostOfOwnership>\r\n
+        \ <TotalMonthlyRunningCosts>1291.66</TotalMonthlyRunningCosts>\r\n  <RunningCostsPerMile>1.55</RunningCostsPerMile>\r\n
+        \ <FuelCosts>2320.95</FuelCosts>\r\n  <Depreciation>11150</Depreciation>\r\n
+        \ <ServiceAndMaintenance>1849.00</ServiceAndMaintenance>\r\n  <InsuranceGroup>50E</InsuranceGroup>\r\n
+        \ <Insurance>0.00</Insurance>\r\n  <CostNew>77818.00</CostNew>\r\n  <DeliveryCost>660.0000</DeliveryCost>\r\n
+        \ <RoadTax>180.00</RoadTax>\r\n  <PurchasePrice>41000.00</PurchasePrice>\r\n</TCOResult>"
+    http_version:
+  recorded_at: Tue, 04 Jul 2023 11:22:44 GMT
+recorded_with: VCR 4.0.0

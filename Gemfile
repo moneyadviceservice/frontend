@@ -102,7 +102,7 @@ gem 'pensions_calculator', '~> 3.5.0'
 gem 'puma'
 gem 'quiz', '~> 1.4.0', source: 'https://gem.fury.io/h_app288206558'
 gem 'savings_calculator', '~> 2.0.1'
-gem 'timelines', '~> 2.1.0'
+gem 'timelines', '~> 2.2.1'
 gem 'universal_credit', '~> 5.2.0'
 gem 'wpcc', '~> 3.1.0'
 

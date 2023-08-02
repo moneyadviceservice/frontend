@@ -1,4 +1,4 @@
-LEGACY_MAS_WWW = 'www.moneyadviceservice.org.uk'.freeze
+LEGACY_MAS_WWW = %r{(www.)?moneyadviceservice.org.uk}.freeze
 
 if Rails.env.production?
   r301 %r{^/assets/(.*)$}, '/a/$1'

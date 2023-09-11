@@ -1,5 +1,7 @@
 LEGACY_MAPS_HOST = %r{^(www.)?moneyandpensionsservice.org.uk$}.freeze
 
+r301 %r{^/?}, 'https://adviser.moneyhelper.org.uk/en/faqs-independent-confidential-impartial-money-advice', host: 'moneyadviser.moneyhelper.org.uk'
+
 r301 %r{^/?$}, 'https://www.maps.org.uk/en', host: LEGACY_MAPS_HOST
 r301 %r{^/cy/?$}, 'https://www.maps.org.uk/cy', host: LEGACY_MAPS_HOST
 

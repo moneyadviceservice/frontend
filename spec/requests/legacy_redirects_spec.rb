@@ -45,4 +45,14 @@ RSpec.describe 'Legacy redirects', type: :request do
       end
     end
   end
+
+  describe 'moneyadviser.moneyhelper.org.uk/* wildcard' do
+    it 'redirects to the correct FAQ' do
+      host! 'moneyadviser.moneyhelper.org.uk'
+
+      get '/'
+
+      expect(request).to redirect_to('https://adviser.moneyhelper.org.uk/en/faqs-independent-confidential-impartial-money-advice')
+    end
+  end
 end

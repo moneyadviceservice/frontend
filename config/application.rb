@@ -44,6 +44,7 @@ module Frontend
     config.middleware.insert_after 'ActionDispatch::Static', 'PartnerToolsCookies'
 
     config.middleware.insert_before(Rack::Runtime, Rack::Rewrite) do
+      instance_eval IO.read(Rails.root.join('lib', 'legacy_maps_redirects.rb'))
       instance_eval IO.read(Rails.root.join('lib', 'legacy_redirects.rb'))
     end
 

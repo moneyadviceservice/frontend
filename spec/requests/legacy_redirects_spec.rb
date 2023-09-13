@@ -24,4 +24,35 @@ RSpec.describe 'Legacy redirects', type: :request do
       expect(request).to redirect_to('/en/cookies_disabled?tool=budget-planner')
     end
   end
+
+  ['www.moneyandpensionsservice.org.uk', 'moneyandpensionsservice.org.uk'].each do |host|
+    context "when requested from the legacy #{host} host" do
+      before { host! host }
+
+      [
+        ['/cy/2019/10/10/sut-mae-maps-yn-cefnogi-gweithwyr/', '/cy/media'],
+        ['/', '/en'],
+        ['/cy/', '/cy'],
+        ['/tag/gender', '/en/media-centre'],
+        ['/foi-publication-scheme', '/en/about-us/freedom-of-information-responses'],
+        ['/2020/12/01/financial-education-provision-mapping-final-report-summary', '/en/publications/research/2020/financial-education-provision-mapping-final-report-summary']
+      ].each do |pair|
+        it "redirects from '#{pair.first}' to '#{pair.last}'" do
+          get pair.first
+
+          expect(request).to redirect_to("https://www.maps.org.uk#{pair.last}")
+        end
+      end
+    end
+  end
+
+  describe 'moneyadviser.moneyhelper.org.uk/* wildcard' do
+    it 'redirects to the correct FAQ' do
+      host! 'moneyadviser.moneyhelper.org.uk'
+
+      get '/'
+
+      expect(request).to redirect_to('https://adviser.moneyhelper.org.uk/en/faqs-independent-confidential-impartial-money-advice')
+    end
+  end
 end

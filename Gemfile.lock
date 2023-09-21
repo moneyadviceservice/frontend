@@ -15,14 +15,13 @@ GIT
 
 GIT
   remote: https://github.com/moneyadviceservice/dough.git
-  revision: 0bf4b23a74f57d5ec0d5ebd300828e4088109e6f
-  ref: 0bf4b23a
+  revision: 02330ca3dc829f8f9ca14d8ab7e44cfa8747c60b
   branch: PostMessages_v5.45
   specs:
     dough-ruby (5.45.0)
       activemodel
       activesupport
-      rails (>= 3.2, < 5.1.0)
+      rails (>= 3.2, < 6)
       sass-rails
 
 GIT

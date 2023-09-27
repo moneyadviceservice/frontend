@@ -30,10 +30,10 @@ RSpec.describe 'Legacy redirects', type: :request do
       before { host! host }
 
       [
-        ['/cy/2019/10/10/sut-mae-maps-yn-cefnogi-gweithwyr/', '/cy/media'],
+        ['/cy/2019/10/10/sut-mae-maps-yn-cefnogi-gweithwyr/', '/cy/media-centre/press-releases'],
         ['/', '/en'],
         ['/cy/', '/cy'],
-        ['/tag/gender', '/en/media-centre'],
+        ['/tag/gender', '/en/media-centre/press-releases'],
         ['/foi-publication-scheme', '/en/about-us/freedom-of-information-responses'],
         ['/2020/12/01/financial-education-provision-mapping-final-report-summary', '/en/publications/research/2020/financial-education-provision-mapping-final-report-summary']
       ].each do |pair|

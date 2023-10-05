@@ -203,6 +203,15 @@
       include_ga: true
       title: "Stamp duty calculator"
 
+    lbtt_calculator:
+      en:
+        path: "en/tools/house-buying/land-and-buildings-transaction-tax-calculator-scotland"
+      cy:
+        path: "cy/tools/prynu-ty/cyfrifiannell-treth-trafodion-tir-ac-adeiladau-alban"
+      width: "100%"
+      include_ga: false
+      title: "LBTT Calculator"
+
     mortgage_affordability_calculator:
       en:
         path: "en/tools/house-buying/mortgage-affordability-calculator"

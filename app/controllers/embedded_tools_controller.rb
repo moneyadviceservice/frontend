@@ -59,6 +59,7 @@ class EmbeddedToolsController < ApplicationController
   def engine_name
     self.class.parent.name.underscore
   end
+  helper_method :engine_name
 
   def alternate_locale
     @alternate_locale ||= mount_point.alternate_locale(params[:locale])

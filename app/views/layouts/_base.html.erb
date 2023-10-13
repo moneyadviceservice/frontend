@@ -5,7 +5,6 @@
 <!--[if IE 9 ]> <html lang="<%= I18n.locale %>" class="ie ie9 no-js"> <![endif]-->
 <!--[if (gt IE 9)|!(IE)]><!-->
 <html lang="<%= I18n.locale %>" class="no-js"><!--<![endif]-->
-
 <head>
   <meta property="fb:pages" content="160564360681471" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -63,6 +62,19 @@
 
     <%# // Inline custom Modernizr %>
     <%= raw Rails.application.assets['modernizr/modernizr'] %>
+
+    <%# // Adobe Data Layer %>
+    window.adobeDataLayer = window.adobeDataLayer || [];
+    adobeDataLayer.push({
+      "event": "pageLoad",
+      "page": {
+        "pageName": "<%= j(engine_name&.dasherize) if defined?(engine_name) %>",
+        "pageTitle": "<%= j(title) %>",
+        "lang": "<%= I18n.locale %>",
+        "site": "moneyhelper",
+        "pageType": "tool"
+      }
+    });
 
     <%# // Required for Google Tag Manager %>
     var dataLayer = window.dataLayer || [];

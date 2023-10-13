@@ -8,8 +8,6 @@ require 'site_prism'
 require 'timecop'
 require 'email_spec/cucumber'
 require 'selenium/webdriver'
-require 'webdrivers/chromedriver'
-
 
 I18n.available_locales = [:en, :cy]
 Time.zone = 'London'

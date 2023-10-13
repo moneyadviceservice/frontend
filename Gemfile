@@ -135,7 +135,7 @@ group :test do
   gem 'net-imap'
   gem 'rspec-html-matchers'
   gem 'rspec_junit_formatter'
-  gem 'selenium-webdriver', '3.142.7'
+  gem 'selenium-webdriver'
   gem 'shoulda-matchers'
   gem 'site_prism'
   gem 'sqlite3', '1.4.2'
@@ -144,7 +144,6 @@ group :test do
   gem 'uri', '0.10.0'
   gem 'vcr'
   gem 'warning', '~> 1.3'
-  gem 'webdrivers', '4.4.1'
   gem 'webmock', '~> 3.5.0'
 end
 

@@ -4,7 +4,7 @@ require 'dotenv/load'
 VCR.configure do |c|
   c.cassette_library_dir = 'features/cassettes'
   c.hook_into :webmock
-  c.ignore_hosts 'codeclimate.com'
+  c.ignore_hosts 'codeclimate.com', 'chromedriver.storage.googleapis.com'
   c.ignore_request do |req|
     # Don't mock the call that Poltergeist polls while waiting for
     # Phantomjs to load (http://localhost:<random port>/__identify__)

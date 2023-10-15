@@ -68,11 +68,12 @@
     adobeDataLayer.push({
       "event": "pageLoad",
       "page": {
-        "pageName": "<%= j(engine_name&.dasherize) if defined?(engine_name) %>",
-        "pageTitle": "<%= j(Array(title).join(' ')) %>",
+        "pageName": "<%= analytics_page_name(request.url) %>",
+        "pageTitle": "<%= analytics_page_title(title) %>",
         "lang": "<%= I18n.locale %>",
         "site": "moneyhelper",
-        "pageType": "tool"
+        "pageType": "tool page",
+        "toolStep": "1"
       }
     });
 

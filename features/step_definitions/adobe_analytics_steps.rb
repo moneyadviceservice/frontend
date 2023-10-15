@@ -10,10 +10,11 @@ Then("I see the correct data layer fields") do
       "event" => "pageLoad",
       "page"  => {
         "lang"      => "en",
-        "pageName"  => "car-cost-tool",
+        "pageName"  => "car-costs-calculator",
         "pageTitle" => "Car Costs Calculator – Estimate car value, car tax, insurance, depreciation and more",
-        "pageType"  => "tool",
-        "site"      => "moneyhelper"
+        "pageType"  => "tool page",
+        "site"      => "moneyhelper",
+        "toolStep"  => "1"
       }
     }
   )
@@ -37,10 +38,11 @@ Then("I see the correct data layer fields for WPCC") do
       "event" => "pageLoad",
       "page"  => {
         "lang"      => "en",
-        "pageName"  => "wpcc",
+        "pageName"  => "new",
         "pageTitle" => "Workplace pension contribution calculator Your contributions",
-        "pageType"  => "tool",
-        "site"      => "moneyhelper"
+        "pageType"  => "tool page",
+        "site"      => "moneyhelper",
+        "toolStep"  => "1"
       }
     }
   )

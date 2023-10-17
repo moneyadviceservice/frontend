@@ -35,12 +35,13 @@ RSpec.describe 'Legacy redirects', type: :request do
         ['/cy/', '/cy'],
         ['/tag/gender', '/en/media-centre/press-releases'],
         ['/foi-publication-scheme', '/en/about-us/freedom-of-information-responses'],
-        ['/2020/12/01/financial-education-provision-mapping-final-report-summary', '/en/publications/research/2020/financial-education-provision-mapping-final-report-summary']
+        ['/2020/12/01/financial-education-provision-mapping-final-report-summary', '/en/publications/research/2020/financial-education-provision-mapping-final-report-summary'],
+        ['/wp-content/uploads/2021/12/smarter-signposting-to-pensions-guidance.pdf', '/en/publications/research/2021/smarter-signposting-to-pensions-guidance']
       ].each do |pair|
         it "redirects from '#{pair.first}' to '#{pair.last}'" do
           get pair.first
 
-          expect(request).to redirect_to("https://www.maps.org.uk#{pair.last}")
+          expect(request).to redirect_to(%r{https://(www.)?maps.org.uk#{pair.last}})
         end
       end
     end

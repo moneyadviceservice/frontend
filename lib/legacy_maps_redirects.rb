@@ -196,7 +196,7 @@ r301 %r{^/2023/02/15/the-money-and-pensions-service-announces-reappointment-of-a
 r301 %r{^/2023/02/28/technical-report-2022-debt-need-survey/?$}, 'https://www.maps.org.uk/en/media-centre/press-releases', host: LEGACY_MAPS_HOST
 r301 %r{^/2023/03/07/improving-children-and-young-peoples-financial-wellbeing-seven-projects-for-teachers-and-vulnerable-children/?$}, 'https://www.maps.org.uk/en/media-centre/press-releases', host: LEGACY_MAPS_HOST
 r301 %r{^/2023/03/16/media-comment-childcare-reforms-announced-in-budget-a-double-dividend-for-parents/?$}, 'https://www.maps.org.uk/en/media-centre/press-releases', host: LEGACY_MAPS_HOST
-r301 %r{^/2023/03/22/financial-wellbeing-guidance-for-employers/?$}, 'https://www.maps.org.uk/en/media-centre/press-releases', host: LEGACY_MAPS_HOST
+r301 %r{^/2023/03/22/financial-wellbeing-guidance-for-employers/?$}, 'https://maps.org.uk/en/work-with-us/financial-wellbeing-in-the-workplace', host: LEGACY_MAPS_HOST
 r301 %r{^/2023/04/13/new-maps-independent-quality-assessment-service-iqas-announced/?$}, 'https://www.maps.org.uk/en/media-centre/press-releases', host: LEGACY_MAPS_HOST
 r301 %r{^/2023/04/14/maps-makes-changes-to-debt-advice-grants-in-response-to-increased-complexity-of-client-cases-in-community-based-services/?$}, 'https://www.maps.org.uk/en/media-centre/press-releases', host: LEGACY_MAPS_HOST
 r301 %r{^/2023/04/25/why-do-so-many-young-people-need-debt-advice/?$}, 'https://www.maps.org.uk/en/media-centre/press-releases', host: LEGACY_MAPS_HOST
@@ -682,7 +682,6 @@ r301 %r{^/wp-content/uploads/2020/11/Financial-Education-Guidance-for-Secondary-
 r301 %r{^/wp-content/uploads/2020/11/Improving-financial-wellbeing-through-the-debt-advice-journey-report-Nov-2020.pdf$}, 'https://maps.org.uk/en/publications/research/2020/improving-financial-wellbeing-through-the-debt-advice-journey', host: LEGACY_MAPS_HOST
 r301 %r{^/wp-content/uploads/2020/11/Savings-and-innovation-a-service-prototype-evaluation.pdf$}, 'https://maps.org.uk/en/publications/research/2020/encouraging-debt-advice-clients-to-save-using-behavioural-science', host: LEGACY_MAPS_HOST
 r301 %r{^/wp-content/uploads/2021/01/creditor-toolkit-2021.pdf$}, 'https://maps.org.uk/en/work-with-us/financial-wellbeing-for-housing-residents', host: LEGACY_MAPS_HOST
-r301 %r{^/wp-content/uploads/2021/02/the-money-guidance-competency-framework.pdf$}, 'https://maps.org.uk/en/media-centre/financial-wellbeing-blog/2021-financial-wellbeing-blogs/the-front-line-of-money-guidance-money-guiders-pilot-update', host: LEGACY_MAPS_HOST
 r301 %r{^/wp-content/uploads/2021/02/transforming-debt-relief-order-administration.pdf$}, 'https://maps.org.uk/en/publications/research/2021/transforming-debt-relief-order-administration', host: LEGACY_MAPS_HOST
 r301 %r{^/wp-content/uploads/2021/02/woolard-review-call-for-input-into-the-unsecured-credit-market.pdf$}, 'https://maps.org.uk/en/publications/consultations-and-responses/2020/consultation-response-review-into-change-and-innovation-in-the-unsecured-credit-market-the-woolard-review', host: LEGACY_MAPS_HOST
 r301 %r{^/wp-content/uploads/2021/03/debt-advice-steering-group.pdf$}, 'https://maps.org.uk/en/our-work/our-debt-work', host: LEGACY_MAPS_HOST

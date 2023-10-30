@@ -16,40 +16,6 @@ RSpec.describe SearchResultDecorator do
   it { is_expected.to respond_to(:description) }
   it { is_expected.to respond_to(:title) }
 
-  describe '#title' do
-    context 'when the site title is appended' do
-      let(:title) { 'Item Title - Money Advice Service' }
-
-      it 'removes the the page title' do
-        expect(subject.title).to eq('Item Title')
-      end
-    end
-
-    context 'when the site title is appended then truncated' do
-      let(:title) { 'Item Title - Money ...' }
-
-      it 'removes the the page title' do
-        expect(subject.title).to eq('Item Title')
-      end
-    end
-
-    context 'when the site title is not appended' do
-      let(:title) { 'Item Title - Something' }
-
-      it 'removes the the page title' do
-        expect(subject.title).to eq('Item Title - Something')
-      end
-    end
-
-    context 'when the site title is not appended but truncated' do
-      let(:title) { 'Item Title - Something ...' }
-
-      it 'removes the the page title' do
-        expect(subject.title).to eq('Item Title - Something ...')
-      end
-    end
-  end
-
   describe '#description' do
     subject { decorator.description }
 

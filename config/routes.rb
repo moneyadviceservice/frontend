@@ -20,6 +20,9 @@ Rails.application.routes.draw do
   scope '/:locale', locale: /en|cy/ do
     root 'home#show'
 
+    get '/tools/car-costs-calculator', to: 'car_cost_tool#index'
+    get '/tools/car-costs-calculator/*all', to: 'car_cost_tool#index'
+
     resource :cookies_disabled
 
     #Money Navigator Tool

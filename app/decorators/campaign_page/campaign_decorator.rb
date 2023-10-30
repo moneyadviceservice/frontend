@@ -66,11 +66,7 @@ module CampaignPage
     end
 
     def cost_calculator_link
-      tool_id = ToolMountPoint::CarCostTool.new.public_send("#{I18n.locale}_id")
-
-      h.link_to(I18n.t("#{name}.button_content"),
-                h.car_cost_tool_path(tool_id: tool_id),
-                class: 'button button--primary')
+      ''
     end
   end
 end

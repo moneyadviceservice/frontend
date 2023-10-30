@@ -64,9 +64,6 @@ Rails.application.routes.draw do
     mount BudgetPlanner::Engine => '/tools/:tool_id(/:incognito)',
           constraints: { tool_id: budget_planner_url_constraint, incognito: /incognito/ }
 
-    mount CarCostTool::Engine => '/tools/:tool_id',
-          constraints: ToolMountPoint.for(:car_cost_tool)
-
     mount CutbackCalculator::Engine => '/tools/:tool_id',
           constraints: ToolMountPoint.for(:cutback_calculator)
 

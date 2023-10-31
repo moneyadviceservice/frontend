@@ -1,10 +1,11 @@
 RSpec.feature 'Car cost tool' do
-  scenario 'Functions after a successful cookie check', vcr: true do
-    visit '/en/tools/car-costs-calculator/?checked=true'
+  scenario 'Yields the decommissioning banner when syndicated' do
+    visit '/en/tools/car-costs-calculator'
 
-    fill_in 'vrm', with: 'AC63 UFO'
-    click_on 'Add car'
+    expect(page).to have_text('This tool is no longer available')
 
-    expect(page).to have_text('C63 S Premium Plus 2dr 9G-Tronic')
+    visit '/en/tools/car-costs-calculator/a/deep/path'
+
+    expect(page).to have_text('This tool is no longer available')
   end
 end

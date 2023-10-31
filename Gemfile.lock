@@ -151,14 +151,6 @@ GEM
       rack (>= 1.0.0)
       rack-test (>= 0.5.4)
       xpath (>= 2.0, < 4.0)
-    car_cost_tool (2.1.0)
-      dough-ruby (~> 5.36)
-      nokogiri
-      rails (>= 4, < 5)
-      rest-client
-      roo (< 2.5.0)
-      roo-xls (<= 1)
-      sass-rails
     chai-jquery-rails (2.0.1)
       railties (>= 3.1)
       sprockets
@@ -649,13 +641,6 @@ GEM
       nokogiri (> 1.5.0)
       sprockets
     rollbar (3.4.0)
-    roo (2.4.0)
-      nokogiri (~> 1)
-      rubyzip (~> 1.1, < 2.0.0)
-    roo-xls (1.0.0)
-      nokogiri
-      roo (>= 2.0.0beta1, < 3)
-      spreadsheet (> 0.9.0)
     rouge (3.1.1)
     rspec (3.7.0)
       rspec-core (~> 3.7.0)
@@ -844,7 +829,6 @@ DEPENDENCIES
   budget_planner (~> 6.2.1)
   byebug
   capybara
-  car_cost_tool (~> 2.1.0)
   chai-jquery-rails
   chronic
   codeclimate-test-reporter (= 0.6.0)

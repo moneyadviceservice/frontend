@@ -23,11 +23,6 @@ class CookiedTool
       canonical_url: 'https://www.moneyhelper.org.uk/en/everyday-money/budgeting/use-our-budget-planner'
     ),
     CookiedTool.new(
-      landing_path: '/en/tools/car-costs-calculator/',
-      tool: 'car-cost-calculator',
-      canonical_url: 'https://www.moneyhelper.org.uk/en/everyday-money/buying-and-running-a-car/use-our-car-costs-calculator'
-    ),
-    CookiedTool.new(
       landing_path: '/en/tools/credit-card-calculator/credit-card/',
       tool: 'credit-card-calculator',
       canonical_url: 'https://www.moneyhelper.org.uk/en/everyday-money/credit-and-purchases/use-our-credit-card-calculator'

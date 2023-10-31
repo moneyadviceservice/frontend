@@ -1,7 +1,6 @@
 class ApplicationController < ActionController::Base
   rescue_from Mas::Cms::HttpRedirect, with: :redirect_page
   rescue_from Mas::Cms::Errors::ResourceNotFound, with: :not_found
-  rescue_from RestClient::InternalServerError, with: :car_cost_tool_error
 
   protect_from_forgery with: :exception
   add_flash_types :success
@@ -20,10 +19,6 @@ class ApplicationController < ActionController::Base
   BANNER_DISMISSED_COOKIE_VALUE = 'y'.freeze
 
   helper BudgetWarning
-
-  def car_cost_tool_error
-    render :car_cost_tool_error
-  end
 
   def syndicated_tool_request?
     true

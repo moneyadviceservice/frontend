@@ -5,6 +5,7 @@ r301 %r{^/?}, 'https://adviser.moneyhelper.org.uk/en/faqs-independent-confidenti
 r301 %r{^/?$}, 'https://www.maps.org.uk/en', host: LEGACY_MAPS_HOST
 r301 %r{^/cy/?$}, 'https://www.maps.org.uk/cy', host: LEGACY_MAPS_HOST
 
+r301 %r{^/wp-content/uploads/2021/09/pension-wise-letter.pdf}, 'https://maps.org.uk/content/dam/maps-corporate/en/about-us/moneyhelper/pension-wise-signpost-letter.pdf', host: LEGACY_MAPS_HOST
 r301 %r{^/cy/2019/10/10/sut-mae-maps-yn-cefnogi-gweithwyr/?}, 'https://www.maps.org.uk/cy/media-centre/press-releases', host: LEGACY_MAPS_HOST
 r301 %r{^/cy/2020/01/21/strategaeth-y-du-am-les-ariannol-yn-gosod-gweledigaeth-deg-mlynedd-i-wella-bywydau-miliynau-o-bobl/?$}, 'https://www.maps.org.uk/cy/media-centre/press-releases', host: LEGACY_MAPS_HOST
 r301 %r{^/cy/2020/02/25/3093/?$}, 'https://www.maps.org.uk/cy/media-centre/press-releases', host: LEGACY_MAPS_HOST

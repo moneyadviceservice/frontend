@@ -17,8 +17,8 @@ r301 %r{.*}, 'https://www.moneyhelper.org.uk/en/benefits/universal-credit/money-
 r301 %r{^/en/tools/budget-planner/?(.*)}, 'https://www.moneyhelper.org.uk/en/everyday-money/budgeting/use-our-budget-planner', host: LEGACY_MAS_WWW
 r301 %r{^/cy/tools/cynllunydd-cyllideb/?(.*)}, 'https://www.moneyhelper.org.uk/cy/everyday-money/budgeting/use-our-budget-planner', host: LEGACY_MAS_WWW
 r301 %r{^/en/tools/debt-advice-locator/?(.*)}, 'https://www.moneyhelper.org.uk/en/money-troubles/dealing-with-debt/use-our-debt-advice-locator', host: LEGACY_MAS_WWW
-r301 %r{^/en/tools/mortgage-calculator/?(.*)}, 'https://www.moneyhelper.org.uk/en/homes/buying-a-home/use-our-mortgage-calculator', host: LEGACY_MAS_WWW
-r301 %r{^/en/tools/house-buying/stamp-duty-calculator/?(.*)}, 'https://www.moneyhelper.org.uk/en/homes/buying-a-home/use-our-stamp-duty-calculator', host: LEGACY_MAS_WWW
+r301 %r{^/en/tools/mortgage-calculator/?(.*)}, 'https://www.moneyhelper.org.uk/en/homes/buying-a-home/mortgage-calculator', host: LEGACY_MAS_WWW
+r301 %r{^/en/tools/house-buying/stamp-duty-calculator/?(.*)}, 'https://www.moneyhelper.org.uk/en/homes/buying-a-home/stamp-duty-calculator', host: LEGACY_MAS_WWW
 r301 %r{^/en/tools/pension-calculator/?(.*)}, 'https://www.moneyhelper.org.uk/en/pensions-and-retirement/pensions-basics/use-our-pension-calculator', host: LEGACY_MAS_WWW
 r301 %r{^/en/tools/workplace-pension-contribution-calculator/?(.*)}, 'https://www.moneyhelper.org.uk/en/pensions-and-retirement/auto-enrolment/use-our-workplace-pension-calculator', host: LEGACY_MAS_WWW
 r301 %r{^/en/tools/savings-calculator/?(.*)}, 'https://www.moneyhelper.org.uk/en/savings/how-to-save/use-our-savings-calculator', host: LEGACY_MAS_WWW

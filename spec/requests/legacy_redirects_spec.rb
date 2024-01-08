@@ -36,7 +36,8 @@ RSpec.describe 'Legacy redirects', type: :request do
         ['/tag/gender', '/en/media-centre/press-releases'],
         ['/foi-publication-scheme', '/en/about-us/freedom-of-information-responses'],
         ['/2020/12/01/financial-education-provision-mapping-final-report-summary', '/en/publications/research/2020/financial-education-provision-mapping-final-report-summary'],
-        ['/wp-content/uploads/2021/12/smarter-signposting-to-pensions-guidance.pdf', '/en/publications/research/2021/smarter-signposting-to-pensions-guidance']
+        ['/wp-content/uploads/2021/12/smarter-signposting-to-pensions-guidance.pdf', '/en/publications/research/2021/smarter-signposting-to-pensions-guidance'],
+        ['/wp-content/uploads/2023/08/maps-pension-scams-uk-evidence-review.pdf', '/content/dam/maps-corporate/en/publications/research/2023/pensions-scams-uk-evidence-review-june-2023.pdf']
       ].each do |pair|
         it "redirects from '#{pair.first}' to '#{pair.last}'" do
           get pair.first

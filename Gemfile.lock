@@ -133,7 +133,7 @@ GEM
       activesupport (>= 4.2)
     bowndler (1.0.2)
       thor
-    bson (4.12.1)
+    bson (4.15.0)
     budget_planner (6.2.1)
       i18n-js (= 3.0.0.mas)
       js-routes (= 1.1.2)
@@ -301,33 +301,29 @@ GEM
       activemodel (>= 3.0)
       activesupport (>= 3.0)
       request_store (~> 1.0)
-    dry-configurable (0.12.1)
+    dry-container (0.11.0)
       concurrent-ruby (~> 1.0)
-      dry-core (~> 0.5, >= 0.5.0)
-    dry-container (0.7.2)
+    dry-core (1.0.0)
       concurrent-ruby (~> 1.0)
-      dry-configurable (~> 0.1, >= 0.1.3)
-    dry-core (0.6.0)
+      zeitwerk (~> 2.6)
+    dry-inflector (1.0.0)
+    dry-logic (1.5.0)
       concurrent-ruby (~> 1.0)
-    dry-equalizer (0.3.0)
-    dry-inflector (0.2.0)
-    dry-logic (1.2.0)
-      concurrent-ruby (~> 1.0)
-      dry-core (~> 0.5, >= 0.5)
-    dry-struct (1.3.0)
-      dry-core (~> 0.4, >= 0.4.4)
-      dry-equalizer (~> 0.3)
-      dry-types (~> 1.3)
+      dry-core (~> 1.0, < 2)
+      zeitwerk (~> 2.6)
+    dry-struct (1.6.0)
+      dry-core (~> 1.0, < 2)
+      dry-types (>= 1.7, < 2)
       ice_nine (~> 0.11)
-    dry-struct-setters (0.3.0)
-      dry-struct (>= 1.0.0)
-    dry-types (1.4.0)
+      zeitwerk (~> 2.6)
+    dry-struct-setters (0.4.0)
+      dry-struct (>= 1.4.0)
+    dry-types (1.7.1)
       concurrent-ruby (~> 1.0)
-      dry-container (~> 0.3)
-      dry-core (~> 0.4, >= 0.4.4)
-      dry-equalizer (~> 0.3)
-      dry-inflector (~> 0.1, >= 0.1.2)
-      dry-logic (~> 1.0, >= 1.0.2)
+      dry-core (~> 1.0)
+      dry-inflector (~> 1.0)
+      dry-logic (~> 1.4)
+      zeitwerk (~> 2.6)
     ejs (1.1.1)
     email_spec (1.6.0)
       launchy (~> 2.1)
@@ -471,8 +467,8 @@ GEM
     mini_portile2 (2.8.4)
     minitest (5.19.0)
     modernizr-rails (2.6.3)
-    mongo (2.15.0)
-      bson (>= 4.8.2, < 5.0.0)
+    mongo (2.19.3)
+      bson (>= 4.14.1, < 5.0.0)
     mongoid (5.4.1)
       activemodel (~> 4.0)
       mongo (>= 2.5.1, < 3.0.0)
@@ -514,14 +510,14 @@ GEM
       activesupport
     origin (2.3.1)
     orm_adapter (0.5.0)
-    pacs (4.0.4)
-      dough-ruby (~> 5.39)
-      dry-container (= 0.7.2)
-      dry-core (= 0.6.0)
-      dry-inflector (= 0.2.0)
-      dry-struct (< 1.4.0)
+    pacs (4.2.0)
+      dough-ruby (~> 5.36)
+      dry-container
+      dry-core
+      dry-inflector
+      dry-struct
       dry-struct-setters
-      dry-types (< 1.5.0)
+      dry-types
       faraday
       faraday-conductivity
       faraday_middleware
@@ -800,6 +796,7 @@ GEM
       rails (>= 4, < 5)
     xpath (3.0.0)
       nokogiri (~> 1.8)
+    zeitwerk (2.6.12)
 
 PLATFORMS
   ruby
@@ -876,7 +873,7 @@ DEPENDENCIES
   nokogiri
   nunes
   opening_hours
-  pacs (~> 4.0.4)
+  pacs (~> 4.2)
   payday_loans_intervention (~> 1.9.0)
   pensions_calculator (~> 3.5.0)
   postcode_anywhere-email_validation!

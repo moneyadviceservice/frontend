@@ -57,6 +57,17 @@ GIT
       uglifier
 
 GIT
+  remote: https://github.com/moneyadviceservice/wpcc.git
+  revision: c5274fbc28204201af42a2f4724698f80b4a8d74
+  branch: adobe-data
+  specs:
+    wpcc (3.2.0)
+      dough-ruby (< 6)
+      meta-tags
+      modernizr-rails (~> 2.6.2)
+      rails (>= 4, < 5)
+
+GIT
   remote: https://github.com/rails-lts/rack.git
   revision: 3d883a4eb6c088378afed388231bfda6e862e3e2
   branch: lts-1-6-stable
@@ -806,11 +817,6 @@ GEM
     websocket-extensions (0.1.5)
     whenever (0.10.0)
       chronic (>= 0.6.3)
-    wpcc (3.1.1)
-      dough-ruby (~> 5.38)
-      meta-tags
-      modernizr-rails (~> 2.6.2)
-      rails (>= 4, < 5)
     xpath (3.0.0)
       nokogiri (~> 1.8)
     zeitwerk (2.6.12)
@@ -942,7 +948,7 @@ DEPENDENCIES
   webmock (~> 3.5.0)
   websocket-extensions (>= 0.1.5)
   whenever
-  wpcc (~> 3.1.0)
+  wpcc!
 
 RUBY VERSION
    ruby 2.7.7p221

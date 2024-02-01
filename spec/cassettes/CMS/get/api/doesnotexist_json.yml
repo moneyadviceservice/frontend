@@ -1,0 +1,652 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:3000/api/doesnotexist.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Mas-Responsive/1.0 (birdperson2; benlovell; 17728) ruby/2.7.7 (221; arm64-darwin22)
+      X-Request-Id:
+      - 903e4f97-736d-411d-a202-0a7339bdcaf3
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Content-Type:
+      - text/html; charset=UTF-8
+      X-Request-Id:
+      - 903e4f97-736d-411d-a202-0a7339bdcaf3
+      X-Runtime:
+      - '0.072998'
+      Content-Length:
+      - '51976'
+    body:
+      encoding: UTF-8
+      string: "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\"
+        />\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n
+        \ <title>Action Controller: Exception caught</title>\n  <style>\n    body
+        {\n      background-color: #FAFAFA;\n      color: #333;\n      color-scheme:
+        light dark;\n      supported-color-schemes: light dark;\n      margin: 0px;\n
+        \   }\n\n    body, p, ol, ul, td {\n      font-family: helvetica, verdana,
+        arial, sans-serif;\n      font-size:   13px;\n      line-height: 18px;\n    }\n\n
+        \   pre {\n      font-size: 11px;\n      white-space: pre-wrap;\n    }\n\n
+        \   pre.box {\n      border: 1px solid #EEE;\n      padding: 10px;\n      margin:
+        0px;\n      width: 958px;\n    }\n\n    header {\n      color: #F0F0F0;\n
+        \     background: #C00;\n      padding: 0.5em 1.5em;\n    }\n\n    h1 {\n
+        \     overflow-wrap: break-word;\n      margin: 0.2em 0;\n      line-height:
+        1.1em;\n      font-size: 2em;\n    }\n\n    h2 {\n      color: #C00;\n      line-height:
+        25px;\n    }\n\n    .exception-message {\n      padding: 8px 0;\n    }\n\n
+        \   .exception-message .message{\n      margin-bottom: 8px;\n      line-height:
+        25px;\n      font-size: 1.5em;\n      font-weight: bold;\n      color: #C00;\n
+        \   }\n\n    .details {\n      border: 1px solid #D0D0D0;\n      border-radius:
+        4px;\n      margin: 1em 0px;\n      display: block;\n      max-width: 978px;\n
+        \   }\n\n    .summary {\n      padding: 8px 15px;\n      border-bottom: 1px
+        solid #D0D0D0;\n      display: block;\n    }\n\n    .details pre {\n      margin:
+        5px;\n      border: none;\n    }\n\n    #container {\n      box-sizing: border-box;\n
+        \     width: 100%;\n      padding: 0 1.5em;\n    }\n\n    .source * {\n      margin:
+        0px;\n      padding: 0px;\n    }\n\n    .source {\n      border: 1px solid
+        #D9D9D9;\n      background: #ECECEC;\n      max-width: 978px;\n    }\n\n    .source
+        pre {\n      padding: 10px 0px;\n      border: none;\n    }\n\n    .source
+        .data {\n      font-size: 80%;\n      overflow: auto;\n      background-color:
+        #FFF;\n    }\n\n    .info {\n      padding: 0.5em;\n    }\n\n    .source .data
+        .line_numbers {\n      background-color: #ECECEC;\n      color: #AAA;\n      padding:
+        1em .5em;\n      border-right: 1px solid #DDD;\n      text-align: right;\n
+        \   }\n\n    .line {\n      padding-left: 10px;\n      white-space: pre;\n
+        \   }\n\n    .line:hover {\n      background-color: #F6F6F6;\n    }\n\n    .line.active
+        {\n      background-color: #FCC;\n    }\n\n    .button_to {\n      display:
+        inline-block;\n      margin-top: 0.75em;\n      margin-bottom: 0.75em;\n    }\n\n
+        \   .hidden {\n      display: none;\n    }\n\n    input[type=\"submit\"] {\n
+        \     color: white;\n      background-color: #C00;\n      border: none;\n
+        \     border-radius: 12px;\n      box-shadow: 0 3px #F99;\n      font-size:
+        13px;\n      font-weight: bold;\n      margin: 0;\n      padding: 10px 18px;\n
+        \     -webkit-appearance: none;\n    }\n    input[type=\"submit\"]:focus,\n
+        \   input[type=\"submit\"]:hover {\n      opacity: 0.8;\n    }\n    input[type=\"submit\"]:active
+        {\n      box-shadow: 0 2px #F99;\n      transform: translateY(1px)\n    }\n\n\n
+        \   a { color: #980905; }\n    a:visited { color: #666; }\n    a.trace-frames
+        {\n      color: #666;\n      overflow-wrap: break-word;\n    }\n    a:hover
+        { color: #C00; }\n    a.trace-frames.selected { color: #C00 }\n\n    @media
+        (prefers-color-scheme: dark) {\n      body {\n        background-color: #222;\n
+        \       color: #ECECEC;\n      }\n\n      .details {\n        border-color:
+        #666;\n      }\n\n      .summary {\n        border-color: #666;\n      }\n\n
+        \     .source {\n        border-color: #555;\n        background-color: #333;\n
+        \     }\n\n      .source .data {\n        background: #444;\n      }\n\n      .source
+        .data .line_numbers {\n        background: #333;\n        border-color: #222;\n
+        \     }\n\n      .line:hover {\n        background: #666;\n      }\n\n      .line.active
+        {\n        background-color: #900;\n      }\n\n      input[type=\"submit\"]
+        {\n        box-shadow: 0 3px #800;\n      }\n      input[type=\"submit\"]:active
+        {\n        box-shadow: 0 2px #800;\n      }\n\n      a { color: #C00; }\n
+        \     a.trace-frames { color: #999; }\n      a:hover { color: #E9382B; }\n
+        \     a.trace-frames.selected { color: #E9382B; }\n    }\n\n      #route_table
+        {\n    margin: 0;\n    border-collapse: collapse;\n  }\n\n  #route_table thead
+        tr {\n    border-bottom: 2px solid #ddd;\n  }\n\n  #route_table thead tr.bottom
+        {\n    border-bottom: none;\n  }\n\n  #route_table thead tr.bottom th {\n
+        \   padding: 10px 0;\n    line-height: 15px;\n  }\n\n  #route_table thead
+        tr.bottom th input#search {\n    -webkit-appearance: textfield;\n  }\n\n  #route_table
+        tbody tr {\n    border-bottom: 1px solid #ddd;\n  }\n\n  #route_table tbody
+        tr:nth-child(odd) {\n    background: #f2f2f2;\n  }\n\n  #route_table tbody.exact_matches,\n
+        \ #route_table tbody.fuzzy_matches {\n    background-color: LightGoldenRodYellow;\n
+        \   border-bottom: solid 2px SlateGrey;\n  }\n\n  #route_table tbody.exact_matches
+        tr,\n  #route_table tbody.fuzzy_matches tr {\n    background: none;\n    border-bottom:
+        none;\n  }\n\n  #route_table td {\n    padding: 4px 30px;\n  }\n\n  #path_search
+        {\n    width: 80%;\n    font-size: inherit;\n  }\n\n  @media (prefers-color-scheme:
+        dark) {\n    body {\n      background-color: #222;\n      color: #ECECEC;\n
+        \   }\n\n    #route_table tbody tr:nth-child(odd) {\n      background: #333;\n
+        \   }\n\n    #route_table tbody tr:nth-child(even) {\n      background: #444;\n
+        \   }\n\n    #route_table tbody.exact_matches,\n    #route_table tbody.fuzzy_matches
+        {\n      color: #333;\n    }\n  }\n\n  </style>\n\n  <script>\n    var toggle
+        = function(id) {\n      var s = document.getElementById(id).style;\n      s.display
+        = s.display == 'none' ? 'block' : 'none';\n      return false;\n    }\n    var
+        show = function(id) {\n      document.getElementById(id).style.display = 'block';\n
+        \   }\n    var hide = function(id) {\n      document.getElementById(id).style.display
+        = 'none';\n    }\n    var toggleTrace = function() {\n      return toggle('blame_trace');\n
+        \   }\n    var toggleSessionDump = function() {\n      return toggle('session_dump');\n
+        \   }\n    var toggleEnvDump = function() {\n      return toggle('env_dump');\n
+        \   }\n  </script>\n</head>\n<body>\n\n<header>\n  <h1>Routing Error</h1>\n</header>\n<div
+        id=\"container\">\n  <h2>No route matches [GET] &quot;/api/doesnotexist.json&quot;</h2>\n\n
+        \ \n<p><code>Rails.root: /Users/benlovell/code/planner</code></p>\n\n<div
+        id=\"traces-0\">\n    <a href=\"#\" onclick=\"hide(&#39;Framework-Trace-0&#39;);hide(&#39;Full-Trace-0&#39;);show(&#39;Application-Trace-0&#39;);;
+        return false;\">Application Trace</a> |\n    <a href=\"#\" onclick=\"hide(&#39;Application-Trace-0&#39;);hide(&#39;Full-Trace-0&#39;);show(&#39;Framework-Trace-0&#39;);;
+        return false;\">Framework Trace</a> |\n    <a href=\"#\" onclick=\"hide(&#39;Application-Trace-0&#39;);hide(&#39;Framework-Trace-0&#39;);show(&#39;Full-Trace-0&#39;);;
+        return false;\">Full Trace</a> \n\n    <div id=\"Application-Trace-0\" style=\"display:
+        block;\">\n      <code style=\"font-size: 11px;\">\n      </code>\n    </div>\n
+        \   <div id=\"Framework-Trace-0\" style=\"display: none;\">\n      <code style=\"font-size:
+        11px;\">\n          <a class=\"trace-frames trace-frames-0\" data-exception-object-id=\"38980\"
+        data-frame-id=\"0\" href=\"#\">\n            actionpack (6.1.7.7) lib/action_dispatch/middleware/debug_exceptions.rb:33:in
+        `call&#39;\n          </a>\n          <br>\n          <a class=\"trace-frames
+        trace-frames-0\" data-exception-object-id=\"38980\" data-frame-id=\"1\" href=\"#\">\n
+        \           actionpack (6.1.7.7) lib/action_dispatch/middleware/show_exceptions.rb:33:in
+        `call&#39;\n          </a>\n          <br>\n          <a class=\"trace-frames
+        trace-frames-0\" data-exception-object-id=\"38980\" data-frame-id=\"2\" href=\"#\">\n
+        \           railties (6.1.7.7) lib/rails/rack/logger.rb:37:in `call_app&#39;\n
+        \         </a>\n          <br>\n          <a class=\"trace-frames trace-frames-0\"
+        data-exception-object-id=\"38980\" data-frame-id=\"3\" href=\"#\">\n            railties
+        (6.1.7.7) lib/rails/rack/logger.rb:26:in `block in call&#39;\n          </a>\n
+        \         <br>\n          <a class=\"trace-frames trace-frames-0\" data-exception-object-id=\"38980\"
+        data-frame-id=\"4\" href=\"#\">\n            activesupport (6.1.7.7) lib/active_support/tagged_logging.rb:99:in
+        `block in tagged&#39;\n          </a>\n          <br>\n          <a class=\"trace-frames
+        trace-frames-0\" data-exception-object-id=\"38980\" data-frame-id=\"5\" href=\"#\">\n
+        \           activesupport (6.1.7.7) lib/active_support/tagged_logging.rb:37:in
+        `tagged&#39;\n          </a>\n          <br>\n          <a class=\"trace-frames
+        trace-frames-0\" data-exception-object-id=\"38980\" data-frame-id=\"6\" href=\"#\">\n
+        \           activesupport (6.1.7.7) lib/active_support/tagged_logging.rb:99:in
+        `tagged&#39;\n          </a>\n          <br>\n          <a class=\"trace-frames
+        trace-frames-0\" data-exception-object-id=\"38980\" data-frame-id=\"7\" href=\"#\">\n
+        \           railties (6.1.7.7) lib/rails/rack/logger.rb:26:in `call&#39;\n
+        \         </a>\n          <br>\n          <a class=\"trace-frames trace-frames-0\"
+        data-exception-object-id=\"38980\" data-frame-id=\"8\" href=\"#\">\n            actionpack
+        (6.1.7.7) lib/action_dispatch/middleware/remote_ip.rb:81:in `call&#39;\n          </a>\n
+        \         <br>\n          <a class=\"trace-frames trace-frames-0\" data-exception-object-id=\"38980\"
+        data-frame-id=\"9\" href=\"#\">\n            request_store (1.5.1) lib/request_store/middleware.rb:19:in
+        `call&#39;\n          </a>\n          <br>\n          <a class=\"trace-frames
+        trace-frames-0\" data-exception-object-id=\"38980\" data-frame-id=\"10\" href=\"#\">\n
+        \           actionpack (6.1.7.7) lib/action_dispatch/middleware/request_id.rb:26:in
+        `call&#39;\n          </a>\n          <br>\n          <a class=\"trace-frames
+        trace-frames-0\" data-exception-object-id=\"38980\" data-frame-id=\"11\" href=\"#\">\n
+        \           rack (2.2.8.1) lib/rack/method_override.rb:24:in `call&#39;\n
+        \         </a>\n          <br>\n          <a class=\"trace-frames trace-frames-0\"
+        data-exception-object-id=\"38980\" data-frame-id=\"12\" href=\"#\">\n            rack
+        (2.2.8.1) lib/rack/runtime.rb:22:in `call&#39;\n          </a>\n          <br>\n
+        \         <a class=\"trace-frames trace-frames-0\" data-exception-object-id=\"38980\"
+        data-frame-id=\"13\" href=\"#\">\n            activesupport (6.1.7.7) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in
+        `call&#39;\n          </a>\n          <br>\n          <a class=\"trace-frames
+        trace-frames-0\" data-exception-object-id=\"38980\" data-frame-id=\"14\" href=\"#\">\n
+        \           actionpack (6.1.7.7) lib/action_dispatch/middleware/executor.rb:14:in
+        `call&#39;\n          </a>\n          <br>\n          <a class=\"trace-frames
+        trace-frames-0\" data-exception-object-id=\"38980\" data-frame-id=\"15\" href=\"#\">\n
+        \           actionpack (6.1.7.7) lib/action_dispatch/middleware/static.rb:24:in
+        `call&#39;\n          </a>\n          <br>\n          <a class=\"trace-frames
+        trace-frames-0\" data-exception-object-id=\"38980\" data-frame-id=\"16\" href=\"#\">\n
+        \           rack (2.2.8.1) lib/rack/sendfile.rb:110:in `call&#39;\n          </a>\n
+        \         <br>\n          <a class=\"trace-frames trace-frames-0\" data-exception-object-id=\"38980\"
+        data-frame-id=\"17\" href=\"#\">\n            actionpack (6.1.7.7) lib/action_dispatch/middleware/host_authorization.rb:148:in
+        `call&#39;\n          </a>\n          <br>\n          <a class=\"trace-frames
+        trace-frames-0\" data-exception-object-id=\"38980\" data-frame-id=\"18\" href=\"#\">\n
+        \           rack-cors (1.1.1) lib/rack/cors.rb:100:in `call&#39;\n          </a>\n
+        \         <br>\n          <a class=\"trace-frames trace-frames-0\" data-exception-object-id=\"38980\"
+        data-frame-id=\"19\" href=\"#\">\n            railties (6.1.7.7) lib/rails/engine.rb:539:in
+        `call&#39;\n          </a>\n          <br>\n          <a class=\"trace-frames
+        trace-frames-0\" data-exception-object-id=\"38980\" data-frame-id=\"20\" href=\"#\">\n
+        \           puma (6.4.2) lib/puma/configuration.rb:272:in `call&#39;\n          </a>\n
+        \         <br>\n          <a class=\"trace-frames trace-frames-0\" data-exception-object-id=\"38980\"
+        data-frame-id=\"21\" href=\"#\">\n            puma (6.4.2) lib/puma/request.rb:100:in
+        `block in handle_request&#39;\n          </a>\n          <br>\n          <a
+        class=\"trace-frames trace-frames-0\" data-exception-object-id=\"38980\" data-frame-id=\"22\"
+        href=\"#\">\n            puma (6.4.2) lib/puma/thread_pool.rb:378:in `with_force_shutdown&#39;\n
+        \         </a>\n          <br>\n          <a class=\"trace-frames trace-frames-0\"
+        data-exception-object-id=\"38980\" data-frame-id=\"23\" href=\"#\">\n            puma
+        (6.4.2) lib/puma/request.rb:99:in `handle_request&#39;\n          </a>\n          <br>\n
+        \         <a class=\"trace-frames trace-frames-0\" data-exception-object-id=\"38980\"
+        data-frame-id=\"24\" href=\"#\">\n            puma (6.4.2) lib/puma/server.rb:464:in
+        `process_client&#39;\n          </a>\n          <br>\n          <a class=\"trace-frames
+        trace-frames-0\" data-exception-object-id=\"38980\" data-frame-id=\"25\" href=\"#\">\n
+        \           puma (6.4.2) lib/puma/server.rb:245:in `block in run&#39;\n          </a>\n
+        \         <br>\n          <a class=\"trace-frames trace-frames-0\" data-exception-object-id=\"38980\"
+        data-frame-id=\"26\" href=\"#\">\n            puma (6.4.2) lib/puma/thread_pool.rb:155:in
+        `block in spawn_thread&#39;\n          </a>\n          <br>\n      </code>\n
+        \   </div>\n    <div id=\"Full-Trace-0\" style=\"display: none;\">\n      <code
+        style=\"font-size: 11px;\">\n          <a class=\"trace-frames trace-frames-0\"
+        data-exception-object-id=\"38980\" data-frame-id=\"0\" href=\"#\">\n            actionpack
+        (6.1.7.7) lib/action_dispatch/middleware/debug_exceptions.rb:33:in `call&#39;\n
+        \         </a>\n          <br>\n          <a class=\"trace-frames trace-frames-0\"
+        data-exception-object-id=\"38980\" data-frame-id=\"1\" href=\"#\">\n            actionpack
+        (6.1.7.7) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call&#39;\n
+        \         </a>\n          <br>\n          <a class=\"trace-frames trace-frames-0\"
+        data-exception-object-id=\"38980\" data-frame-id=\"2\" href=\"#\">\n            railties
+        (6.1.7.7) lib/rails/rack/logger.rb:37:in `call_app&#39;\n          </a>\n
+        \         <br>\n          <a class=\"trace-frames trace-frames-0\" data-exception-object-id=\"38980\"
+        data-frame-id=\"3\" href=\"#\">\n            railties (6.1.7.7) lib/rails/rack/logger.rb:26:in
+        `block in call&#39;\n          </a>\n          <br>\n          <a class=\"trace-frames
+        trace-frames-0\" data-exception-object-id=\"38980\" data-frame-id=\"4\" href=\"#\">\n
+        \           activesupport (6.1.7.7) lib/active_support/tagged_logging.rb:99:in
+        `block in tagged&#39;\n          </a>\n          <br>\n          <a class=\"trace-frames
+        trace-frames-0\" data-exception-object-id=\"38980\" data-frame-id=\"5\" href=\"#\">\n
+        \           activesupport (6.1.7.7) lib/active_support/tagged_logging.rb:37:in
+        `tagged&#39;\n          </a>\n          <br>\n          <a class=\"trace-frames
+        trace-frames-0\" data-exception-object-id=\"38980\" data-frame-id=\"6\" href=\"#\">\n
+        \           activesupport (6.1.7.7) lib/active_support/tagged_logging.rb:99:in
+        `tagged&#39;\n          </a>\n          <br>\n          <a class=\"trace-frames
+        trace-frames-0\" data-exception-object-id=\"38980\" data-frame-id=\"7\" href=\"#\">\n
+        \           railties (6.1.7.7) lib/rails/rack/logger.rb:26:in `call&#39;\n
+        \         </a>\n          <br>\n          <a class=\"trace-frames trace-frames-0\"
+        data-exception-object-id=\"38980\" data-frame-id=\"8\" href=\"#\">\n            actionpack
+        (6.1.7.7) lib/action_dispatch/middleware/remote_ip.rb:81:in `call&#39;\n          </a>\n
+        \         <br>\n          <a class=\"trace-frames trace-frames-0\" data-exception-object-id=\"38980\"
+        data-frame-id=\"9\" href=\"#\">\n            request_store (1.5.1) lib/request_store/middleware.rb:19:in
+        `call&#39;\n          </a>\n          <br>\n          <a class=\"trace-frames
+        trace-frames-0\" data-exception-object-id=\"38980\" data-frame-id=\"10\" href=\"#\">\n
+        \           actionpack (6.1.7.7) lib/action_dispatch/middleware/request_id.rb:26:in
+        `call&#39;\n          </a>\n          <br>\n          <a class=\"trace-frames
+        trace-frames-0\" data-exception-object-id=\"38980\" data-frame-id=\"11\" href=\"#\">\n
+        \           rack (2.2.8.1) lib/rack/method_override.rb:24:in `call&#39;\n
+        \         </a>\n          <br>\n          <a class=\"trace-frames trace-frames-0\"
+        data-exception-object-id=\"38980\" data-frame-id=\"12\" href=\"#\">\n            rack
+        (2.2.8.1) lib/rack/runtime.rb:22:in `call&#39;\n          </a>\n          <br>\n
+        \         <a class=\"trace-frames trace-frames-0\" data-exception-object-id=\"38980\"
+        data-frame-id=\"13\" href=\"#\">\n            activesupport (6.1.7.7) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in
+        `call&#39;\n          </a>\n          <br>\n          <a class=\"trace-frames
+        trace-frames-0\" data-exception-object-id=\"38980\" data-frame-id=\"14\" href=\"#\">\n
+        \           actionpack (6.1.7.7) lib/action_dispatch/middleware/executor.rb:14:in
+        `call&#39;\n          </a>\n          <br>\n          <a class=\"trace-frames
+        trace-frames-0\" data-exception-object-id=\"38980\" data-frame-id=\"15\" href=\"#\">\n
+        \           actionpack (6.1.7.7) lib/action_dispatch/middleware/static.rb:24:in
+        `call&#39;\n          </a>\n          <br>\n          <a class=\"trace-frames
+        trace-frames-0\" data-exception-object-id=\"38980\" data-frame-id=\"16\" href=\"#\">\n
+        \           rack (2.2.8.1) lib/rack/sendfile.rb:110:in `call&#39;\n          </a>\n
+        \         <br>\n          <a class=\"trace-frames trace-frames-0\" data-exception-object-id=\"38980\"
+        data-frame-id=\"17\" href=\"#\">\n            actionpack (6.1.7.7) lib/action_dispatch/middleware/host_authorization.rb:148:in
+        `call&#39;\n          </a>\n          <br>\n          <a class=\"trace-frames
+        trace-frames-0\" data-exception-object-id=\"38980\" data-frame-id=\"18\" href=\"#\">\n
+        \           rack-cors (1.1.1) lib/rack/cors.rb:100:in `call&#39;\n          </a>\n
+        \         <br>\n          <a class=\"trace-frames trace-frames-0\" data-exception-object-id=\"38980\"
+        data-frame-id=\"19\" href=\"#\">\n            railties (6.1.7.7) lib/rails/engine.rb:539:in
+        `call&#39;\n          </a>\n          <br>\n          <a class=\"trace-frames
+        trace-frames-0\" data-exception-object-id=\"38980\" data-frame-id=\"20\" href=\"#\">\n
+        \           puma (6.4.2) lib/puma/configuration.rb:272:in `call&#39;\n          </a>\n
+        \         <br>\n          <a class=\"trace-frames trace-frames-0\" data-exception-object-id=\"38980\"
+        data-frame-id=\"21\" href=\"#\">\n            puma (6.4.2) lib/puma/request.rb:100:in
+        `block in handle_request&#39;\n          </a>\n          <br>\n          <a
+        class=\"trace-frames trace-frames-0\" data-exception-object-id=\"38980\" data-frame-id=\"22\"
+        href=\"#\">\n            puma (6.4.2) lib/puma/thread_pool.rb:378:in `with_force_shutdown&#39;\n
+        \         </a>\n          <br>\n          <a class=\"trace-frames trace-frames-0\"
+        data-exception-object-id=\"38980\" data-frame-id=\"23\" href=\"#\">\n            puma
+        (6.4.2) lib/puma/request.rb:99:in `handle_request&#39;\n          </a>\n          <br>\n
+        \         <a class=\"trace-frames trace-frames-0\" data-exception-object-id=\"38980\"
+        data-frame-id=\"24\" href=\"#\">\n            puma (6.4.2) lib/puma/server.rb:464:in
+        `process_client&#39;\n          </a>\n          <br>\n          <a class=\"trace-frames
+        trace-frames-0\" data-exception-object-id=\"38980\" data-frame-id=\"25\" href=\"#\">\n
+        \           puma (6.4.2) lib/puma/server.rb:245:in `block in run&#39;\n          </a>\n
+        \         <br>\n          <a class=\"trace-frames trace-frames-0\" data-exception-object-id=\"38980\"
+        data-frame-id=\"26\" href=\"#\">\n            puma (6.4.2) lib/puma/thread_pool.rb:155:in
+        `block in spawn_thread&#39;\n          </a>\n          <br>\n      </code>\n
+        \   </div>\n\n  <script type=\"text/javascript\">\n    (function() {\n      var
+        traceFrames = document.getElementsByClassName('trace-frames-0');\n      var
+        selectedFrame, currentSource = document.getElementById('frame-source-0-0');\n\n
+        \     // Add click listeners for all stack frames\n      for (var i = 0; i
+        < traceFrames.length; i++) {\n        traceFrames[i].addEventListener('click',
+        function(e) {\n          e.preventDefault();\n          var target = e.target;\n
+        \         var frame_id = target.dataset.frameId;\n\n          if (selectedFrame)
+        {\n            selectedFrame.className = selectedFrame.className.replace(\"selected\",
+        \"\");\n          }\n\n          target.className += \" selected\";\n          selectedFrame
+        = target;\n\n          // Change the extracted source code\n          changeSourceExtract(frame_id);\n
+        \       });\n\n        function changeSourceExtract(frame_id) {\n          var
+        el = document.getElementById('frame-source-0-' + frame_id);\n          if
+        (currentSource && el) {\n            currentSource.className += \" hidden\";\n
+        \           el.className = el.className.replace(\" hidden\", \"\");\n            currentSource
+        = el;\n          }\n        }\n      }\n    })();\n  </script>\n</div>\n\n\n
+        \   <h2>\n      Routes\n    </h2>\n\n    <p>\n      Routes match in priority
+        from top to bottom\n    </p>\n\n    \n<table id='route_table' class='route_table'>\n
+        \ <thead>\n    <tr>\n      <th>Helper</th>\n      <th>HTTP Verb</th>\n      <th>Path</th>\n
+        \     <th>Controller#Action</th>\n    </tr>\n    <tr class='bottom'>\n      <th>\n
+        \       <a data-route-helper=\"_path\" title=\"Returns a relative path (without
+        the http or domain)\" href=\"#\">Path</a> /\n        <a data-route-helper=\"_url\"
+        title=\"Returns an absolute URL (with the http and domain)\" href=\"#\">Url</a>\n
+        \     </th>\n      <th>\n      </th>\n      <th>\n        <input id=\"search\"
+        placeholder=\"Path Match\" type=\"search\" name=\"path[]\" />\n      </th>\n
+        \     <th>\n      </th>\n    </tr>\n  </thead>\n  <tbody class='exact_matches'
+        id='exact_matches'>\n  </tbody>\n  <tbody class='fuzzy_matches' id='fuzzy_matches'>\n
+        \ </tbody>\n  <tbody>\n    <tr class='route_row' data-helper='path'>\n  <td
+        data-route-name='sms_cancellations'>\n      sms_cancellations<span class='helper'>_path</span>\n
+        \ </td>\n  <td>\n    POST\n  </td>\n  <td data-route-path='/sms_cancellations(.:format)'>\n
+        \   /sms_cancellations(.:format)\n  </td>\n  <td>\n    <p>sms_cancellations#create</p>\n
+        \ </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n  <td data-route-name='mail_gun_drops'>\n
+        \     mail_gun_drops<span class='helper'>_path</span>\n  </td>\n  <td>\n    POST\n
+        \ </td>\n  <td data-route-path='/mail_gun/drops(.:format)'>\n    /mail_gun/drops(.:format)\n
+        \ </td>\n  <td>\n    <p>mail_gun/drops#create</p>\n  </td>\n</tr>\n<tr class='route_row'
+        data-helper='path'>\n  <td data-route-name='my_appointments'>\n      my_appointments<span
+        class='helper'>_path</span>\n  </td>\n  <td>\n    GET\n  </td>\n  <td data-route-path='/my_appointments(.:format)'>\n
+        \   /my_appointments(.:format)\n  </td>\n  <td>\n    <p>my_appointments#index</p>\n
+        \ </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n  <td data-route-name='user'>\n
+        \     user<span class='helper'>_path</span>\n  </td>\n  <td>\n    PATCH\n
+        \ </td>\n  <td data-route-path='/users/:id(.:format)'>\n    /users/:id(.:format)\n
+        \ </td>\n  <td>\n    <p>users#update</p>\n  </td>\n</tr>\n<tr class='route_row'
+        data-helper='path'>\n  <td data-route-name=''>\n  </td>\n  <td>\n    PUT\n
+        \ </td>\n  <td data-route-path='/users/:id(.:format)'>\n    /users/:id(.:format)\n
+        \ </td>\n  <td>\n    <p>users#update</p>\n  </td>\n</tr>\n<tr class='route_row'
+        data-helper='path'>\n  <td data-route-name='appointment_cancel'>\n      appointment_cancel<span
+        class='helper'>_path</span>\n  </td>\n  <td>\n    POST\n  </td>\n  <td data-route-path='/appointments/:appointment_id/cancel(.:format)'>\n
+        \   /appointments/:appointment_id/cancel(.:format)\n  </td>\n  <td>\n    <p>cancels#create</p>\n
+        \ </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n  <td data-route-name='appointment_process'>\n
+        \     appointment_process<span class='helper'>_path</span>\n  </td>\n  <td>\n
+        \   POST\n  </td>\n  <td data-route-path='/appointments/:appointment_id/process(.:format)'>\n
+        \   /appointments/:appointment_id/process(.:format)\n  </td>\n  <td>\n    <p>processes#create</p>\n
+        \ </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n  <td data-route-name='appointment_changes'>\n
+        \     appointment_changes<span class='helper'>_path</span>\n  </td>\n  <td>\n
+        \   GET\n  </td>\n  <td data-route-path='/appointments/:appointment_id/changes(.:format)'>\n
+        \   /appointments/:appointment_id/changes(.:format)\n  </td>\n  <td>\n    <p>changes#index</p>\n
+        \ </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n  <td data-route-name='appointment_reschedule'>\n
+        \     appointment_reschedule<span class='helper'>_path</span>\n  </td>\n  <td>\n
+        \   GET\n  </td>\n  <td data-route-path='/appointments/:appointment_id/reschedule(.:format)'>\n
+        \   /appointments/:appointment_id/reschedule(.:format)\n  </td>\n  <td>\n
+        \   <p>reschedules#show</p>\n  </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n
+        \ <td data-route-name=''>\n  </td>\n  <td>\n    POST\n  </td>\n  <td data-route-path='/appointments/:appointment_id/reschedule(.:format)'>\n
+        \   /appointments/:appointment_id/reschedule(.:format)\n  </td>\n  <td>\n
+        \   <p>reschedules#create</p>\n  </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n
+        \ <td data-route-name='appointments'>\n      appointments<span class='helper'>_path</span>\n
+        \ </td>\n  <td>\n    GET\n  </td>\n  <td data-route-path='/appointments(.:format)'>\n
+        \   /appointments(.:format)\n  </td>\n  <td>\n    <p>appointments#index</p>\n
+        \ </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n  <td data-route-name='edit_appointment'>\n
+        \     edit_appointment<span class='helper'>_path</span>\n  </td>\n  <td>\n
+        \   GET\n  </td>\n  <td data-route-path='/appointments/:id/edit(.:format)'>\n
+        \   /appointments/:id/edit(.:format)\n  </td>\n  <td>\n    <p>appointments#edit</p>\n
+        \ </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n  <td data-route-name='appointment'>\n
+        \     appointment<span class='helper'>_path</span>\n  </td>\n  <td>\n    PATCH\n
+        \ </td>\n  <td data-route-path='/appointments/:id(.:format)'>\n    /appointments/:id(.:format)\n
+        \ </td>\n  <td>\n    <p>appointments#update</p>\n  </td>\n</tr>\n<tr class='route_row'
+        data-helper='path'>\n  <td data-route-name=''>\n  </td>\n  <td>\n    PUT\n
+        \ </td>\n  <td data-route-path='/appointments/:id(.:format)'>\n    /appointments/:id(.:format)\n
+        \ </td>\n  <td>\n    <p>appointments#update</p>\n  </td>\n</tr>\n<tr class='route_row'
+        data-helper='path'>\n  <td data-route-name='booking_request_activities'>\n
+        \     booking_request_activities<span class='helper'>_path</span>\n  </td>\n
+        \ <td>\n    GET\n  </td>\n  <td data-route-path='/booking_requests/:booking_request_id/activities(.:format)'>\n
+        \   /booking_requests/:booking_request_id/activities(.:format)\n  </td>\n
+        \ <td>\n    <p>activities#index</p>\n  </td>\n</tr>\n<tr class='route_row'
+        data-helper='path'>\n  <td data-route-name=''>\n  </td>\n  <td>\n    POST\n
+        \ </td>\n  <td data-route-path='/booking_requests/:booking_request_id/activities(.:format)'>\n
+        \   /booking_requests/:booking_request_id/activities(.:format)\n  </td>\n
+        \ <td>\n    <p>activities#create</p>\n  </td>\n</tr>\n<tr class='route_row'
+        data-helper='path'>\n  <td data-route-name='booking_request_appointments'>\n
+        \     booking_request_appointments<span class='helper'>_path</span>\n  </td>\n
+        \ <td>\n    POST\n  </td>\n  <td data-route-path='/booking_requests/:booking_request_id/appointments(.:format)'>\n
+        \   /booking_requests/:booking_request_id/appointments(.:format)\n  </td>\n
+        \ <td>\n    <p>appointments#create</p>\n  </td>\n</tr>\n<tr class='route_row'
+        data-helper='path'>\n  <td data-route-name='new_booking_request_appointment'>\n
+        \     new_booking_request_appointment<span class='helper'>_path</span>\n  </td>\n
+        \ <td>\n    GET\n  </td>\n  <td data-route-path='/booking_requests/:booking_request_id/appointments/new(.:format)'>\n
+        \   /booking_requests/:booking_request_id/appointments/new(.:format)\n  </td>\n
+        \ <td>\n    <p>appointments#new</p>\n  </td>\n</tr>\n<tr class='route_row'
+        data-helper='path'>\n  <td data-route-name='edit_booking_request_postal_address'>\n
+        \     edit_booking_request_postal_address<span class='helper'>_path</span>\n
+        \ </td>\n  <td>\n    GET\n  </td>\n  <td data-route-path='/booking_requests/:booking_request_id/postal_address/edit(.:format)'>\n
+        \   /booking_requests/:booking_request_id/postal_address/edit(.:format)\n
+        \ </td>\n  <td>\n    <p>postal_addresses#edit</p>\n  </td>\n</tr>\n<tr class='route_row'
+        data-helper='path'>\n  <td data-route-name='booking_request_postal_address'>\n
+        \     booking_request_postal_address<span class='helper'>_path</span>\n  </td>\n
+        \ <td>\n    PATCH\n  </td>\n  <td data-route-path='/booking_requests/:booking_request_id/postal_address(.:format)'>\n
+        \   /booking_requests/:booking_request_id/postal_address(.:format)\n  </td>\n
+        \ <td>\n    <p>postal_addresses#update</p>\n  </td>\n</tr>\n<tr class='route_row'
+        data-helper='path'>\n  <td data-route-name=''>\n  </td>\n  <td>\n    PUT\n
+        \ </td>\n  <td data-route-path='/booking_requests/:booking_request_id/postal_address(.:format)'>\n
+        \   /booking_requests/:booking_request_id/postal_address(.:format)\n  </td>\n
+        \ <td>\n    <p>postal_addresses#update</p>\n  </td>\n</tr>\n<tr class='route_row'
+        data-helper='path'>\n  <td data-route-name='booking_request_confirmation'>\n
+        \     booking_request_confirmation<span class='helper'>_path</span>\n  </td>\n
+        \ <td>\n    POST\n  </td>\n  <td data-route-path='/booking_requests/:booking_request_id/confirmation(.:format)'>\n
+        \   /booking_requests/:booking_request_id/confirmation(.:format)\n  </td>\n
+        \ <td>\n    <p>confirmations#create</p>\n  </td>\n</tr>\n<tr class='route_row'
+        data-helper='path'>\n  <td data-route-name='booking_request_consent'>\n      booking_request_consent<span
+        class='helper'>_path</span>\n  </td>\n  <td>\n    GET\n  </td>\n  <td data-route-path='/booking_requests/:booking_request_id/consent(.:format)'>\n
+        \   /booking_requests/:booking_request_id/consent(.:format)\n  </td>\n  <td>\n
+        \   <p>consents#show</p>\n  </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n
+        \ <td data-route-name=''>\n  </td>\n  <td>\n    PATCH\n  </td>\n  <td data-route-path='/booking_requests/:booking_request_id/consent(.:format)'>\n
+        \   /booking_requests/:booking_request_id/consent(.:format)\n  </td>\n  <td>\n
+        \   <p>consents#update</p>\n  </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n
+        \ <td data-route-name=''>\n  </td>\n  <td>\n    PUT\n  </td>\n  <td data-route-path='/booking_requests/:booking_request_id/consent(.:format)'>\n
+        \   /booking_requests/:booking_request_id/consent(.:format)\n  </td>\n  <td>\n
+        \   <p>consents#update</p>\n  </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n
+        \ <td data-route-name='booking_requests'>\n      booking_requests<span class='helper'>_path</span>\n
+        \ </td>\n  <td>\n    GET\n  </td>\n  <td data-route-path='/booking_requests(.:format)'>\n
+        \   /booking_requests(.:format)\n  </td>\n  <td>\n    <p>booking_requests#index</p>\n
+        \ </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n  <td data-route-name='booking_request'>\n
+        \     booking_request<span class='helper'>_path</span>\n  </td>\n  <td>\n
+        \   PATCH\n  </td>\n  <td data-route-path='/booking_requests/:id(.:format)'>\n
+        \   /booking_requests/:id(.:format)\n  </td>\n  <td>\n    <p>booking_requests#update</p>\n
+        \ </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n  <td data-route-name=''>\n
+        \ </td>\n  <td>\n    PUT\n  </td>\n  <td data-route-path='/booking_requests/:id(.:format)'>\n
+        \   /booking_requests/:id(.:format)\n  </td>\n  <td>\n    <p>booking_requests#update</p>\n
+        \ </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n  <td data-route-name='schedules'>\n
+        \     schedules<span class='helper'>_path</span>\n  </td>\n  <td>\n    GET\n
+        \ </td>\n  <td data-route-path='/schedules(.:format)'>\n    /schedules(.:format)\n
+        \ </td>\n  <td>\n    <p>schedules#index</p>\n  </td>\n</tr>\n<tr class='route_row'
+        data-helper='path'>\n  <td data-route-name='locations'>\n      locations<span
+        class='helper'>_path</span>\n  </td>\n  <td>\n    GET\n  </td>\n  <td data-route-path='/locations(.:format)'>\n
+        \   /locations(.:format)\n  </td>\n  <td>\n    <p>locations#index</p>\n  </td>\n</tr>\n<tr
+        class='route_row' data-helper='path'>\n  <td data-route-name='future_realtime_bookable_slots'>\n
+        \     future_realtime_bookable_slots<span class='helper'>_path</span>\n  </td>\n
+        \ <td>\n    DELETE\n  </td>\n  <td data-route-path='/locations/:location_id/realtime_bookable_slots/future(.:format)'>\n
+        \   /locations/:location_id/realtime_bookable_slots/future(.:format)\n  </td>\n
+        \ <td>\n    <p>realtime_bookable_slots#future</p>\n  </td>\n</tr>\n<tr class='route_row'
+        data-helper='path'>\n  <td data-route-name='realtime_bookable_slots'>\n      realtime_bookable_slots<span
+        class='helper'>_path</span>\n  </td>\n  <td>\n    GET\n  </td>\n  <td data-route-path='/locations/:location_id/realtime_bookable_slots(.:format)'>\n
+        \   /locations/:location_id/realtime_bookable_slots(.:format)\n  </td>\n  <td>\n
+        \   <p>realtime_bookable_slots#index</p>\n  </td>\n</tr>\n<tr class='route_row'
+        data-helper='path'>\n  <td data-route-name=''>\n  </td>\n  <td>\n    POST\n
+        \ </td>\n  <td data-route-path='/locations/:location_id/realtime_bookable_slots(.:format)'>\n
+        \   /locations/:location_id/realtime_bookable_slots(.:format)\n  </td>\n  <td>\n
+        \   <p>realtime_bookable_slots#create</p>\n  </td>\n</tr>\n<tr class='route_row'
+        data-helper='path'>\n  <td data-route-name='realtime_bookable_slot'>\n      realtime_bookable_slot<span
+        class='helper'>_path</span>\n  </td>\n  <td>\n    DELETE\n  </td>\n  <td data-route-path='/locations/:location_id/realtime_bookable_slots/:id(.:format)'>\n
+        \   /locations/:location_id/realtime_bookable_slots/:id(.:format)\n  </td>\n
+        \ <td>\n    <p>realtime_bookable_slots#destroy</p>\n  </td>\n</tr>\n<tr class='route_row'
+        data-helper='path'>\n  <td data-route-name='preview_realtime_bookable_slot_copies'>\n
+        \     preview_realtime_bookable_slot_copies<span class='helper'>_path</span>\n
+        \ </td>\n  <td>\n    POST\n  </td>\n  <td data-route-path='/locations/:location_id/realtime_bookable_slot_copies/preview(.:format)'>\n
+        \   /locations/:location_id/realtime_bookable_slot_copies/preview(.:format)\n
+        \ </td>\n  <td>\n    <p>realtime_bookable_slot_copies#preview</p>\n  </td>\n</tr>\n<tr
+        class='route_row' data-helper='path'>\n  <td data-route-name='realtime_bookable_slot_copies'>\n
+        \     realtime_bookable_slot_copies<span class='helper'>_path</span>\n  </td>\n
+        \ <td>\n    POST\n  </td>\n  <td data-route-path='/locations/:location_id/realtime_bookable_slot_copies(.:format)'>\n
+        \   /locations/:location_id/realtime_bookable_slot_copies(.:format)\n  </td>\n
+        \ <td>\n    <p>realtime_bookable_slot_copies#create</p>\n  </td>\n</tr>\n<tr
+        class='route_row' data-helper='path'>\n  <td data-route-name='new_realtime_bookable_slot_copy'>\n
+        \     new_realtime_bookable_slot_copy<span class='helper'>_path</span>\n  </td>\n
+        \ <td>\n    GET\n  </td>\n  <td data-route-path='/locations/:location_id/realtime_bookable_slot_copies/new(.:format)'>\n
+        \   /locations/:location_id/realtime_bookable_slot_copies/new(.:format)\n
+        \ </td>\n  <td>\n    <p>realtime_bookable_slot_copies#new</p>\n  </td>\n</tr>\n<tr
+        class='route_row' data-helper='path'>\n  <td data-route-name='realtime_bookable_slot_lists'>\n
+        \     realtime_bookable_slot_lists<span class='helper'>_path</span>\n  </td>\n
+        \ <td>\n    GET\n  </td>\n  <td data-route-path='/locations/:location_id/realtime_bookable_slot_lists(.:format)'>\n
+        \   /locations/:location_id/realtime_bookable_slot_lists(.:format)\n  </td>\n
+        \ <td>\n    <p>realtime_bookable_slot_lists#index</p>\n  </td>\n</tr>\n<tr
+        class='route_row' data-helper='path'>\n  <td data-route-name='realtime_appointments'>\n
+        \     realtime_appointments<span class='helper'>_path</span>\n  </td>\n  <td>\n
+        \   GET\n  </td>\n  <td data-route-path='/locations/:location_id/realtime_appointments(.:format)'>\n
+        \   /locations/:location_id/realtime_appointments(.:format)\n  </td>\n  <td>\n
+        \   <p>realtime_appointments#index</p>\n  </td>\n</tr>\n<tr class='route_row'
+        data-helper='path'>\n  <td data-route-name='guiders'>\n      guiders<span
+        class='helper'>_path</span>\n  </td>\n  <td>\n    GET\n  </td>\n  <td data-route-path='/locations/:location_id/guiders(.:format)'>\n
+        \   /locations/:location_id/guiders(.:format)\n  </td>\n  <td>\n    <p>guiders#index</p>\n
+        \ </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n  <td data-route-name='preview_agent_booking_requests'>\n
+        \     preview_agent_booking_requests<span class='helper'>_path</span>\n  </td>\n
+        \ <td>\n    POST\n  </td>\n  <td data-route-path='/locations/:location_id/booking_requests/preview(.:format)'>\n
+        \   /locations/:location_id/booking_requests/preview(.:format)\n  </td>\n
+        \ <td>\n    <p>agent/booking_requests#preview</p>\n  </td>\n</tr>\n<tr class='route_row'
+        data-helper='path'>\n  <td data-route-name='agent_booking_requests'>\n      agent_booking_requests<span
+        class='helper'>_path</span>\n  </td>\n  <td>\n    POST\n  </td>\n  <td data-route-path='/locations/:location_id/booking_requests(.:format)'>\n
+        \   /locations/:location_id/booking_requests(.:format)\n  </td>\n  <td>\n
+        \   <p>agent/booking_requests#create</p>\n  </td>\n</tr>\n<tr class='route_row'
+        data-helper='path'>\n  <td data-route-name='new_agent_booking_request'>\n
+        \     new_agent_booking_request<span class='helper'>_path</span>\n  </td>\n
+        \ <td>\n    GET\n  </td>\n  <td data-route-path='/locations/:location_id/booking_requests/new(.:format)'>\n
+        \   /locations/:location_id/booking_requests/new(.:format)\n  </td>\n  <td>\n
+        \   <p>agent/booking_requests#new</p>\n  </td>\n</tr>\n<tr class='route_row'
+        data-helper='path'>\n  <td data-route-name='agent_booking_request'>\n      agent_booking_request<span
+        class='helper'>_path</span>\n  </td>\n  <td>\n    GET\n  </td>\n  <td data-route-path='/locations/:location_id/booking_requests/:id(.:format)'>\n
+        \   /locations/:location_id/booking_requests/:id(.:format)\n  </td>\n  <td>\n
+        \   <p>agent/booking_requests#show</p>\n  </td>\n</tr>\n<tr class='route_row'
+        data-helper='path'>\n  <td data-route-name='agent_search_index'>\n      agent_search_index<span
+        class='helper'>_path</span>\n  </td>\n  <td>\n    GET\n  </td>\n  <td data-route-path='/agents/booking_requests(.:format)'>\n
+        \   /agents/booking_requests(.:format)\n  </td>\n  <td>\n    <p>agent/booking_requests#index</p>\n
+        \ </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n  <td data-route-name='edit_agent_appointment'>\n
+        \     edit_agent_appointment<span class='helper'>_path</span>\n  </td>\n  <td>\n
+        \   GET\n  </td>\n  <td data-route-path='/agents/appointments/:id/edit(.:format)'>\n
+        \   /agents/appointments/:id/edit(.:format)\n  </td>\n  <td>\n    <p>agent/appointments#edit</p>\n
+        \ </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n  <td data-route-name='agent_appointment'>\n
+        \     agent_appointment<span class='helper'>_path</span>\n  </td>\n  <td>\n
+        \   PATCH\n  </td>\n  <td data-route-path='/agents/appointments/:id(.:format)'>\n
+        \   /agents/appointments/:id(.:format)\n  </td>\n  <td>\n    <p>agent/appointments#update</p>\n
+        \ </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n  <td data-route-name=''>\n
+        \ </td>\n  <td>\n    PUT\n  </td>\n  <td data-route-path='/agents/appointments/:id(.:format)'>\n
+        \   /agents/appointments/:id(.:format)\n  </td>\n  <td>\n    <p>agent/appointments#update</p>\n
+        \ </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n  <td data-route-name='preview_booking_manager_appointments'>\n
+        \     preview_booking_manager_appointments<span class='helper'>_path</span>\n
+        \ </td>\n  <td>\n    POST\n  </td>\n  <td data-route-path='/locations/:location_id/appointments/preview(.:format)'>\n
+        \   /locations/:location_id/appointments/preview(.:format)\n  </td>\n  <td>\n
+        \   <p>booking_manager/appointments#preview</p>\n  </td>\n</tr>\n<tr class='route_row'
+        data-helper='path'>\n  <td data-route-name='booking_manager_appointments'>\n
+        \     booking_manager_appointments<span class='helper'>_path</span>\n  </td>\n
+        \ <td>\n    POST\n  </td>\n  <td data-route-path='/locations/:location_id/appointments(.:format)'>\n
+        \   /locations/:location_id/appointments(.:format)\n  </td>\n  <td>\n    <p>booking_manager/appointments#create</p>\n
+        \ </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n  <td data-route-name='new_booking_manager_appointment'>\n
+        \     new_booking_manager_appointment<span class='helper'>_path</span>\n  </td>\n
+        \ <td>\n    GET\n  </td>\n  <td data-route-path='/locations/:location_id/appointments/new(.:format)'>\n
+        \   /locations/:location_id/appointments/new(.:format)\n  </td>\n  <td>\n
+        \   <p>booking_manager/appointments#new</p>\n  </td>\n</tr>\n<tr class='route_row'
+        data-helper='path'>\n  <td data-route-name='booking_manager_appointment'>\n
+        \     booking_manager_appointment<span class='helper'>_path</span>\n  </td>\n
+        \ <td>\n    GET\n  </td>\n  <td data-route-path='/locations/:location_id/appointments/:id(.:format)'>\n
+        \   /locations/:location_id/appointments/:id(.:format)\n  </td>\n  <td>\n
+        \   <p>booking_manager/appointments#show</p>\n  </td>\n</tr>\n<tr class='route_row'
+        data-helper='path'>\n  <td data-route-name='admin_search'>\n      admin_search<span
+        class='helper'>_path</span>\n  </td>\n  <td>\n    GET\n  </td>\n  <td data-route-path='/admin/search(.:format)'>\n
+        \   /admin/search(.:format)\n  </td>\n  <td>\n    <p>admin/searches#show</p>\n
+        \ </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n  <td data-route-name='root'>\n
+        \     root<span class='helper'>_path</span>\n  </td>\n  <td>\n    GET\n  </td>\n
+        \ <td data-route-path='/'>\n    /\n  </td>\n  <td>\n    <p>home#index</p>\n
+        \ </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n  <td data-route-name='api_v1_searches'>\n
+        \     api_v1_searches<span class='helper'>_path</span>\n  </td>\n  <td>\n
+        \   GET\n  </td>\n  <td data-route-path='/api/v1/searches(.:format)'>\n    /api/v1/searches(.:format)\n
+        \ </td>\n  <td>\n    <p>api/v1/searches#index {:format=&gt;:json}</p>\n  </td>\n</tr>\n<tr
+        class='route_row' data-helper='path'>\n  <td data-route-name='batch_reassign_api_v1_booking_requests'>\n
+        \     batch_reassign_api_v1_booking_requests<span class='helper'>_path</span>\n
+        \ </td>\n  <td>\n    PATCH\n  </td>\n  <td data-route-path='/api/v1/booking_requests/batch_reassign(.:format)'>\n
+        \   /api/v1/booking_requests/batch_reassign(.:format)\n  </td>\n  <td>\n    <p>api/v1/booking_requests#batch_reassign
+        {:format=&gt;:json}</p>\n  </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n
+        \ <td data-route-name='api_v1_booking_requests'>\n      api_v1_booking_requests<span
+        class='helper'>_path</span>\n  </td>\n  <td>\n    POST\n  </td>\n  <td data-route-path='/api/v1/booking_requests(.:format)'>\n
+        \   /api/v1/booking_requests(.:format)\n  </td>\n  <td>\n    <p>api/v1/booking_requests#create
+        {:format=&gt;:json}</p>\n  </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n
+        \ <td data-route-name='api_v2_bookable_slots'>\n      api_v2_bookable_slots<span
+        class='helper'>_path</span>\n  </td>\n  <td>\n    GET\n  </td>\n  <td data-route-path='/api/v2/locations/:location_id/bookable_slots(.:format)'>\n
+        \   /api/v2/locations/:location_id/bookable_slots(.:format)\n  </td>\n  <td>\n
+        \   <p>api/v2/bookable_slots#index {:format=&gt;:json}</p>\n  </td>\n</tr>\n<tr
+        class='route_row' data-helper='path'>\n  <td data-route-name='sidekiq_web'>\n
+        \     sidekiq_web<span class='helper'>_path</span>\n  </td>\n  <td>\n    \n
+        \ </td>\n  <td data-route-path='/sidekiq'>\n    /sidekiq\n  </td>\n  <td>\n
+        \   <p>Sidekiq::Web</p>\n  </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n
+        \ <td data-route-name='gds_sign_in'>\n      gds_sign_in<span class='helper'>_path</span>\n
+        \ </td>\n  <td>\n    GET\n  </td>\n  <td data-route-path='/auth/gds/callback(.:format)'>\n
+        \   /auth/gds/callback(.:format)\n  </td>\n  <td>\n    <p>authentications#callback</p>\n
+        \ </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n  <td data-route-name='gds_sign_out'>\n
+        \     gds_sign_out<span class='helper'>_path</span>\n  </td>\n  <td>\n    GET\n
+        \ </td>\n  <td data-route-path='/auth/gds/sign_out(.:format)'>\n    /auth/gds/sign_out(.:format)\n
+        \ </td>\n  <td>\n    <p>authentications#sign_out</p>\n  </td>\n</tr>\n<tr
+        class='route_row' data-helper='path'>\n  <td data-route-name='auth_failure'>\n
+        \     auth_failure<span class='helper'>_path</span>\n  </td>\n  <td>\n    GET\n
+        \ </td>\n  <td data-route-path='/auth/failure(.:format)'>\n    /auth/failure(.:format)\n
+        \ </td>\n  <td>\n    <p>authentications#failure</p>\n  </td>\n</tr>\n<tr class='route_row'
+        data-helper='path'>\n  <td data-route-name=''>\n  </td>\n  <td>\n    PUT\n
+        \ </td>\n  <td data-route-path='/auth/gds/api/users/:uid(.:format)'>\n    /auth/gds/api/users/:uid(.:format)\n
+        \ </td>\n  <td>\n    <p>api/user#update</p>\n  </td>\n</tr>\n<tr class='route_row'
+        data-helper='path'>\n  <td data-route-name=''>\n  </td>\n  <td>\n    POST\n
+        \ </td>\n  <td data-route-path='/auth/gds/api/users/:uid/reauth(.:format)'>\n
+        \   /auth/gds/api/users/:uid/reauth(.:format)\n  </td>\n  <td>\n    <p>api/user#reauth</p>\n
+        \ </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n  <td data-route-name='rails_service_blob'>\n
+        \     rails_service_blob<span class='helper'>_path</span>\n  </td>\n  <td>\n
+        \   GET\n  </td>\n  <td data-route-path='/rails/active_storage/blobs/redirect/:signed_id/*filename(.:format)'>\n
+        \   /rails/active_storage/blobs/redirect/:signed_id/*filename(.:format)\n
+        \ </td>\n  <td>\n    <p>active_storage/blobs/redirect#show</p>\n  </td>\n</tr>\n<tr
+        class='route_row' data-helper='path'>\n  <td data-route-name='rails_service_blob_proxy'>\n
+        \     rails_service_blob_proxy<span class='helper'>_path</span>\n  </td>\n
+        \ <td>\n    GET\n  </td>\n  <td data-route-path='/rails/active_storage/blobs/proxy/:signed_id/*filename(.:format)'>\n
+        \   /rails/active_storage/blobs/proxy/:signed_id/*filename(.:format)\n  </td>\n
+        \ <td>\n    <p>active_storage/blobs/proxy#show</p>\n  </td>\n</tr>\n<tr class='route_row'
+        data-helper='path'>\n  <td data-route-name=''>\n  </td>\n  <td>\n    GET\n
+        \ </td>\n  <td data-route-path='/rails/active_storage/blobs/:signed_id/*filename(.:format)'>\n
+        \   /rails/active_storage/blobs/:signed_id/*filename(.:format)\n  </td>\n
+        \ <td>\n    <p>active_storage/blobs/redirect#show</p>\n  </td>\n</tr>\n<tr
+        class='route_row' data-helper='path'>\n  <td data-route-name='rails_blob_representation'>\n
+        \     rails_blob_representation<span class='helper'>_path</span>\n  </td>\n
+        \ <td>\n    GET\n  </td>\n  <td data-route-path='/rails/active_storage/representations/redirect/:signed_blob_id/:variation_key/*filename(.:format)'>\n
+        \   /rails/active_storage/representations/redirect/:signed_blob_id/:variation_key/*filename(.:format)\n
+        \ </td>\n  <td>\n    <p>active_storage/representations/redirect#show</p>\n
+        \ </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n  <td data-route-name='rails_blob_representation_proxy'>\n
+        \     rails_blob_representation_proxy<span class='helper'>_path</span>\n  </td>\n
+        \ <td>\n    GET\n  </td>\n  <td data-route-path='/rails/active_storage/representations/proxy/:signed_blob_id/:variation_key/*filename(.:format)'>\n
+        \   /rails/active_storage/representations/proxy/:signed_blob_id/:variation_key/*filename(.:format)\n
+        \ </td>\n  <td>\n    <p>active_storage/representations/proxy#show</p>\n  </td>\n</tr>\n<tr
+        class='route_row' data-helper='path'>\n  <td data-route-name=''>\n  </td>\n
+        \ <td>\n    GET\n  </td>\n  <td data-route-path='/rails/active_storage/representations/:signed_blob_id/:variation_key/*filename(.:format)'>\n
+        \   /rails/active_storage/representations/:signed_blob_id/:variation_key/*filename(.:format)\n
+        \ </td>\n  <td>\n    <p>active_storage/representations/redirect#show</p>\n
+        \ </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n  <td data-route-name='rails_disk_service'>\n
+        \     rails_disk_service<span class='helper'>_path</span>\n  </td>\n  <td>\n
+        \   GET\n  </td>\n  <td data-route-path='/rails/active_storage/disk/:encoded_key/*filename(.:format)'>\n
+        \   /rails/active_storage/disk/:encoded_key/*filename(.:format)\n  </td>\n
+        \ <td>\n    <p>active_storage/disk#show</p>\n  </td>\n</tr>\n<tr class='route_row'
+        data-helper='path'>\n  <td data-route-name='update_rails_disk_service'>\n
+        \     update_rails_disk_service<span class='helper'>_path</span>\n  </td>\n
+        \ <td>\n    PUT\n  </td>\n  <td data-route-path='/rails/active_storage/disk/:encoded_token(.:format)'>\n
+        \   /rails/active_storage/disk/:encoded_token(.:format)\n  </td>\n  <td>\n
+        \   <p>active_storage/disk#update</p>\n  </td>\n</tr>\n<tr class='route_row'
+        data-helper='path'>\n  <td data-route-name='rails_direct_uploads'>\n      rails_direct_uploads<span
+        class='helper'>_path</span>\n  </td>\n  <td>\n    POST\n  </td>\n  <td data-route-path='/rails/active_storage/direct_uploads(.:format)'>\n
+        \   /rails/active_storage/direct_uploads(.:format)\n  </td>\n  <td>\n    <p>active_storage/direct_uploads#create</p>\n
+        \ </td>\n</tr>\n\n  </tbody>\n</table>\n\n<script type='text/javascript'>\n
+        \ // support forEach iterator on NodeList\n  NodeList.prototype.forEach =
+        Array.prototype.forEach;\n\n  // Enables path search functionality\n  function
+        setupMatchPaths() {\n    // Check if there are any matched results in a section\n
+        \   function checkNoMatch(section, noMatchText) {\n      if (section.children.length
+        <= 1) {\n        section.innerHTML += noMatchText;\n      }\n    }\n\n    //
+        get JSON from URL and invoke callback with result\n    function getJSON(url,
+        success) {\n      var xhr = new XMLHttpRequest();\n      xhr.open('GET', url);\n
+        \     xhr.onload = function() {\n        if (this.status == 200)\n          success(JSON.parse(this.response));\n
+        \     };\n      xhr.send();\n    }\n\n    function delayedKeyup(input, callback)
+        {\n      var timeout;\n      input.onkeyup = function(){\n        if (timeout)
+        clearTimeout(timeout);\n        timeout = setTimeout(callback, 300);\n      }\n
+        \   }\n\n    // remove params or fragments\n    function sanitizePath(path)
+        {\n      return path.replace(/[#?].*/, '');\n    }\n\n    var pathElements
+        = document.querySelectorAll('#route_table [data-route-path]'),\n        searchElem
+        \  = document.querySelector('#search'),\n        exactSection = document.querySelector('#exact_matches'),\n
+        \       fuzzySection = document.querySelector('#fuzzy_matches');\n\n    //
+        Remove matches when no search value is present\n    searchElem.onblur = function(e)
+        {\n      if (searchElem.value === \"\") {\n        exactSection.innerHTML
+        = \"\";\n        fuzzySection.innerHTML = \"\";\n      }\n    }\n\n    //
+        On key press perform a search for matching paths\n    delayedKeyup(searchElem,
+        function() {\n      var path = sanitizePath(searchElem.value),\n          defaultExactMatch
+        = '<tr><th colspan=\"4\">Paths Matching (' + path +'):</th></tr>',\n          defaultFuzzyMatch
+        = '<tr><th colspan=\"4\">Paths Containing (' + path +'):</th></tr>',\n          noExactMatch
+        \     = '<tr><th colspan=\"4\">No Exact Matches Found</th></tr>',\n          noFuzzyMatch
+        \     = '<tr><th colspan=\"4\">No Fuzzy Matches Found</th></tr>';\n\n      if
+        (!path)\n        return searchElem.onblur();\n\n      getJSON('/rails/info/routes?path='
+        + path, function(matches){\n        // Clear out results section\n        exactSection.innerHTML
+        = defaultExactMatch;\n        fuzzySection.innerHTML = defaultFuzzyMatch;\n\n
+        \       // Display exact matches and fuzzy matches\n        pathElements.forEach(function(elem)
+        {\n          var elemPath = elem.getAttribute('data-route-path');\n\n          if
+        (matches['exact'].indexOf(elemPath) != -1)\n            exactSection.appendChild(elem.parentNode.cloneNode(true));\n\n
+        \         if (matches['fuzzy'].indexOf(elemPath) != -1)\n            fuzzySection.appendChild(elem.parentNode.cloneNode(true));\n
+        \       })\n\n        // Display 'No Matches' message when no matches are
+        found\n        checkNoMatch(exactSection, noExactMatch);\n        checkNoMatch(fuzzySection,
+        noFuzzyMatch);\n      })\n    })\n  }\n\n  // Enables functionality to toggle
+        between `_path` and `_url` helper suffixes\n  function setupRouteToggleHelperLinks()
+        {\n\n    // Sets content for each element\n    function setValOn(elems, val)
+        {\n      elems.forEach(function(elem) {\n        elem.innerHTML = val;\n      });\n
+        \   }\n\n    // Sets onClick event for each element\n    function onClick(elems,
+        func) {\n      elems.forEach(function(elem) {\n        elem.onclick = func;\n
+        \     });\n    }\n\n    var toggleLinks = document.querySelectorAll('#route_table
+        [data-route-helper]');\n\n    onClick(toggleLinks, function(){\n      var
+        helperTxt   = this.getAttribute(\"data-route-helper\"),\n          helperElems
+        = document.querySelectorAll('[data-route-name] span.helper');\n\n      setValOn(helperElems,
+        helperTxt);\n    });\n  }\n\n  setupMatchPaths();\n  setupRouteToggleHelperLinks();\n\n
+        \ // Focus the search input after page has loaded\n  document.getElementById('search').focus();\n</script>\n\n\n
+        \ \n<h2 style=\"margin-top: 30px\">Request</h2>\n  <p><b>Parameters</b>:</p>
+        <pre>None</pre>\n\n<div class=\"details\">\n  <div class=\"summary\"><a href=\"#\"
+        onclick=\"return toggleSessionDump()\">Toggle session dump</a></div>\n  <div
+        id=\"session_dump\" style=\"display:none\"><pre></pre></div>\n</div>\n\n<div
+        class=\"details\">\n  <div class=\"summary\"><a href=\"#\" onclick=\"return
+        toggleEnvDump()\">Toggle env dump</a></div>\n  <div id=\"env_dump\" style=\"display:none\"><pre>GATEWAY_INTERFACE:
+        &quot;CGI/1.2&quot;\nHTTP_ACCEPT: &quot;*/*&quot;\nHTTP_ACCEPT_ENCODING: &quot;gzip;q=1.0,deflate;q=0.6,identity;q=0.3&quot;\nHTTP_VERSION:
+        &quot;HTTP/1.1&quot;\nHTTP_X_REQUEST_ID: &quot;903e4f97-736d-411d-a202-0a7339bdcaf3&quot;\nORIGINAL_SCRIPT_NAME:
+        &quot;&quot;\nREMOTE_ADDR: &quot;::1&quot;\nSERVER_NAME: &quot;localhost&quot;\nSERVER_PROTOCOL:
+        &quot;HTTP/1.1&quot;</pre></div>\n</div>\n\n<h2 style=\"margin-top: 30px\">Response</h2>\n<p><b>Headers</b>:</p>
+        <pre>None</pre>\n\n</div>\n\n\n</body>\n</html>\n"
+    http_version:
+  recorded_at: Tue, 27 Feb 2024 10:01:36 GMT
+recorded_with: VCR 4.0.0

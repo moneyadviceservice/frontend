@@ -39,6 +39,21 @@ GIT
       uglifier
 
 GIT
+  remote: https://github.com/moneyadviceservice/savings_calculator.git
+  revision: 61e05757b9e6e9a6611fad209199702546d8a597
+  branch: adobe-data
+  specs:
+    savings_calculator (2.1.0)
+      autoprefixer-rails
+      dough-ruby (~> 5.36)
+      jquery-rails
+      mas-fonts
+      meta-tags
+      rails (>= 4, < 5)
+      sass-rails
+      sprockets (< 4)
+
+GIT
   remote: https://github.com/moneyadviceservice/universal_credit.git
   revision: 5d330f37f7f8f5d4a5afaecc04661bcc5001bd37
   ref: 5d330f3
@@ -725,15 +740,6 @@ GEM
       sass (~> 3.2.2)
       sprockets (~> 2.8, < 3.0)
       sprockets-rails (~> 2.0)
-    savings_calculator (2.0.1)
-      autoprefixer-rails
-      dough-ruby (~> 5.36)
-      jquery-rails
-      mas-fonts
-      meta-tags
-      rails (>= 4, < 5)
-      sass-rails
-      sprockets (< 4)
     sdoc (1.0.0)
       rdoc (>= 5.0)
     selenium-webdriver (4.9.0)
@@ -926,7 +932,7 @@ DEPENDENCIES
   rubocop
   rubytree (~> 1)
   sass-rails
-  savings_calculator (~> 2.0.1)
+  savings_calculator!
   sdoc
   selenium-webdriver
   shoulda-matchers

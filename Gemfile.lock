@@ -5,6 +5,19 @@ GIT
     aes (0.5.1)
 
 GIT
+  remote: https://github.com/moneyadviceservice/action_plans.git
+  revision: 1d80bf05bf6864eb00e1ba4c72f474182aca6567
+  branch: adobe-data
+  specs:
+    action_plans (6.2.0)
+      autoprefixer-rails
+      dough-ruby (~> 5.0)
+      draper
+      hashie
+      rails (>= 4, < 5)
+      sass-rails
+
+GIT
   remote: https://github.com/moneyadviceservice/azure-activedirectory-library-for-ruby.git
   revision: 26f534a42d516dcdd13fe7fc82149b6d4bc9bebb
   specs:
@@ -113,13 +126,6 @@ GEM
   remote: https://gems.railslts.com/
   remote: https://gem.fury.io/h_app288206558/
   specs:
-    action_plans (6.2.0)
-      autoprefixer-rails
-      dough-ruby (~> 5.0)
-      draper
-      hashie
-      rails (>= 4, < 5)
-      sass-rails
     actionmailer (4.2.11.34)
       actionpack (= 4.2.11.34)
       actionview (= 4.2.11.34)
@@ -838,7 +844,7 @@ PLATFORMS
   x86_64-darwin-20
 
 DEPENDENCIES
-  action_plans (~> 6.2.0)
+  action_plans!
   actionmailer!
   actionpack!
   actionview!

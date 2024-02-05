@@ -70,7 +70,7 @@
     <% if tool_provides_data_layer? %>
       window.adobeDataLayer ||= [];
       adobeDataLayer.push({
-        "event": "pageLoad",
+        "event": "pageLoadRuby",
         "page": {
           "pageName": "<%= j(content_for(:page_name)) %>",
           "pageTitle": "<%= j(content_for(:page_title)) %>",

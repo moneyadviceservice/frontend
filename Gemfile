@@ -86,7 +86,7 @@ gem 'action_plans', github: 'moneyadviceservice/action_plans', branch: 'adobe-da
 gem 'advice_plans', '~> 4.1.1'
 gem 'agreements', '~> 2.5.0'
 gem 'budget_planner', '~> 6.2.1'
-gem 'cost_calculator_builder', '~> 2.0.0'
+gem 'cost_calculator_builder', github: 'moneyadviceservice/cost_calculator_builder', branch: 'adobe-data'
 gem 'cutback_calculator', '~> 0.13.0'
 gem 'debt_advice_locator', '~> 4.2.0'
 gem 'debt_and_mental_health', '~> 1.6.0'

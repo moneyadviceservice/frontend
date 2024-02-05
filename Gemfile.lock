@@ -27,6 +27,17 @@ GIT
       uri_template (~> 0.7)
 
 GIT
+  remote: https://github.com/moneyadviceservice/cost_calculator_builder.git
+  revision: 00373b93694e31e493419ccbe6f9b8d5b3e82cc2
+  branch: adobe-data
+  specs:
+    cost_calculator_builder (2.1.0)
+      bowndler
+      dough-ruby (~> 5.36)
+      friendly_id (>= 5.1.0)
+      rails (>= 4, < 5)
+
+GIT
   remote: https://github.com/moneyadviceservice/debt_free_day_calculator.git
   revision: ea3b11935809a11238df3cdd1ad45e1355e2e9dd
   branch: adobe-data
@@ -250,11 +261,6 @@ GEM
       execjs
     coffee-script-source (1.12.2)
     concurrent-ruby (1.2.2)
-    cost_calculator_builder (2.0.0)
-      bowndler
-      dough-ruby (~> 5.36)
-      friendly_id (>= 5.1.0)
-      rails (>= 4, < 5)
     crack (0.4.5)
       rexml
     crass (1.0.6)
@@ -870,7 +876,7 @@ DEPENDENCIES
   chai-jquery-rails
   chronic
   codeclimate-test-reporter (= 0.6.0)
-  cost_calculator_builder (~> 2.0.0)
+  cost_calculator_builder!
   cream (= 2.1.8)
   csslint_ruby
   cucumber-rails

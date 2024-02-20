@@ -102,7 +102,7 @@ gem 'puma'
 gem 'quiz', '~> 1.4.0', source: 'https://gem.fury.io/h_app288206558'
 gem 'savings_calculator', '~> 2.0.1'
 gem 'timelines', '~> 2.2.1'
-gem 'universal_credit', '~> 5.2.0'
+gem 'universal_credit', github: 'moneyadviceservice/universal_credit', ref: '5d330f3'
 gem 'wpcc', '~> 3.1.0'
 
 group :assets do

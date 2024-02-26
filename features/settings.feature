@@ -17,9 +17,11 @@ Feature: Settings
 
   Scenario: Updating password
     Given I am signed in
+    And   I sign in elsewhere
     And   I am on the settings page
     And   I update password to "new password"
-    Then  I should see a successful update notification
+    And   I will be logged out
+    And   I will be logged out elsewhere
 
   Scenario: Updating post code
     Given I am signed in

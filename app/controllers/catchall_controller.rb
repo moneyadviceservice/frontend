@@ -1,5 +1,7 @@
 class CatchallController < ApplicationController
   def not_implemented
+    return head :not_found if Rails.env.development?
+
     interactor.call do |error|
       return redirect_to error.location, status: error.status if error.redirect?
     end

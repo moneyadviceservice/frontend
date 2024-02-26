@@ -34,3 +34,14 @@ end
 Then(/^I see my settings page$/) do
   expect(settings_page).to be_displayed
 end
+
+Then('I will be logged out') do
+  expect(sign_in_page).to be_displayed
+end
+
+Then('I will be logged out elsewhere') do
+  Capybara.using_session(:other_session) do
+    step 'I try to view the settings page'
+    step 'I will be logged out'
+  end
+end

@@ -28,7 +28,7 @@ GIT
 
 GIT
   remote: https://github.com/moneyadviceservice/budget_planner.git
-  revision: c251a0fbffdf3609152ffa629202af6170284595
+  revision: b6a18721e4300b275d76c3a6db93a264e268137b
   branch: adobe-data
   specs:
     budget_planner (6.2.1)
@@ -353,9 +353,9 @@ GEM
       rails (>= 4, < 5)
       sass-rails (~> 4.0.5)
       sprockets-rails (~> 2.3.3)
-    delayed_job (4.1.10)
+    delayed_job (4.1.11)
       activesupport (>= 3.0, < 8.0)
-    delayed_job_active_record (4.1.7)
+    delayed_job_active_record (4.1.8)
       activerecord (>= 3.0, < 8.0)
       delayed_job (>= 3.0, < 5)
     devise (4.7.3)

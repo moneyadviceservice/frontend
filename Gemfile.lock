@@ -53,7 +53,7 @@ GIT
 
 GIT
   remote: https://github.com/moneyadviceservice/debt_free_day_calculator.git
-  revision: ea3b11935809a11238df3cdd1ad45e1355e2e9dd
+  revision: 2d3ed787e7360e6281feb0d27c6f30654c23d1e9
   branch: adobe-data
   specs:
     debt_free_day_calculator (4.2.0)
@@ -198,7 +198,7 @@ GEM
       minitest (~> 5.1)
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.2, >= 1.2.10)
-    addressable (2.8.4)
+    addressable (2.8.6)
       public_suffix (>= 2.0.2, < 6.0)
     advice_plans (4.1.1)
       dough-ruby (~> 5.36)
@@ -640,7 +640,7 @@ GEM
       interception (>= 0.5)
       pry
     psych (3.0.2)
-    public_suffix (5.0.1)
+    public_suffix (5.0.4)
     puma (6.4.2)
       nio4r (~> 2.0)
     quiz (1.4.0)

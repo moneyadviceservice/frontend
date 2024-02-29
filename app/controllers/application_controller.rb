@@ -100,6 +100,12 @@ class ApplicationController < ActionController::Base
 
   private
 
+  def append_info_to_payload(payload)
+    super
+
+    payload[:params] = request.filtered_parameters
+  end
+
   def redirect_page(e)
     redirect_to e.location, status: e.http_response.status
   end

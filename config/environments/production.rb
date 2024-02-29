@@ -1,4 +1,5 @@
 Rails.application.configure do
+  config.lograge.enabled = true
 
   # Code is not reloaded between requests.
   config.cache_classes = true

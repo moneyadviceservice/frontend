@@ -22,19 +22,10 @@ Rails.application.routes.draw do
 
     get '/tools/car-costs-calculator', to: 'car_cost_tool#index'
     get '/tools/car-costs-calculator/*all', to: 'car_cost_tool#index'
+    get '/tools/money-navigator-tool', to: 'money_navigator_tool#index'
+    get '/tools/money-navigator-tool/*all', to: 'money_navigator_tool#index'
 
     resource :cookies_disabled
-
-    #Money Navigator Tool
-    scope :tools do
-      scope '/:money_navigator_tool', money_navigator_tool: /money-navigator-tool|teclyn-llywio-ariannol/ do
-        get '/', to: 'money_navigator_tool#landing'
-        get '/questionnaire', to: 'money_navigator_tool#questionnaire', as: 'money_navigator_tool_questionnaire'
-        post '/questionnaire', to: 'money_navigator_tool#questionnaire'
-        patch '/questionnaire', to: 'money_navigator_tool#questionnaire'
-        get '/results', to: 'money_navigator_tool#results', as: 'money_navigator_tool_results'
-      end
-    end
 
     get '/sitemap', to: 'sitemap#index'
 

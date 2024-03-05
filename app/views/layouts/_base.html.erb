@@ -53,8 +53,12 @@
       includes feature detection, analytics setup, JSON bootstrap %>
 
   <% if include_adobe_analytics_scripts?(request) %>
-  <script type="text/javascript" src="//assets.adobedtm.com/c3a3920a84ef/2104df5e2099/launch-a40370bb1e84.min.js" async></script>
-  <script type="text/javascript" src="//www.moneyhelper.org.uk/etc.clientlibs/maps/core/clientlibs/clientlib-digitaldata.min.536e82a039f309f9f59b3e9e3dab024f.js" defer></script>
+    <% if staging? %>
+      <script type="text/javascript" src="//assets.adobedtm.com/c3a3920a84ef/2104df5e2099/launch-834de5c44d2c-staging.min.js" async></script>
+    <% else %>
+      <script type="text/javascript" src="//assets.adobedtm.com/c3a3920a84ef/2104df5e2099/launch-a40370bb1e84.min.js" async></script>
+      <script type="text/javascript" src="//www.moneyhelper.org.uk/etc.clientlibs/maps/core/clientlibs/clientlib-digitaldata.min.536e82a039f309f9f59b3e9e3dab024f.js" defer></script>
+    <% end %>
   <% end %>
   <%= javascript_include_tag "syndication/iframeScroller" %>
 
@@ -63,18 +67,25 @@
     <%# // Inline custom Modernizr %>
     <%= raw Rails.application.assets['modernizr/modernizr'] %>
 
-    <%# // Adobe Data Layer %>
-    window.adobeDataLayer = window.adobeDataLayer || [];
-    adobeDataLayer.push({
-      "event": "pageLoad",
-      "page": {
-        "pageName": "<%= j(engine_name&.dasherize) if defined?(engine_name) %>",
-        "pageTitle": "<%= j(Array(title).join(' ')) %>",
-        "lang": "<%= I18n.locale %>",
-        "site": "moneyhelper",
-        "pageType": "tool"
-      }
-    });
+    <% if tool_provides_data_layer? %>
+      window.adobeDataLayer ||= [];
+      adobeDataLayer.push({
+        "event": "pageLoadRuby",
+        "page": {
+          "pageName": "<%= j(content_for(:page_name)) %>",
+          "pageTitle": "<%= j(content_for(:page_title)) %>",
+          "lang": "<%= I18n.locale %>",
+          "site": "moneyhelper",
+          "pageType": "tool page"
+        },
+        "tool": {
+          "toolName": "<%= content_for(:tool_name) %>",
+          "toolCategory": "",
+          "toolStep": "<%= content_for(:tool_step) %>",
+          "stepName": "<%= content_for(:step_name) %>"
+        }
+      });
+    <% end %>
 
     <%# // Required for Google Tag Manager %>
     var dataLayer = window.dataLayer || [];

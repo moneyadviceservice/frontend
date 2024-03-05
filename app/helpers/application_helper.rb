@@ -1,8 +1,16 @@
 module ApplicationHelper
+  def staging?
+    ENV['MAS_ENVIRONMENT'] == 'staging'
+  end
+
+  def tool_provides_data_layer?
+    content_for?(:page_name) && content_for?(:page_title)
+  end
+
   def include_adobe_analytics_scripts?(request)
     return false unless Rails.env.production? && ENV['INCLUDE_AEM_ANALYTICS'] == 'true'
 
-    request.original_url.match?(/partner-tools.moneyhelper.org.uk/)
+    request.original_url.match?(/[staging-]?partner-tools\.moneyhelper\.org\.uk/)
   end
 
   def css(line_numbers: false, &block)

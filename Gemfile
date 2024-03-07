@@ -102,7 +102,7 @@ gem 'pensions_calculator', github: 'moneyadviceservice/pensions_calculator', ref
 gem 'puma'
 gem 'quiz', '~> 1.4.0', source: 'https://gem.fury.io/h_app288206558'
 gem 'savings_calculator', github: 'moneyadviceservice/savings_calculator', ref: '1ccfd87'
-gem 'timelines', '~> 2.2.1'
+gem 'timelines', github: 'moneyadviceservice/timelines', ref: '83285fd'
 gem 'universal_credit', github: 'moneyadviceservice/universal_credit', ref: '5d330f3'
 gem 'wpcc', github: 'moneyadviceservice/wpcc', ref: '30b2c2e'
 

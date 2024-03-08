@@ -90,7 +90,7 @@ gem 'cost_calculator_builder', github: 'moneyadviceservice/cost_calculator_build
 gem 'cutback_calculator', '~> 0.13.0'
 gem 'debt_advice_locator', '~> 4.2.0'
 gem 'debt_and_mental_health', '~> 1.6.0'
-gem 'debt_free_day_calculator', github: 'moneyadviceservice/debt_free_day_calculator', ref: '531f573'
+gem 'debt_free_day_calculator', github: 'moneyadviceservice/debt_free_day_calculator', ref: 'cc7d907'
 gem 'debt_test', '~> 1.9.0'
 gem 'decision_trees', '~> 2.3.0'
 gem 'feedback', '~> 0.5.1'

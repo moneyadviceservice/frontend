@@ -111,6 +111,19 @@ GIT
       sprockets (< 4)
 
 GIT
+  remote: https://github.com/moneyadviceservice/timelines.git
+  revision: 83285fd5ccedc78651f4100114ef06853ee7c2e3
+  ref: 83285fd
+  specs:
+    timelines (2.3.0)
+      bowndler
+      icalendar
+      jquery-rails
+      mas-templating
+      rails (>= 4, < 5)
+      sass-rails
+
+GIT
   remote: https://github.com/moneyadviceservice/universal_credit.git
   revision: 5d330f37f7f8f5d4a5afaecc04661bcc5001bd37
   ref: 5d330f3
@@ -478,7 +491,7 @@ GEM
       concurrent-ruby (~> 1.0)
     i18n-js (3.0.0.mas)
       i18n
-    icalendar (2.9.0)
+    icalendar (2.10.1)
       ice_cube (~> 0.16)
     ice_cube (0.16.4)
     ice_nine (0.11.2)
@@ -806,13 +819,6 @@ GEM
     tidy-html5 (0.1.2)
     tilt (1.4.1)
     timecop (0.9.1)
-    timelines (2.2.2)
-      bowndler
-      icalendar
-      jquery-rails
-      mas-templating
-      rails (>= 4, < 5)
-      sass-rails
     timeout (0.4.1)
     transitions (0.1.13)
     turnout (2.4.1)
@@ -968,7 +974,7 @@ DEPENDENCIES
   syslog-logger
   tidy-html5
   timecop
-  timelines (~> 2.2.1)
+  timelines!
   turnout
   uglifier
   universal_credit!

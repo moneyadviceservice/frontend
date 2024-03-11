@@ -1,4 +1,5 @@
 LEGACY_MAS_WWW = %r{^(www.)?moneyadviceservice.org.uk}.freeze
+LEGACY_MAS_SYNDICATION = 'partner-tools.moneyadviceservice.org.uk'.freeze
 
 if Rails.env.production?
   r301 %r{^/assets/(.*)$}, '/a/$1'
@@ -13,6 +14,8 @@ r301 %r{.*}, 'https://www.moneyhelper.org.uk/en/family-and-care/divorce-and-sepa
 r301 %r{.*}, 'https://www.moneyhelper.org.uk/en/pensions-and-retirement/taking-your-pension/compare-annuities?source=mas', host: 'compare.moneyadviceservice.org.uk'
 r301 %r{.*}, 'https://www.moneyhelper.org.uk/en/everyday-money?source=mas', host: 'yourmoney.moneyadviceservice.org.uk'
 r301 %r{.*}, 'https://www.moneyhelper.org.uk/en/benefits/universal-credit/money-manager?source=mas', host: 'obs.moneyadviceservice.org.uk'
+
+r301 %r{^/en/tools/mortgage-calculator/?(.*)}, 'https://tools.moneyhelper.org.uk/en/embed/mortgage-calculator', host: LEGACY_MAS_SYNDICATION
 
 r301 %r{^/en/tools/budget-planner/?(.*)}, 'https://www.moneyhelper.org.uk/en/everyday-money/budgeting/budget-planner', host: LEGACY_MAS_WWW
 r301 %r{^/cy/tools/cynllunydd-cyllideb/?(.*)}, 'https://www.moneyhelper.org.uk/cy/everyday-money/budgeting/budget-planner', host: LEGACY_MAS_WWW

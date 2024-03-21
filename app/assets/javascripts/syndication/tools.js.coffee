@@ -184,6 +184,7 @@
         path: "cy/tools/cyfrifiannell-morgais"
       width: "100%"
       include_ga: false
+      omit_logo: true
       title: "Mortgage calculator"
 
     mortgage_calculator:
@@ -193,6 +194,7 @@
         path: "cy/tools/cyfrifiannell-morgais"
       width: "100%"
       include_ga: false
+      omit_logo: true
       title: "Mortgage calculator"
 
     stamp_duty:

@@ -28,11 +28,6 @@ class CookiedTool
       canonical_url: 'https://www.moneyhelper.org.uk/en/everyday-money/credit-and-purchases/use-our-loan-calculator'
     ),
     CookiedTool.new(
-      landing_path: '/en/tools/money-manager/',
-      tool: 'money-manager',
-      canonical_url: 'https://www.moneyhelper.org.uk/en/benefits/universal-credit/use-our-money-manager'
-    ),
-    CookiedTool.new(
       landing_path: '/en/tools/redundancy-pay-calculator/',
       tool: 'redundancy-pay-calculator',
       canonical_url: 'https://www.moneyhelper.org.uk/en/work/losing-your-job/use-our-redundancy-pay-calculator'

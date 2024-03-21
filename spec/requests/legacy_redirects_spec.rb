@@ -1,4 +1,14 @@
 RSpec.describe 'Legacy redirects', type: :request do
+  describe 'legacy tools to new tools redirects' do
+    before { host! 'partner-tools.moneyadviceservice.org.uk' }
+
+    it 'redirects to the new mortgage calculator' do
+      get '/en/tools/mortgage-calculator'
+
+      expect(request).to redirect_to('https://tools.moneyhelper.org.uk/en/embed/mortgage-calculator')
+    end
+  end
+
   ['www.moneyadviceservice.org.uk', 'moneyadviceservice.org.uk'].each do |host|
     context "when requested from the legacy #{host} host" do
       it 'redirects tools to the correct landing page' do

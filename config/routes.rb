@@ -24,6 +24,8 @@ Rails.application.routes.draw do
     get '/tools/car-costs-calculator/*all', to: 'car_cost_tool#index'
     get '/tools/money-navigator-tool', to: 'money_navigator_tool#index'
     get '/tools/money-navigator-tool/*all', to: 'money_navigator_tool#index'
+    get '/tools/money-manager', to: 'money_manager_tool#index'
+    get '/tools/money-manager/*all', to: 'money_manager_tool#index'
 
     resource :cookies_disabled
 
@@ -92,9 +94,6 @@ Rails.application.routes.draw do
 
     mount Quiz::Engine => '/tools/:tool_id',
       constraints: ToolMountPoint.for(:quiz)
-
-    mount UniversalCredit::Engine => '/tools/:tool_id',
-          constraints: ToolMountPoint.for(:universal_credit)
 
     mount SavingsCalculator::Engine => '/tools/:tool_id',
           constraints: ToolMountPoint.for(:savings_calculator)

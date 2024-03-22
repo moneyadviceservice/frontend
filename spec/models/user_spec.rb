@@ -247,15 +247,4 @@ RSpec.describe User, type: :model do
       end
     end
   end
-
-  describe 'data for universal credit' do
-    it 'returns true if user has data' do
-      subject.universal_credit_claimant_data = UniversalCredit::ClaimantData.create
-      expect(subject.data_for_universal_credit?).to be true
-    end
-
-    it 'returns false if user has no data' do
-      expect(subject.data_for_universal_credit?).to be false
-    end
-  end
 end

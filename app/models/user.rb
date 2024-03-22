@@ -6,10 +6,6 @@ class User < ActiveRecord::Base
     %i[first_name email password post_code]
   end
 
-  has_one :universal_credit_claimant_data,
-          class_name: UniversalCredit::ClaimantData,
-          foreign_key: 'claimant_id'
-
   devise :registerable,
          :database_authenticatable,
          :encryptable,
@@ -82,10 +78,6 @@ class User < ActiveRecord::Base
 
   def send_devise_notification(notification, *args)
     devise_mailer.delay(queue: 'frontend_email').send(notification, self, *args)
-  end
-
-  def data_for_universal_credit?
-    universal_credit_claimant_data.present?
   end
 
   def data_for?(tool_name)

@@ -1,2 +1,0 @@
-class UniversalCreditController < EmbeddedToolsController
-end

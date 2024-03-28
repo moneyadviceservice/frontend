@@ -18,7 +18,6 @@ require_relative '../lib/tool_mount_point/savings_calculator'
 require_relative '../lib/tool_mount_point/timelines'
 require_relative '../lib/tool_mount_point/christmas_money_planner'
 require_relative '../lib/tool_mount_point/quiz'
-require_relative '../lib/tool_mount_point/universal_credit'
 require_relative '../lib/tool_mount_point/wpcc'
 
 module ToolMountPoint

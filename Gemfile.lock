@@ -6,10 +6,10 @@ GIT
 
 GIT
   remote: https://github.com/moneyadviceservice/action_plans.git
-  revision: ed9e0708479e14393e315de137cb7921f0380a34
-  ref: ed9e070
+  revision: d3feb88555a16c6f9cdaa53238097b36e2ff3812
+  ref: d3feb88
   specs:
-    action_plans (6.3.0)
+    action_plans (6.4.0)
       autoprefixer-rails
       dough-ruby (~> 5.0)
       draper
@@ -83,10 +83,10 @@ GIT
 
 GIT
   remote: https://github.com/moneyadviceservice/pensions_calculator.git
-  revision: baceac3cb06a9677b39f380351dc4f52a4a90e5f
-  ref: baceac3
+  revision: 37b2bffba7ce8a59d7c7c191b95bc87826e39139
+  ref: 37b2bff
   specs:
-    pensions_calculator (3.6.0)
+    pensions_calculator (3.7.0)
       autoprefixer-rails
       dough-ruby (~> 5.36)
       meta-tags
@@ -547,7 +547,7 @@ GEM
     mime-types-data (3.2022.0105)
     mini_mime (1.1.5)
     mini_portile2 (2.8.5)
-    minitest (5.22.2)
+    minitest (5.22.3)
     modernizr-rails (2.6.3)
     mongo (2.19.3)
       bson (>= 4.14.1, < 5.0.0)
@@ -578,14 +578,14 @@ GEM
       net-protocol
     net-protocol (0.2.2)
       timeout
-    net-smtp (0.4.0.1)
+    net-smtp (0.5.0)
       net-protocol
     netrc (0.11.0)
     nio4r (2.7.0)
-    nokogiri (1.15.5)
+    nokogiri (1.15.6)
       mini_portile2 (~> 2.8.2)
       racc (~> 1.4)
-    nokogiri (1.15.5-x86_64-darwin)
+    nokogiri (1.15.6-x86_64-darwin)
       racc (~> 1.4)
     nunes (0.5.0)
     opening_hours (0.0.7)
@@ -684,7 +684,7 @@ GEM
       rake (>= 0.8.7)
       thor (>= 0.18.1, < 2.0)
     rainbow (3.0.0)
-    rake (13.1.0)
+    rake (13.2.0)
     ranked-model (0.4.2)
       activerecord (>= 4.1.16)
     rb-readline (0.5.5)

@@ -203,6 +203,7 @@
       cy:
         path: "cy/tools/prynu-ty/cyfrifiannell-treth-stamp"
       include_ga: true
+      omit_logo: true
       title: "Stamp duty calculator"
 
     lbtt_calculator:
@@ -212,6 +213,7 @@
         path: "cy/tools/prynu-ty/cyfrifiannell-treth-trafodion-tir-ac-adeiladau-alban"
       width: "100%"
       include_ga: false
+      omit_logo: true
       title: "LBTT Calculator"
 
     mortgage_affordability_calculator:

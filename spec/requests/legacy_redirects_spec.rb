@@ -5,19 +5,19 @@ RSpec.describe 'Legacy redirects', type: :request do
     it 'redirects to the new mortgage calculator' do
       get '/en/tools/mortgage-calculator'
 
-      expect(request).to redirect_to('https://tools.moneyhelper.org.uk/en/embed/mortgage-calculator')
+      expect(request).to redirect_to('https://tools.moneyhelper.org.uk/en/mortgage-calculator?isEmbedded=true')
     end
 
     it 'redirects to the new stamp duty calculator' do
       get '/en/tools/house-buying/stamp-duty-calculator'
 
-      expect(request).to redirect_to('https://tools.moneyhelper.org.uk/en/embed/sdlt-calculator')
+      expect(request).to redirect_to('https://tools.moneyhelper.org.uk/en/sdlt-calculator?isEmbedded=true')
     end
 
     it 'redirects to the new LBTT calculator' do
       get '/en/tools/house-buying/land-and-buildings-transaction-tax-calculator-scotland'
 
-      expect(request).to redirect_to('https://tools.moneyhelper.org.uk/en/embed/lbtt-calculator')
+      expect(request).to redirect_to('https://tools.moneyhelper.org.uk/en/lbtt-calculator?isEmbedded=true')
     end
   end
 

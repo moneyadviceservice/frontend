@@ -20,6 +20,8 @@ Rails.application.routes.draw do
   scope '/:locale', locale: /en|cy/ do
     root 'home#show'
 
+    get '/direct/budget-planner', to: 'direct_budget_planner#new'
+
     get '/tools/car-costs-calculator', to: 'car_cost_tool#index'
     get '/tools/car-costs-calculator/*all', to: 'car_cost_tool#index'
     get '/tools/money-navigator-tool', to: 'money_navigator_tool#index'

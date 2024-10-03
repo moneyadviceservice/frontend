@@ -1,6 +1,18 @@
 require_relative '../../features/support/ui/pages/sign_in'
 
 RSpec.feature 'Budget Planner' do
+  scenario 'disallowing registrations' do
+    visit '/en/users/sign_in'
+    expect(page).to have_css('.t-register')
+
+    ENV['DISALLOW_REGISTRATIONS'] = 'true'
+
+    visit '/en/users/sign_in'
+    expect(page).to_not have_css('.t-register')
+  ensure
+    ENV.delete('DISALLOW_REGISTRATIONS')
+  end
+
   scenario 'The `noresize` param when set, persists across requests' do
     visit '/en/tools/budget-planner?noresize=true'
 

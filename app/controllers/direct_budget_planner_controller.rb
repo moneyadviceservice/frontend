@@ -1,11 +1,26 @@
 class DirectBudgetPlannerController < EmbeddedToolsController
-  BUDGET_PLANNER_SUMMARY_PATH = '/en/tools/budget-planner/budget/summary'.freeze
+  ENGLISH_BUDGET_PLANNER_SUMMARY_PATH = '/en/tools/budget-planner/budget/summary'.freeze
+  WELSH_BUDGET_PLANNER_SUMMARY_PATH   = '/cy/tools/cynllunydd-cyllideb/budget/summary'.freeze
 
   def new
-    return redirect_to BUDGET_PLANNER_SUMMARY_PATH if user_signed_in?
+    return redirect_to summary_path_for(locale) if user_signed_in?
 
-    session[:user_return_to] = BUDGET_PLANNER_SUMMARY_PATH
+    session[:user_return_to] = summary_path_for(locale)
 
-    redirect_to new_user_session_path
+    redirect_to new_user_session_path(locale: locale)
+  end
+
+  private
+
+  def locale
+    I18n.locale
+  end
+
+  def summary_path_for(locale)
+    if locale == :en
+      ENGLISH_BUDGET_PLANNER_SUMMARY_PATH
+    else
+      WELSH_BUDGET_PLANNER_SUMMARY_PATH
+    end
   end
 end

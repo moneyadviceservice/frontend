@@ -19,7 +19,23 @@ RSpec.feature 'Budget Planner' do
     end
   end
 
-  scenario 'Using the direct sign-in link successfully' do
+  scenario 'Using the direct sign-in link successfully in English' do
+    create_user_budget
+    visit '/en/direct/budget-planner'
+    sign_in_user
+
+    expect(@page.current_path).to eq('/en/tools/budget-planner/budget/summary')
+  end
+
+  scenario 'Using the direct sign-in link successfully in Welsh' do
+    create_user_budget
+    visit '/cy/direct/budget-planner'
+    sign_in_user
+
+    expect(@page.current_path).to eq('/cy/tools/cynllunydd-cyllideb/budget/summary')
+  end
+
+  def create_user_budget
     @user = create(:user)
 
     @budget = BudgetPlanner::Budget.new
@@ -28,16 +44,14 @@ RSpec.feature 'Budget Planner' do
     @budget.steps[1].categories[0].sources[0].value = 50.0
     @budget.user = @user
     @budget.save
+  end
 
-    visit '/en/direct/budget-planner'
-
+  def sign_in_user
     @page = UI::Pages::SignIn.new
     expect(@page).to be_displayed
 
     @page.email.set(@user.email)
     @page.password.set(@user.password)
     @page.submit.click
-
-    expect(@page.current_path).to eq('/en/tools/budget-planner/budget/summary')
   end
 end

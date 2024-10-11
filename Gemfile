@@ -136,7 +136,6 @@ group :test do
   gem 'selenium-webdriver'
   gem 'shoulda-matchers'
   gem 'site_prism'
-  gem 'sqlite3', '1.4.2'
   gem 'tidy-html5'
   gem 'timecop'
   gem 'uri', '0.10.0'

@@ -6,7 +6,7 @@ module UI::Pages
 
     element :email, "input[name='user[email]']"
     element :password, "input[name='user[password]']"
-    element :submit, "input[value='Sign in']"
+    element :submit, '.t-submit'
 
     element :forgot_password, ".registration__links a"
   end

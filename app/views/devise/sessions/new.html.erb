@@ -54,11 +54,13 @@
 
     <div class="registration__row">
       <div class="registration__field">
-        <%= f.submit t("authentication.sign_in_page.label"), class: "button button--primary" %>
+        <%= f.submit t("authentication.sign_in_page.label"), class: "button button--primary t-submit" %>
       </div>
     </div>
   <% end %>
 
+  <% unless ENV['DISALLOW_REGISTRATIONS'] %>
   <h2><%= t("authentication.sign_in_page.links.register_title") %></h2>
-  <p><%= raw authentication_sign_in_description new_registration_path(resource_name) %></p>
+  <p class="t-register"><%= raw authentication_sign_in_description new_registration_path(resource_name) %></p>
+  <% end %>
 </main>

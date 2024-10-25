@@ -23,10 +23,6 @@ class StyleguideController < ApplicationController
     render layout: 'styleguide/page_unconstrained'
   end
 
-  def pages_search_results
-    render layout: 'styleguide/page'
-  end
-
   def pages_parent_category_page
     render layout: 'styleguide/page'
   end

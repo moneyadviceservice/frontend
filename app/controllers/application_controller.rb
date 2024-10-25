@@ -48,12 +48,6 @@ class ApplicationController < ActionController::Base
 
   helper_method :covid_banner_dismissed?
 
-  def display_search_box_in_header?
-    true
-  end
-
-  helper_method :display_search_box_in_header?
-
   def contact_panels_border_top?
     false
   end

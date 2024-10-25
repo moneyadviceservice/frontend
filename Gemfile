@@ -36,7 +36,6 @@ gem 'activerecord-session_store'
 # this repo, as all the gem is doing is wrapping OpenSSL.
 ##############################################################
 gem 'aes', github: 'chicks/aes'
-gem 'algoliasearch'
 gem 'attr_encrypted', '~> 3.1'
 gem 'blind_index', '0.2.0'
 gem 'delayed_job_active_record'
@@ -80,7 +79,6 @@ gem 'adal', github: 'moneyadviceservice/azure-activedirectory-library-for-ruby'
 gem 'cream', '2.1.8'
 gem 'dough-ruby', github: 'moneyadviceservice/dough', branch: 'PostMessages_v5.45'
 gem 'mas-cms-client', '1.20.1'
-gem 'site_search', '0.3.0'
 # Tools
 gem 'action_plans', github: 'moneyadviceservice/action_plans', ref: 'edb52f8'
 gem 'advice_plans', '~> 4.1.1'

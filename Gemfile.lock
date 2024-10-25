@@ -235,9 +235,6 @@ GEM
       rails (>= 4, < 5)
       recaptcha
       sass-rails
-    algoliasearch (1.19.2)
-      httpclient (~> 2.8, >= 2.8.3)
-      json (>= 1.5.1)
     angularjs-rails (1.2.26)
     arel (6.0.4)
     ast (2.4.0)
@@ -450,7 +447,6 @@ GEM
     http-accept (1.7.0)
     http-cookie (1.0.4)
       domain_name (~> 0.5)
-    httpclient (2.8.3)
     i18n (0.9.5)
       concurrent-ruby (~> 1.0)
     i18n-js (3.0.0.mas)
@@ -732,8 +728,6 @@ GEM
     site_prism (2.11)
       addressable (~> 2.4)
       capybara (~> 2.7)
-    site_search (0.3.0)
-      algoliasearch
     spreadsheet (1.2.8)
       ruby-ole
     sprockets (2.12.5)
@@ -811,7 +805,6 @@ DEPENDENCIES
   advice_plans (~> 4.1.1)
   aes!
   agreements (~> 2.5.0)
-  algoliasearch
   attr_encrypted (~> 3.1)
   autoprefixer-rails
   better_errors
@@ -902,7 +895,6 @@ DEPENDENCIES
   selenium-webdriver
   shoulda-matchers
   site_prism
-  site_search (= 0.3.0)
   statsd-ruby
   sucker_punch
   syslog-logger

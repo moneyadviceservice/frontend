@@ -130,7 +130,6 @@ Rails.application.routes.draw do
         page_type: /home_pages/
 
     resources :categories, only: 'show'
-    resources :search_results, only: 'index', path: 'search'
     resources :videos, only: :show
 
     resources :corporate_categories, only: [:show], constraints: CorporateCategoriesConstraint.new

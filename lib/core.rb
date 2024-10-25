@@ -21,8 +21,6 @@ module Core
   autoload :Entity, 'core/entity'
   autoload :Footer, 'core/entity/footer'
   autoload :Other, 'core/entity/other'
-  autoload :SearchResult, 'core/entity/search_result'
-  autoload :SearchResultCollection, 'core/entity/search_result_collection'
   autoload :StaticPage, 'core/entity/static_page'
   autoload :Customer, 'core/entity/customer'
   autoload :WebChat, 'core/entity/web_chat'

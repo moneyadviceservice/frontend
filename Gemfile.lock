@@ -28,10 +28,10 @@ GIT
 
 GIT
   remote: https://github.com/moneyadviceservice/budget_planner.git
-  revision: 0efd1a9a3938da78701ce68c0cd49f6c78583e1f
-  ref: 0efd1a9
+  revision: 825c37646048e21b47f3d7f533b2f3d65049704f
+  ref: 825c376
   specs:
-    budget_planner (6.2.1)
+    budget_planner (6.3.1)
       i18n-js (= 3.0.0.mas)
       js-routes (= 1.1.2)
       mas-mailer (~> 0.3)
@@ -697,7 +697,7 @@ GEM
       rainbow (>= 2.2.2, < 4.0)
       ruby-progressbar (~> 1.7)
       unicode-display_width (~> 1.0, >= 1.0.1)
-    ruby-ole (1.2.12.2)
+    ruby-ole (1.2.13.1)
     ruby-progressbar (1.9.0)
     ruby_parser (3.13.1)
       sexp_processor (~> 4.9)

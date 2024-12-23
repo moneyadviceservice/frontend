@@ -1,7 +1,6 @@
 ruby IO.read('.ruby-version').strip
 
 source 'https://rubygems.org'
-source 'https://gem.fury.io/h_app288206558'
 
 # force Bundler to use SSL
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
@@ -26,6 +25,24 @@ source "https://gems.railslts.com" do
   gem 'railslts-version', require: false
 end
 
+source 'https://gem.fury.io/h_app288206558' do
+  gem 'advice_plans', '~> 4.1.1'
+  gem 'agreements', '~> 2.5.0'
+  gem 'cream', '2.1.8'
+  gem 'cutback_calculator', '~> 0.13.0'
+  gem 'debt_and_mental_health', '~> 1.6.0'
+  gem 'debt_advice_locator'
+  gem 'debt_free_day_calculator'
+  gem 'debt_test', '~> 1.9.0'
+  gem 'decision_trees', '~> 2.3.0'
+  gem 'feedback', '~> 0.5.1'
+  gem 'mas-cms-client', '1.20.1'
+  gem 'mortgage_calculator', '~> 4.6.0'
+  gem 'payday_loans_intervention', '~> 1.9.0'
+  gem 'postcode_anywhere-email_validation'
+  gem 'quiz', '~> 1.4.0'
+end
+
 gem 'activerecord-session_store'
 
 ##############################################################
@@ -48,6 +65,7 @@ gem 'faraday', '0.9.2'
 gem 'faraday-conductivity'
 gem 'faraday_middleware'
 gem 'kss'
+gem 'lograge'
 gem 'link_header'
 gem 'mail'
 gem 'mailjet'
@@ -57,8 +75,8 @@ gem 'nokogiri'
 gem 'nunes'
 gem 'opening_hours'
 gem 'rollbar'
-gem 'postcode_anywhere-email_validation', :source => 'https://gem.fury.io/h_app288206558'
 gem 'psych', '>= 2.0.5' # https://www.ruby-lang.org/en/news/2014/03/29/heap-overflow-in-yaml-uri-escape-parsing-cve-2014-2525/
+gem 'puma'
 gem 'rack', github: 'rails-lts/rack', branch: 'lts-1-6-stable'
 gem 'rack-rewrite'
 gem 'recaptcha', require: 'recaptcha/rails'
@@ -77,24 +95,12 @@ gem 'websocket-extensions', '>= 0.1.5'
 # ========
 # Dependencies
 gem 'adal', github: 'moneyadviceservice/azure-activedirectory-library-for-ruby'
-gem 'cream', '2.1.8'
 gem 'dough-ruby', github: 'moneyadviceservice/dough', branch: 'PostMessages_v5.45'
+
 # Tools
 gem 'action_plans', github: 'moneyadviceservice/action_plans', ref: '79dad04'
-gem 'advice_plans', '~> 4.1.1'
-gem 'agreements', '~> 2.5.0'
 gem 'budget_planner', github: 'moneyadviceservice/budget_planner', ref: 'ae91831'
-gem 'cutback_calculator', '~> 0.13.0'
-gem 'debt_and_mental_health', '~> 1.6.0'
-gem 'debt_free_day_calculator', github: 'moneyadviceservice/debt_free_day_calculator', ref: 'cc7d907'
-gem 'debt_test', '~> 1.9.0'
-gem 'decision_trees', '~> 2.3.0'
-gem 'feedback', '~> 0.5.1'
-gem 'lograge'
-gem 'mortgage_calculator', '~> 4.6.0'
-gem 'payday_loans_intervention', '~> 1.9.0'
 gem 'pensions_calculator', github: 'moneyadviceservice/pensions_calculator', ref: '786b6b3'
-gem 'puma'
 gem 'savings_calculator', github: 'moneyadviceservice/savings_calculator', ref: '1ccfd87'
 gem 'wpcc', github: 'moneyadviceservice/wpcc', ref: '45a0a46'
 

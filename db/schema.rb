@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20181127152000) do
+ActiveRecord::Schema.define(version: 20250107135912) do
 
   create_table "action_plans_expense_items", force: :cascade do |t|
     t.string  "kind",       limit: 256,             null: false
@@ -50,7 +50,7 @@ ActiveRecord::Schema.define(version: 20181127152000) do
     t.string   "package_salary_period",   limit: 255
     t.integer  "package_duration_units",  limit: 4
     t.string   "package_duration_period", limit: 255
-    t.boolean  "northern_ireland"
+    t.integer  "residence",               limit: 4
   end
 
   create_table "action_plans_redundancy_tasks", force: :cascade do |t|

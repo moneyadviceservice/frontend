@@ -1,0 +1,32 @@
+FROM ruby:2.7.7
+
+RUN apt-get update -qq && apt-get install -y build-essential nodejs npm
+
+RUN mkdir /myapp
+WORKDIR /myapp
+
+ARG BUNDLE_GEM__FURY__IO
+ARG BUNDLE_GEMS__RAILSLTS__COM
+ARG BUNDLE_GITHUB__COM
+
+ENV BUNDLE_GEM__FURY__IO ${BUNDLE_GEM__FURY__IO}
+ENV BUNDLE_GEMS__RAILSLTS__COM ${BUNDLE_GEMS__RAILSLTS__COM}
+ENV BUNDLE_GITHUB__COM ${BUNDLE_GITHUB__COM}
+
+ENV RAILS_ENV production
+ENV ALGOLIA_APP_ID NA
+ENV ALGOLIA_API_KEY NA
+ENV FRONTEND_HTTP_REQUEST_TIMEOUT 10
+ENV BUNDLE_WITHOUT test:development
+
+COPY Gemfile* .ruby-version ./
+RUN gem install bundler:1.17.3
+RUN bundle install -j4 --retry 5
+RUN npm install -g bower
+COPY . /myapp
+
+RUN rm -rf vendor/assets/bower_components
+RUN bundle exec bowndler update --allow-root --production
+RUN bundle exec rake assets:precompile
+
+CMD bundle exec rake jobs:work

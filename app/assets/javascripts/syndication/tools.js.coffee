@@ -317,6 +317,7 @@
       cy:
         path: "cy/tools/canfyddwr-cyngor-ar-ddyledion"
       title: "Debt advice locator"
+      omit_logo: true
 
     debt_advice_locator_f2f:
       en:
@@ -325,6 +326,7 @@
         path: "cy/tools/canfyddwr-cyngor-ar-ddyledion/f2f"
       title: "Debt advice locator - face to face"
       width: "100%"
+      omit_logo: true
 
     car_cost_tool:
       en:

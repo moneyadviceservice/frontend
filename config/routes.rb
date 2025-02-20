@@ -91,9 +91,6 @@ Rails.application.routes.draw do
     mount PensionsCalculator::Engine => '/tools/:tool_id',
           constraints: ToolMountPoint.for(:pensions_calculator)
 
-    mount Quiz::Engine => '/tools/:tool_id',
-      constraints: ToolMountPoint.for(:quiz)
-
     mount SavingsCalculator::Engine => '/tools/:tool_id',
           constraints: ToolMountPoint.for(:savings_calculator)
 

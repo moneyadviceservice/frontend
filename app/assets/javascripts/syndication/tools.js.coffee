@@ -39,6 +39,7 @@
       height: "800px"
       include_ga: false
       title: "Baby money timeline"
+      omit_logo: true
 
     baby_timeline_mumsnet:
       en:
@@ -47,6 +48,7 @@
       height: "800px"
       include_ga: false
       title: "Baby money timeline"
+      omit_logo: true
 
     debt_test:
       en:

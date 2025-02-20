@@ -19,6 +19,7 @@ r301 %r{^/en/tools/house-buying/stamp-duty-calculator/?(.*)}, 'https://tools.mon
 r301 %r{^/en/tools/house-buying/land-and-buildings-transaction-tax-calculator-scotland/?(.*)}, 'https://tools.moneyhelper.org.uk/en/lbtt-calculator?isEmbedded=true', host: LEGACY_MAS_SYNDICATION
 r301 %r{^/en/tools/mortgage-calculator/?(.*)}, 'https://tools.moneyhelper.org.uk/en/mortgage-calculator?isEmbedded=true', host: LEGACY_MAS_SYNDICATION
 r301 %r{^/en/tools/debt-advice-locator/?(.*)}, 'https://debt-advice-locator.moneyhelper.org.uk/en/question-1?isEmbedded=true', host: LEGACY_MAS_SYNDICATION
+r301 %r{^/en/tools/baby-money-timeline/?(.*)}, 'https://tool.moneyhelper.org.uk/en/baby-money-timeline?isEmbedded=true', host: LEGACY_MAS_SYNDICATION
 
 r301 %r{^/en/tools/budget-planner/?(.*)}, 'https://www.moneyhelper.org.uk/en/everyday-money/budgeting/budget-planner', host: LEGACY_MAS_WWW
 r301 %r{^/cy/tools/cynllunydd-cyllideb/?(.*)}, 'https://www.moneyhelper.org.uk/cy/everyday-money/budgeting/budget-planner', host: LEGACY_MAS_WWW

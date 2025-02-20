@@ -97,7 +97,6 @@ gem 'payday_loans_intervention', '~> 1.9.0'
 gem 'pensions_calculator', github: 'moneyadviceservice/pensions_calculator', ref: '12db3f55'
 gem 'puma'
 gem 'savings_calculator', github: 'moneyadviceservice/savings_calculator', ref: '1ccfd87'
-gem 'timelines', github: 'moneyadviceservice/timelines', ref: 'c5ee622'
 gem 'wpcc', github: 'moneyadviceservice/wpcc', ref: '45a0a46'
 
 group :assets do

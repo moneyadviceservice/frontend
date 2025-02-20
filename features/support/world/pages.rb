@@ -23,7 +23,6 @@ module World
       news_article
       partners
       profile
-      quiz_admin
       rio
       search_results
       sitemap

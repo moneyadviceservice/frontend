@@ -36,7 +36,6 @@
       cy:
         path: "cy/tools/llinell-amser-arian-babi"
       width: "100%"
-      height: "800px"
       include_ga: false
       title: "Baby money timeline"
       omit_logo: true
@@ -45,7 +44,6 @@
       en:
         path: "en/tools/baby-money-timeline?version=mumsnet"
       width: "100%"
-      height: "800px"
       include_ga: false
       title: "Baby money timeline"
       omit_logo: true

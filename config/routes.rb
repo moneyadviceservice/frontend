@@ -91,9 +91,6 @@ Rails.application.routes.draw do
     mount SavingsCalculator::Engine => '/tools/:tool_id',
           constraints: ToolMountPoint.for(:savings_calculator)
 
-    mount Timelines::Engine => '/tools/:tool_id',
-          constraints: ToolMountPoint.for(:timelines)
-
     mount Wpcc::Engine => '/tools/:tool_id',
           constraints: ToolMountPoint.for(:wpcc)
 

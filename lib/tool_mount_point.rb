@@ -14,7 +14,6 @@ require_relative '../lib/tool_mount_point/mortgage_calculator'
 require_relative '../lib/tool_mount_point/payday_loans'
 require_relative '../lib/tool_mount_point/pensions_calculator'
 require_relative '../lib/tool_mount_point/savings_calculator'
-require_relative '../lib/tool_mount_point/timelines'
 require_relative '../lib/tool_mount_point/christmas_money_planner'
 require_relative '../lib/tool_mount_point/wpcc'
 

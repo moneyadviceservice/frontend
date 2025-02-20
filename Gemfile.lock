@@ -122,19 +122,6 @@ GIT
       sprockets (< 4)
 
 GIT
-  remote: https://github.com/moneyadviceservice/timelines.git
-  revision: c5ee62254e90076790d28f2f85943cc55fe88da5
-  ref: c5ee622
-  specs:
-    timelines (2.4.0)
-      bowndler
-      icalendar
-      jquery-rails
-      mas-templating
-      rails (>= 4, < 5)
-      sass-rails
-
-GIT
   remote: https://github.com/moneyadviceservice/wpcc.git
   revision: 45a0a46f6cd73aed8a64ee06b4a503cdcba6a529
   ref: 45a0a46
@@ -431,9 +418,6 @@ GEM
       concurrent-ruby (~> 1.0)
     i18n-js (3.0.0.mas)
       i18n
-    icalendar (2.10.1)
-      ice_cube (~> 0.16)
-    ice_cube (0.16.4)
     interception (0.5)
     jbuilder (2.9.1)
       activesupport (>= 4.2.0)
@@ -871,7 +855,6 @@ DEPENDENCIES
   syslog-logger
   tidy-html5
   timecop
-  timelines!
   turnout
   uglifier
   uri (= 0.10.0)

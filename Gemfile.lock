@@ -41,17 +41,6 @@ GIT
       spreadsheet (= 1.2.8)
 
 GIT
-  remote: https://github.com/moneyadviceservice/cost_calculator_builder.git
-  revision: a6a0ddf07b09e5903ec2a01293a21e16cd0ad21e
-  ref: a6a0ddf
-  specs:
-    cost_calculator_builder (2.1.1)
-      bowndler
-      dough-ruby (~> 5.36)
-      friendly_id (>= 5.1.0)
-      rails (>= 4, < 5)
-
-GIT
   remote: https://github.com/moneyadviceservice/debt-advice-locator.git
   revision: 878f1b1e5c765c15537328a78ccdd60d175b5dd9
   ref: 878f1b1
@@ -817,7 +806,6 @@ DEPENDENCIES
   chai-jquery-rails
   chronic
   codeclimate-test-reporter (= 0.6.0)
-  cost_calculator_builder!
   cream (= 2.1.8)
   csslint_ruby
   cucumber-rails

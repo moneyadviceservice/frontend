@@ -54,9 +54,6 @@ Rails.application.routes.draw do
     mount ActionPlans::Engine => '/tools/:tool_id',
           constraints: ToolMountPoint.for(:action_plans)
 
-    mount CostCalculatorBuilder::Engine => '/:engine_id',
-          constraints: EngineMountPoint.for(:cost_calculator_builder)
-
     bpmp = ToolMountPoint.for(:budget_planner)
     budget_planner_url_constraint = /#{bpmp.en_id}|#{bpmp.cy_id}/
     mount BudgetPlanner::Engine => '/tools/:tool_id(/:incognito)',

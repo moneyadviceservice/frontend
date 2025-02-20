@@ -20,8 +20,6 @@ class RedirectorsController < ApplicationController
   private
 
   def url_for_tool(locale, tool_name)
-    if tool_name == :debt_advice_locator
-      "https://www.moneyhelper.org.uk/#{locale}/money-troubles/dealing-with-debt/debt-advice-locator"
     elsif tool_name == :loan_calculator
       "https://www.moneyhelper.org.uk/#{locale}/everyday-money/credit-and-purchases/loan-calculator"
     elsif tool_name == :credit_card_calculator

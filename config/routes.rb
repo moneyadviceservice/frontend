@@ -68,9 +68,6 @@ Rails.application.routes.draw do
     mount DebtFreeDayCalculator::Engine => '/tools/:tool_id',
           constraints: ToolMountPoint.for(:debt_free_day_calculator)
 
-    mount DebtAdviceLocator::Engine => '/tools/:tool_id',
-          constraints: ToolMountPoint.for(:debt_advice_locator)
-
     mount DebtTest::Engine => '/tools/:tool_id',
           constraints: ToolMountPoint.for(:debt_test)
 
@@ -102,8 +99,6 @@ Rails.application.routes.draw do
     get LandingPagePaths.path(:retirements, :pension_savings_timeline, :cy), to: 'retirements#pension_savings_timeline'
 
     get '/tools/:id', to: 'landing_pages#show', constraints: { id: /annuities/ }
-
-    get '/tools/redirect_to/:tool_name', to: 'redirectors#redirect'
 
     resources :articles, only: 'show' do
       resource :amp, only: [:show], controller: :amp_articles

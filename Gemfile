@@ -81,7 +81,7 @@ gem 'cream', '2.1.8'
 gem 'dough-ruby', github: 'moneyadviceservice/dough', branch: 'PostMessages_v5.45'
 gem 'mas-cms-client', '1.20.1'
 # Tools
-gem 'action_plans', github: 'moneyadviceservice/action_plans', ref: '071e3c3c'
+gem 'action_plans', github: 'moneyadviceservice/action_plans', ref: '79dad04'
 gem 'advice_plans', '~> 4.1.1'
 gem 'agreements', '~> 2.5.0'
 gem 'budget_planner', github: 'moneyadviceservice/budget_planner', ref: 'ae91831'

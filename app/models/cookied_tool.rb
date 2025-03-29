@@ -13,11 +13,6 @@ class CookiedTool
 
   COOKIED_TOOLS = [
     CookiedTool.new(
-      landing_path: '/en/tools/budget-planner/',
-      tool: 'budget-planner',
-      canonical_url: 'https://www.moneyhelper.org.uk/en/everyday-money/budgeting/use-our-budget-planner'
-    ),
-    CookiedTool.new(
       landing_path: '/en/tools/credit-card-calculator/credit-card/',
       tool: 'credit-card-calculator',
       canonical_url: 'https://www.moneyhelper.org.uk/en/everyday-money/credit-and-purchases/use-our-credit-card-calculator'

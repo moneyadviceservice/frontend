@@ -94,6 +94,7 @@
       width: "100%"
       height: "2500px"
       title: "Budget planner"
+      omit_logo: true
 
     budget_planner_incognito:
       en:
@@ -103,6 +104,7 @@
       width: "100%"
       height: "2500px"
       title: "Budget planner"
+      omit_logo: true
 
     back_to_school:
       en:

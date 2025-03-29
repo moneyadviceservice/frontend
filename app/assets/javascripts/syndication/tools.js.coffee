@@ -102,6 +102,7 @@
       height: "2500px"
       include_ga: false
       title: "Budget planner"
+      omit_logo: true
 
     budget_planner_incognito:
       en:
@@ -112,6 +113,7 @@
       height: "2500px"
       include_ga: false
       title: "Budget planner"
+      omit_logo: true
 
     back_to_school:
       en:

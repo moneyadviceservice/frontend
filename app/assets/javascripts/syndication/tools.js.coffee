@@ -27,7 +27,6 @@
       cy:
         path: 'cy/employer-best-practices/money-guide'
       width: '100%'
-      include_ga: false
       title: 'Making the most of your money'
 
     baby_timeline:
@@ -36,7 +35,6 @@
       cy:
         path: "cy/tools/llinell-amser-arian-babi"
       width: "100%"
-      include_ga: false
       title: "Baby money timeline"
       omit_logo: true
 
@@ -44,7 +42,6 @@
       en:
         path: "en/tools/baby-money-timeline?version=mumsnet"
       width: "100%"
-      include_ga: false
       title: "Baby money timeline"
       omit_logo: true
 
@@ -55,7 +52,6 @@
         path: "cy/tools/prawf-dyledion"
       width: "100%"
       height: "1550px"
-      include_ga: false
       title: "Debt test"
 
     help_to_buy_quiz:
@@ -63,7 +59,6 @@
         path: "en/quiz/help_to_buy"
       width: "600px"
       height: "2000px"
-      include_ga: false
       title: "Help to buy quiz"
 
     quiz:
@@ -82,7 +77,6 @@
         path: "en/cost_planner/plans/christmas-syndicated/start"
       height: "2400px"
       width: "100%"
-      include_ga: false
       title: "Christmas planner"
 
     christmas_planner_no_start_page:
@@ -90,7 +84,6 @@
         path: "en/cost_planner/plans/christmas-syndicated"
       width: "100%"
       height: "2400px"
-      include_ga: false
       title: "Christmas planner"
 
     budget_planner:
@@ -100,7 +93,6 @@
         path: "cy/tools/cynllunydd-cyllideb"
       width: "100%"
       height: "2500px"
-      include_ga: false
       title: "Budget planner"
 
     budget_planner_incognito:
@@ -110,7 +102,6 @@
         path: "en/tools/cynllunydd-cyllideb/incognito"
       width: "100%"
       height: "2500px"
-      include_ga: false
       title: "Budget planner"
 
     back_to_school:
@@ -118,7 +109,6 @@
         path: "en/cost_planner/plans/back-to-school/start"
       width: "100%"
       height: "2100px"
-      include_ga: false
       title: "Back to school"
 
     divorce_and_separation:
@@ -126,7 +116,6 @@
         path: "divorce_separation_calculator/index.html"
       width: "748px"
       height: "1230"
-      include_ga: true
       title: "Divorce and separation calculator"
 
     workplace_pensions:
@@ -136,7 +125,6 @@
         path: "workplace_pensions_calculator/index.html?lang=cy"
       width: "800px"
       height: "2200px"
-      include_ga: false
       title: "Workplace pensions calculator"
 
     universal_credit_timeline:
@@ -146,7 +134,6 @@
         path: "universal_credit_timeline/index_cy.html"
       width: "960px"
       height: "700px"
-      include_ga: true
       title: "Universal credit timeline"
 
     auto_enrolment:
@@ -154,7 +141,6 @@
         path: "en/tools/workplace-pension-advice-tool"
       width: "960px"
       height: "700px"
-      include_ga: false
       title: "Workplace pension advice tool"
 
     summer_planner:
@@ -164,7 +150,6 @@
         path: "summer_planner/index.html?lang=cy"
       height: "1340px"
       width: "720px"
-      include_ga: false
       title: "Summer planner"
 
     how_much_to_save:
@@ -174,7 +159,6 @@
         path: "how_much_to_save_2013_04_08_cy/index.htm"
       height: "700px"
       width: "680px"
-      include_ga: true
       title: "How much to save"
 
     mortgage_calculator_new:
@@ -183,7 +167,6 @@
       cy:
         path: "cy/tools/cyfrifiannell-morgais"
       width: "100%"
-      include_ga: false
       omit_logo: true
       title: "Mortgage calculator"
 
@@ -193,7 +176,6 @@
       cy:
         path: "cy/tools/cyfrifiannell-morgais"
       width: "100%"
-      include_ga: false
       omit_logo: true
       title: "Mortgage calculator"
 
@@ -202,7 +184,6 @@
         path: "en/tools/house-buying/stamp-duty-calculator"
       cy:
         path: "cy/tools/prynu-ty/cyfrifiannell-treth-stamp"
-      include_ga: true
       omit_logo: true
       title: "Stamp duty calculator"
 
@@ -212,7 +193,6 @@
       cy:
         path: "cy/tools/prynu-ty/cyfrifiannell-treth-trafodion-tir-ac-adeiladau-alban"
       width: "100%"
-      include_ga: false
       omit_logo: true
       title: "LBTT Calculator"
 
@@ -230,7 +210,6 @@
         path: "cy/benthyciadau-diwrnod-cyflog"
       height: "2000px"
       width: "100%"
-      include_ga: false
       omit_logo: true
       title: "Payday loans"
 
@@ -241,7 +220,6 @@
         path: "cy/tools/cyfrifiannell-pensiwn"
       width: "100%"
       height: "800px"
-      include_ga: false
       title: "Pensions calculator"
 
     pension_calculator:
@@ -251,7 +229,6 @@
         path: "cy/tools/cyfrifiannell-pensiwn"
       width: "100%"
       height: "800px"
-      include_ga: false
       title: "Pension calculator"
 
     health_check:
@@ -261,7 +238,6 @@
         path: "cy/tools/gwiriad-iechyd"
       width: "100%"
       height: "800px"
-      include_ga: false
       title: "Money health check"
 
     savings_calculator:
@@ -376,10 +352,6 @@
     then locale = 'cy'
     else locale = 'en'
 
-  gaPath: (node)->
-    locale = masConfig.getLocale(node)
-    toolpath = masConfig.toolConfig[node.id][locale].ga_path
-
   iframeUrl: (node)->
     locale = masConfig.getLocale(node)
     toolpath = masConfig.toolConfig[node.id][locale].path
@@ -388,25 +360,9 @@
   iframeSrc: (node)->
     "src='#{masConfig.iframeUrl(node)}'"
 
-  gaIframeUrl: (node)->
-    locale = masConfig.getLocale(node)
-    toolId = node.id
-    toolURL = masConfig.toolsConfig['syndication']['ga_iframe_url']
-    toolArgs = "?tool=#{toolId}&lang=#{locale}"
-    "#{toolURL}#{toolArgs}"
-
-  gaIframeSrc: (node)->
-    "src='#{masConfig.gaIframeUrl(node)}'"
-
-  gaIframeRequired: (node)->
-    if (masConfig.toolConfig[node.id]['include_ga']?)
-      return masConfig.toolConfig[node.id]['include_ga']
-    false
-
   iframeScrolling: "no"
   iframeBorder: "0"
   iframeClass: "mas-widget-iframe"
-  gaIframeClass: "mas-widget-ga-iframe"
 
 syndication = new window.PartnerMAS.ToolSyndication
 

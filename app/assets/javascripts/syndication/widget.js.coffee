@@ -9,7 +9,6 @@ class window.PartnerMAS.Widget
     renderParts = []
     renderParts.push(this.createLogo(masConfig.getLocale(@targetNode))) unless this.dataAttr("omit_logo")
     renderParts.push(this.createIFrame())
-    renderParts.push(this.createGAIFrame()) if masConfig.gaIframeRequired(@targetNode)
     this.addToDocument this.createContainer(renderParts...)
     this.removeTargetNode()
 
@@ -26,10 +25,7 @@ class window.PartnerMAS.Widget
     hostname = document.getElementsByClassName(masConfig.targetSelector)[0].hostname;
 
     masConfig.toolsConfig = {
-      syndication_url: 'https://partner-tools.moneyadviceservice.org.uk',
-      syndication: {
-        ga_iframe_url: 'https://partner-tools.moneyadviceservice.org.uk/partner_ga_iframe.html'
-      }
+      syndication_url: 'https://partner-tools.moneyadviceservice.org.uk'
     }
     masConfig.toolsConfig['syndication_url'] = domains[hostname] if domains[hostname]
 
@@ -52,14 +48,6 @@ class window.PartnerMAS.Widget
         <iframe class='#{masConfig.iframeClass}' id='#{@targetNode.id}-iframe' #{masConfig.iframeSrc(@targetNode)}
                 scrolling='#{masConfig.iframeScrolling}' frameborder='#{masConfig.iframeBorder}'
                 width='#{this.dataAttr('width')}' height='#{this.dataAttr('height')}' title='#{this.dataAttr('title')}'>
-        </iframe>
-        """
-
-  createGAIFrame: ->
-    """
-        <iframe class='#{masConfig.gaIframeClass}' id='#{@targetNode.id}-ga-iframe' #{masConfig.gaIframeSrc(@targetNode)}
-                scrolling='no' frameborder='0'
-                width='0px' height='0px'>
         </iframe>
         """
 

@@ -15,6 +15,8 @@ r301 %r{.*}, 'https://www.moneyhelper.org.uk/en/pensions-and-retirement/taking-y
 r301 %r{.*}, 'https://www.moneyhelper.org.uk/en/everyday-money?source=mas', host: 'yourmoney.moneyadviceservice.org.uk'
 r301 %r{.*}, 'https://www.moneyhelper.org.uk/en/benefits/universal-credit/money-manager?source=mas', host: 'obs.moneyadviceservice.org.uk'
 
+r301 %r{^/en/direct/budget-planner/?(.*)}, 'https://tools.moneyhelper.org.uk/en/budget-planner/income?isEmbedded=true'
+r301 %r{^/cy/direct/budget-planner/?(.*)}, 'https://tools.moneyhelper.org.uk/cy/budget-planner/income?isEmbedded=true'
 r301 %r{^/en/tools/budget-planner/?(.*)}, 'https://tools.moneyhelper.org.uk/en/budget-planner/income?isEmbedded=true', host: LEGACY_MAS_SYNDICATION
 r301 %r{^/en/tools/house-buying/stamp-duty-calculator/?(.*)}, 'https://tools.moneyhelper.org.uk/en/sdlt-calculator?isEmbedded=true', host: LEGACY_MAS_SYNDICATION
 r301 %r{^/en/tools/house-buying/land-and-buildings-transaction-tax-calculator-scotland/?(.*)}, 'https://tools.moneyhelper.org.uk/en/lbtt-calculator?isEmbedded=true', host: LEGACY_MAS_SYNDICATION

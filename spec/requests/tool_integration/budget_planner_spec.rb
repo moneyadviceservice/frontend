@@ -9,32 +9,16 @@ RSpec.describe 'Budget Planner', type: :request do
     end
   end
 
-  context 'when syndicated with `noresize` but prior to cookie checks' do
-    it 'does not include the frame resizer' do
-      get '/en/tools/budget-planner', { noresize: true }
 
-      expect(response).to be_redirect
-      cookie_check_path = response.location
-      get cookie_check_path
+  it 'redirects from the legacy direct sign-in link successfully in English' do
+    get '/en/direct/budget-planner'
 
-      expect(response).to be_redirect
-      expect(response.location).to end_with('/en/tools/budget-planner/?checked=true&noresize=true')
-    end
+    expect(response).to redirect_to('https://tools.moneyhelper.org.uk/en/budget-planner/income?isEmbedded=true')
   end
 
-  context 'when syndicated with `noresize`' do
-    it 'does not include the frame resizer' do
-      get '/en/tools/budget-planner', { checked: true, noresize: true }
+  it 'redirects from the legacy direct sign-in link successfully in Welsh' do
+    get '/cy/direct/budget-planner'
 
-      expect(response.body).not_to include('window.iframeResizer')
-    end
-  end
-
-  context 'when syndicated normally' do
-    it 'includes the frame resizer' do
-      get '/en/tools/budget-planner?checked=true', {}
-
-      expect(response.body).to include('window.iframeResizer')
-    end
+    expect(response).to redirect_to('https://tools.moneyhelper.org.uk/cy/budget-planner/income?isEmbedded=true')
   end
 end

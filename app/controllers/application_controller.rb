@@ -1,7 +1,4 @@
 class ApplicationController < ActionController::Base
-  rescue_from Mas::Cms::HttpRedirect, with: :redirect_page
-  rescue_from Mas::Cms::Errors::ResourceNotFound, with: :not_found
-
   protect_from_forgery with: :exception
   add_flash_types :success
 
@@ -121,52 +118,6 @@ class ApplicationController < ActionController::Base
     'syndicated' if syndicated_tool_request?
   end
 
-  def clumps
-    Mas::Cms::Clump.all(cached: true, locale: I18n.locale)
-  end
-  helper_method :clumps
-
-  def category_tree(categories = Core::Registry::Repository[:category].all)
-    Core::CategoryTreeReader.new.call(categories)
-  end
-
-  def category_tree_with_decorator(categories = Core::Registry::Repository[:category].all)
-    Core::CategoryTreeReaderWithDecorator.new.call(categories)
-  end
-
-  def navigation_categories
-    Core::Registry::Repository[:category].all
-  end
-
-  def corporate_categories
-    Core::Registry::Repository[:category].find('corporate-categories')['contents']
-  end
-
-  def corporate_category?(category, corporate = corporate_categories, categories = [])
-    categories << corporate.map { |c| c['id'] }
-    return true if categories.flatten.include?(category)
-
-    corporate_category?(category, corporate.first['contents'], categories.flatten) unless corporate.first['contents']
-  end
-
-  helper_method :corporate_category?
-
-  def category_navigation(corporate = false)
-    categories = corporate ? corporate_categories : navigation_categories
-    @category_navigation ||= CategoryNavigationDecorator.decorate_collection(category_tree_with_decorator(categories).children)
-  end
-
-  helper_method :category_navigation
-
-  def corporate_category_navigation
-    @corporate_category_navigation ||=
-      CategoryNavigationDecorator.decorate_collection(
-        category_tree_with_decorator(corporate_categories).children
-      )
-  end
-
-  helper_method :corporate_category_navigation
-
   def hide_elements_irrelevant_for_third_parties?
     false
   end
@@ -183,20 +134,6 @@ class ApplicationController < ActionController::Base
     true
   end
   helper_method :engine_content?
-
-  def pensions_and_retirement_page?
-    return false unless @active_categories
-
-    @active_categories.include?('pensions-and-retirement')
-  end
-  helper_method :pensions_and_retirement_page?
-
-  def debt_and_borrowing_page?
-    return false unless @active_categories
-
-    @active_categories.include?('debt-and-borrowing')
-  end
-  helper_method :debt_and_borrowing_page?
 
   def redirect_page(e)
     redirect_to e.location, status: e.http_response.status

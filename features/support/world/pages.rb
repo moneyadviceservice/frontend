@@ -6,31 +6,17 @@ module World
 
     pages = %w[
       account
-      article
-      article_feedback
-      category
       change_password
-      corporate
-      corporate_categories
-      corporate_tool
-      corporate_tool_directory
       debt_management
       debt_management_companies
       forgot_password
-      home
       internal_server_error
-      news
-      news_article
-      partners
       profile
-      rio
-      search_results
       sitemap
       settings
       sign_in
       sign_up
       static
-      technical_feedback
       tools
     ]
 

@@ -18,13 +18,4 @@ RSpec.describe '404 catchall', type: :request do
       expect(response).to redirect_to('https://www.moneyhelper.org.uk/404')
     end
   end
-
-  context 'when redirect in cms exists' do
-    it 'redirects' do
-      get '/our-debt-work'
-      expect(response).to redirect_to(
-        'http://localhost:5000/en/corporate/about-our-debt-work'
-      )
-    end
-  end
 end

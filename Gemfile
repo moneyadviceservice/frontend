@@ -79,7 +79,6 @@ gem 'websocket-extensions', '>= 0.1.5'
 gem 'adal', github: 'moneyadviceservice/azure-activedirectory-library-for-ruby'
 gem 'cream', '2.1.8'
 gem 'dough-ruby', github: 'moneyadviceservice/dough', branch: 'PostMessages_v5.45'
-gem 'mas-cms-client', '1.20.1'
 # Tools
 gem 'action_plans', github: 'moneyadviceservice/action_plans', ref: '79dad04'
 gem 'advice_plans', '~> 4.1.1'

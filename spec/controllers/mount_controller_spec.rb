@@ -3,15 +3,6 @@ RSpec.describe MountController, type: :controller do
     allow(subject).to receive(:alternate_engine_id) { 'alternative_engine' }
   end
 
-  describe '#breadcrumbs' do
-    it 'returns breadcrumb of just home' do
-      subject.send(:set_categories)
-      trail = subject.send(:breadcrumbs)
-      expect(trail.size).to eql(1)
-      expect(trail.first.title).to eql('Home')
-    end
-  end
-
   describe '#alternate_url' do
     it 'returns an alternate_url if one is available' do
       expect(subject).to receive(:url_for).with(

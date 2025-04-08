@@ -11,23 +11,11 @@ class ActionPlansEngineController < EmbeddedToolsController
     'redundancy'
   end
 
-  def breadcrumbs
-    categories.map(&Breadcrumb.public_method(:new))
-  end
-
   def mount_point
     @mount_point ||= ToolMountPoint::ActionPlans.new
   end
 
   private
-
-  def category
-    @category ||= Core::CategoryReader.new(category_id).call
-  end
-
-  def categories
-    RootToNodePath.build(category, category_tree)
-  end
 
   def alternate_engine_id
     send "#{alternate_locale}_engine_id"

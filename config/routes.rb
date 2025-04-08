@@ -18,8 +18,6 @@ Rails.application.routes.draw do
   get '/robots', to: 'sitemap#robots'
 
   scope '/:locale', locale: /en|cy/ do
-    root 'home#show'
-
     get '/direct/budget-planner', to: 'direct_budget_planner#new'
 
     get '/tools/car-costs-calculator', to: 'car_cost_tool#index'
@@ -100,48 +98,8 @@ Rails.application.routes.draw do
 
     get '/tools/:id', to: 'landing_pages#show', constraints: { id: /annuities/ }
 
-    resources :articles, only: 'show' do
-      resource :amp, only: [:show], controller: :amp_articles
-      resources :page_feedbacks, only: [:create]
-      patch 'page_feedbacks' => 'page_feedbacks#update'
-    end
-
-    get '/:page_type/:id/preview' => 'articles_preview#show',
-        page_type: /articles|corporate|tools/
-
-    get '/:page_type/:id/preview' => 'videos_preview#show',
-        page_type: /videos/
-
-    get '/:page_type/:id/preview' => 'home_pages_preview#show',
-        page_type: /home_pages/
-
-    resources :categories, only: 'show'
-    resources :videos, only: :show
-
-    resources :corporate_categories, only: [:show], constraints: CorporateCategoriesConstraint.new
-    resources :corporate, only: [:index, :show, :create] do
-      get 'export-partners', on: :collection
-    end
-
-    resources :corporate, only: [:show], as: 'corporate_articles'
-
-    resources :campaigns,
-              only: 'show',
-              path: 'campaigns',
-              constraints: {
-                id: %r{
-                      coping-with-unexpected-bills|
-                      how-to-look-ahead-when-buying-a-car|
-                      revealed-the-true-cost-of-buying-a-car|
-                      the-cost-of-caring
-                    }x
-              }
-
     get '/tools/christmas-money-planner', to: 'christmas_money_planner#show', constraints: lambda { |request| request.params['locale'] == 'en' }
     get '/tools/cynllunydd-ariannol-y-nadolig', to: 'christmas_money_planner#show', constraints: lambda { |request| request.params['locale'] == 'cy' }
-
-    get '/campaigns/debt-management', to: 'debt_management#show'
-    get '/campaigns/debt-management/faq', to: 'debt_management#faq'
 
     # Employer best practice
     get '/employer-best-practices', to: 'employer_best_practices#show'
@@ -158,57 +116,11 @@ Rails.application.routes.draw do
     get '/moneyadvisernetwork/privacy', to: 'pace#privacy'
     get '/moneyadvisernetwork/online', to: 'pace#online'
 
-    resource :feedback, only: [:new, :create], controller: :technical_feedback, as: :technical_feedback
-
     resource :cookie_notice_acceptance, only: :create, path: 'cookie-notice'
 
     resource :cookie_dismissal, only: :create, controller: 'cookie_dismissal'
 
     resource :empty, only: :show, controller: :empty
-
-    resource :styleguide,
-             controller:  'styleguide',
-             only:        'show',
-             constraints: { locale: I18n.default_locale } do
-      member do
-
-        scope 'components' do
-          get 'components_common', path: '/common'
-          get 'components_website', path: '/website'
-        end
-
-        get 'forms'
-        get 'layouts'
-        get 'html'
-        get 'javascript'
-
-        scope 'pages' do
-          get 'pages', path: '/'
-          get 'pages_guide', path: '/guide'
-          get 'pages_campaign', path: '/campaign'
-          get 'pages_technical_feedback', path: '/technical_feedback'
-          get 'pages_error', path: '/error'
-          get 'pages_news_article', path: '/news_article'
-          get 'pages_action_plan', path: '/action_plan'
-          get 'pages_news_index', path: '/news_index'
-          get 'pages_home', path: '/home'
-          get 'pages_search_results', path: '/search_results'
-          get 'pages_parent_category_page', path: '/parent_category_page'
-          get 'pages_child_category_page', path: '/child_category_page'
-          get 'pages_annuities_landing_page', path: '/annuities_landing_page'
-          get 'pages_contact', path: '/contact'
-          get 'pages_tool', path: '/tool'
-        end
-
-        scope 'css' do
-          get 'css_overview', path: '/'
-          get 'css_basic', path: '/typography'
-          get 'css_article_demo', path: '/article-demo'
-          get 'css_default_styles', path: '/default-styles'
-        end
-
-      end
-    end
 
     get '/hub/coronavirus-support', to: redirect('/en/hub/coronavirus-money-guidance')
     get '/hub/cymorth-coronafeirws', to: redirect('/cy/hub/arweiniad-ariannol-coronafeirws')

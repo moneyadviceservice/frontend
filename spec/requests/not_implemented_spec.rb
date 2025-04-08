@@ -19,11 +19,3 @@ RSpec.describe 'Request that is redirected', type: :request do
     expect(response).to redirect_to('https://www.moneyhelper.org.uk/en')
   end
 end
-
-RSpec.describe 'Request that is redirected with extension', type: :request do
-  it 'redirects to specified location' do
-    get('/contact.aspx')
-
-    expect(response).to redirect_to('http://localhost:5000/en/corporate/contact-us')
-  end
-end

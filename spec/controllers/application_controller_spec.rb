@@ -56,33 +56,4 @@ RSpec.describe ApplicationController, type: :controller do
     end
   end
 
-  context 'when cms resource not found' do
-    controller do
-      def index
-        raise Mas::Cms::Errors::ResourceNotFound
-      end
-    end
-
-    it 'raises not found' do
-      expect { get :index }.to raise_error(ActionController::RoutingError)
-    end
-  end
-
-  context 'when cms asset is a redirect' do
-    controller do
-      def index
-        cms_response = Faraday::Response.new.finish(
-          status: 302,
-          response_headers: { location: '/test' }
-        )
-        raise Mas::Cms::HttpRedirect, cms_response
-      end
-    end
-
-    it 'redirects to given url' do
-      get :index
-      expect(response.status).to eq(302)
-      expect(response.location).to eq('http://test.host/test')
-    end
-  end
 end

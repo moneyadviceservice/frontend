@@ -108,13 +108,3 @@ Shoulda::Matchers.configure do |config|
     with.library :rails
   end
 end
-
-Mas::Cms::Client.config do |c|
-  c.timeout      =  (ENV['FRONTEND_HTTP_REQUEST_TIMEOUT'] ||= '10').to_i
-  c.open_timeout =  (ENV['FRONTEND_HTTP_REQUEST_TIMEOUT'] ||= '10').to_i
-  c.api_token    =  (ENV['MAS_CMS_API_TOKEN'] ||= 'mytoken')
-  c.host         =  (ENV['MAS_CMS_URL'] ||= 'http://localhost:3000')
-  c.retries      = 1
-  c.cache        = Rails.cache
-  c.cache_gets   = true
-end

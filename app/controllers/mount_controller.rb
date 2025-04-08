@@ -1,7 +1,4 @@
 class MountController < ApplicationController
-  include Navigation
-  before_action :set_categories
-
   def canonical
     nil
   end
@@ -37,17 +34,9 @@ class MountController < ApplicationController
     true
   end
 
-  attr_reader :breadcrumbs
-  helper_method :breadcrumbs
-
   private
 
   def alternate_engine_id
     raise NotImplementedError
-  end
-
-  def set_categories
-    @category = nil
-    @breadcrumbs = BreadcrumbTrail.home
   end
 end

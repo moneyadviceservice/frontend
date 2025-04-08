@@ -18,10 +18,6 @@ RSpec.describe 'password reset', type: :feature do
   after { ENV['MONEY_HELPER_URL'] = @old_url }
 
   it 'allows me to reset my password' do
-    redirect_reader = double(:redirect_reader)
-    allow(Core::RedirectReader).to receive(:new).and_return(redirect_reader)
-    allow(redirect_reader).to receive(:call)
-
     user = create(:user)
 
     sign_in_page.load(locale: 'en')

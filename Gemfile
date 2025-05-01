@@ -100,7 +100,7 @@ gem 'dough-ruby', github: 'moneyadviceservice/dough', branch: 'PostMessages_v5.4
 # Tools
 gem 'action_plans', github: 'moneyadviceservice/action_plans', ref: '79dad04'
 gem 'budget_planner', github: 'moneyadviceservice/budget_planner', ref: 'ae91831'
-gem 'pensions_calculator', github: 'moneyadviceservice/pensions_calculator', ref: '786b6b3'
+gem 'pensions_calculator', github: 'moneyadviceservice/pensions_calculator', ref: '4bf8b63e'
 gem 'savings_calculator', github: 'moneyadviceservice/savings_calculator', ref: '1ccfd87'
 gem 'wpcc', github: 'moneyadviceservice/wpcc', ref: '45a0a46'
 

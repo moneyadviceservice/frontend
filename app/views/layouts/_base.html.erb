@@ -196,6 +196,7 @@
   <%# END MAS JAVASCRIPT SETUP %>
 </head>
 <body class="<%= locale_class %> l-body">
+  <%= content_for(:after_body) %>
 <!--[if ( !IE ) | ( gte IE 9 ) ]><!-->
 <%= render 'shared/svg/icon_sprite' %>
 <!--<![endif]-->

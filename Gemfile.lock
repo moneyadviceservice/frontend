@@ -5,19 +5,6 @@ GIT
     aes (0.5.1)
 
 GIT
-  remote: https://github.com/moneyadviceservice/action_plans.git
-  revision: 79dad04f35ade9b6970643592638385fecbcc2e5
-  ref: 79dad04
-  specs:
-    action_plans (6.9.0)
-      autoprefixer-rails
-      dough-ruby (~> 5.0)
-      draper
-      hashie
-      rails (>= 4, < 5)
-      sass-rails
-
-GIT
   remote: https://github.com/moneyadviceservice/azure-activedirectory-library-for-ruby.git
   revision: 26f534a42d516dcdd13fe7fc82149b6d4bc9bebb
   specs:
@@ -755,7 +742,6 @@ PLATFORMS
   x86_64-darwin-20
 
 DEPENDENCIES
-  action_plans!
   actionmailer!
   actionpack!
   actionview!

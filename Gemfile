@@ -98,7 +98,6 @@ gem 'adal', github: 'moneyadviceservice/azure-activedirectory-library-for-ruby'
 gem 'dough-ruby', github: 'moneyadviceservice/dough', branch: 'PostMessages_v5.45'
 
 # Tools
-gem 'action_plans', github: 'moneyadviceservice/action_plans', ref: '79dad04'
 gem 'budget_planner', github: 'moneyadviceservice/budget_planner', ref: 'ae91831'
 gem 'pensions_calculator', github: 'moneyadviceservice/pensions_calculator', ref: 'b9e8439'
 gem 'savings_calculator', github: 'moneyadviceservice/savings_calculator', ref: '1ccfd87'

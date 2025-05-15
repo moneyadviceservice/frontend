@@ -258,6 +258,7 @@
         path: "cy/tools/cyfrifiannell-tal-diswyddo"
       width: "100%"
       title: "Redundancy action plan"
+      omit_logo: true
 
     credit_card_calculator:
       en:

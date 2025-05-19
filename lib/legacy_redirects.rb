@@ -1,6 +1,8 @@
 LEGACY_MAS_WWW = %r{^(www.)?moneyadviceservice.org.uk}.freeze
 LEGACY_MAS_SYNDICATION = 'partner-tools.moneyadviceservice.org.uk'.freeze
 
+r301 %r{^/a/(.*)$}, '/assets/$1' if Rails.env.production?
+
 r301 %r{.*}, 'https://www.moneyhelper.org.uk/en?source=mas', host: 'syndicated.moneyadviceservice.org.uk'
 r301 %r{.*}, 'https://www.moneyhelper.org.uk/en?source=mas', host: 'tables.moneyadviceservice.org.uk'
 r301 %r{.*}, 'https://www.moneyhelper.org.uk/en?source=mas', host: 'healthcheck.moneyadviceservice.org.uk'

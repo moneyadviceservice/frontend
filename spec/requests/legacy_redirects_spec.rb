@@ -31,7 +31,7 @@ RSpec.describe 'Legacy redirects', type: :request do
     it 'redirects to the new mortgage calculator' do
       get '/en/tools/mortgage-calculator'
 
-      expect(request).to redirect_to('https://tools.moneyhelper.org.uk/en/mortgage-calculator?isEmbedded=true')
+      expect(request).to redirect_to('https://mortgage-calculator.moneyhelper.org.uk/en?isEmbedded=true')
     end
 
     it 'redirects to the new stamp duty calculator' do

@@ -20,7 +20,7 @@ r301 %r{^/cy/direct/budget-planner/?(.*)}, 'https://tools.moneyhelper.org.uk/cy/
 r301 %r{^/en/tools/budget-planner/?(.*)}, 'https://tools.moneyhelper.org.uk/en/budget-planner/income?isEmbedded=true', host: LEGACY_MAS_SYNDICATION
 r301 %r{^/en/tools/house-buying/stamp-duty-calculator/?(.*)}, 'https://tools.moneyhelper.org.uk/en/sdlt-calculator?isEmbedded=true', host: LEGACY_MAS_SYNDICATION
 r301 %r{^/en/tools/house-buying/land-and-buildings-transaction-tax-calculator-scotland/?(.*)}, 'https://tools.moneyhelper.org.uk/en/lbtt-calculator?isEmbedded=true', host: LEGACY_MAS_SYNDICATION
-r301 %r{^/en/tools/mortgage-calculator/?(.*)}, 'https://tools.moneyhelper.org.uk/en/mortgage-calculator?isEmbedded=true', host: LEGACY_MAS_SYNDICATION
+r301 %r{^/en/tools/mortgage-calculator/?(.*)}, 'https://mortgage-calculator.moneyhelper.org.uk/en?isEmbedded=true', host: LEGACY_MAS_SYNDICATION
 r301 %r{^/en/tools/debt-advice-locator/?(.*)}, 'https://debt-advice-locator.moneyhelper.org.uk/en/question-1?isEmbedded=true', host: LEGACY_MAS_SYNDICATION
 r301 %r{^/en/tools/baby-money-timeline/?(.*)}, 'https://tool.moneyhelper.org.uk/en/baby-money-timeline?isEmbedded=true', host: LEGACY_MAS_SYNDICATION
 

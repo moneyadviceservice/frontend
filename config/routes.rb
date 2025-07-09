@@ -71,9 +71,6 @@ Rails.application.routes.draw do
 
     mount Feedback::Engine => '/improvements'
 
-    mount MortgageCalculator::Engine => '/tools/:tool_id',
-          constraints: { tool_id: %r{mortgage-calculator|cyfrifiannell-morgais|house-buying|prynu-ty} }
-
     mount PaydayLoansIntervention::Engine => '/:tool_id',
           constraints: ToolMountPoint.for(:payday_loans)
 

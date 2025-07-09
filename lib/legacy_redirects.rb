@@ -18,6 +18,7 @@ r301 %r{^/cy/tools/cyfrifiannell-tal-diswyddo/?}, 'https://redundancy-pay-calcul
 r301 %r{^/en/direct/budget-planner/?(.*)}, 'https://tools.moneyhelper.org.uk/en/budget-planner/income?isEmbedded=true'
 r301 %r{^/cy/direct/budget-planner/?(.*)}, 'https://tools.moneyhelper.org.uk/cy/budget-planner/income?isEmbedded=true'
 r301 %r{^/en/tools/budget-planner/?(.*)}, 'https://tools.moneyhelper.org.uk/en/budget-planner/income?isEmbedded=true', host: LEGACY_MAS_SYNDICATION
+r301 %r{^/en/tools/house-buying/mortgage-affordability-calculator/?(.*)}, 'https://mortgage-affordability-calculator.moneyhelper.org.uk/en/annual-income?isEmbedded=true', host: LEGACY_MAS_SYNDICATION
 r301 %r{^/en/tools/house-buying/stamp-duty-calculator/?(.*)}, 'https://tools.moneyhelper.org.uk/en/sdlt-calculator?isEmbedded=true', host: LEGACY_MAS_SYNDICATION
 r301 %r{^/en/tools/house-buying/land-and-buildings-transaction-tax-calculator-scotland/?(.*)}, 'https://tools.moneyhelper.org.uk/en/lbtt-calculator?isEmbedded=true', host: LEGACY_MAS_SYNDICATION
 r301 %r{^/en/tools/mortgage-calculator/?(.*)}, 'https://mortgage-calculator.moneyhelper.org.uk/en?isEmbedded=true', host: LEGACY_MAS_SYNDICATION

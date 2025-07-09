@@ -37,7 +37,6 @@ source 'https://gem.fury.io/h_app288206558' do
   gem 'decision_trees', '~> 2.3.0'
   gem 'feedback', '~> 0.5.1'
   gem 'mas-cms-client', '1.20.1'
-  gem 'mortgage_calculator', '~> 4.6.0'
   gem 'payday_loans_intervention', '~> 1.9.0'
   gem 'postcode_anywhere-email_validation'
   gem 'quiz', '~> 1.4.0'

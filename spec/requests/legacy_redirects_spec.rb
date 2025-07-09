@@ -2,6 +2,12 @@ RSpec.describe 'Legacy redirects', type: :request do
   describe 'legacy tools to new tools redirects' do
     before { host! 'partner-tools.moneyadviceservice.org.uk' }
 
+    it 'redirects to the new mortgage affordability calculator' do
+      get '/en/tools/house-buying/mortgage-affordability-calculator'
+
+      expect(request).to redirect_to('https://mortgage-affordability-calculator.moneyhelper.org.uk/en/annual-income?isEmbedded=true')
+    end
+
     it 'redirects to the new redundancy pay calculator' do
       get '/en/tools/redundancy-pay-calculator'
       expect(request).to redirect_to('https://redundancy-pay-calculator.moneyhelper.org.uk/en?isEmbedded=true')

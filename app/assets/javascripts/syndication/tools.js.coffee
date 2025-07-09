@@ -204,6 +204,7 @@
       cy:
         path: "cy/tools/prynu-ty/cyfrifiannell-fforddiadwyedd-morgais"
       title: "Mortgage affordability calculator"
+      omit_logo: true
 
     payday_loans_intervention:
       en:

@@ -15,8 +15,6 @@ r301 %r{.*}, 'https://www.moneyhelper.org.uk/en/benefits/universal-credit/money-
 
 r301 %r{^/en/tools/redundancy-pay-calculator/?}, 'https://redundancy-pay-calculator.moneyhelper.org.uk/en?isEmbedded=true'
 r301 %r{^/cy/tools/cyfrifiannell-tal-diswyddo/?}, 'https://redundancy-pay-calculator.moneyhelper.org.uk/cy?isEmbedded=true'
-r301 %r{^/en/direct/budget-planner/?(.*)}, 'https://tools.moneyhelper.org.uk/en/budget-planner/income?isEmbedded=true'
-r301 %r{^/cy/direct/budget-planner/?(.*)}, 'https://tools.moneyhelper.org.uk/cy/budget-planner/income?isEmbedded=true'
 r301 %r{^/en/tools/budget-planner/?(.*)}, 'https://tools.moneyhelper.org.uk/en/budget-planner/income?isEmbedded=true', host: LEGACY_MAS_SYNDICATION
 r301 %r{^/en/tools/house-buying/mortgage-affordability-calculator/?(.*)}, 'https://mortgage-affordability-calculator.moneyhelper.org.uk/en/annual-income?isEmbedded=true', host: LEGACY_MAS_SYNDICATION
 r301 %r{^/en/tools/house-buying/stamp-duty-calculator/?(.*)}, 'https://stamp-duty-calculator.moneyhelper.org.uk/en/sdlt?isEmbedded=true', host: LEGACY_MAS_SYNDICATION

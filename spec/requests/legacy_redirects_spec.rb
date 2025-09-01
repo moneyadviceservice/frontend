@@ -19,7 +19,7 @@ RSpec.describe 'Legacy redirects', type: :request do
     it 'redirects to the new budget planner tool' do
       get '/en/tools/budget-planner'
 
-      expect(request).to redirect_to('https://tools.moneyhelper.org.uk/en/budget-planner/income?isEmbedded=true')
+      expect(request).to redirect_to('https://budget-planner.moneyhelper.org.uk/en/income?isEmbedded=true')
     end
 
     it 'redirects to the new baby money tool' do

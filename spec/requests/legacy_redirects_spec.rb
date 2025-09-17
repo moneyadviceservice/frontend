@@ -25,7 +25,7 @@ RSpec.describe 'Legacy redirects', type: :request do
     it 'redirects to the new baby money tool' do
       get '/en/tools/baby-money-timeline'
 
-      expect(request).to redirect_to('https://tool.moneyhelper.org.uk/en/baby-money-timeline?isEmbedded=true')
+      expect(request).to redirect_to('https://baby-money-timeline.moneyhelper.org.uk/en?isEmbedded=true')
     end
 
     it 'redirects to the new debt advice locator' do

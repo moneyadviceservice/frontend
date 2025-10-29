@@ -100,7 +100,7 @@ gem 'dough-ruby', github: 'moneyadviceservice/dough', branch: 'PostMessages_v5.4
 gem 'budget_planner', github: 'moneyadviceservice/budget_planner', ref: 'fcb7973'
 gem 'pensions_calculator', github: 'moneyadviceservice/pensions_calculator', ref: 'b1391e5'
 gem 'savings_calculator', github: 'moneyadviceservice/savings_calculator', ref: '1ccfd87'
-gem 'wpcc', github: 'moneyadviceservice/wpcc', ref: '45a0a46'
+gem 'wpcc', github: 'moneyadviceservice/wpcc', ref: 'fdf832a'
 
 group :assets do
   gem 'autoprefixer-rails'

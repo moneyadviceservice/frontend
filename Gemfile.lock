@@ -69,10 +69,10 @@ GIT
 
 GIT
   remote: https://github.com/moneyadviceservice/wpcc.git
-  revision: fdf832a3d7cfeb17664e62c6e4b7ee2cddd67582
-  ref: fdf832a
+  revision: a0df69fcb3502c981d035b0cbf323d4dbced7df0
+  ref: a0df69f
   specs:
-    wpcc (3.4.0)
+    wpcc (3.5.0)
       dough-ruby (< 6)
       meta-tags
       modernizr-rails (~> 2.6.2)
@@ -490,7 +490,7 @@ GEM
     net-smtp (0.5.0)
       net-protocol
     netrc (0.11.0)
-    nio4r (2.7.0)
+    nio4r (2.7.5)
     nokogiri (1.15.6)
       mini_portile2 (~> 2.8.2)
       racc (~> 1.4)
@@ -528,7 +528,7 @@ GEM
       pry (>= 0.12.0)
     psych (3.0.2)
     public_suffix (5.1.1)
-    puma (6.4.2)
+    puma (6.6.1)
       nio4r (~> 2.0)
     quiz (1.4.0)
       cocoon

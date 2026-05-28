@@ -1,7 +1,6 @@
 require_relative '../lib/tool_mount_point/base'
 require_relative '../lib/tool_mount_point/advice_plans'
 require_relative '../lib/tool_mount_point/agreements'
-require_relative '../lib/tool_mount_point/budget_planner'
 require_relative '../lib/tool_mount_point/cutback_calculator'
 require_relative '../lib/tool_mount_point/debt_and_mental_health'
 require_relative '../lib/tool_mount_point/debt_free_day_calculator'

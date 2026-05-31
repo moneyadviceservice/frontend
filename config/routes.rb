@@ -18,8 +18,6 @@ Rails.application.routes.draw do
   get '/robots', to: 'sitemap#robots'
 
   scope '/:locale', locale: /en|cy/ do
-    get '/direct/budget-planner', to: 'direct_budget_planner#new'
-
     get '/tools/car-costs-calculator', to: 'car_cost_tool#index'
     get '/tools/car-costs-calculator/*all', to: 'car_cost_tool#index'
     get '/tools/money-navigator-tool', to: 'money_navigator_tool#index'
@@ -48,11 +46,6 @@ Rails.application.routes.draw do
 
     mount AdvicePlans::Engine => '/tools/:tool_id',
           constraints: ToolMountPoint.for(:advice_plans)
-
-    bpmp = ToolMountPoint.for(:budget_planner)
-    budget_planner_url_constraint = /#{bpmp.en_id}|#{bpmp.cy_id}/
-    mount BudgetPlanner::Engine => '/tools/:tool_id(/:incognito)',
-          constraints: { tool_id: budget_planner_url_constraint, incognito: /incognito/ }
 
     mount CutbackCalculator::Engine => '/tools/:tool_id',
           constraints: ToolMountPoint.for(:cutback_calculator)

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20250107135912) do
+ActiveRecord::Schema.define(version: 20260528093109) do
 
   create_table "action_plans_expense_items", force: :cascade do |t|
     t.string  "kind",       limit: 256,             null: false
@@ -135,38 +135,6 @@ ActiveRecord::Schema.define(version: 20250107135912) do
     t.string   "debt_evaluation_toolkit_membership",    limit: 255
     t.boolean  "debt_evaluation_toolkit_allow_contact"
   end
-
-  create_table "budget_planner_budgets", force: :cascade do |t|
-    t.binary   "data",               limit: 65535, null: false
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.integer  "user_id",            limit: 4
-    t.string   "commited_from",      limit: 255
-    t.string   "last_commited_from", limit: 255
-    t.text     "referral_url",       limit: 65535
-  end
-
-  add_index "budget_planner_budgets", ["user_id"], name: "index_budget_planner_budgets_on_user_id", using: :btree
-
-  create_table "budget_planner_spreadsheets", force: :cascade do |t|
-    t.integer  "user_id",    limit: 4,     null: false
-    t.binary   "data",       limit: 65535, null: false
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "budget_planner_wip_budgets", force: :cascade do |t|
-    t.binary   "data",             limit: 65535, null: false
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.integer  "user_id",          limit: 4
-    t.integer  "source_budget_id", limit: 4
-    t.string   "source_website",   limit: 255
-    t.datetime "commited_at"
-    t.text     "referral_url",     limit: 65535
-  end
-
-  add_index "budget_planner_wip_budgets", ["user_id"], name: "index_budget_planner_wip_budgets_on_user_id", using: :btree
 
   create_table "car_cost_tool_car_adjustments", force: :cascade do |t|
     t.integer "user_data_id",      limit: 4

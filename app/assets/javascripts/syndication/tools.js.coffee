@@ -125,8 +125,8 @@
         path: "workplace_pensions_calculator/index.html"
       cy:
         path: "workplace_pensions_calculator/index.html?lang=cy"
-      width: "800px"
-      height: "2200px"
+      width: "100%"
+      omit_logo: true
       title: "Workplace pensions calculator"
 
     universal_credit_timeline:
@@ -336,7 +336,7 @@
       cy:
         path: 'cy/tools/cyfrifiannell-cyfraniadau-pensiwn-gweithle'
       width: "100%"
-      height: "1550px"
+      omit_logo: true
       title: 'Workplace Pension Contribution Calculator'
 
     money_navigator_tool:

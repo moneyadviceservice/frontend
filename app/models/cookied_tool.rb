@@ -21,11 +21,6 @@ class CookiedTool
       landing_path: '/en/tools/loan-calculator/loan/',
       tool: 'loan-calculator',
       canonical_url: 'https://www.moneyhelper.org.uk/en/everyday-money/credit-and-purchases/use-our-loan-calculator'
-    ),
-    CookiedTool.new(
-      landing_path: '/en/tools/workplace-pension-contribution-calculator/',
-      tool: 'wpcc',
-      canonical_url: 'https://www.moneyhelper.org.uk/en/pensions-and-retirement/auto-enrolment/use-our-workplace-pension-calculator'
     )
   ].freeze
 

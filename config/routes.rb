@@ -73,9 +73,6 @@ Rails.application.routes.draw do
     mount SavingsCalculator::Engine => '/tools/:tool_id',
           constraints: ToolMountPoint.for(:savings_calculator)
 
-    mount Wpcc::Engine => '/tools/:tool_id',
-          constraints: ToolMountPoint.for(:wpcc)
-
     get LandingPagePaths.path(:retirements, :index, :en),     to: 'retirements#index'
     get LandingPagePaths.path(:retirements, :index, :cy),     to: 'retirements#index'
     get LandingPagePaths.path(:retirements, :budgeting, :en), to: 'retirements#budgeting'

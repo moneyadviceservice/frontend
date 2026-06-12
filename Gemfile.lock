@@ -54,17 +54,6 @@ GIT
       sprockets (< 4)
 
 GIT
-  remote: https://github.com/moneyadviceservice/wpcc.git
-  revision: a0df69fcb3502c981d035b0cbf323d4dbced7df0
-  ref: a0df69f
-  specs:
-    wpcc (3.5.0)
-      dough-ruby (< 6)
-      meta-tags
-      modernizr-rails (~> 2.6.2)
-      rails (>= 4, < 5)
-
-GIT
   remote: https://github.com/rails-lts/rack.git
   revision: 93aa66af110260f0e154a7e9a6b694df6434565e
   branch: lts-1-6-stable
@@ -821,7 +810,6 @@ DEPENDENCIES
   webmock (~> 3.5.0)
   websocket-extensions (>= 0.1.5)
   whenever
-  wpcc!
 
 RUBY VERSION
    ruby 2.7.7p221

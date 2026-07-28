@@ -14,6 +14,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 source "https://gems.railslts.com" do
   gem 'rails', '~> 4.2.11'
+  gem 'rack'
   gem 'actionmailer',     require: false
   gem 'actionpack',       require: false
   gem 'activemodel',      require: false
@@ -76,7 +77,6 @@ gem 'opening_hours'
 gem 'rollbar'
 gem 'psych', '>= 2.0.5' # https://www.ruby-lang.org/en/news/2014/03/29/heap-overflow-in-yaml-uri-escape-parsing-cve-2014-2525/
 gem 'puma'
-gem 'rack', github: 'rails-lts/rack', branch: 'lts-1-6-stable'
 gem 'rack-rewrite'
 gem 'recaptcha', require: 'recaptcha/rails'
 gem 'redcarpet'

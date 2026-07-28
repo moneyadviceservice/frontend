@@ -53,13 +53,6 @@ GIT
       sass-rails
       sprockets (< 4)
 
-GIT
-  remote: https://github.com/rails-lts/rack.git
-  revision: 93aa66af110260f0e154a7e9a6b694df6434565e
-  branch: lts-1-6-stable
-  specs:
-    rack (1.6.13.17)
-
 GEM
   remote: https://rubygems.org/
   remote: https://gems.railslts.com/
@@ -509,6 +502,7 @@ GEM
       friendly_id (>= 5.0)
       rails (>= 4, < 5)
     racc (1.8.1)
+    rack (1.6.13.27)
     rack-accept (0.4.5)
       rack (>= 0.4)
     rack-livereload (0.3.17)

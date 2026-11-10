@@ -29,25 +29,20 @@ RSpec.describe ApplicationHelper, type: :helper do
     end
   end
 
-  describe 'include_adobe_analytics_scripts?' do
-    before do
-      ENV['INCLUDE_AEM_ANALYTICS'] = 'true'
-      allow(Rails).to receive(:env) { 'production'.inquiry }
-    end
+  describe '#include_adobe_analytics_scripts?' do
+    before { ENV['INCLUDE_AEM_ANALYTICS'] = 'true' }
 
-    context 'when the host is incorrect' do
-      it 'returns false' do
-        req = double(original_url: 'https://partner-tools.moneyadviceservice.org.uk/en/tools/meh')
+    context 'when in production' do
+      it 'returns true' do
+        allow(Rails).to receive(:env) { 'production'.inquiry }
 
-        expect(helper.include_adobe_analytics_scripts?(req)).to be false
+        expect(helper.include_adobe_analytics_scripts?).to be true
       end
     end
 
-    context 'when the host is correct' do
-      it 'returns true' do
-        req = double(original_url: 'https://partner-tools.moneyhelper.org.uk/en/tools/meh')
-
-        expect(helper.include_adobe_analytics_scripts?(req)).to be true
+    context 'when outside of production' do
+      it 'returns false' do
+        expect(helper.include_adobe_analytics_scripts?).to be false
       end
     end
   end

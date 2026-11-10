@@ -52,7 +52,7 @@
       Any JS that is required before DOM is created should be in this block
       includes feature detection, analytics setup, JSON bootstrap %>
 
-  <% if include_adobe_analytics_scripts?(request) %>
+  <% if include_adobe_analytics_scripts? %>
     <% if staging? %>
       <script type="text/javascript" src="//assets.adobedtm.com/c3a3920a84ef/2104df5e2099/launch-834de5c44d2c-staging.min.js" async></script>
     <% else %>

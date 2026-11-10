@@ -7,10 +7,8 @@ module ApplicationHelper
     content_for?(:page_name) && content_for?(:page_title)
   end
 
-  def include_adobe_analytics_scripts?(request)
-    return false unless Rails.env.production? && ENV['INCLUDE_AEM_ANALYTICS'] == 'true'
-
-    request.original_url.match?(/[staging-]?partner-tools\.moneyhelper\.org\.uk/)
+  def include_adobe_analytics_scripts?
+    Rails.env.production? && ENV['INCLUDE_AEM_ANALYTICS'] == 'true'
   end
 
   def css(line_numbers: false, &block)
